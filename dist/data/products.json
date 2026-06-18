@@ -1,1087 +1,3082 @@
 [
   {
-    "id": "rolex",
-    "name": "劳力士官方旗舰店",
-    "desc": "瑞士劳力士·官方授权·全球联保·正品保证",
-    "image": "/images/photo-1523170335258-f5ed11844a49.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "rl1",
-        "name": "Daytona 116500LN 宇宙计型迪通拿",
-        "price": 285000,
-        "desc": "40mm蚝式钢表壳，Cerachrom陶瓷表圈，4130计时机芯。黑白熊猫盘，72小时动力储备。",
-        "specs": {
-          "表径": "40mm",
-          "材质": "蚝式钢",
-          "机芯": "4130自动计时机芯",
-          "动力": "72小时"
-        },
-        "image": "/images/photo-1523170335258-f5ed11844a49.jpg",
-        "tags": [
-          "劳力士",
-          "迪通拿",
-          "陶瓷圈"
-        ]
-      },
-      {
-        "id": "rl2",
-        "name": "Submariner 126610LV 绿水鬼",
-        "price": 168000,
-        "desc": "41mm蚝式钢，绿色Cerachrom陶瓷表圈，3235自动机芯。防水300米。",
-        "specs": {
-          "表径": "41mm",
-          "材质": "蚝式钢",
-          "机芯": "3235自动机芯",
-          "防水": "300m"
-        },
-        "image": "/images/photo-1547996160-81dfa63595aa.jpg",
-        "tags": [
-          "劳力士",
-          "水鬼",
-          "潜水表"
-        ]
-      },
-      {
-        "id": "rl3",
-        "name": "Day-Date 228238 星期日历型",
-        "price": 398000,
-        "desc": "40mm 18K黄金总统型表带，3255自动机芯。星期+日历双重显示。",
-        "specs": {
-          "表径": "40mm",
-          "材质": "18K黄金",
-          "机芯": "3255自动机芯"
-        },
-        "image": "/images/photo-1622434641406-a158123450f9.jpg",
-        "tags": [
-          "劳力士",
-          "金表",
-          "总统型"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "patek",
-    "name": "百达翡丽旗舰店",
-    "desc": "瑞士百达翡丽·传世之作·家族传承·手工打造",
-    "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "pp1",
-        "name": "Nautilus 5711/1A 鹦鹉螺",
-        "price": 880000,
-        "desc": "40mm不锈钢表壳，蓝色渐变表盘，26-330自动机芯。经典舷窗造型，最难买的钢表之王。",
-        "specs": {
-          "表径": "40mm",
-          "材质": "不锈钢",
-          "机芯": "26-330自动机芯"
-        },
-        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
-        "tags": [
-          "百达翡丽",
-          "鹦鹉螺",
-          "钢王"
-        ]
-      },
-      {
-        "id": "pp2",
-        "name": "Calatrava 5227J 将官型",
-        "price": 328000,
-        "desc": "39mm 18K黄金表壳，象牙白珐琅表盘，324自动机芯。军官式底盖。经典正装表。",
-        "specs": {
-          "表径": "39mm",
-          "材质": "18K黄金",
-          "表盘": "珐琅",
-          "机芯": "324自动机芯"
-        },
-        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
-        "tags": [
-          "百达翡丽",
-          "正装表",
-          "珐琅"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "audemars",
-    "name": "爱彼皇家橡树旗舰店",
-    "desc": "瑞士爱彼Audemars Piguet·皇家橡树系列·独立制表",
-    "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "ap1",
-        "name": "Royal Oak 15500ST 皇家橡树",
-        "price": 380000,
-        "desc": "41mm不锈钢表壳，Grande Tapisserie蓝色格纹表盘，4302自动机芯。",
-        "specs": {
-          "表径": "41mm",
-          "材质": "不锈钢",
-          "机芯": "4302自动机芯"
-        },
-        "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
-        "tags": [
-          "爱彼",
-          "皇家橡树",
-          "蓝盘"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "vc",
-    "name": "江诗丹顿旗舰店",
-    "desc": "瑞士江诗丹顿·260年历史·日内瓦印记·顶级制表",
-    "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "vc1",
-        "name": "Overseas 4500V 纵横四海",
-        "price": 298000,
-        "desc": "41mm不锈钢表壳，蓝色漆面表盘，5100自动机芯。3条快拆表带（钢带/皮带/胶带）。",
-        "specs": {
-          "表径": "41mm",
-          "材质": "不锈钢",
-          "机芯": "5100自动机芯",
-          "表带": "3条快拆"
-        },
-        "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg",
-        "tags": [
-          "江诗丹顿",
-          "纵横四海",
-          "蓝盘"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "omega",
-    "name": "欧米茄旗舰店",
-    "desc": "瑞士欧米茄·登月传奇·奥运计时·007同款",
-    "image": "/images/photo-1547996160-81dfa63595aa.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "om1",
-        "name": "Speedmaster Moonwatch 超霸登月",
-        "price": 58000,
-        "desc": "42mm不锈钢，黑色表盘，3861手动机芯。NASA认证登月腕表。",
-        "specs": {
-          "表径": "42mm",
-          "材质": "不锈钢",
-          "机芯": "3861手动机芯"
-        },
-        "image": "/images/photo-1547996160-81dfa63595aa.jpg",
-        "tags": [
-          "欧米茄",
-          "登月",
-          "超霸"
-        ]
-      },
-      {
-        "id": "om2",
-        "name": "Seamaster 300M 海马潜水",
-        "price": 48000,
-        "desc": "42mm不锈钢，陶瓷表圈，8800自动机芯。007詹姆斯·邦德同款。防水300米。",
-        "specs": {
-          "表径": "42mm",
-          "材质": "不锈钢",
-          "机芯": "8800自动机芯",
-          "防水": "300m"
-        },
-        "image": "/images/photo-1547996160-81dfa63595aa.jpg",
-        "tags": [
-          "欧米茄",
-          "海马",
-          "007"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cartier",
-    "name": "卡地亚旗舰店",
-    "desc": "法国卡地亚·皇室珠宝商·珠宝腕表·经典设计",
-    "image": "/images/photo-1589128777073-263566ae5e4d.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "ct1",
-        "name": "Santos-Dumont 山度士",
-        "price": 68000,
-        "desc": "43.5mm x 31.4mm不锈钢方形表壳，430MC手动机芯。1904年首款飞行员腕表的现代演绎。",
-        "specs": {
-          "尺寸": "43.5×31.4mm",
-          "材质": "不锈钢",
-          "机芯": "430MC手动机芯"
-        },
-        "image": "/images/photo-1589128777073-263566ae5e4d.jpg",
-        "tags": [
-          "卡地亚",
-          "山度士",
-          "方形表"
-        ]
-      },
-      {
-        "id": "ct2",
-        "name": "Tank Louis Cartier 坦克",
-        "price": 128000,
-        "desc": "33.7mm x 25.5mm 18K黄金表壳，1917MC手动机芯。1917年设计，百年经典。",
-        "specs": {
-          "尺寸": "33.7×25.5mm",
-          "材质": "18K黄金",
-          "机芯": "1917MC手动机芯"
-        },
-        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
-        "tags": [
-          "卡地亚",
-          "坦克",
-          "经典"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "iwc",
-    "name": "IWC万国表旗舰店",
-    "desc": "瑞士IWC·沙夫豪森制造·飞行员腕表·工程师精神",
-    "image": "/images/photo-1622434641406-a158123450f9.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "iw1",
-        "name": "Big Pilot 大型飞行员43",
-        "price": 88000,
-        "desc": "43mm不锈钢，蓝色表盘，82100自动机芯。标志性洋葱头表冠，7日动力储备。",
-        "specs": {
-          "表径": "43mm",
-          "材质": "不锈钢",
-          "机芯": "82100自动机芯",
-          "动力": "7日"
-        },
-        "image": "/images/photo-1622434641406-a158123450f9.jpg",
-        "tags": [
-          "IWC",
-          "大飞",
-          "飞行员"
-        ]
-      }
-    ]
-  },
-  {
     "id": "maotai",
     "name": "茅台官方旗舰店",
-    "desc": "贵州茅台酒·国酒之尊·酱香型白酒·收藏投资",
-    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-    "category": "dutyfree",
+    "name_en": "Moutai Official Store",
+    "tags": [
+      "白酒",
+      "酱香",
+      "国酒"
+    ],
+    "rating": 5.0,
+    "category": "白酒",
+    "delivery_time": "约5天",
+    "min_price": 1499,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1551698618-1dfe5d97d256.jpg",
+    "description": "贵州茅台酒·国酒之尊·酱香型白酒典范·收藏投资佳品",
     "products": [
       {
-        "id": "mt1",
         "name": "飞天茅台 53%vol 500ml",
+        "desc": "酱香型白酒标杆，九次蒸煮八次发酵七次取酒，五年窖藏。",
         "price": 2888,
-        "desc": "酱香型白酒典范。历经九次蒸煮、八次发酵、七次取酒，五年窖藏方成。",
-        "specs": {
-          "酒精度": "53%vol",
-          "容量": "500ml",
-          "香型": "酱香型",
-          "年份": "5年窖藏"
-        },
-        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-        "tags": [
-          "茅台",
-          "飞天",
-          "酱香"
-        ]
+        "image": "/images/photo-1622434641406-a158123450f9.jpg"
       },
       {
-        "id": "mt2",
         "name": "茅台生肖纪念酒·龙年 500ml",
+        "desc": "甲辰龙年限量版，兼具饮用与收藏价值。",
         "price": 8888,
-        "desc": "茅台生肖纪念系列·甲辰龙年特别版。限量发行，兼具饮用与收藏价值。",
-        "specs": {
-          "酒精度": "53%vol",
-          "容量": "500ml",
-          "系列": "生肖纪念·龙年",
-          "特点": "限量版"
-        },
-        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-        "tags": [
-          "茅台",
-          "生肖",
-          "限量"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "hennessy",
-    "name": "轩尼诗旗舰店",
-    "desc": "法国轩尼诗·干邑之王·250年传承",
-    "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "hn1",
-        "name": "Hennessy XO 干邑白兰地 700ml",
-        "price": 3880,
-        "desc": "由100多种陈年生命之水调配而成，陈酿至少10年以上。层次丰富，余韵悠长。",
-        "specs": {
-          "酒精度": "40%vol",
-          "容量": "700ml",
-          "陈酿": "10年以上",
-          "类型": "干邑XO"
-        },
-        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg",
-        "tags": [
-          "轩尼诗",
-          "XO",
-          "干邑"
-        ]
+        "image": "/images/photo-1621996346565-e3dbc646d9a9.jpg"
       },
       {
-        "id": "hn2",
-        "name": "Hennessy Paradis 700ml",
-        "price": 18800,
-        "desc": "轩尼诗顶级珍藏，由25-130年陈年生命之水调配。全球限量供应。",
-        "specs": {
-          "陈酿": "25-130年",
-          "容量": "700ml",
-          "类型": "顶级珍藏"
-        },
-        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg",
-        "tags": [
-          "轩尼诗",
-          "Paradis",
-          "珍藏"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "louis13",
-    "name": "路易十三旗舰店",
-    "desc": "法国路易十三·干邑皇冠上的明珠·百年陈酿",
-    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-    "category": "dutyfree",
-    "products": [
+        "name": "茅台1935 53%vol 500ml",
+        "desc": "致敬1935年茅台前身烧房获奖，经典酱香。",
+        "price": 1688,
+        "image": "/images/photo-1617196034796-73dfa7b1fd56.jpg"
+      },
       {
-        "id": "l13-1",
-        "name": "Louis XIII 经典装 700ml",
-        "price": 38800,
-        "desc": "由多达1200种陈年40-100年的生命之水调配。Baccarat水晶瓶纯手工吹制。",
-        "specs": {
-          "酒精度": "40%vol",
-          "容量": "700ml",
-          "陈酿": "40-100年",
-          "瓶身": "Baccarat水晶"
-        },
-        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-        "tags": [
-          "路易十三",
-          "百年陈酿",
-          "水晶瓶"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "domperi",
-    "name": "唐培里侬旗舰店",
-    "desc": "法国唐培里侬·香槟之王·年份香槟的标杆",
-    "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
-    "category": "dutyfree",
-    "products": [
+        "name": "茅台迎宾酒 53%vol 500ml",
+        "desc": "大众酱香入门，性价比之选。",
+        "price": 288,
+        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg"
+      },
       {
-        "id": "dp1",
-        "name": "Dom Perignon Vintage 2013 750ml",
-        "price": 2880,
-        "desc": "2013年份香槟。经过至少8年酒窖陈酿，霞多丽与黑皮诺的完美平衡。",
-        "specs": {
-          "容量": "750ml",
-          "年份": "2013",
-          "陈酿": "8年以上"
-        },
-        "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
-        "tags": [
-          "香槟",
-          "年份",
-          "唐培里侬"
-        ]
+        "name": "茅台王子酒 53%vol 500ml",
+        "desc": "醇厚酱香风格，日常品鉴佳选。",
+        "price": 388,
+        "image": "/images/photo-1611143669185-af224c5e3252.jpg"
+      },
+      {
+        "name": "茅台陈年酒 15年 53%vol 500ml",
+        "desc": "15年窖藏陈酿，酱香浓郁层次丰富。",
+        "price": 6888,
+        "image": "/images/photo-1610945265064-0e34e5519bbf.jpg"
+      },
+      {
+        "name": "汉酱 51%vol 500ml",
+        "desc": "茅台酱香系列中高端代表，绵柔酱香。",
+        "price": 888,
+        "image": "/images/photo-1606144042614-b2417e99c4e3.jpg"
+      },
+      {
+        "name": "赖茅传承 53%vol 500ml",
+        "desc": "赖茅经典传承款，百年工艺。",
+        "price": 498,
+        "image": "/images/photo-1603133872878-684f208fb84b.jpg"
+      },
+      {
+        "name": "贵州大曲 80年代 53%vol 500ml",
+        "desc": "复刻80年代经典口感，怀旧酱香。",
+        "price": 358,
+        "image": "/images/photo-1600891964092-4316c288032e.jpg"
+      },
+      {
+        "name": "茅台醇 1998 53%vol 500ml",
+        "desc": "纪念1998年配方，陈酿酱香。",
+        "price": 688,
+        "image": "/images/photo-1599487488170-d11ec9c172f0.jpg"
       }
     ]
   },
   {
     "id": "wuliangye",
-    "name": "五粮液旗舰店",
-    "desc": "四川宜宾·浓香型白酒典范·600年古窖池",
-    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-    "category": "dutyfree",
+    "name": "五粮液官方旗舰店",
+    "name_en": "Wuliangye Official Store",
+    "tags": [
+      "白酒",
+      "浓香",
+      "五粮"
+    ],
+    "rating": 4.9,
+    "category": "白酒",
+    "delivery_time": "约5天",
+    "min_price": 899,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1598515214211-89d3c73ae83b.jpg",
+    "description": "四川宜宾·五粮酿造·600年明代古窖池·浓香型白酒之王",
     "products": [
       {
-        "id": "wl1",
-        "name": "五粮液 52%vol 500ml 普五",
+        "name": "五粮液普五 52%vol 500ml",
+        "desc": "五粮液经典之作，高粱大米糯米小麦玉米五粮酿造，明代古窖池发酵。",
         "price": 1580,
-        "desc": "以高粱大米糯米小麦玉米五种粮食为原料，明代古窖池发酵。浓香型标杆。",
-        "specs": {
-          "酒精度": "52%vol",
-          "容量": "500ml",
-          "香型": "浓香型",
-          "原料": "五粮"
-        },
-        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-        "tags": [
-          "五粮液",
-          "浓香",
-          "古窖"
-        ]
+        "image": "/images/photo-1598103442097-8b74394b95c6.jpg"
+      },
+      {
+        "name": "五粮液1618 52%vol 500ml",
+        "desc": "五粮液高端系列，陈香舒适绵甜醇厚。",
+        "price": 1880,
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg"
+      },
+      {
+        "name": "五粮液·缘定晶生 52%vol 500ml",
+        "desc": "水晶瓶限量版，婚宴送礼首选。",
+        "price": 2880,
+        "image": "/images/photo-1592919505780-303950717480.jpg"
+      },
+      {
+        "name": "五粮春 52%vol 500ml",
+        "desc": "浓香型高性价比之选，日常饮用佳品。",
+        "price": 338,
+        "image": "/images/photo-1591405351990-4726e331f141.jpg"
+      },
+      {
+        "name": "五粮醇 红淡雅 50%vol 500ml",
+        "desc": "大众浓香口粮酒，口感柔和。",
+        "price": 128,
+        "image": "/images/photo-1589128777073-263566ae5e4d.jpg"
+      },
+      {
+        "name": "尖庄 高光 50%vol 500ml",
+        "desc": "五粮液旗下高性价比口粮酒，纯粮固态发酵。",
+        "price": 68,
+        "image": "/images/photo-1588168333986-5078d3ae3976.jpg"
+      },
+      {
+        "name": "五粮液生肖纪念酒·虎年 52%vol 500ml",
+        "desc": "壬寅虎年限量生肖版，收藏价值极高。",
+        "price": 5888,
+        "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg"
+      },
+      {
+        "name": "五粮液 15年陈酿 52%vol 500ml",
+        "desc": "15年洞藏老酒，陈香突出。",
+        "price": 3880,
+        "image": "/images/photo-1587593810167-a84920ea0781.jpg"
+      },
+      {
+        "name": "五粮液 金装 52%vol 500ml",
+        "desc": "金色瓶身设计，送礼体面大气。",
+        "price": 2280,
+        "image": "/images/photo-1587314168485-3236d6710814.jpg"
+      },
+      {
+        "name": "五粮头曲 52%vol 500ml",
+        "desc": "五粮液传统工艺头曲，醇厚丰满。",
+        "price": 258,
+        "image": "/images/photo-1585123334904-845d60e97b29.jpg"
+      }
+    ]
+  },
+  {
+    "id": "jiannanchun",
+    "name": "剑南春官方旗舰店",
+    "name_en": "Jiannanchun Official Store",
+    "tags": [
+      "白酒",
+      "浓香",
+      "唐时宫廷酒"
+    ],
+    "rating": 4.8,
+    "category": "白酒",
+    "delivery_time": "约5天",
+    "min_price": 458,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1583032015879-e5022cb87c3b.jpg",
+    "description": "四川绵竹·唐朝宫廷御酒·1500年酿酒史·浓香型白酒典范",
+    "products": [
+      {
+        "name": "剑南春 水晶剑 52%vol 500ml",
+        "desc": "剑南春明星产品，冰川水酿造，窖香浓郁。",
+        "price": 518,
+        "image": "/images/photo-1582967788606-a171c1080cb0.jpg"
+      },
+      {
+        "name": "剑南春 珍藏级 52%vol 500ml",
+        "desc": "珍藏级特酿，九年以上基酒勾调。",
+        "price": 888,
+        "image": "/images/photo-1580910051074-3eb694886505.jpg"
+      },
+      {
+        "name": "剑南春 东方红 52%vol 500ml",
+        "desc": "剑南春超高端系列，限量生产。",
+        "price": 1880,
+        "image": "/images/photo-1579871494447-9811cf80d66c.jpg"
+      },
+      {
+        "name": "剑南春 金剑南K6 52%vol 500ml",
+        "desc": "中高端浓香，口感醇和，宴请佳选。",
+        "price": 338,
+        "image": "/images/photo-1571896349842-33c89424de2d.jpg"
+      },
+      {
+        "name": "剑南春 银剑南 52%vol 500ml",
+        "desc": "高性价比浓香口粮，纯粮酿造。",
+        "price": 168,
+        "image": "/images/photo-1571513722275-4b41940f54b8.jpg"
+      },
+      {
+        "name": "绵竹大曲 52%vol 500ml",
+        "desc": "经典口粮酒，绵竹百年工艺。",
+        "price": 48,
+        "image": "/images/photo-1569718212165-3a8278d5f624.jpg"
+      },
+      {
+        "name": "剑南春 鉴藏 52%vol 500ml",
+        "desc": "鉴藏限量版，高端礼盒装。",
+        "price": 1280,
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg"
+      },
+      {
+        "name": "剑南春 24K金剑 52%vol 500ml",
+        "desc": "金色剑形瓶身，送礼收藏皆宜。",
+        "price": 1680,
+        "image": "/images/photo-1569263979104-865ab7cd8d13.jpg"
+      },
+      {
+        "name": "剑南春 原浆 60%vol 500ml",
+        "desc": "高度原浆酒，浓烈醇厚。",
+        "price": 888,
+        "image": "/images/photo-1569058242253-92a9c755a0ec.jpg"
+      },
+      {
+        "name": "剑南春 1988复刻版 52%vol 500ml",
+        "desc": "复刻1988年经典配方，老酒风味。",
+        "price": 688,
+        "image": "/images/photo-1565557623262-b51c2513a641.jpg"
+      }
+    ]
+  },
+  {
+    "id": "luzhoulaojiao",
+    "name": "泸州老窖官方旗舰店",
+    "name_en": "Luzhou Laojiao Official Store",
+    "tags": [
+      "白酒",
+      "浓香",
+      "国窖"
+    ],
+    "rating": 4.9,
+    "category": "白酒",
+    "delivery_time": "约5天",
+    "min_price": 1399,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1563379926898-05f4575a45d8.jpg",
+    "description": "四川泸州·国窖1573·440余年连续使用古窖池群·浓香鼻祖",
+    "products": [
+      {
+        "name": "国窖1573 52%vol 500ml",
+        "desc": "泸州老窖旗舰产品，440余年古窖酿造，浓香标杆。",
+        "price": 1499,
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg"
+      },
+      {
+        "name": "泸州老窖特曲 52%vol 500ml",
+        "desc": "浓香型白酒四大名酒之一，醇厚浓郁。",
+        "price": 398,
+        "image": "/images/photo-1559737558-2f5a35f4523b.jpg"
+      },
+      {
+        "name": "泸州老窖特曲60版 52%vol 500ml",
+        "desc": "60年代经典复刻，老酒友最爱。",
+        "price": 688,
+        "image": "/images/photo-1558030006-450675393462.jpg"
+      },
+      {
+        "name": "泸州老窖头曲 52%vol 500ml",
+        "desc": "大众浓香性价比之王，口粮首选。",
+        "price": 128,
+        "image": "/images/photo-1556910103-1c02745aae4d.jpg"
+      },
+      {
+        "name": "泸州老窖窖龄酒 90年 52%vol 500ml",
+        "desc": "90年窖龄老窖池酿造，窖香突出。",
+        "price": 888,
+        "image": "/images/photo-1555939594-58d7cb561ad1.jpg"
+      },
+      {
+        "name": "国窖1573·中国品味 52%vol 500ml",
+        "desc": "国窖1573升级版，品味极致浓香。",
+        "price": 2880,
+        "image": "/images/photo-1555680202-c86f0e12f086.jpg"
+      },
+      {
+        "name": "泸州老窖 百年泸州 52%vol 500ml",
+        "desc": "纪念品牌百年历史，浓中带酱风格。",
+        "price": 588,
+        "image": "/images/photo-1555244162-803834f70033.jpg"
+      },
+      {
+        "name": "泸州老窖 紫砂大曲 52%vol 500ml",
+        "desc": "紫砂瓶盛装，独特陈化效果。",
+        "price": 338,
+        "image": "/images/photo-1555126634-323283e090fa.jpg"
+      },
+      {
+        "name": "泸州老窖 六年窖头曲 52%vol 500ml",
+        "desc": "六年窖藏头曲，口感更加醇和。",
+        "price": 168,
+        "image": "/images/photo-1554200876-56c2f25224fa.jpg"
+      },
+      {
+        "name": "国窖1573·金鸡报晓 52%vol 500ml",
+        "desc": "生肖纪念限量版，艺术与美酒结合。",
+        "price": 3880,
+        "image": "/images/photo-1553284965-83fd3e82fa5a.jpg"
+      }
+    ]
+  },
+  {
+    "id": "yanghe",
+    "name": "洋河官方旗舰店",
+    "name_en": "Yanghe Official Store",
+    "tags": [
+      "白酒",
+      "绵柔",
+      "蓝色经典"
+    ],
+    "rating": 4.8,
+    "category": "白酒",
+    "delivery_time": "约5天",
+    "min_price": 588,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1553062407-98eeb64c6a62.jpg",
+    "description": "江苏宿迁·蓝色经典系列·绵柔型白酒开创者",
+    "products": [
+      {
+        "name": "梦之蓝M9 52%vol 500ml",
+        "desc": "洋河顶级系列，百斤好酒取一斤，极致绵柔。",
+        "price": 2880,
+        "image": "/images/photo-1551218808-94e220e084d2.jpg"
+      },
+      {
+        "name": "梦之蓝M6+ 52%vol 500ml",
+        "desc": "梦之蓝主力产品，绵柔醇厚，送礼首选。",
+        "price": 1280,
+        "image": "/images/photo-1551183053-bf91a1d81141.jpg"
+      },
+      {
+        "name": "梦之蓝M3 52%vol 500ml",
+        "desc": "梦之蓝入门级，绵柔顺滑。",
+        "price": 688,
+        "image": "/images/photo-1550304943-4f24f54ddde9.jpg"
+      },
+      {
+        "name": "天之蓝 52%vol 480ml",
+        "desc": "蓝色经典中端，绵柔清爽。",
+        "price": 398,
+        "image": "/images/photo-1547996160-81dfa63595aa.jpg"
+      },
+      {
+        "name": "海之蓝 52%vol 480ml",
+        "desc": "蓝色经典核心大单品，绵柔甘冽。",
+        "price": 218,
+        "image": "/images/photo-1546833998-877b37c2e5c6.jpg"
+      },
+      {
+        "name": "洋河大曲 55%vol 500ml",
+        "desc": "洋河经典老产品，纯粮固态发酵。",
+        "price": 68,
+        "image": "/images/photo-1546069901-ba9599a7e63c.jpg"
+      },
+      {
+        "name": "洋河小黑瓶 42%vol 100ml",
+        "desc": "精致小瓶装，便携品鉴。",
+        "price": 88,
+        "image": "/images/photo-1545389336-cf090694435e.jpg"
+      },
+      {
+        "name": "梦之蓝 手工班 52%vol 500ml",
+        "desc": "全手工酿造，百斤好酒取半斤。",
+        "price": 5880,
+        "image": "/images/photo-1544636331-e26879cd4d9b.jpg"
+      },
+      {
+        "name": "洋河微分子 43.8%vol 500ml",
+        "desc": "低度健康白酒，适合年轻消费。",
+        "price": 358,
+        "image": "/images/photo-1544551763-8dd44758c2dd.jpg"
+      },
+      {
+        "name": "洋河敦煌 52%vol 500ml",
+        "desc": "敦煌文化联名款，艺术典藏。",
+        "price": 888,
+        "image": "/images/photo-1544551763-46a013bb70d5.jpg"
+      }
+    ]
+  },
+  {
+    "id": "gujinggongjiu",
+    "name": "古井贡酒官方旗舰店",
+    "name_en": "Gujinggongjiu Official Store",
+    "tags": [
+      "白酒",
+      "浓香",
+      "年份原浆"
+    ],
+    "rating": 4.7,
+    "category": "白酒",
+    "delivery_time": "约5天",
+    "min_price": 388,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1544161515-4ab6ce6db874.jpg",
+    "description": "安徽亳州·千年古井·曹操献酒·年份原浆开创者",
+    "products": [
+      {
+        "name": "古井贡酒 年份原浆 古20 52%vol 500ml",
+        "desc": "古井顶级系列，20年以上基酒勾调。",
+        "price": 1680,
+        "image": "/images/photo-1544025162-d76694265947.jpg"
+      },
+      {
+        "name": "古井贡酒 年份原浆 古16 52%vol 500ml",
+        "desc": "16年陈酿，绵甜爽净。",
+        "price": 888,
+        "image": "/images/photo-1542291026-7eec264c27ff.jpg"
+      },
+      {
+        "name": "古井贡酒 年份原浆 古8 50%vol 500ml",
+        "desc": "8年原浆，浓香突出入口甘美。",
+        "price": 398,
+        "image": "/images/photo-1540962351504-03099e0a754b.jpg"
+      },
+      {
+        "name": "古井贡酒 年份原浆 古5 50%vol 500ml",
+        "desc": "5年陈酿，日常饮用佳选。",
+        "price": 238,
+        "image": "/images/photo-1540189549336-e6e99c3679fe.jpg"
+      },
+      {
+        "name": "古井贡酒 年份原浆 献礼版 50%vol 500ml",
+        "desc": "性价比年份原浆，送礼实惠。",
+        "price": 188,
+        "image": "/images/photo-1535131749006-b7f58c99034b.jpg"
+      },
+      {
+        "name": "古井贡酒 经典玻瓶 50%vol 500ml",
+        "desc": "经典口粮酒，纯粮酿造。",
+        "price": 58,
+        "image": "/images/photo-1534773728080-33d31da27ae5.jpg"
+      },
+      {
+        "name": "古井贡酒 1979复刻 50%vol 500ml",
+        "desc": "复刻1979年历史配方。",
+        "price": 588,
+        "image": "/images/photo-1534604973900-c43ab4c2e0ab.jpg"
+      },
+      {
+        "name": "古井贡酒 桃花春曲 52%vol 500ml",
+        "desc": "春季桃花时节制曲，独特风味。",
+        "price": 488,
+        "image": "/images/photo-1534080564583-6be75777b70a.jpg"
+      },
+      {
+        "name": "古井贡酒 青花瓷 50%vol 500ml",
+        "desc": "青花瓷瓶身，文化品味。",
+        "price": 688,
+        "image": "/images/photo-1532550907401-a500c9a57435.jpg"
+      },
+      {
+        "name": "古井贡酒 30年窖藏 52%vol 1000ml",
+        "desc": "30年窖藏大瓶装，珍藏级美酒。",
+        "price": 3880,
+        "image": "/images/photo-1531366936337-7c912a4589a7.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hennessy",
+    "name": "轩尼诗官方旗舰店",
+    "name_en": "Hennessy Official Store",
+    "tags": [
+      "洋酒",
+      "干邑",
+      "XO"
+    ],
+    "rating": 4.9,
+    "category": "洋酒",
+    "delivery_time": "约7天",
+    "min_price": 688,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1529626455594-4ff0802cfb7e.jpg",
+    "description": "法国轩尼诗·干邑之王·始于1765年·LVMH集团旗下",
+    "products": [
+      {
+        "name": "Hennessy XO 干邑白兰地 700ml",
+        "desc": "100多种陈年生命之水调配，陈酿至少10年，层次丰富。",
+        "price": 3880,
+        "image": "/images/photo-1529333166437-7750a6dd5a70.jpg"
+      },
+      {
+        "name": "Hennessy VSOP 干邑白兰地 700ml",
+        "desc": "经典VSOP级别，陈酿4年以上，果香馥郁。",
+        "price": 688,
+        "image": "/images/photo-1529042410759-befb1204b468.jpg"
+      },
+      {
+        "name": "Hennessy Paradis 干邑白兰地 700ml",
+        "desc": "轩尼诗顶级珍藏，25-130年生命之水调配。",
+        "price": 18800,
+        "image": "/images/photo-1524678714210-9917a6c619c2.jpg"
+      },
+      {
+        "name": "Hennessy Richard 干邑白兰地 700ml",
+        "desc": "以创始人命名的顶级珍品，百年陈酿。",
+        "price": 38800,
+        "image": "/images/photo-1524230659092-07f99a75c013.jpg"
+      },
+      {
+        "name": "轩尼诗新点 干邑白兰地 700ml",
+        "desc": "年轻时尚之选，活泼果香风格。",
+        "price": 398,
+        "image": "/images/photo-1523170335258-f5ed11844a49.jpg"
+      },
+      {
+        "name": "Hennessy XXO 干邑白兰地 700ml",
+        "desc": "超越XO级别，陈酿14年以上。",
+        "price": 6880,
+        "image": "/images/photo-1518199266791-5375a83190b7.jpg"
+      },
+      {
+        "name": "轩尼诗百乐廷 干邑白兰地 700ml",
+        "desc": "Extra级别，花果香与香料完美融合。",
+        "price": 12800,
+        "image": "/images/photo-1517336714731-489689fd1ca8.jpg"
+      },
+      {
+        "name": "轩尼诗詹姆士 干邑白兰地 700ml",
+        "desc": "纪念创始人詹姆士·轩尼诗的特调款。",
+        "price": 8880,
+        "image": "/images/photo-1516724562728-afc824a36e84.jpg"
+      },
+      {
+        "name": "Hennessy VS 干邑白兰地 700ml",
+        "desc": "入门级干邑，陈酿至少2年。",
+        "price": 328,
+        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg"
+      },
+      {
+        "name": "轩尼诗大师精选 干邑白兰地 700ml",
+        "desc": "调酒大师精选系列，限量批次。",
+        "price": 5880,
+        "image": "/images/photo-1514306191717-452ec28c7814.jpg"
+      }
+    ]
+  },
+  {
+    "id": "remymartin",
+    "name": "人头马官方旗舰店",
+    "name_en": "Rémy Martin Official Store",
+    "tags": [
+      "洋酒",
+      "干邑",
+      "CLUB"
+    ],
+    "rating": 4.8,
+    "category": "洋酒",
+    "delivery_time": "约7天",
+    "min_price": 388,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1514282401047-d79a71a590e8.jpg",
+    "description": "法国人头马·人头马一开好事自然来·优质香槟区干邑",
+    "products": [
+      {
+        "name": "人头马CLUB 干邑白兰地 700ml",
+        "desc": "人头马经典款，优质香槟区干邑，醇和优雅。",
+        "price": 888,
+        "image": "/images/photo-1512621776951-a57141f2eefd.jpg"
+      },
+      {
+        "name": "人头马XO 干邑白兰地 700ml",
+        "desc": "XO级别，数百种生命之水精心调配。",
+        "price": 2880,
+        "image": "/images/photo-1509440159596-0249088772ff.jpg"
+      },
+      {
+        "name": "人头马VSOP 干邑白兰地 700ml",
+        "desc": "VSOP级别标杆，果香花香平衡。",
+        "price": 588,
+        "image": "/images/photo-1507652313519-d4e9174996dd.jpg"
+      },
+      {
+        "name": "人头马1738皇家礼赞 干邑 700ml",
+        "desc": "纪念路易十五1738年特授荣誉的复刻款。",
+        "price": 1280,
+        "image": "/images/photo-1506354666786-959d6d497f1a.jpg"
+      },
+      {
+        "name": "人头马Tercet 干邑白兰地 700ml",
+        "desc": "以三种风土生命之水调配，独特风格。",
+        "price": 1680,
+        "image": "/images/photo-1505740420928-5e560c06d30e.jpg"
+      },
+      {
+        "name": "人头马V.S.O.P.限量礼盒 700ml",
+        "desc": "节日限定礼盒装，送礼体面大方。",
+        "price": 688,
+        "image": "/images/photo-1504674900247-0877df9cc836.jpg"
+      },
+      {
+        "name": "人头马1898 干邑白兰地 700ml",
+        "desc": "纪念1898年的经典复刻款。",
+        "price": 2280,
+        "image": "/images/photo-1503376780353-7e6692767b70.jpg"
+      },
+      {
+        "name": "人头马大香槟区 干邑 700ml",
+        "desc": "100%大香槟区葡萄酿造，顶级品质。",
+        "price": 5880,
+        "image": "/images/photo-1500937386664-56d1dfef3854.jpg"
+      },
+      {
+        "name": "人头马路易十三 干邑 700ml",
+        "desc": "人头马顶级产品，百年陈酿水晶瓶。",
+        "price": 38800,
+        "image": "/images/photo-1496116218417-1a781b1c416c.jpg"
+      },
+      {
+        "name": "人头马VSOP 1L装 干邑白兰地",
+        "desc": "大容量实惠装，派对首选。",
+        "price": 788,
+        "image": "/images/photo-1494790108377-be9c29b29330.jpg"
+      }
+    ]
+  },
+  {
+    "id": "martell",
+    "name": "马爹利官方旗舰店",
+    "name_en": "Martell Official Store",
+    "tags": [
+      "洋酒",
+      "干邑",
+      "蓝带"
+    ],
+    "rating": 4.8,
+    "category": "洋酒",
+    "delivery_time": "约7天",
+    "min_price": 688,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1476718406336-bb5a9690ee2a.jpg",
+    "description": "法国马爹利·始于1715年·最古老的干邑品牌·蓝带经典",
+    "products": [
+      {
+        "name": "马爹利蓝带 干邑白兰地 700ml",
+        "desc": "马爹利明星产品，宝德区生命之水为主，圆润醇厚。",
+        "price": 1680,
+        "image": "/images/photo-1473968512647-3e447244af8f.jpg"
+      },
+      {
+        "name": "马爹利XO 干邑白兰地 700ml",
+        "desc": "拱形瓶XO，陈年15-35年，大香槟区与宝德区调配。",
+        "price": 2880,
+        "image": "/images/photo-1470337458703-46ad1756a187.jpg"
+      },
+      {
+        "name": "马爹利名士 干邑白兰地 700ml",
+        "desc": "现代风格干邑，口感顺滑果香突出。",
+        "price": 688,
+        "image": "/images/photo-1467003909585-2f8a72700288.jpg"
+      },
+      {
+        "name": "马爹利鼎盛 干邑白兰地 700ml",
+        "desc": "VSOP级别，适合调配长饮。",
+        "price": 458,
+        "image": "/images/photo-1455619452474-d2be8b1e70cd.jpg"
+      },
+      {
+        "name": "马爹利尚选 干邑白兰地 700ml",
+        "desc": "Extra级别，来自马爹利核心产区。",
+        "price": 5880,
+        "image": "/images/photo-1414235077428-338989a2e8c0.jpg"
+      },
+      {
+        "name": "马爹利高希霸 干邑 700ml",
+        "desc": "与高希霸雪茄特调配对款。",
+        "price": 3880,
+        "image": "/images/photo-1551698618-1dfe5d97d256.jpg"
+      },
+      {
+        "name": "马爹利XXO 干邑白兰地 700ml",
+        "desc": "超越XO级别，14年以上陈酿。",
+        "price": 4880,
+        "image": "/images/photo-1622434641406-a158123450f9.jpg"
+      },
+      {
+        "name": "马爹利VS 干邑白兰地 700ml",
+        "desc": "入门级干邑，年轻活力风格。",
+        "price": 298,
+        "image": "/images/photo-1621996346565-e3dbc646d9a9.jpg"
+      },
+      {
+        "name": "马爹利300周年纪念版 700ml",
+        "desc": "纪念品牌300周年的特别限量版。",
+        "price": 8880,
+        "image": "/images/photo-1617196034796-73dfa7b1fd56.jpg"
+      },
+      {
+        "name": "马爹利蓝带傲创 干邑 700ml",
+        "desc": "蓝带升级版，更长时间陈酿。",
+        "price": 2880,
+        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg"
+      }
+    ]
+  },
+  {
+    "id": "johnniewalker",
+    "name": "尊尼获加官方旗舰店",
+    "name_en": "Johnnie Walker Official Store",
+    "tags": [
+      "洋酒",
+      "威士忌",
+      "调和"
+    ],
+    "rating": 4.8,
+    "category": "洋酒",
+    "delivery_time": "约7天",
+    "min_price": 198,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1611143669185-af224c5e3252.jpg",
+    "description": "苏格兰尊尼获加·Keep Walking·全球第一调和威士忌品牌",
+    "products": [
+      {
+        "name": "Johnnie Walker Blue Label 蓝牌 700ml",
+        "desc": "尊尼获加顶级调配，稀有威士忌原酒，极致顺滑。",
+        "price": 1880,
+        "image": "/images/photo-1610945265064-0e34e5519bbf.jpg"
+      },
+      {
+        "name": "Johnnie Walker Gold Label 金牌 700ml",
+        "desc": "18年以上原酒调配，蜂蜜柔滑口感。",
+        "price": 888,
+        "image": "/images/photo-1606144042614-b2417e99c4e3.jpg"
+      },
+      {
+        "name": "Johnnie Walker 18年 调配威士忌 700ml",
+        "desc": "18年陈酿，复杂层次感。",
+        "price": 1280,
+        "image": "/images/photo-1603133872878-684f208fb84b.jpg"
+      },
+      {
+        "name": "Johnnie Walker Black Label 12年 700ml",
+        "desc": "黑牌12年经典，烟熏果香平衡。",
+        "price": 388,
+        "image": "/images/photo-1600891964092-4316c288032e.jpg"
+      },
+      {
+        "name": "Johnnie Walker Double Black 黑牌醇黑 700ml",
+        "desc": "双黑版，加重烟熏泥煤风格。",
+        "price": 488,
+        "image": "/images/photo-1599487488170-d11ec9c172f0.jpg"
+      },
+      {
+        "name": "Johnnie Walker Green Label 绿牌 15年 700ml",
+        "desc": "纯麦混合15年，斯佩塞风格。",
+        "price": 688,
+        "image": "/images/photo-1598515214211-89d3c73ae83b.jpg"
+      },
+      {
+        "name": "Johnnie Walker Red Label 红牌 700ml",
+        "desc": "经典入门款，适合调饮。",
+        "price": 198,
+        "image": "/images/photo-1598103442097-8b74394b95c6.jpg"
+      },
+      {
+        "name": "Johnnie Walker XR21 21年 700ml",
+        "desc": "纪念亚历山大爵士的21年陈酿礼赞。",
+        "price": 1680,
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg"
+      },
+      {
+        "name": "Johnnie Walker 调配大师典藏 700ml",
+        "desc": "大师精选限量批次，收藏级别。",
+        "price": 2880,
+        "image": "/images/photo-1592919505780-303950717480.jpg"
+      },
+      {
+        "name": "Johnnie Walker King George V 700ml",
+        "desc": "纪念乔治五世国王的荣勋调配。",
+        "price": 3880,
+        "image": "/images/photo-1591405351990-4726e331f141.jpg"
       }
     ]
   },
   {
     "id": "macallan",
-    "name": "麦卡伦旗舰店",
-    "desc": "苏格兰麦卡伦·单一麦芽威士忌之王·雪莉桶专家",
-    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-    "category": "dutyfree",
+    "name": "麦卡伦官方旗舰店",
+    "name_en": "The Macallan Official Store",
+    "tags": [
+      "洋酒",
+      "单一麦芽",
+      "雪莉桶"
+    ],
+    "rating": 4.9,
+    "category": "洋酒",
+    "delivery_time": "约7天",
+    "min_price": 888,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1589128777073-263566ae5e4d.jpg",
+    "description": "苏格兰麦卡伦·单一麦芽威士忌之王·雪莉桶陈酿专家·斯佩塞明珠",
     "products": [
       {
-        "id": "mc1",
-        "name": "Macallan 18年 雪莉桶 700ml",
+        "name": "Macallan 18年 雪莉桶 单一麦芽 700ml",
+        "desc": "100%雪莉桶陈酿18年，干果巧克力香料层次丰富。",
         "price": 6800,
-        "desc": "100%雪莉桶陈酿18年。干果、巧克力、香料层次丰富。单一麦芽威士忌的标杆。",
-        "specs": {
-          "容量": "700ml",
-          "年份": "18年",
-          "桶型": "雪莉桶",
-          "产地": "苏格兰斯佩塞"
-        },
-        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
-        "tags": [
-          "麦卡伦",
-          "18年",
-          "雪莉桶"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "davidoff",
-    "name": "大卫杜夫旗舰店",
-    "desc": "瑞士大卫杜夫·雪茄奢侈品的代名词·始于1911年",
-    "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
-    "category": "dutyfree",
-    "products": [
+        "image": "/images/photo-1588168333986-5078d3ae3976.jpg"
+      },
       {
-        "id": "dv1",
-        "name": "Davidoff Winston Churchill 雪茄盒25支",
-        "price": 12800,
-        "desc": "丘吉尔纪念系列，厄瓜多尔茄衣+多米尼加茄芯。中等浓郁，木香与坚果风味。",
-        "specs": {
-          "支数": "25支",
-          "茄衣": "厄瓜多尔",
-          "茄芯": "多米尼加",
-          "风味": "木香/坚果"
-        },
-        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
-        "tags": [
-          "雪茄",
-          "大卫杜夫",
-          "丘吉尔"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cohiba",
-    "name": "高希霸旗舰店",
-    "desc": "古巴高希霸·古巴雪茄之王·卡斯特罗至爱",
-    "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
-    "category": "dutyfree",
-    "products": [
+        "name": "Macallan 12年 雪莉桶 单一麦芽 700ml",
+        "desc": "经典入门雪莉桶，果干太妃糖风味。",
+        "price": 1280,
+        "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg"
+      },
       {
-        "id": "ch1",
-        "name": "Cohiba Behike 56 木盒10支",
+        "name": "Macallan 12年 双桶 单一麦芽 700ml",
+        "desc": "雪莉桶+波本桶双桶陈酿，清新蜂蜜风格。",
+        "price": 888,
+        "image": "/images/photo-1587593810167-a84920ea0781.jpg"
+      },
+      {
+        "name": "Macallan 18年 双桶 单一麦芽 700ml",
+        "desc": "双桶18年，美国橡木+欧洲橡木雪莉桶。",
+        "price": 4880,
+        "image": "/images/photo-1587314168485-3236d6710814.jpg"
+      },
+      {
+        "name": "Macallan 25年 雪莉桶 单一麦芽 700ml",
+        "desc": "25年雪莉桶顶级陈酿，极致奢华。",
         "price": 28800,
-        "desc": "高希霸最顶级的Behike系列。稀有Medio Tiempo烟叶，环径56，浓郁复杂的风味。",
-        "specs": {
-          "支数": "10支",
-          "环径": "56",
-          "产地": "古巴",
-          "烟叶": "Medio Tiempo"
-        },
-        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
-        "tags": [
-          "高希霸",
-          "Behike",
-          "古巴"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "laperla",
-    "name": "La Perla旗舰店",
-    "desc": "意大利La Perla·内衣界的劳斯莱斯·1954年创立",
-    "image": "/images/photo-1554200876-56c2f25224fa.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "lp1",
-        "name": "Silk Saga 真丝系列套装",
-        "price": 6800,
-        "desc": "100%桑蚕丝面料的奢华触感。意大利工匠手工制作，Leavers蕾丝镶边。",
-        "specs": {
-          "材质": "100%桑蚕丝",
-          "工艺": "手工",
-          "蕾丝": "Leavers法式蕾丝"
-        },
-        "image": "/images/photo-1554200876-56c2f25224fa.jpg",
-        "tags": [
-          "La Perla",
-          "真丝",
-          "手工"
-        ]
+        "image": "/images/photo-1585123334904-845d60e97b29.jpg"
       },
       {
-        "id": "lp2",
-        "name": "La Perla Maison 睡袍",
-        "price": 8800,
-        "desc": "丝绸与蕾丝结合的居家艺术品。法国加莱地区手工蕾丝，意大利科莫湖丝绸。",
-        "specs": {
-          "材质": "丝绸+蕾丝",
-          "蕾丝": "法国加莱手工",
-          "丝绸": "意大利科莫湖"
-        },
-        "image": "/images/photo-1554200876-56c2f25224fa.jpg",
-        "tags": [
-          "La Perla",
-          "睡袍",
-          "奢侈"
-        ]
+        "name": "Macallan Rare Cask 黑钻 单一麦芽 700ml",
+        "desc": "稀有雪莉桶精选，少于1%桶被选取。",
+        "price": 3880,
+        "image": "/images/photo-1583032015879-e5022cb87c3b.jpg"
+      },
+      {
+        "name": "Macallan Harmony 臻彩系列 单一麦芽 700ml",
+        "desc": "限量臻彩系列，独特风味探索。",
+        "price": 2880,
+        "image": "/images/photo-1582967788606-a171c1080cb0.jpg"
+      },
+      {
+        "name": "Macallan Estate 庄园系列 单一麦芽 700ml",
+        "desc": "以庄园自产大麦制成，风土表达。",
+        "price": 5880,
+        "image": "/images/photo-1580910051074-3eb694886505.jpg"
+      },
+      {
+        "name": "Macallan 30年 雪莉桶 单一麦芽 700ml",
+        "desc": "30年雪莉桶稀世珍品，收藏级别。",
+        "price": 68800,
+        "image": "/images/photo-1579871494447-9811cf80d66c.jpg"
+      },
+      {
+        "name": "Macallan Classic Cut 2025版 单一麦芽 700ml",
+        "desc": "年度限量经典切割系列。",
+        "price": 1980,
+        "image": "/images/photo-1571896349842-33c89424de2d.jpg"
       }
     ]
   },
   {
-    "id": "agent",
-    "name": "Agent Provocateur旗舰店",
-    "desc": "英国大内密探·叛逆奢华·1994年创立",
+    "id": "royalsalute",
+    "name": "皇家礼炮官方旗舰店",
+    "name_en": "Royal Salute Official Store",
+    "tags": [
+      "洋酒",
+      "威士忌",
+      "调和"
+    ],
+    "rating": 4.9,
+    "category": "洋酒",
+    "delivery_time": "约7天",
+    "min_price": 888,
+    "address": "京东官方旗舰店",
     "image": "/images/photo-1571513722275-4b41940f54b8.jpg",
-    "category": "dutyfree",
+    "description": "苏格兰皇家礼炮·始于1953年·纪念英女王加冕·21年陈酿起步",
     "products": [
       {
-        "id": "ag1",
-        "name": "Lorna 蕾丝套装",
-        "price": 4800,
-        "desc": "黑色法国加莱蕾丝，丝绸绑带设计。标志性的Agent Provocateur性感风格。",
-        "specs": {
-          "材质": "蕾丝+丝绸",
-          "蕾丝": "法国加莱",
-          "风格": "性感奢华"
-        },
-        "image": "/images/photo-1571513722275-4b41940f54b8.jpg",
-        "tags": [
-          "Agent Provocateur",
-          "蕾丝",
-          "英伦"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "arcteryx",
-    "name": "始祖鸟旗舰店",
-    "desc": "加拿大始祖鸟·户外装备天花板·1989年温哥华创立",
-    "image": "/images/photo-1551698618-1dfe5d97d256.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "ac1",
-        "name": "Alpha SV Jacket 硬壳冲锋衣",
-        "price": 8800,
-        "desc": "GORE-TEX Pro 3层压胶，N100d高强度面料。极端环境下的终极保护。",
-        "specs": {
-          "材质": "GORE-TEX Pro",
-          "面料": "N100d",
-          "用途": "极端环境/登山"
-        },
-        "image": "/images/photo-1551698618-1dfe5d97d256.jpg",
-        "tags": [
-          "始祖鸟",
-          "硬壳",
-          "登山"
-        ]
+        "name": "皇家礼炮21年 调和威士忌 700ml",
+        "desc": "经典蓝瓶，21年以上陈酿，顺滑优雅。",
+        "price": 1580,
+        "image": "/images/photo-1569718212165-3a8278d5f624.jpg"
       },
       {
-        "id": "ac2",
-        "name": "Cerium SV Hoody 羽绒服",
-        "price": 6800,
-        "desc": "850蓬松度欧洲鹅绒，Arato 10超轻面料。极寒环境下的保暖利器。",
-        "specs": {
-          "填充": "850蓬欧洲鹅绒",
-          "面料": "Arato 10",
-          "重量": "305g"
-        },
-        "image": "/images/photo-1551698618-1dfe5d97d256.jpg",
-        "tags": [
-          "始祖鸟",
-          "羽绒",
-          "轻量"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "nike",
-    "name": "Nike旗舰店",
-    "desc": "美国Nike·Just Do It·全球运动品牌第一",
-    "image": "/images/photo-1542291026-7eec264c27ff.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "nk1",
-        "name": "Air Jordan 1 Retro High OG",
-        "price": 1499,
-        "desc": "经典黑红配色，1985年首发。全掌Air-Sole气垫，头层牛皮鞋面。",
-        "specs": {
-          "科技": "Air-Sole",
-          "鞋面": "头层牛皮",
-          "首发": "1985年"
-        },
-        "image": "/images/photo-1542291026-7eec264c27ff.jpg",
-        "tags": [
-          "Nike",
-          "AJ1",
-          "经典"
-        ]
+        "name": "皇家礼炮21年 雪地马球限量版 700ml",
+        "desc": "马球运动限量版，独特包装设计。",
+        "price": 1880,
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg"
       },
       {
-        "id": "nk2",
-        "name": "Nike Vaporfly 3 碳板跑鞋",
-        "price": 2299,
-        "desc": "全掌ZoomX泡棉+碳纤维板。世界纪录级马拉松竞速跑鞋。",
-        "specs": {
-          "中底": "ZoomX+碳板",
-          "重量": "约200g",
-          "用途": "马拉松竞速"
-        },
-        "image": "/images/photo-1542291026-7eec264c27ff.jpg",
-        "tags": [
-          "Nike",
-          "碳板",
-          "竞速"
-        ]
+        "name": "皇家礼炮38年 命运之石 调和威士忌 700ml",
+        "desc": "38年陈酿，向苏格兰命运之石致敬。",
+        "price": 8880,
+        "image": "/images/photo-1569263979104-865ab7cd8d13.jpg"
+      },
+      {
+        "name": "皇家礼炮62响 礼赞 调和威士忌 700ml",
+        "desc": "62年陈酿稀世珍品，全球限量。",
+        "price": 28800,
+        "image": "/images/photo-1569058242253-92a9c755a0ec.jpg"
+      },
+      {
+        "name": "皇家礼炮21年 绿瓶 调和威士忌 700ml",
+        "desc": "绿瓶限量版，清新风格。",
+        "price": 1680,
+        "image": "/images/photo-1565557623262-b51c2513a641.jpg"
+      },
+      {
+        "name": "皇家礼炮 王者之钻 调和威士忌 700ml",
+        "desc": "钻石瓶身设计，超高端礼赞。",
+        "price": 12800,
+        "image": "/images/photo-1563379926898-05f4575a45d8.jpg"
+      },
+      {
+        "name": "皇家礼炮21年 礼盒装 调和威士忌 700ml",
+        "desc": "精美礼盒装配送威士忌杯，送礼首选。",
+        "price": 1880,
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg"
+      },
+      {
+        "name": "皇家礼炮32年 王者之冕 调和威士忌 700ml",
+        "desc": "32年稀有陈酿，仅限特定渠道。",
+        "price": 5880,
+        "image": "/images/photo-1559737558-2f5a35f4523b.jpg"
+      },
+      {
+        "name": "皇家礼炮 时光系列 50年 调和威士忌 700ml",
+        "desc": "50年时光陈酿，稀世珍藏。",
+        "price": 38800,
+        "image": "/images/photo-1558030006-450675393462.jpg"
+      },
+      {
+        "name": "皇家礼炮 永恒系列 调和威士忌 700ml",
+        "desc": "致敬永恒的调配艺术。",
+        "price": 2880,
+        "image": "/images/photo-1556910103-1c02745aae4d.jpg"
       }
     ]
   },
   {
-    "id": "taylormade",
-    "name": "TaylorMade旗舰店",
-    "desc": "美国TaylorMade·高尔夫装备王者·Stealth暗影系列",
+    "id": "rolex",
+    "name": "劳力士官方旗舰店",
+    "name_en": "Rolex Official Store",
+    "tags": [
+      "手表",
+      "机械表",
+      "奢华"
+    ],
+    "rating": 5.0,
+    "category": "手表",
+    "delivery_time": "约10天",
+    "min_price": 68000,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1555939594-58d7cb561ad1.jpg",
+    "description": "瑞士劳力士·皇冠标志·全球最负盛名的腕表品牌·精准耐用",
+    "products": [
+      {
+        "name": "Submariner 126610LV 绿水鬼",
+        "desc": "41mm蚝式钢，绿色陶瓷表圈，3235自动机芯，防水300米。",
+        "price": 168000,
+        "image": "/images/photo-1555680202-c86f0e12f086.jpg"
+      },
+      {
+        "name": "Daytona 116500LN 迪通拿",
+        "desc": "40mm蚝式钢，黑白熊猫盘，4130计时机芯。",
+        "price": 285000,
+        "image": "/images/photo-1555244162-803834f70033.jpg"
+      },
+      {
+        "name": "Datejust 126334 日志型",
+        "desc": "41mm蚝式钢+白金，蓝盘，3235机芯。",
+        "price": 98000,
+        "image": "/images/photo-1555126634-323283e090fa.jpg"
+      },
+      {
+        "name": "Day-Date 228238 星期日历型",
+        "desc": "40mm 18K黄金总统型表带，3255机芯。",
+        "price": 398000,
+        "image": "/images/photo-1554200876-56c2f25224fa.jpg"
+      },
+      {
+        "name": "GMT-Master II 126710BLRO 百事圈",
+        "desc": "40mm蚝式钢，红蓝双色陶瓷圈，3285机芯。",
+        "price": 188000,
+        "image": "/images/photo-1553284965-83fd3e82fa5a.jpg"
+      },
+      {
+        "name": "Explorer I 124270 探险家",
+        "desc": "36mm蚝式钢，黑色表盘，3230机芯。",
+        "price": 68000,
+        "image": "/images/photo-1553062407-98eeb64c6a62.jpg"
+      },
+      {
+        "name": "Yacht-Master 126622 游艇名仕",
+        "desc": "40mm蚝式钢+铂金圈，3235机芯。",
+        "price": 138000,
+        "image": "/images/photo-1551218808-94e220e084d2.jpg"
+      },
+      {
+        "name": "Sky-Dweller 336934 天行者",
+        "desc": "42mm蚝式钢+白金圈，9002年历机芯。",
+        "price": 218000,
+        "image": "/images/photo-1551183053-bf91a1d81141.jpg"
+      },
+      {
+        "name": "Cosmograph Daytona 铂金冰蓝迪",
+        "desc": "40mm铂金，冰蓝色表盘，计时机芯。",
+        "price": 888000,
+        "image": "/images/photo-1550304943-4f24f54ddde9.jpg"
+      },
+      {
+        "name": "Oyster Perpetual 124300 41mm",
+        "desc": "41mm蚝式钢，多彩表盘选择。",
+        "price": 58000,
+        "image": "/images/photo-1547996160-81dfa63595aa.jpg"
+      }
+    ]
+  },
+  {
+    "id": "omega",
+    "name": "欧米茄官方旗舰店",
+    "name_en": "Omega Official Store",
+    "tags": [
+      "手表",
+      "瑞士",
+      "登月"
+    ],
+    "rating": 4.9,
+    "category": "手表",
+    "delivery_time": "约10天",
+    "min_price": 38000,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1546833998-877b37c2e5c6.jpg",
+    "description": "瑞士欧米茄·登月传奇·奥运官方计时·007邦德之选",
+    "products": [
+      {
+        "name": "Speedmaster Moonwatch 超霸登月",
+        "desc": "42mm不锈钢，3861手动机芯，NASA认证登月腕表。",
+        "price": 58000,
+        "image": "/images/photo-1546069901-ba9599a7e63c.jpg"
+      },
+      {
+        "name": "Seamaster Diver 300M 海马潜水",
+        "desc": "42mm不锈钢，陶瓷表圈，8800机芯，007同款。",
+        "price": 48000,
+        "image": "/images/photo-1545389336-cf090694435e.jpg"
+      },
+      {
+        "name": "Seamaster Planet Ocean 600M",
+        "desc": "43.5mm不锈钢，600米防水，8900机芯。",
+        "price": 58800,
+        "image": "/images/photo-1544636331-e26879cd4d9b.jpg"
+      },
+      {
+        "name": "Constellation 星座 41mm",
+        "desc": "41mm不锈钢+18K金，8900机芯。",
+        "price": 52800,
+        "image": "/images/photo-1544551763-8dd44758c2dd.jpg"
+      },
+      {
+        "name": "De Ville Prestige 碟飞 40mm",
+        "desc": "40mm不锈钢，正装优雅，8800机芯。",
+        "price": 38000,
+        "image": "/images/photo-1544551763-46a013bb70d5.jpg"
+      },
+      {
+        "name": "Speedmaster Dark Side of the Moon",
+        "desc": "44.25mm黑色陶瓷，月之暗面限量版。",
+        "price": 98000,
+        "image": "/images/photo-1544161515-4ab6ce6db874.jpg"
+      },
+      {
+        "name": "Seamaster Aqua Terra 150M",
+        "desc": "41mm不锈钢，甲板纹表盘，8900机芯。",
+        "price": 48800,
+        "image": "/images/photo-1544025162-d76694265947.jpg"
+      },
+      {
+        "name": "Speedmaster 38 Orbis 奥比斯",
+        "desc": "38mm不锈钢，奥比斯慈善款。",
+        "price": 42800,
+        "image": "/images/photo-1542291026-7eec264c27ff.jpg"
+      },
+      {
+        "name": "Seamaster 300 Heritage 复古",
+        "desc": "41mm不锈钢，复古风格设计。",
+        "price": 62800,
+        "image": "/images/photo-1540962351504-03099e0a754b.jpg"
+      },
+      {
+        "name": "Speedmaster X-33 Marstimer 火星表",
+        "desc": "45mm钛合金，火星任务专用计时。",
+        "price": 88000,
+        "image": "/images/photo-1540189549336-e6e99c3679fe.jpg"
+      }
+    ]
+  },
+  {
+    "id": "patekphilippe",
+    "name": "百达翡丽官方旗舰店",
+    "name_en": "Patek Philippe Official Store",
+    "tags": [
+      "手表",
+      "顶级",
+      "传承"
+    ],
+    "rating": 5.0,
+    "category": "手表",
+    "delivery_time": "约15天",
+    "min_price": 280000,
+    "address": "京东官方旗舰店",
     "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
-    "category": "dutyfree",
+    "description": "瑞士百达翡丽·表王之王·始于1839年·代代相传的传世之作",
     "products": [
       {
-        "id": "tm1",
-        "name": "Stealth 2 Plus 一号木杆",
-        "price": 5800,
-        "desc": "60层碳纤维杆面，Fujikura Ventus TR杆身。极低倒旋率+最大球速。",
-        "specs": {
-          "杆面": "60层碳纤维",
-          "杆身": "Fujikura Ventus TR",
-          "特点": "低倒旋/高球速"
-        },
-        "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
-        "tags": [
-          "高尔夫",
-          "一号木",
-          "碳纤维"
-        ]
+        "name": "Nautilus 5711/1A 鹦鹉螺",
+        "desc": "40mm不锈钢，蓝色渐变表盘。最难买钢表之王。",
+        "price": 880000,
+        "image": "/images/photo-1534773728080-33d31da27ae5.jpg"
       },
       {
-        "id": "tm2",
-        "name": "P·7TW 老虎·伍兹签名铁杆组",
+        "name": "Calatrava 5227J 将官型",
+        "desc": "39mm 18K黄金，珐琅表盘，军官底盖。",
+        "price": 328000,
+        "image": "/images/photo-1534604973900-c43ab4c2e0ab.jpg"
+      },
+      {
+        "name": "Aquanaut 5167A 手雷",
+        "desc": "40mm不锈钢，Tropical复合表带。",
+        "price": 388000,
+        "image": "/images/photo-1534080564583-6be75777b70a.jpg"
+      },
+      {
+        "name": "Nautilus 5990/1A 旅行时间计时",
+        "desc": "40.5mm不锈钢，双时区+计时。",
+        "price": 1280000,
+        "image": "/images/photo-1532550907401-a500c9a57435.jpg"
+      },
+      {
+        "name": "Grand Complications 5320G 万年历",
+        "desc": "40mm白金，万年历+月相功能。",
+        "price": 888000,
+        "image": "/images/photo-1531366936337-7c912a4589a7.jpg"
+      },
+      {
+        "name": "Twenty~4 7300/1200A 女表",
+        "desc": "36mm不锈钢，钻石镶嵌石英机芯。",
+        "price": 148000,
+        "image": "/images/photo-1529626455594-4ff0802cfb7e.jpg"
+      },
+      {
+        "name": "Complications 5524R 飞行员",
+        "desc": "42mm玫瑰金，飞行员双时区。",
+        "price": 528000,
+        "image": "/images/photo-1529333166437-7750a6dd5a70.jpg"
+      },
+      {
+        "name": "Calatrava 6119R 巴黎钉纹",
+        "desc": "39mm玫瑰金，巴黎钉纹表圈。",
+        "price": 298000,
+        "image": "/images/photo-1529042410759-befb1204b468.jpg"
+      },
+      {
+        "name": "Nautilus 5980/1R 计时全金",
+        "desc": "40.5mm玫瑰金，计时功能。",
+        "price": 1880000,
+        "image": "/images/photo-1524678714210-9917a6c619c2.jpg"
+      },
+      {
+        "name": "Grandmaster Chime 6300G",
+        "desc": "47.7mm白金，20项复杂功能。",
+        "price": 8800000,
+        "image": "/images/photo-1524230659092-07f99a75c013.jpg"
+      }
+    ]
+  },
+  {
+    "id": "audemarspiguet",
+    "name": "爱彼官方旗舰店",
+    "name_en": "Audemars Piguet Official Store",
+    "tags": [
+      "手表",
+      "顶级",
+      "皇家橡树"
+    ],
+    "rating": 5.0,
+    "category": "手表",
+    "delivery_time": "约15天",
+    "min_price": 350000,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1523170335258-f5ed11844a49.jpg",
+    "description": "瑞士爱彼·始于1875年·皇家橡树系列开创者·独立家族制表",
+    "products": [
+      {
+        "name": "Royal Oak 15510ST 皇家橡树 41mm",
+        "desc": "41mm不锈钢，Grande Tapisserie格纹盘。",
+        "price": 380000,
+        "image": "/images/photo-1518199266791-5375a83190b7.jpg"
+      },
+      {
+        "name": "Royal Oak 15450ST 37mm",
+        "desc": "37mm不锈钢，经典格纹蓝盘。",
+        "price": 298000,
+        "image": "/images/photo-1517336714731-489689fd1ca8.jpg"
+      },
+      {
+        "name": "Royal Oak Offshore 26420SO",
+        "desc": "43mm黑色陶瓷+钛合金，离岸计时。",
+        "price": 488000,
+        "image": "/images/photo-1516724562728-afc824a36e84.jpg"
+      },
+      {
+        "name": "Royal Oak 15510OR 玫瑰金",
+        "desc": "41mm玫瑰金，烟熏灰色表盘。",
+        "price": 688000,
+        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg"
+      },
+      {
+        "name": "Royal Oak 15202ST Jumbo超薄",
+        "desc": "39mm不锈钢，2121超薄机芯。",
+        "price": 988000,
+        "image": "/images/photo-1514306191717-452ec28c7814.jpg"
+      },
+      {
+        "name": "Code 11.59 15210CR 计时",
+        "desc": "41mm白金+玫瑰金双色，计时功能。",
+        "price": 388000,
+        "image": "/images/photo-1514282401047-d79a71a590e8.jpg"
+      },
+      {
+        "name": "Royal Oak Offshore Survivor",
+        "desc": "42mm黑色陶瓷+钛合金，限量版。",
+        "price": 528000,
+        "image": "/images/photo-1512621776951-a57141f2eefd.jpg"
+      },
+      {
+        "name": "Royal Oak 26240ST 计时 50周年",
+        "desc": "41mm不锈钢，50周年纪念款计时。",
+        "price": 588000,
+        "image": "/images/photo-1509440159596-0249088772ff.jpg"
+      },
+      {
+        "name": "Royal Oak Concept 浮动陀飞轮",
+        "desc": "44mm钛合金，浮动陀飞轮。",
+        "price": 2880000,
+        "image": "/images/photo-1507652313519-d4e9174996dd.jpg"
+      },
+      {
+        "name": "Royal Oak 67651SR Frosted Gold",
+        "desc": "33mm白金霜金工艺，钻石表圈。",
+        "price": 488000,
+        "image": "/images/photo-1506354666786-959d6d497f1a.jpg"
+      }
+    ]
+  },
+  {
+    "id": "vacheronconstantin",
+    "name": "江诗丹顿官方旗舰店",
+    "name_en": "Vacheron Constantin Official Store",
+    "tags": [
+      "手表",
+      "顶级",
+      "日内瓦印记"
+    ],
+    "rating": 5.0,
+    "category": "手表",
+    "delivery_time": "约15天",
+    "min_price": 250000,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1505740420928-5e560c06d30e.jpg",
+    "description": "瑞士江诗丹顿·始于1755年·日内瓦印记守护者·260余年从未停产",
+    "products": [
+      {
+        "name": "Overseas 4500V 纵横四海",
+        "desc": "41mm不锈钢，蓝漆表盘，3条快拆表带。",
+        "price": 298000,
+        "image": "/images/photo-1504674900247-0877df9cc836.jpg"
+      },
+      {
+        "name": "Fiftysix 4600E 伍陆之型",
+        "desc": "40mm不锈钢，自动上链，日内瓦印记。",
+        "price": 128000,
+        "image": "/images/photo-1503376780353-7e6692767b70.jpg"
+      },
+      {
+        "name": "Patrimony 81180 传承",
+        "desc": "40mm白金，极简两针设计，超薄手动。",
+        "price": 168000,
+        "image": "/images/photo-1500937386664-56d1dfef3854.jpg"
+      },
+      {
+        "name": "Traditionnelle 82172 传袭",
+        "desc": "38mm白金，小三针设计，日内瓦印记。",
+        "price": 218000,
+        "image": "/images/photo-1496116218417-1a781b1c416c.jpg"
+      },
+      {
+        "name": "Métiers d'Art 艺术大师",
+        "desc": "40mm白金，珐琅微绘工艺。",
+        "price": 588000,
+        "image": "/images/photo-1494790108377-be9c29b29330.jpg"
+      },
+      {
+        "name": "Overseas 5500V 计时",
+        "desc": "42.5mm不锈钢，计时+纵横四海。",
+        "price": 388000,
+        "image": "/images/photo-1476718406336-bb5a9690ee2a.jpg"
+      },
+      {
+        "name": "Overseas 2305V 女表 33mm",
+        "desc": "33mm不锈钢，钻石表圈，石英机芯。",
+        "price": 168000,
+        "image": "/images/photo-1473968512647-3e447244af8f.jpg"
+      },
+      {
+        "name": "Historiques 1921 美国1921",
+        "desc": "40mm白金，枕形表壳，独特倾斜表盘。",
+        "price": 388000,
+        "image": "/images/photo-1470337458703-46ad1756a187.jpg"
+      },
+      {
+        "name": "Les Cabinotiers 阁楼工匠",
+        "desc": "45mm白金，陀飞轮+三问，全定制。",
+        "price": 6880000,
+        "image": "/images/photo-1467003909585-2f8a72700288.jpg"
+      },
+      {
+        "name": "Overseas 6000V 陀飞轮",
+        "desc": "42.5mm钛合金，陀飞轮+纵横四海。",
+        "price": 1880000,
+        "image": "/images/photo-1455619452474-d2be8b1e70cd.jpg"
+      }
+    ]
+  },
+  {
+    "id": "longines",
+    "name": "浪琴官方旗舰店",
+    "name_en": "Longines Official Store",
+    "tags": [
+      "手表",
+      "瑞士",
+      "优雅"
+    ],
+    "rating": 4.8,
+    "category": "手表",
+    "delivery_time": "约7天",
+    "min_price": 8800,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1414235077428-338989a2e8c0.jpg",
+    "description": "瑞士浪琴·始于1832年·优雅态度真我个性·中端瑞士制表王者",
+    "products": [
+      {
+        "name": "Master Collection 名匠 月相",
+        "desc": "40mm不锈钢，月相+日期显示，L899机芯。",
+        "price": 21800,
+        "image": "/images/photo-1551698618-1dfe5d97d256.jpg"
+      },
+      {
+        "name": "Conquest 康卡斯潜水",
+        "desc": "41mm不锈钢，蓝色表盘，300米防水。",
+        "price": 14800,
+        "image": "/images/photo-1622434641406-a158123450f9.jpg"
+      },
+      {
+        "name": "HydroConquest 康卡斯计时",
+        "desc": "44mm不锈钢，计时+潜水，300米防水。",
+        "price": 19800,
+        "image": "/images/photo-1621996346565-e3dbc646d9a9.jpg"
+      },
+      {
+        "name": "Heritage 经典复刻潜水",
+        "desc": "42mm不锈钢，复刻60年代潜水表。",
+        "price": 16800,
+        "image": "/images/photo-1617196034796-73dfa7b1fd56.jpg"
+      },
+      {
+        "name": "DolceVita 黛绰维纳 女表",
+        "desc": "27.7mm x 43.8mm不锈钢方形表壳。",
+        "price": 12800,
+        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg"
+      },
+      {
+        "name": "Spirit 先行者",
+        "desc": "42mm不锈钢，飞行员腕表，COSC认证。",
         "price": 18800,
-        "desc": "Tiger Woods亲自参与设计的铁杆组（3-PW）。锻造1025碳钢，极佳手感。",
-        "specs": {
-          "组合": "3-PW(8支)",
-          "材质": "锻造1025碳钢",
-          "设计师": "Tiger Woods"
-        },
-        "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
-        "tags": [
-          "高尔夫",
-          "铁杆",
-          "老虎签名"
-        ]
+        "image": "/images/photo-1611143669185-af224c5e3252.jpg"
+      },
+      {
+        "name": "La Grande Classique 嘉岚",
+        "desc": "33mm不锈钢超薄系列，2针简约。",
+        "price": 8800,
+        "image": "/images/photo-1610945265064-0e34e5519bbf.jpg"
+      },
+      {
+        "name": "Master Collection 名匠 8针",
+        "desc": "40mm不锈钢，8针全历计时功能。",
+        "price": 29800,
+        "image": "/images/photo-1606144042614-b2417e99c4e3.jpg"
+      },
+      {
+        "name": "Legend Diver 经典复刻传奇潜水",
+        "desc": "42mm不锈钢，双表冠设计，复古风格。",
+        "price": 22800,
+        "image": "/images/photo-1603133872878-684f208fb84b.jpg"
+      },
+      {
+        "name": "Elegance 优雅系列 钻表",
+        "desc": "25.5mm不锈钢，镶钻表圈石英女表。",
+        "price": 15800,
+        "image": "/images/photo-1600891964092-4316c288032e.jpg"
       }
     ]
   },
   {
-    "id": "callaway",
-    "name": "Callaway旗舰店",
-    "desc": "美国Callaway·高尔夫科技创新者",
-    "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
-    "category": "dutyfree",
+    "id": "apple",
+    "name": "Apple官方旗舰店",
+    "name_en": "Apple Official Store",
+    "tags": [
+      "数码",
+      "手机",
+      "生态"
+    ],
+    "rating": 4.9,
+    "category": "数码手机",
+    "delivery_time": "约3天",
+    "min_price": 5999,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1599487488170-d11ec9c172f0.jpg",
+    "description": "美国Apple·Think Different·全球市值第一的科技公司·软硬件一体化生态",
     "products": [
       {
-        "id": "cw1",
-        "name": "Paradym Triple Diamond 一号木",
-        "price": 4800,
-        "desc": "360°碳纤维底盘+钛合金杆面。AI设计的杆面结构。",
-        "specs": {
-          "杆面": "钛合金",
-          "底盘": "碳纤维",
-          "技术": "AI设计"
-        },
-        "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
-        "tags": [
-          "高尔夫",
-          "一号木",
-          "AI"
-        ]
+        "name": "iPhone 18 Pro Max 1TB",
+        "desc": "6.9英寸ProMotion 120Hz，A20 Pro芯片，4800万三摄。",
+        "price": 13999,
+        "image": "/images/photo-1598515214211-89d3c73ae83b.jpg"
+      },
+      {
+        "name": "iPhone 18 Pro 512GB",
+        "desc": "6.3英寸OLED，A20 Pro芯片，钛金属边框。",
+        "price": 10999,
+        "image": "/images/photo-1598103442097-8b74394b95c6.jpg"
+      },
+      {
+        "name": "iPhone 18 256GB",
+        "desc": "6.1英寸OLED，A20芯片，4800万双摄。",
+        "price": 7999,
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg"
+      },
+      {
+        "name": "MacBook Pro 16 M5 Max",
+        "desc": "16.2英寸Liquid Retina XDR，M5 Max芯片，128GB统一内存。",
+        "price": 29999,
+        "image": "/images/photo-1592919505780-303950717480.jpg"
+      },
+      {
+        "name": "MacBook Air 15 M5",
+        "desc": "15.3英寸Liquid Retina，M5芯片，18小时续航。",
+        "price": 12999,
+        "image": "/images/photo-1591405351990-4726e331f141.jpg"
+      },
+      {
+        "name": "iPad Pro M5 13英寸",
+        "desc": "13英寸Ultra Retina XDR，M5芯片，Apple Pencil Pro。",
+        "price": 10999,
+        "image": "/images/photo-1589128777073-263566ae5e4d.jpg"
+      },
+      {
+        "name": "Apple Watch Ultra 3",
+        "desc": "49mm钛合金表壳，双频GPS，深潜100米。",
+        "price": 6999,
+        "image": "/images/photo-1588168333986-5078d3ae3976.jpg"
+      },
+      {
+        "name": "AirPods Pro 4",
+        "desc": "H4芯片，个性化空间音频，USB-C充电。",
+        "price": 2499,
+        "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg"
+      },
+      {
+        "name": "Vision Pro 2 空间计算",
+        "desc": "M5+R2双芯片，4K per eye Micro-OLED。",
+        "price": 26999,
+        "image": "/images/photo-1587593810167-a84920ea0781.jpg"
+      },
+      {
+        "name": "HomePod 3 智能音箱",
+        "desc": "高保真音频，空间感知技术，Siri智能助手。",
+        "price": 2999,
+        "image": "/images/photo-1587314168485-3236d6710814.jpg"
+      }
+    ]
+  },
+  {
+    "id": "huawei",
+    "name": "华为官方旗舰店",
+    "name_en": "Huawei Official Store",
+    "tags": [
+      "数码",
+      "手机",
+      "鸿蒙"
+    ],
+    "rating": 4.9,
+    "category": "数码手机",
+    "delivery_time": "约3天",
+    "min_price": 5499,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1585123334904-845d60e97b29.jpg",
+    "description": "中国华为·构建万物互联的智能世界·鸿蒙生态·麒麟芯片·卫星通信",
+    "products": [
+      {
+        "name": "HUAWEI Mate 80 Pro+ 1TB",
+        "desc": "麒麟9100芯片，卫星通话，XMAGE四摄，鸿蒙NEXT。",
+        "price": 10999,
+        "image": "/images/photo-1583032015879-e5022cb87c3b.jpg"
+      },
+      {
+        "name": "HUAWEI Pura 90 Ultra 1TB",
+        "desc": "1英寸伸缩主摄，麒麟9100，100W超级快充。",
+        "price": 9999,
+        "image": "/images/photo-1582967788606-a171c1080cb0.jpg"
+      },
+      {
+        "name": "HUAWEI Mate 80 512GB",
+        "desc": "麒麟9100，120Hz OLED，北斗卫星消息。",
+        "price": 6999,
+        "image": "/images/photo-1580910051074-3eb694886505.jpg"
+      },
+      {
+        "name": "HUAWEI Mate X6 折叠屏 1TB",
+        "desc": "内外双屏旗舰折叠，麒麟9100，IPX8防水。",
+        "price": 16999,
+        "image": "/images/photo-1579871494447-9811cf80d66c.jpg"
+      },
+      {
+        "name": "HUAWEI MatePad Pro 14.2 鸿蒙",
+        "desc": "14.2英寸OLED柔性屏，10000mAh电池。",
+        "price": 6999,
+        "image": "/images/photo-1571896349842-33c89424de2d.jpg"
+      },
+      {
+        "name": "HUAWEI Watch Ultimate 2",
+        "desc": "蓝宝石表镜，100米潜水，双向北斗卫星消息。",
+        "price": 6999,
+        "image": "/images/photo-1571513722275-4b41940f54b8.jpg"
+      },
+      {
+        "name": "HUAWEI FreeBuds Pro 5",
+        "desc": "星闪连接，静谧通话3.0，动态降噪。",
+        "price": 1999,
+        "image": "/images/photo-1569718212165-3a8278d5f624.jpg"
+      },
+      {
+        "name": "HUAWEI MateBook X Pro 2026",
+        "desc": "14.2英寸3.1K OLED，酷睿Ultra 300系列。",
+        "price": 11999,
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg"
+      },
+      {
+        "name": "HUAWEI Vision 智慧屏 5 85英寸",
+        "desc": "85英寸Mini LED，鸿蒙智慧交互。",
+        "price": 19999,
+        "image": "/images/photo-1569263979104-865ab7cd8d13.jpg"
+      },
+      {
+        "name": "HUAWEI nova 14 Pro 512GB",
+        "desc": "前置6000万双摄，后置5000万三摄。",
+        "price": 4499,
+        "image": "/images/photo-1569058242253-92a9c755a0ec.jpg"
+      }
+    ]
+  },
+  {
+    "id": "samsung",
+    "name": "三星官方旗舰店",
+    "name_en": "Samsung Official Store",
+    "tags": [
+      "数码",
+      "手机",
+      "Galaxy"
+    ],
+    "rating": 4.8,
+    "category": "数码手机",
+    "delivery_time": "约3天",
+    "min_price": 6999,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1565557623262-b51c2513a641.jpg",
+    "description": "韩国三星·全球科技巨头·Galaxy AI·折叠屏开创者",
+    "products": [
+      {
+        "name": "Galaxy S26 Ultra 1TB",
+        "desc": "6.9英寸Dynamic AMOLED 2X，200MP主摄，钛合金边框，Galaxy AI。",
+        "price": 12999,
+        "image": "/images/photo-1563379926898-05f4575a45d8.jpg"
+      },
+      {
+        "name": "Galaxy Z Fold 8 1TB",
+        "desc": "7.6英寸可折叠内屏，骁龙8 Gen 5，IPX8防水。",
+        "price": 15999,
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg"
+      },
+      {
+        "name": "Galaxy Z Flip 8 512GB",
+        "desc": "6.7英寸折叠屏，3.4英寸外屏，时尚便携。",
+        "price": 8999,
+        "image": "/images/photo-1559737558-2f5a35f4523b.jpg"
+      },
+      {
+        "name": "Galaxy S26+ 512GB",
+        "desc": "6.7英寸Dynamic AMOLED，50MP三摄，AI加持。",
+        "price": 8999,
+        "image": "/images/photo-1558030006-450675393462.jpg"
+      },
+      {
+        "name": "Galaxy S26 256GB",
+        "desc": "6.2英寸Dynamic AMOLED，50MP主摄。",
+        "price": 6999,
+        "image": "/images/photo-1556910103-1c02745aae4d.jpg"
+      },
+      {
+        "name": "Galaxy Tab S11 Ultra 5G",
+        "desc": "14.6英寸Dynamic AMOLED 2X，AI办公助手。",
+        "price": 10999,
+        "image": "/images/photo-1555939594-58d7cb561ad1.jpg"
+      },
+      {
+        "name": "Galaxy Watch 8 Classic",
+        "desc": "47mm钛合金，旋转表圈，BioActive传感器。",
+        "price": 3999,
+        "image": "/images/photo-1555680202-c86f0e12f086.jpg"
+      },
+      {
+        "name": "Galaxy Buds 4 Pro",
+        "desc": "智能主动降噪，360音频，IP57防水。",
+        "price": 1999,
+        "image": "/images/photo-1555244162-803834f70033.jpg"
+      },
+      {
+        "name": "Galaxy Book 5 Ultra 16英寸",
+        "desc": "16英寸3K AMOLED，酷睿Ultra 300+RTX 5090。",
+        "price": 19999,
+        "image": "/images/photo-1555126634-323283e090fa.jpg"
+      },
+      {
+        "name": "Galaxy Ring 2 智能戒指",
+        "desc": "钛合金材质，72h续航，心率/睡眠/体温监测。",
+        "price": 3299,
+        "image": "/images/photo-1554200876-56c2f25224fa.jpg"
+      }
+    ]
+  },
+  {
+    "id": "oppo",
+    "name": "OPPO官方旗舰店",
+    "name_en": "OPPO Official Store",
+    "tags": [
+      "数码",
+      "手机",
+      "影像"
+    ],
+    "rating": 4.7,
+    "category": "数码手机",
+    "delivery_time": "约3天",
+    "min_price": 3499,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1553284965-83fd3e82fa5a.jpg",
+    "description": "中国OPPO·影像旗舰·Find系列·快充技术领先者",
+    "products": [
+      {
+        "name": "OPPO Find X9 Pro 1TB",
+        "desc": "骁龙8 Gen 5，四摄哈苏影像，100W超级快充。",
+        "price": 7999,
+        "image": "/images/photo-1553062407-98eeb64c6a62.jpg"
+      },
+      {
+        "name": "OPPO Find X9 Ultra 512GB",
+        "desc": "双潜望长焦，哈苏大师影像，2K LTPO屏。",
+        "price": 6999,
+        "image": "/images/photo-1551218808-94e220e084d2.jpg"
+      },
+      {
+        "name": "OPPO Find X9 256GB",
+        "desc": "旗舰影像，哈苏色彩，80W快充。",
+        "price": 4999,
+        "image": "/images/photo-1551183053-bf91a1d81141.jpg"
+      },
+      {
+        "name": "OPPO Reno 14 Pro 512GB",
+        "desc": "人像大师，天玑9400+，80W闪充。",
+        "price": 4499,
+        "image": "/images/photo-1550304943-4f24f54ddde9.jpg"
+      },
+      {
+        "name": "OPPO Reno 14 256GB",
+        "desc": "轻薄时尚，5000万AI三摄。",
+        "price": 3499,
+        "image": "/images/photo-1547996160-81dfa63595aa.jpg"
+      },
+      {
+        "name": "OPPO Pad 4 Pro 5G",
+        "desc": "12.1英寸2.5K LCD，天玑9300+，100W快充。",
+        "price": 3999,
+        "image": "/images/photo-1546833998-877b37c2e5c6.jpg"
+      },
+      {
+        "name": "OPPO Watch 5 Pro",
+        "desc": "1.91英寸LTPO曲面屏，eSIM独立通信。",
+        "price": 2999,
+        "image": "/images/photo-1546069901-ba9599a7e63c.jpg"
+      },
+      {
+        "name": "OPPO Enco X4 真无线降噪",
+        "desc": "丹拿联合调音，45dB降噪，Qi充电。",
+        "price": 1299,
+        "image": "/images/photo-1545389336-cf090694435e.jpg"
+      },
+      {
+        "name": "OPPO Find N5 折叠屏 1TB",
+        "desc": "8英寸折叠大屏，哈苏影像，超轻薄。",
+        "price": 10999,
+        "image": "/images/photo-1544636331-e26879cd4d9b.jpg"
+      },
+      {
+        "name": "OPPO K14 256GB",
+        "desc": "性能中端，6000mAh大电池，67W快充。",
+        "price": 2299,
+        "image": "/images/photo-1544551763-8dd44758c2dd.jpg"
+      }
+    ]
+  },
+  {
+    "id": "vivo",
+    "name": "vivo官方旗舰店",
+    "name_en": "vivo Official Store",
+    "tags": [
+      "数码",
+      "手机",
+      "蔡司"
+    ],
+    "rating": 4.7,
+    "category": "数码手机",
+    "delivery_time": "约3天",
+    "min_price": 3499,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1544551763-46a013bb70d5.jpg",
+    "description": "中国vivo·蔡司联合研发·专业人像摄影·X系列旗舰",
+    "products": [
+      {
+        "name": "vivo X200 Ultra 1TB",
+        "desc": "骁龙8 Gen 5，蔡司四摄，2亿APO长焦。",
+        "price": 8999,
+        "image": "/images/photo-1544161515-4ab6ce6db874.jpg"
+      },
+      {
+        "name": "vivo X200 Pro 512GB",
+        "desc": "蔡司三摄，1英寸主摄，100W闪充。",
+        "price": 6999,
+        "image": "/images/photo-1544025162-d76694265947.jpg"
+      },
+      {
+        "name": "vivo X200 256GB",
+        "desc": "蔡司全焦段影像，天玑9400+，AI蓝心大模型。",
+        "price": 4999,
+        "image": "/images/photo-1542291026-7eec264c27ff.jpg"
+      },
+      {
+        "name": "vivo S21 Pro 512GB",
+        "desc": "5000万前置柔光双摄，影棚级人像。",
+        "price": 3999,
+        "image": "/images/photo-1540962351504-03099e0a754b.jpg"
+      },
+      {
+        "name": "vivo S21 256GB",
+        "desc": "前置柔光环+AI美颜，轻薄设计。",
+        "price": 2999,
+        "image": "/images/photo-1540189549336-e6e99c3679fe.jpg"
+      },
+      {
+        "name": "vivo Pad 4 Pro",
+        "desc": "13英寸3.1K LCD，天玑9300+，66W快充。",
+        "price": 3499,
+        "image": "/images/photo-1535131749006-b7f58c99034b.jpg"
+      },
+      {
+        "name": "vivo Watch 5",
+        "desc": "1.43英寸AMOLED，eSIM独立通信。",
+        "price": 2499,
+        "image": "/images/photo-1534773728080-33d31da27ae5.jpg"
+      },
+      {
+        "name": "vivo TWS 5 Pro",
+        "desc": "蔡司调音，55dB主动降噪。",
+        "price": 1499,
+        "image": "/images/photo-1534604973900-c43ab4c2e0ab.jpg"
+      },
+      {
+        "name": "vivo X Fold 5 折叠屏 1TB",
+        "desc": "8英寸2K+ E7折叠屏，蔡司全焦段。",
+        "price": 11999,
+        "image": "/images/photo-1534080564583-6be75777b70a.jpg"
+      },
+      {
+        "name": "vivo Y300 256GB",
+        "desc": "6000mAh长续航，5000万主摄。",
+        "price": 1699,
+        "image": "/images/photo-1532550907401-a500c9a57435.jpg"
+      }
+    ]
+  },
+  {
+    "id": "xiaomi",
+    "name": "小米官方旗舰店",
+    "name_en": "Xiaomi Official Store",
+    "tags": [
+      "数码",
+      "手机",
+      "AIoT"
+    ],
+    "rating": 4.8,
+    "category": "数码手机",
+    "delivery_time": "约3天",
+    "min_price": 2499,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1531366936337-7c912a4589a7.jpg",
+    "description": "中国小米·感动人心价格厚道·人车家全生态·AIoT平台",
+    "products": [
+      {
+        "name": "Xiaomi 16 Ultra 1TB",
+        "desc": "骁龙8 Gen 5，徕卡光学四摄，小米金沙江电池。",
+        "price": 7999,
+        "image": "/images/photo-1529626455594-4ff0802cfb7e.jpg"
+      },
+      {
+        "name": "Xiaomi 16 Pro 512GB",
+        "desc": "骁龙8 Gen 5，徕卡三摄，120W有线+80W无线。",
+        "price": 5999,
+        "image": "/images/photo-1529333166437-7750a6dd5a70.jpg"
+      },
+      {
+        "name": "Xiaomi 16 256GB",
+        "desc": "骁龙8 Gen 5，徕卡双摄，1.5K四微曲屏。",
+        "price": 4499,
+        "image": "/images/photo-1529042410759-befb1204b468.jpg"
+      },
+      {
+        "name": "Redmi K90 Pro 512GB",
+        "desc": "骁龙8s Gen 5，120W快充，2K直屏。",
+        "price": 3999,
+        "image": "/images/photo-1524678714210-9917a6c619c2.jpg"
+      },
+      {
+        "name": "Xiaomi MIX Flip 3 512GB",
+        "desc": "折叠小屏，徕卡双摄，超薄耐用。",
+        "price": 6999,
+        "image": "/images/photo-1524230659092-07f99a75c013.jpg"
+      },
+      {
+        "name": "Xiaomi Pad 8 Max 14英寸",
+        "desc": "14英寸3K LCD，骁龙8 Gen 5，120W快充。",
+        "price": 4999,
+        "image": "/images/photo-1523170335258-f5ed11844a49.jpg"
+      },
+      {
+        "name": "Xiaomi Watch S5",
+        "desc": "1.5英寸AMOLED，eSIM，150+运动模式。",
+        "price": 1999,
+        "image": "/images/photo-1518199266791-5375a83190b7.jpg"
+      },
+      {
+        "name": "Xiaomi Buds 5 Pro",
+        "desc": "哈曼卡顿调音，空间音频，48dB降噪。",
+        "price": 999,
+        "image": "/images/photo-1517336714731-489689fd1ca8.jpg"
+      },
+      {
+        "name": "Xiaomi Book Pro 16 2026",
+        "desc": "16英寸4K OLED触屏，酷睿Ultra 300。",
+        "price": 9999,
+        "image": "/images/photo-1516724562728-afc824a36e84.jpg"
+      },
+      {
+        "name": "Xiaomi SU7 Ultra 智能电动车",
+        "desc": "零百加速2.78秒，800V高压平台，人车家生态。",
+        "price": 299900,
+        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg"
       }
     ]
   },
   {
     "id": "nvidia",
     "name": "NVIDIA官方旗舰店",
-    "desc": "美国NVIDIA·AI计算之王·GPU核心硬件",
-    "image": "/images/photo-1555680202-c86f0e12f086.jpg",
-    "category": "dutyfree",
+    "name_en": "NVIDIA Official Store",
+    "tags": [
+      "GPU",
+      "AI",
+      "RTX"
+    ],
+    "rating": 4.9,
+    "category": "GPU/AI",
+    "delivery_time": "约5天",
+    "min_price": 2999,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1514306191717-452ec28c7814.jpg",
+    "description": "美国NVIDIA·GPU发明者·AI计算之王·GeForce玩家首选",
     "products": [
       {
-        "id": "nv1",
-        "name": "GeForce RTX 6090 32GB",
-        "price": 19999,
-        "desc": "Blackwell架构旗舰GPU。24576个CUDA核心，32GB GDDR7显存。PCIe 5.0 x16。",
-        "specs": {
-          "架构": "Blackwell",
-          "CUDA": "24576",
-          "显存": "32GB GDDR7",
-          "接口": "PCIe 5.0"
-        },
-        "image": "/images/photo-1555680202-c86f0e12f086.jpg",
-        "tags": [
-          "NVIDIA",
-          "RTX",
-          "Blackwell"
-        ]
+        "name": "NVIDIA GeForce RTX 5090 32GB",
+        "desc": "Blackwell架构旗舰，21760 CUDA核，32GB GDDR7，PCIe 5.0。",
+        "price": 17999,
+        "image": "/images/photo-1514282401047-d79a71a590e8.jpg"
       },
       {
-        "id": "nv2",
+        "name": "NVIDIA GeForce RTX 5080 16GB",
+        "desc": "Blackwell架构，10752 CUDA核，16GB GDDR7。",
+        "price": 9999,
+        "image": "/images/photo-1512621776951-a57141f2eefd.jpg"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 5070 Ti 16GB",
+        "desc": "Blackwell架构，8960 CUDA核，16GB GDDR7。",
+        "price": 6999,
+        "image": "/images/photo-1509440159596-0249088772ff.jpg"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 5070 12GB",
+        "desc": "Blackwell架构，6144 CUDA核，12GB GDDR7。",
+        "price": 5499,
+        "image": "/images/photo-1507652313519-d4e9174996dd.jpg"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 5060 Ti 16GB",
+        "desc": "Blackwell架构，16GB GDDR7，主流光追。",
+        "price": 3999,
+        "image": "/images/photo-1506354666786-959d6d497f1a.jpg"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 5060 8GB",
+        "desc": "Blackwell架构，8GB GDDR7，DLSS 4支持。",
+        "price": 2999,
+        "image": "/images/photo-1505740420928-5e560c06d30e.jpg"
+      },
+      {
+        "name": "NVIDIA RTX 6000 Ada 48GB 工作站",
+        "desc": "Ada架构，18176 CUDA，48GB ECC，专业工作站。",
+        "price": 68000,
+        "image": "/images/photo-1504674900247-0877df9cc836.jpg"
+      },
+      {
         "name": "NVIDIA A100 80GB 数据中心GPU",
+        "desc": "Ampere架构，6912 CUDA，80GB HBM2e，AI训练。",
         "price": 128000,
-        "desc": "Ampere架构，6912个CUDA核心，80GB HBM2e显存。AI训练/推理专用。",
-        "specs": {
-          "架构": "Ampere",
-          "显存": "80GB HBM2e",
-          "用途": "AI训练/推理"
-        },
-        "image": "/images/photo-1555680202-c86f0e12f086.jpg",
-        "tags": [
-          "NVIDIA",
-          "A100",
-          "AI"
-        ]
+        "image": "/images/photo-1503376780353-7e6692767b70.jpg"
+      },
+      {
+        "name": "NVIDIA H200 141GB 数据中心GPU",
+        "desc": "Hopper架构，141GB HBM3e，AI大模型推理。",
+        "price": 250000,
+        "image": "/images/photo-1500937386664-56d1dfef3854.jpg"
+      },
+      {
+        "name": "NVIDIA SHIELD Pro 流媒体播放器",
+        "desc": "Tegra X1+芯片，4K HDR升频，GeForce Now云游戏。",
+        "price": 1999,
+        "image": "/images/photo-1496116218417-1a781b1c416c.jpg"
       }
     ]
   },
   {
     "id": "amd",
     "name": "AMD官方旗舰店",
-    "desc": "美国AMD·锐龙处理器·Radeon显卡·3D V-Cache",
-    "image": "/images/photo-1591405351990-4726e331f141.jpg",
-    "category": "dutyfree",
+    "name_en": "AMD Official Store",
+    "tags": [
+      "GPU",
+      "CPU",
+      "Radeon"
+    ],
+    "rating": 4.7,
+    "category": "GPU/AI",
+    "delivery_time": "约5天",
+    "min_price": 1999,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1494790108377-be9c29b29330.jpg",
+    "description": "美国AMD·锐龙+镭龙·YES！台式机/笔记本/数据中心全覆盖",
     "products": [
       {
-        "id": "ad1",
-        "name": "Ryzen 9 9950X3D 处理器",
+        "name": "AMD Radeon RX 9070 XT 16GB",
+        "desc": "RDNA 5架构，16GB GDDR7，4K光追游戏。",
+        "price": 5999,
+        "image": "/images/photo-1476718406336-bb5a9690ee2a.jpg"
+      },
+      {
+        "name": "AMD Radeon RX 9070 16GB",
+        "desc": "RDNA 5架构，16GB GDDR7，主流旗舰。",
+        "price": 4999,
+        "image": "/images/photo-1473968512647-3e447244af8f.jpg"
+      },
+      {
+        "name": "AMD Radeon RX 9060 XT 12GB",
+        "desc": "RDNA 5架构，12GB GDDR7，1440p游戏。",
+        "price": 3499,
+        "image": "/images/photo-1470337458703-46ad1756a187.jpg"
+      },
+      {
+        "name": "AMD Radeon RX 9060 8GB",
+        "desc": "RDNA 5架构，8GB GDDR7，入门光追。",
+        "price": 2499,
+        "image": "/images/photo-1467003909585-2f8a72700288.jpg"
+      },
+      {
+        "name": "AMD Ryzen 9 9950X3D 处理器",
+        "desc": "Zen 5架构，16核32线程，144MB 3D V-Cache。",
         "price": 6599,
-        "desc": "Zen 5架构，16核32线程，144MB 3D V-Cache。游戏+生产力终极CPU。",
-        "specs": {
-          "架构": "Zen 5",
-          "核心": "16核32线程",
-          "缓存": "144MB 3D V-Cache"
-        },
-        "image": "/images/photo-1591405351990-4726e331f141.jpg",
-        "tags": [
-          "AMD",
-          "Ryzen",
-          "3D V-Cache"
-        ]
+        "image": "/images/photo-1455619452474-d2be8b1e70cd.jpg"
+      },
+      {
+        "name": "AMD Ryzen 7 9800X3D 处理器",
+        "desc": "Zen 5架构，8核16线程，104MB 3D V-Cache。",
+        "price": 4499,
+        "image": "/images/photo-1414235077428-338989a2e8c0.jpg"
+      },
+      {
+        "name": "AMD Ryzen 9 9950X 处理器",
+        "desc": "Zen 5架构，16核32线程，170W TDP。",
+        "price": 5499,
+        "image": "/images/photo-1551698618-1dfe5d97d256.jpg"
+      },
+      {
+        "name": "AMD Radeon PRO W7900 48GB",
+        "desc": "RDNA 4架构，48GB GDDR6 ECC，专业工作站。",
+        "price": 38800,
+        "image": "/images/photo-1622434641406-a158123450f9.jpg"
+      },
+      {
+        "name": "AMD Instinct MI350X 192GB",
+        "desc": "CDNA 4架构，192GB HBM4，AI加速卡。",
+        "price": 180000,
+        "image": "/images/photo-1621996346565-e3dbc646d9a9.jpg"
+      },
+      {
+        "name": "AMD Ryzen 5 9600X 处理器",
+        "desc": "Zen 5架构，6核12线程，65W TDP。",
+        "price": 2199,
+        "image": "/images/photo-1617196034796-73dfa7b1fd56.jpg"
       }
     ]
   },
   {
     "id": "intel",
     "name": "Intel官方旗舰店",
-    "desc": "美国Intel·酷睿Ultra·AI PC时代",
-    "image": "/images/photo-1591405351990-4726e331f141.jpg",
-    "category": "dutyfree",
+    "name_en": "Intel Official Store",
+    "tags": [
+      "GPU",
+      "CPU",
+      "Arc"
+    ],
+    "rating": 4.6,
+    "category": "GPU/AI",
+    "delivery_time": "约5天",
+    "min_price": 1999,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
+    "description": "美国Intel·开创x86时代·Arc独立显卡·AI PC引领者",
     "products": [
       {
-        "id": "il1",
-        "name": "Core Ultra 9 285K 处理器",
+        "name": "Intel Arc B580 12GB 显卡",
+        "desc": "Battlemage架构，12GB GDDR6，DLSS竞品XeSS 2。",
+        "price": 2499,
+        "image": "/images/photo-1611143669185-af224c5e3252.jpg"
+      },
+      {
+        "name": "Intel Arc B570 10GB 显卡",
+        "desc": "Battlemage架构，10GB GDDR6，1080p高画质。",
+        "price": 1999,
+        "image": "/images/photo-1610945265064-0e34e5519bbf.jpg"
+      },
+      {
+        "name": "Intel Arc A770 16GB 限量版",
+        "desc": "Alchemist+架构，16GB GDDR6，创作者显卡。",
+        "price": 2999,
+        "image": "/images/photo-1606144042614-b2417e99c4e3.jpg"
+      },
+      {
+        "name": "Intel Core Ultra 9 285K 处理器",
+        "desc": "Arrow Lake架构，24核(8P+16E)，48 TOPS NPU。",
         "price": 5899,
-        "desc": "Arrow Lake架构，24核24线程（8P+16E）。集成NPU，AI算力48 TOPS。",
-        "specs": {
-          "架构": "Arrow Lake",
-          "核心": "24核24线程",
-          "AI算力": "48 TOPS"
-        },
-        "image": "/images/photo-1591405351990-4726e331f141.jpg",
-        "tags": [
-          "Intel",
-          "AI PC",
-          "NPU"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "apple-store",
-    "name": "Apple官方旗舰店",
-    "desc": "美国Apple·Think Different·全球市值第一科技公司",
-    "image": "/images/photo-1580910051074-3eb694886505.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "aa1",
-        "name": "Vision Pro 空间计算设备",
-        "price": 29999,
-        "desc": "M2+R1双芯片，2300万像素Micro-OLED显示屏。空间计算时代的开端。",
-        "specs": {
-          "芯片": "M2+R1",
-          "显示": "2300万像素Micro-OLED",
-          "存储": "256GB/512GB/1TB"
-        },
-        "image": "/images/photo-1580910051074-3eb694886505.jpg",
-        "tags": [
-          "Apple",
-          "Vision Pro",
-          "空间计算"
-        ]
+        "image": "/images/photo-1603133872878-684f208fb84b.jpg"
       },
       {
-        "id": "aa2",
-        "name": "MacBook Pro 16 M4 Max",
-        "price": 29999,
-        "desc": "M4 Max芯片，16核CPU+40核GPU，128GB统一内存。专业创作者终极工具。",
-        "specs": {
-          "芯片": "M4 Max",
-          "内存": "128GB统一内存",
-          "屏幕": "16.2\" Liquid Retina XDR"
-        },
-        "image": "/images/photo-1517336714731-489689fd1ca8.jpg",
-        "tags": [
-          "Apple",
-          "MacBook Pro",
-          "M4 Max"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "samsung",
-    "name": "Samsung旗舰店",
-    "desc": "韩国三星·全球科技巨头·Galaxy生态",
-    "image": "/images/photo-1610945265064-0e34e5519bbf.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "ss1",
-        "name": "Galaxy S25 Ultra 1TB",
-        "price": 10999,
-        "desc": "6.9\" Dynamic AMOLED 2X，120Hz。200MP主摄+50MP 5倍长焦。钛金属框架。",
-        "specs": {
-          "屏幕": "6.9\" AMOLED 2X 120Hz",
-          "摄像头": "200MP+50MP长焦",
-          "材质": "钛金属"
-        },
-        "image": "/images/photo-1610945265064-0e34e5519bbf.jpg",
-        "tags": [
-          "Samsung",
-          "Galaxy",
-          "Ultra"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "sony",
-    "name": "Sony官方旗舰店",
-    "desc": "日本索尼·创新为灵魂·消费电子王者",
-    "image": "/images/photo-1606144042614-b2417e99c4e3.jpg",
-    "category": "dutyfree",
-    "products": [
-      {
-        "id": "sy1",
-        "name": "PlayStation 6 光驱版",
-        "price": 4999,
-        "desc": "次世代游戏主机。AMD定制芯片，8K/120fps输出。触觉反馈手柄。1TB SSD。",
-        "specs": {
-          "输出": "8K/120fps",
-          "存储": "1TB SSD",
-          "手柄": "触觉反馈"
-        },
-        "image": "/images/photo-1606144042614-b2417e99c4e3.jpg",
-        "tags": [
-          "Sony",
-          "PS6",
-          "游戏"
-        ]
+        "name": "Intel Core Ultra 7 265K 处理器",
+        "desc": "Arrow Lake架构，20核(8P+12E)，36 TOPS NPU。",
+        "price": 4299,
+        "image": "/images/photo-1600891964092-4316c288032e.jpg"
       },
       {
-        "id": "sy2",
-        "name": "Sony α9 IV 全画幅微单",
-        "price": 38000,
-        "desc": "5000万像素堆栈式CMOS，120fps连拍。AI对焦系统，8K 60p内录。",
-        "specs": {
-          "像素": "5000万",
-          "连拍": "120fps",
-          "视频": "8K 60p"
-        },
-        "image": "/images/photo-1516724562728-afc824a36e84.jpg",
-        "tags": [
-          "Sony",
-          "α9",
-          "旗舰相机"
-        ]
+        "name": "Intel Core Ultra 5 245K 处理器",
+        "desc": "Arrow Lake架构，14核(6P+8E)，24 TOPS NPU。",
+        "price": 2799,
+        "image": "/images/photo-1599487488170-d11ec9c172f0.jpg"
+      },
+      {
+        "name": "Intel Xeon W-3500 56核 工作站",
+        "desc": "Sapphire Rapids-WS，56核112线程。",
+        "price": 48000,
+        "image": "/images/photo-1598515214211-89d3c73ae83b.jpg"
+      },
+      {
+        "name": "Intel Gaudi 3 AI加速卡",
+        "desc": "Habana架构，128GB HBM2e，大模型训练。",
+        "price": 120000,
+        "image": "/images/photo-1598103442097-8b74394b95c6.jpg"
+      },
+      {
+        "name": "Intel Arc PRO A60 12GB 工作站",
+        "desc": "Alchemist架构，12GB GDDR6，ISV认证。",
+        "price": 5800,
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg"
+      },
+      {
+        "name": "Intel NUC 14 Extreme 迷你主机",
+        "desc": "酷睿Ultra 9+Arc集显，可扩展独显。",
+        "price": 8999,
+        "image": "/images/photo-1592919505780-303950717480.jpg"
       }
     ]
   },
   {
-    "id": "dji",
-    "name": "DJI大疆旗舰店",
-    "desc": "中国大疆·无人机全球霸主·影像创新",
-    "image": "/images/photo-1473968512647-3e447244af8f.jpg",
-    "category": "dutyfree",
+    "id": "nike",
+    "name": "Nike官方旗舰店",
+    "name_en": "Nike Official Store",
+    "tags": [
+      "运动",
+      "跑步",
+      "篮球"
+    ],
+    "rating": 4.8,
+    "category": "运动",
+    "delivery_time": "约5天",
+    "min_price": 399,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1591405351990-4726e331f141.jpg",
+    "description": "美国Nike·Just Do It·全球第一运动品牌·创新科技",
     "products": [
       {
-        "id": "dj1",
-        "name": "DJI Mavic 4 Pro",
-        "price": 12888,
-        "desc": "哈苏L2D-20c相机，4/3 CMOS，5.1K/60fps。全向避障，15公里图传。",
-        "specs": {
-          "相机": "哈苏4/3 CMOS",
-          "视频": "5.1K/60fps",
-          "图传": "15km",
-          "避障": "全向"
-        },
-        "image": "/images/photo-1473968512647-3e447244af8f.jpg",
-        "tags": [
-          "DJI",
-          "无人机",
-          "哈苏"
-        ]
+        "name": "Air Jordan 1 Retro High OG 芝加哥",
+        "desc": "1985年经典配色，头层牛皮鞋面，Air-Sole气垫。",
+        "price": 1499,
+        "image": "/images/photo-1589128777073-263566ae5e4d.jpg"
+      },
+      {
+        "name": "Nike Alphafly 3 碳板竞速跑鞋",
+        "desc": "ZoomX泡棉+Air Zoom+碳纤维板，马拉松竞速。",
+        "price": 2599,
+        "image": "/images/photo-1588168333986-5078d3ae3976.jpg"
+      },
+      {
+        "name": "Nike Vaporfly 4 路跑竞速鞋",
+        "desc": "全掌ZoomX+碳板，世界纪录级。",
+        "price": 2299,
+        "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg"
+      },
+      {
+        "name": "Nike Dunk Low Retro",
+        "desc": "经典复刻板鞋，潮流百搭。",
+        "price": 899,
+        "image": "/images/photo-1587593810167-a84920ea0781.jpg"
+      },
+      {
+        "name": "Air Jordan 4 Retro Bred 黑红",
+        "desc": "1989年经典飞人标志，AJ4元年配色。",
+        "price": 1699,
+        "image": "/images/photo-1587314168485-3236d6710814.jpg"
+      },
+      {
+        "name": "Nike Air Max Dn8 气垫跑鞋",
+        "desc": "8管Dynamic Air气垫，动态响应。",
+        "price": 1399,
+        "image": "/images/photo-1585123334904-845d60e97b29.jpg"
+      },
+      {
+        "name": "Nike Pegasus 42 日常跑鞋",
+        "desc": "ReactX泡棉+Air Zoom，全能训练鞋。",
+        "price": 999,
+        "image": "/images/photo-1583032015879-e5022cb87c3b.jpg"
+      },
+      {
+        "name": "Nike Tech Fleece 连帽卫衣",
+        "desc": "Tech Fleece面料，轻量保暖。",
+        "price": 799,
+        "image": "/images/photo-1582967788606-a171c1080cb0.jpg"
+      },
+      {
+        "name": "Nike Pro Dri-FIT 训练紧身衣",
+        "desc": "Dri-FIT速干科技，排汗透湿。",
+        "price": 399,
+        "image": "/images/photo-1580910051074-3eb694886505.jpg"
+      },
+      {
+        "name": "Nike Sportswear 梭织运动裤",
+        "desc": "经典Swoosh设计，休闲运动。",
+        "price": 599,
+        "image": "/images/photo-1579871494447-9811cf80d66c.jpg"
       }
     ]
   },
   {
-    "id": "bose",
-    "name": "Bose旗舰店",
-    "desc": "美国Bose·声学科技领导者·降噪耳机开创者",
-    "image": "/images/photo-1505740420928-5e560c06d30e.jpg",
-    "category": "dutyfree",
+    "id": "adidas",
+    "name": "Adidas官方旗舰店",
+    "name_en": "Adidas Official Store",
+    "tags": [
+      "运动",
+      "足球",
+      "三叶草"
+    ],
+    "rating": 4.8,
+    "category": "运动",
+    "delivery_time": "约5天",
+    "min_price": 399,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1571896349842-33c89424de2d.jpg",
+    "description": "德国Adidas·Impossible is Nothing·三条纹·Boost科技",
     "products": [
       {
-        "id": "bs1",
-        "name": "Bose QuietComfort Ultra 耳机",
-        "price": 3299,
-        "desc": "CustomTune智能校准+沉浸式空间音频。行业最强主动降噪。",
-        "specs": {
-          "降噪": "Adaptive ANC",
-          "音频": "空间音频",
-          "续航": "24小时"
-        },
-        "image": "/images/photo-1505740420928-5e560c06d30e.jpg",
-        "tags": [
-          "Bose",
-          "降噪",
-          "耳机"
-        ]
+        "name": "Adidas Ultraboost Light 跑鞋",
+        "desc": "Light BoOST中底，Primeknit+鞋面。",
+        "price": 1299,
+        "image": "/images/photo-1571513722275-4b41940f54b8.jpg"
+      },
+      {
+        "name": "Adidas Adizero Adios Pro 4 竞速",
+        "desc": "EnergyRods结构，Lightstrike Pro泡棉。",
+        "price": 2299,
+        "image": "/images/photo-1569718212165-3a8278d5f624.jpg"
+      },
+      {
+        "name": "Adidas Originals Samba OG",
+        "desc": "经典足球鞋复刻，复古潮流。",
+        "price": 899,
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg"
+      },
+      {
+        "name": "Adidas Campus 00s 板鞋",
+        "desc": "经典麂皮板鞋，滑板文化代表。",
+        "price": 799,
+        "image": "/images/photo-1569263979104-865ab7cd8d13.jpg"
+      },
+      {
+        "name": "Adidas Predator 30 高端FG 足球鞋",
+        "desc": "经典猎鹰30周年款，控球+摩擦条。",
+        "price": 1699,
+        "image": "/images/photo-1569058242253-92a9c755a0ec.jpg"
+      },
+      {
+        "name": "Adidas 德国队主场球衣 2026",
+        "desc": "德国队世界杯球衣球迷版，AEROREADY。",
+        "price": 699,
+        "image": "/images/photo-1565557623262-b51c2513a641.jpg"
+      },
+      {
+        "name": "Adidas Tiro 24 训练夹克",
+        "desc": "AEROREADY吸湿排汗，运动训练必备。",
+        "price": 599,
+        "image": "/images/photo-1563379926898-05f4575a45d8.jpg"
+      },
+      {
+        "name": "Adidas Essentials 三条纹长裤",
+        "desc": "经典三条纹设计，日常运动皆宜。",
+        "price": 499,
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg"
+      },
+      {
+        "name": "Adidas Forum Low 经典白",
+        "desc": "80年代篮球鞋复刻，复古百搭。",
+        "price": 999,
+        "image": "/images/photo-1559737558-2f5a35f4523b.jpg"
+      },
+      {
+        "name": "Adidas TERREX Free Hiker 2 GORE-TEX",
+        "desc": "户外徒步鞋，Boost+GORE-TEX。",
+        "price": 1599,
+        "image": "/images/photo-1558030006-450675393462.jpg"
       }
     ]
   },
   {
-    "id": "bo",
-    "name": "Bang & Olufsen旗舰店",
-    "desc": "丹麦B&O·1925年创立·北欧设计美学·声音艺术",
-    "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
-    "category": "dutyfree",
+    "id": "lining",
+    "name": "李宁官方旗舰店",
+    "name_en": "Li-Ning Official Store",
+    "tags": [
+      "运动",
+      "国潮",
+      "篮球"
+    ],
+    "rating": 4.7,
+    "category": "运动",
+    "delivery_time": "约3天",
+    "min_price": 299,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1556910103-1c02745aae4d.jpg",
+    "description": "中国李宁·一切皆有可能·韦德之道·中国运动品牌标杆",
     "products": [
       {
-        "id": "bo1",
-        "name": "Beolab 90 落地音箱(对)",
-        "price": 288000,
-        "desc": "18个独立扬声器单元×2，8200W总功率。自适应声场技术。奢华家居音响巅峰。",
-        "specs": {
-          "单元": "18个×2",
-          "功率": "8200W总",
-          "技术": "自适应声场"
-        },
-        "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
-        "tags": [
-          "B&O",
-          "旗舰音箱",
-          "北欧"
-        ]
+        "name": "李宁 韦德之道11 篮球鞋",
+        "desc": "全掌bèng科技，碳纤维板，韦德签名系列。",
+        "price": 1499,
+        "image": "/images/photo-1555939594-58d7cb561ad1.jpg"
+      },
+      {
+        "name": "李宁 飞电4.0 ELITE 碳板竞速跑鞋",
+        "desc": "全掌bèng+异形碳板，马拉松竞速。",
+        "price": 1899,
+        "image": "/images/photo-1555680202-c86f0e12f086.jpg"
+      },
+      {
+        "name": "李宁 绝影3 弹速跑鞋",
+        "desc": "双层bèng科技+弧结构弹速科技。",
+        "price": 999,
+        "image": "/images/photo-1555244162-803834f70033.jpg"
+      },
+      {
+        "name": "李宁 超轻23 超轻跑鞋",
+        "desc": "bèng科技中底，单只重量180g。",
+        "price": 699,
+        "image": "/images/photo-1555126634-323283e090fa.jpg"
+      },
+      {
+        "name": "李宁 䨻科技短袖T恤",
+        "desc": "bèng丝面料，吸湿速干。",
+        "price": 299,
+        "image": "/images/photo-1554200876-56c2f25224fa.jpg"
+      },
+      {
+        "name": "李宁 反伍4 外场篮球鞋",
+        "desc": "COOLSHELL防侧翻，外场耐磨大底。",
+        "price": 899,
+        "image": "/images/photo-1553284965-83fd3e82fa5a.jpg"
+      },
+      {
+        "name": "李宁 驭帅18 篮球鞋",
+        "desc": "全掌bèng科技，稳定支撑系旗舰。",
+        "price": 1199,
+        "image": "/images/photo-1553062407-98eeb64c6a62.jpg"
+      },
+      {
+        "name": "李宁 中国李宁卫衣 国潮",
+        "desc": "中国李宁系列，国潮设计。",
+        "price": 699,
+        "image": "/images/photo-1551218808-94e220e084d2.jpg"
+      },
+      {
+        "name": "李宁 烈骏8 稳定系跑鞋",
+        "desc": "支撑稳定型跑鞋，大体重跑者。",
+        "price": 799,
+        "image": "/images/photo-1551183053-bf91a1d81141.jpg"
+      },
+      {
+        "name": "李宁 羽毛球拍 风刃900 MAX",
+        "desc": "碳纤维羽毛球拍，高弹性中杆。",
+        "price": 1299,
+        "image": "/images/photo-1550304943-4f24f54ddde9.jpg"
       }
     ]
   },
   {
-    "id": "montblanc",
-    "name": "万宝龙旗舰店",
-    "desc": "德国万宝龙·书写艺术·始于1906年·奢华配饰",
-    "image": "/images/photo-1585123334904-845d60e97b29.jpg",
-    "category": "dutyfree",
+    "id": "anta",
+    "name": "安踏官方旗舰店",
+    "name_en": "ANTA Official Store",
+    "tags": [
+      "运动",
+      "国货",
+      "篮球"
+    ],
+    "rating": 4.7,
+    "category": "运动",
+    "delivery_time": "约3天",
+    "min_price": 199,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1547996160-81dfa63595aa.jpg",
+    "description": "中国安踏·永不止步·中国体育用品龙头·克莱·汤普森代言",
     "products": [
       {
-        "id": "mb1",
-        "name": "Meisterstück 149 大班钢笔",
-        "price": 6800,
-        "desc": "18K金手工打磨笔尖，黑色名贵树脂笔杆。标志性的白色六角星。钢笔收藏的终极之选。",
-        "specs": {
-          "笔尖": "18K金手工",
-          "笔杆": "黑色树脂",
-          "系列": "Meisterstück大班"
-        },
-        "image": "/images/photo-1585123334904-845d60e97b29.jpg",
-        "tags": [
-          "万宝龙",
-          "钢笔",
-          "大班"
-        ]
+        "name": "安踏 KT9 篮球鞋 克莱签名鞋",
+        "desc": "氮科技中底，碳板支撑，汤普森第9代签名鞋。",
+        "price": 1199,
+        "image": "/images/photo-1546833998-877b37c2e5c6.jpg"
+      },
+      {
+        "name": "安踏 C37 5.0 柔感跑鞋",
+        "desc": "C37柔软中底，日常舒适。",
+        "price": 499,
+        "image": "/images/photo-1546069901-ba9599a7e63c.jpg"
+      },
+      {
+        "name": "安踏 冠军跑鞋3代 Pro",
+        "desc": "氮Pro科技，马拉松训练鞋。",
+        "price": 899,
+        "image": "/images/photo-1545389336-cf090694435e.jpg"
+      },
+      {
+        "name": "安踏 狂潮6 篮球鞋",
+        "desc": "A-Shock科技，水泥外场耐磨。",
+        "price": 699,
+        "image": "/images/photo-1544636331-e26879cd4d9b.jpg"
+      },
+      {
+        "name": "安踏 水花6 篮球鞋",
+        "desc": "A-Flashedge科技，透气夏季款。",
+        "price": 599,
+        "image": "/images/photo-1544551763-8dd44758c2dd.jpg"
+      },
+      {
+        "name": "安踏 探野 越野跑鞋",
+        "desc": "Vibram大底，户外越野。",
+        "price": 799,
+        "image": "/images/photo-1544551763-46a013bb70d5.jpg"
+      },
+      {
+        "name": "安踏 速干运动T恤",
+        "desc": "A-PROTECHII速干科技。",
+        "price": 199,
+        "image": "/images/photo-1544161515-4ab6ce6db874.jpg"
+      },
+      {
+        "name": "安踏 运动休闲卫裤",
+        "desc": "弹力舒适面料，日常训练。",
+        "price": 299,
+        "image": "/images/photo-1544025162-d76694265947.jpg"
+      },
+      {
+        "name": "安踏 马赫5 竞速训练跑鞋",
+        "desc": "氮科技中底，速度训练。",
+        "price": 699,
+        "image": "/images/photo-1542291026-7eec264c27ff.jpg"
+      },
+      {
+        "name": "安踏 冰甲防晒皮肤衣 UPF50+",
+        "desc": "冰感科技，防晒透气。",
+        "price": 399,
+        "image": "/images/photo-1540962351504-03099e0a754b.jpg"
       }
     ]
   },
   {
-    "id": "rimowa",
-    "name": "RIMOWA日默瓦旗舰店",
-    "desc": "德国日默瓦·1898年创立·铝镁合金行李箱之王",
-    "image": "/images/photo-1553062407-98eeb64c6a62.jpg",
-    "category": "dutyfree",
+    "id": "victoriassecret",
+    "name": "维多利亚的秘密官方旗舰店",
+    "name_en": "Victoria's Secret Official Store",
+    "tags": [
+      "内衣",
+      "时尚",
+      "性感"
+    ],
+    "rating": 4.6,
+    "category": "内衣",
+    "delivery_time": "约7天",
+    "min_price": 298,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1540189549336-e6e99c3679fe.jpg",
+    "description": "美国维多利亚的秘密·全球最知名内衣品牌·天使秀传奇",
     "products": [
       {
-        "id": "rw1",
-        "name": "Original Cabin 登机箱 21寸",
-        "price": 9800,
-        "desc": "铝镁合金材质，标志性沟槽设计。TSA海关锁，Multi-Wheel静音万向轮。",
-        "specs": {
-          "尺寸": "21寸登机",
-          "材质": "铝镁合金",
-          "锁": "TSA海关锁"
-        },
-        "image": "/images/photo-1553062407-98eeb64c6a62.jpg",
-        "tags": [
-          "RIMOWA",
-          "登机箱",
-          "铝镁合金"
-        ]
+        "name": "Very Sexy 聚拢文胸",
+        "desc": "Push-up钢圈设计，蕾丝镶边，性感塑形。",
+        "price": 498,
+        "image": "/images/photo-1535131749006-b7f58c99034b.jpg"
+      },
+      {
+        "name": "Body by Victoria 无钢圈文胸",
+        "desc": "轻盈舒适无钢圈设计，日常百搭。",
+        "price": 398,
+        "image": "/images/photo-1534773728080-33d31da27ae5.jpg"
+      },
+      {
+        "name": "Dream Angels 蕾丝文胸套装",
+        "desc": "法国蕾丝+真丝面料，天使系列。",
+        "price": 698,
+        "image": "/images/photo-1534604973900-c43ab4c2e0ab.jpg"
+      },
+      {
+        "name": "T-shirt 光面无痕文胸",
+        "desc": "光面模杯设计，T恤内搭隐形。",
+        "price": 358,
+        "image": "/images/photo-1534080564583-6be75777b70a.jpg"
+      },
+      {
+        "name": "Bombshell 聚拢提升文胸",
+        "desc": "加厚Push-up，2 cup升级效果。",
+        "price": 498,
+        "image": "/images/photo-1532550907401-a500c9a57435.jpg"
+      },
+      {
+        "name": "Incredible 运动文胸",
+        "desc": "高支撑运动文胸，速干面料。",
+        "price": 398,
+        "image": "/images/photo-1531366936337-7c912a4589a7.jpg"
+      },
+      {
+        "name": "蕾丝吊带睡裙",
+        "desc": "真丝+蕾丝拼接，性感家居。",
+        "price": 898,
+        "image": "/images/photo-1529626455594-4ff0802cfb7e.jpg"
+      },
+      {
+        "name": "丝缎睡袍长款",
+        "desc": "100%桑蚕丝面料，奢华家居体验。",
+        "price": 1280,
+        "image": "/images/photo-1529333166437-7750a6dd5a70.jpg"
+      },
+      {
+        "name": "内衣洗涤袋套装",
+        "desc": "专业内衣护理套装。",
+        "price": 98,
+        "image": "/images/photo-1529042410759-befb1204b468.jpg"
+      },
+      {
+        "name": "香氛身体乳 250ml",
+        "desc": "标志性维密香氛身体乳。",
+        "price": 298,
+        "image": "/images/photo-1524678714210-9917a6c619c2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "maniform",
+    "name": "曼妮芬官方旗舰店",
+    "name_en": "Maniform Official Store",
+    "tags": [
+      "内衣",
+      "国内",
+      "高端"
+    ],
+    "rating": 4.7,
+    "category": "内衣",
+    "delivery_time": "约3天",
+    "min_price": 199,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1524230659092-07f99a75c013.jpg",
+    "description": "中国曼妮芬·始于1996年·国内高端内衣品牌·舒适塑形",
+    "products": [
+      {
+        "name": "聚拢调整型文胸",
+        "desc": "钢圈聚拢设计，3D立体模杯，舒适塑形。",
+        "price": 368,
+        "image": "/images/photo-1523170335258-f5ed11844a49.jpg"
+      },
+      {
+        "name": "无钢圈舒适文胸",
+        "desc": "零压感无钢圈，一片成型设计。",
+        "price": 298,
+        "image": "/images/photo-1518199266791-5375a83190b7.jpg"
+      },
+      {
+        "name": "薄款法式蕾丝文胸",
+        "desc": "进口法国蕾丝，轻盈透气。",
+        "price": 428,
+        "image": "/images/photo-1517336714731-489689fd1ca8.jpg"
+      },
+      {
+        "name": "大胸显小全罩杯文胸",
+        "desc": "全罩杯包裹，侧收聚拢，D-F杯。",
+        "price": 398,
+        "image": "/images/photo-1516724562728-afc824a36e84.jpg"
+      },
+      {
+        "name": "前扣美背文胸",
+        "desc": "前扣设计，背部U型设计，礼服搭配。",
+        "price": 328,
+        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg"
+      },
+      {
+        "name": "睡眠文胸无束缚款",
+        "desc": "无痕零压，睡眠舒适穿着。",
+        "price": 198,
+        "image": "/images/photo-1514306191717-452ec28c7814.jpg"
+      },
+      {
+        "name": "高腰塑身收腹裤",
+        "desc": "高腰设计，3D分段加压收腹。",
+        "price": 298,
+        "image": "/images/photo-1514282401047-d79a71a590e8.jpg"
+      },
+      {
+        "name": "真丝睡裙 吊带款",
+        "desc": "100%桑蚕丝面料，优雅家居。",
+        "price": 688,
+        "image": "/images/photo-1512621776951-a57141f2eefd.jpg"
+      },
+      {
+        "name": "无缝塑身背心",
+        "desc": "无缝编织，收腹美背。",
+        "price": 268,
+        "image": "/images/photo-1509440159596-0249088772ff.jpg"
+      },
+      {
+        "name": "运动防震文胸",
+        "desc": "高弹面料，防震设计。",
+        "price": 298,
+        "image": "/images/photo-1507652313519-d4e9174996dd.jpg"
+      }
+    ]
+  },
+  {
+    "id": "aimer",
+    "name": "爱慕官方旗舰店",
+    "name_en": "Aimer Official Store",
+    "tags": [
+      "内衣",
+      "国内",
+      "高端"
+    ],
+    "rating": 4.7,
+    "category": "内衣",
+    "delivery_time": "约3天",
+    "min_price": 268,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1506354666786-959d6d497f1a.jpg",
+    "description": "中国爱慕·始于1993年·中国内衣行业龙头·科技与时尚结合",
+    "products": [
+      {
+        "name": "爱慕 水母3.0 无钢圈文胸",
+        "desc": "零压水母垫科技，轻盈自如。",
+        "price": 398,
+        "image": "/images/photo-1505740420928-5e560c06d30e.jpg"
+      },
+      {
+        "name": "爱慕 3D立体模杯聚拢文胸",
+        "desc": "3D立体剪裁，自然聚拢。",
+        "price": 428,
+        "image": "/images/photo-1504674900247-0877df9cc836.jpg"
+      },
+      {
+        "name": "爱慕 舒氧系列 透气文胸",
+        "desc": "透氧面料，减少闷热感。",
+        "price": 368,
+        "image": "/images/photo-1503376780353-7e6692767b70.jpg"
+      },
+      {
+        "name": "爱慕 大胸专属 全罩杯文胸",
+        "desc": "D-G杯专属，侧收聚拢防下垂。",
+        "price": 468,
+        "image": "/images/photo-1500937386664-56d1dfef3854.jpg"
+      },
+      {
+        "name": "爱慕 法式无钢圈三角杯",
+        "desc": "法式简约风格，轻盈舒适。",
+        "price": 298,
+        "image": "/images/photo-1496116218417-1a781b1c416c.jpg"
+      },
+      {
+        "name": "爱慕 塑身腰封",
+        "desc": "3段分压，收腰塑形。",
+        "price": 388,
+        "image": "/images/photo-1494790108377-be9c29b29330.jpg"
+      },
+      {
+        "name": "爱慕 真丝吊带睡裙",
+        "desc": "桑蚕丝面料，优雅女人味。",
+        "price": 798,
+        "image": "/images/photo-1476718406336-bb5a9690ee2a.jpg"
+      },
+      {
+        "name": "爱慕 保暖内衣套装",
+        "desc": "美雅碧发热纤维，轻暖舒适。",
+        "price": 498,
+        "image": "/images/photo-1473968512647-3e447244af8f.jpg"
+      },
+      {
+        "name": "爱慕 瑜伽运动文胸",
+        "desc": "高弹防震，透气速干。",
+        "price": 328,
+        "image": "/images/photo-1470337458703-46ad1756a187.jpg"
+      },
+      {
+        "name": "爱慕 内裤 纯棉中腰",
+        "desc": "新疆长绒棉，舒适亲肤。",
+        "price": 89,
+        "image": "/images/photo-1467003909585-2f8a72700288.jpg"
+      }
+    ]
+  },
+  {
+    "id": "triumph",
+    "name": "黛安芬官方旗舰店",
+    "name_en": "Triumph Official Store",
+    "tags": [
+      "内衣",
+      "德国",
+      "舒适"
+    ],
+    "rating": 4.6,
+    "category": "内衣",
+    "delivery_time": "约7天",
+    "min_price": 238,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1455619452474-d2be8b1e70cd.jpg",
+    "description": "德国黛安芬·始于1886年·全球内衣行业巨头·舒适与创新",
+    "products": [
+      {
+        "name": "黛安芬 记忆棉模杯文胸",
+        "desc": "记忆棉随体温调整，完美贴合。",
+        "price": 398,
+        "image": "/images/photo-1414235077428-338989a2e8c0.jpg"
+      },
+      {
+        "name": "黛安芬 无钢圈减压文胸",
+        "desc": "减压零束缚，无缝亲肤。",
+        "price": 328,
+        "image": "/images/photo-1551698618-1dfe5d97d256.jpg"
+      },
+      {
+        "name": "黛安芬 T-shirt光面隐形文胸",
+        "desc": "光面设计，T恤内搭无痕。",
+        "price": 288,
+        "image": "/images/photo-1622434641406-a158123450f9.jpg"
+      },
+      {
+        "name": "黛安芬 聚拢push-up文胸",
+        "desc": "渐进式加厚垫，自然聚拢。",
+        "price": 358,
+        "image": "/images/photo-1621996346565-e3dbc646d9a9.jpg"
+      },
+      {
+        "name": "黛安芬 大杯文胸 D-J罩杯",
+        "desc": "全罩杯支撑，大胸专属。",
+        "price": 468,
+        "image": "/images/photo-1617196034796-73dfa7b1fd56.jpg"
+      },
+      {
+        "name": "黛安芬 蕾丝三角杯文胸",
+        "desc": "高级蕾丝花边，性感优雅。",
+        "price": 418,
+        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg"
+      },
+      {
+        "name": "黛安芬 运动文胸 高强度",
+        "desc": "能固定防震，高强度支撑。",
+        "price": 378,
+        "image": "/images/photo-1611143669185-af224c5e3252.jpg"
+      },
+      {
+        "name": "黛安芬 塑身连体衣",
+        "desc": "三段式塑身，收腹提臀。",
+        "price": 498,
+        "image": "/images/photo-1610945265064-0e34e5519bbf.jpg"
+      },
+      {
+        "name": "黛安芬 真丝睡裙",
+        "desc": "优雅真丝面料，舒适家居。",
+        "price": 698,
+        "image": "/images/photo-1606144042614-b2417e99c4e3.jpg"
+      },
+      {
+        "name": "黛安芬 经期舒适内裤 三条装",
+        "desc": "抗菌防漏，经期舒适。",
+        "price": 149,
+        "image": "/images/photo-1603133872878-684f208fb84b.jpg"
+      }
+    ]
+  },
+  {
+    "id": "zhonghua",
+    "name": "中华官方旗舰店",
+    "name_en": "Zhonghua Official Store",
+    "tags": [
+      "烟草",
+      "中国",
+      "高端"
+    ],
+    "rating": 4.9,
+    "category": "烟草",
+    "delivery_time": "约5天",
+    "min_price": 500,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1600891964092-4316c288032e.jpg",
+    "description": "上海烟草·中华香烟·国烟之尊·始于1951年·中式烤烟标杆",
+    "products": [
+      {
+        "name": "中华(软) 84mm 条装 10盒",
+        "desc": "软中华经典款，醇和细腻，国烟代表。",
+        "price": 800,
+        "image": "/images/photo-1599487488170-d11ec9c172f0.jpg"
+      },
+      {
+        "name": "中华(硬) 84mm 条装 10盒",
+        "desc": "硬中华经典款，品质稳定，商务首选。",
+        "price": 500,
+        "image": "/images/photo-1598515214211-89d3c73ae83b.jpg"
+      },
+      {
+        "name": "中华(金中支) 89mm 条装",
+        "desc": "中支创新设计，金色滤嘴，尊贵体验。",
+        "price": 1000,
+        "image": "/images/photo-1598103442097-8b74394b95c6.jpg"
+      },
+      {
+        "name": "中华(双中支) 89mm 条装",
+        "desc": "双倍满足感，中支潮流。",
+        "price": 800,
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg"
+      },
+      {
+        "name": "中华(金细支) 97mm 条装",
+        "desc": "细支低焦油，时尚健康。",
+        "price": 900,
+        "image": "/images/photo-1592919505780-303950717480.jpg"
+      },
+      {
+        "name": "中华(5000) 84mm 条装",
+        "desc": "中华5000系列纪念，独特配方。",
+        "price": 700,
+        "image": "/images/photo-1591405351990-4726e331f141.jpg"
+      },
+      {
+        "name": "中华(大中华) 84mm 条装",
+        "desc": "大中华超高端系列，精选上等烟叶。",
+        "price": 1200,
+        "image": "/images/photo-1589128777073-263566ae5e4d.jpg"
+      },
+      {
+        "name": "中华(金短支) 75mm 条装",
+        "desc": "短支设计，浓缩精华。",
+        "price": 800,
+        "image": "/images/photo-1588168333986-5078d3ae3976.jpg"
+      },
+      {
+        "name": "中华(全开式) 84mm 条装",
+        "desc": "全开式包装设计，商务送礼。",
+        "price": 600,
+        "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg"
+      },
+      {
+        "name": "中华(听装50支) 铁罐",
+        "desc": "铁罐50支装，收藏送礼。",
+        "price": 500,
+        "image": "/images/photo-1587593810167-a84920ea0781.jpg"
+      }
+    ]
+  },
+  {
+    "id": "yuxi",
+    "name": "玉溪官方旗舰店",
+    "name_en": "Yuxi Official Store",
+    "tags": [
+      "烟草",
+      "中国",
+      "清香"
+    ],
+    "rating": 4.7,
+    "category": "烟草",
+    "delivery_time": "约5天",
+    "min_price": 230,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1587314168485-3236d6710814.jpg",
+    "description": "云南红塔·玉溪香烟·云烟典范·清香型烟草代表",
+    "products": [
+      {
+        "name": "玉溪(软) 84mm 条装 10盒",
+        "desc": "软玉溪经典款，清香淡雅，国民口粮。",
+        "price": 280,
+        "image": "/images/photo-1585123334904-845d60e97b29.jpg"
+      },
+      {
+        "name": "玉溪(硬) 84mm 条装 10盒",
+        "desc": "硬玉溪经典款，清香醇和。",
+        "price": 260,
+        "image": "/images/photo-1583032015879-e5022cb87c3b.jpg"
+      },
+      {
+        "name": "玉溪(软尚善) 84mm 条装",
+        "desc": "软尚善升级版，更醇和细腻。",
+        "price": 350,
+        "image": "/images/photo-1582967788606-a171c1080cb0.jpg"
+      },
+      {
+        "name": "玉溪(和谐) 84mm 条装",
+        "desc": "和谐系列中高端，香气饱满。",
+        "price": 450,
+        "image": "/images/photo-1580910051074-3eb694886505.jpg"
+      },
+      {
+        "name": "玉溪(境界) 84mm 条装",
+        "desc": "玉溪顶级系列，清甜香润。",
+        "price": 800,
+        "image": "/images/photo-1579871494447-9811cf80d66c.jpg"
+      },
+      {
+        "name": "玉溪(细支) 97mm 条装",
+        "desc": "细支清香型，低焦油时尚。",
+        "price": 300,
+        "image": "/images/photo-1571896349842-33c89424de2d.jpg"
+      },
+      {
+        "name": "玉溪(初心) 84mm 条装",
+        "desc": "青涩初心，经典回归。",
+        "price": 260,
+        "image": "/images/photo-1571513722275-4b41940f54b8.jpg"
+      },
+      {
+        "name": "玉溪(中支和谐) 88mm 条装",
+        "desc": "中支和谐系列，满足感强。",
+        "price": 480,
+        "image": "/images/photo-1569718212165-3a8278d5f624.jpg"
+      },
+      {
+        "name": "玉溪(高配版) 84mm 条装",
+        "desc": "高配升级，醇和饱满。",
+        "price": 380,
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg"
+      },
+      {
+        "name": "玉溪(庄园) 84mm 条装",
+        "desc": "有机庄园种植烟叶，天然醇香。",
+        "price": 600,
+        "image": "/images/photo-1569263979104-865ab7cd8d13.jpg"
+      }
+    ]
+  },
+  {
+    "id": "huanghelou",
+    "name": "黄鹤楼官方旗舰店",
+    "name_en": "Huanghelou Official Store",
+    "tags": [
+      "烟草",
+      "中国",
+      "雅香"
+    ],
+    "rating": 4.8,
+    "category": "烟草",
+    "delivery_time": "约5天",
+    "min_price": 350,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1569058242253-92a9c755a0ec.jpg",
+    "description": "湖北中烟·黄鹤楼·天下江山第一楼·雅香型中式卷烟",
+    "products": [
+      {
+        "name": "黄鹤楼(1916) 84mm 条装",
+        "desc": "黄鹤楼顶级1916系列，手工选叶，雅香尊贵。",
+        "price": 1500,
+        "image": "/images/photo-1565557623262-b51c2513a641.jpg"
+      },
+      {
+        "name": "黄鹤楼(软蓝) 84mm 条装",
+        "desc": "软蓝经典款，淡雅香型，国民高端口粮。",
+        "price": 350,
+        "image": "/images/photo-1563379926898-05f4575a45d8.jpg"
+      },
+      {
+        "name": "黄鹤楼(硬红) 84mm 条装",
+        "desc": "硬红经典款，雅香浓郁。",
+        "price": 280,
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg"
+      },
+      {
+        "name": "黄鹤楼(硬珍品) 84mm 条装",
+        "desc": "硬珍品系列，雅致平衡。",
+        "price": 500,
+        "image": "/images/photo-1559737558-2f5a35f4523b.jpg"
+      },
+      {
+        "name": "黄鹤楼(软珍品) 84mm 条装",
+        "desc": "软珍品系列，醇雅细腻。",
+        "price": 600,
+        "image": "/images/photo-1558030006-450675393462.jpg"
+      },
+      {
+        "name": "黄鹤楼(漫天游) 84mm 条装",
+        "desc": "创意设计，雅香飘逸。",
+        "price": 800,
+        "image": "/images/photo-1556910103-1c02745aae4d.jpg"
+      },
+      {
+        "name": "黄鹤楼(峡谷柔情) 84mm 条装",
+        "desc": "峡谷柔情系列，柔美雅香。",
+        "price": 400,
+        "image": "/images/photo-1555939594-58d7cb561ad1.jpg"
+      },
+      {
+        "name": "黄鹤楼(细支) 97mm 条装",
+        "desc": "细支雅香型，低焦时尚。",
+        "price": 350,
+        "image": "/images/photo-1555680202-c86f0e12f086.jpg"
+      },
+      {
+        "name": "黄鹤楼(硬8度) 84mm 条装",
+        "desc": "爆珠薄荷清凉款，夏季首选。",
+        "price": 300,
+        "image": "/images/photo-1555244162-803834f70033.jpg"
+      },
+      {
+        "name": "黄鹤楼(天骄圣地) 84mm 条装",
+        "desc": "限量版高端系列，雅香巅峰。",
+        "price": 1000,
+        "image": "/images/photo-1555126634-323283e090fa.jpg"
+      }
+    ]
+  },
+  {
+    "id": "liqun",
+    "name": "利群官方旗舰店",
+    "name_en": "Liqun Official Store",
+    "tags": [
+      "烟草",
+      "中国",
+      "江南"
+    ],
+    "rating": 4.7,
+    "category": "烟草",
+    "delivery_time": "约5天",
+    "min_price": 180,
+    "address": "京东官方旗舰店",
+    "image": "/images/photo-1554200876-56c2f25224fa.jpg",
+    "description": "浙江中烟·利群·江南韵味·让心灵去旅行·中式烤烟中端王者",
+    "products": [
+      {
+        "name": "利群(软长嘴) 84mm 条装",
+        "desc": "软长嘴经典款，江南清新风格。",
+        "price": 280,
+        "image": "/images/photo-1553284965-83fd3e82fa5a.jpg"
+      },
+      {
+        "name": "利群(硬阳光) 84mm 条装",
+        "desc": "硬阳光系列，花香清甜。",
+        "price": 250,
+        "image": "/images/photo-1553062407-98eeb64c6a62.jpg"
+      },
+      {
+        "name": "利群(软阳光) 84mm 条装",
+        "desc": "软阳光系列，柔和顺畅。",
+        "price": 300,
+        "image": "/images/photo-1551218808-94e220e084d2.jpg"
+      },
+      {
+        "name": "利群(休闲) 84mm 条装",
+        "desc": "利群高端休闲系列，优雅从容。",
+        "price": 800,
+        "image": "/images/photo-1551183053-bf91a1d81141.jpg"
+      },
+      {
+        "name": "利群(红利) 84mm 条装",
+        "desc": "红利系列，醇厚饱满。",
+        "price": 350,
+        "image": "/images/photo-1550304943-4f24f54ddde9.jpg"
+      },
+      {
+        "name": "利群(富春山居) 84mm 条装",
+        "desc": "利群顶级系列，江南韵味极致。",
+        "price": 1000,
+        "image": "/images/photo-1547996160-81dfa63595aa.jpg"
+      },
+      {
+        "name": "利群(西子阳光) 84mm 条装",
+        "desc": "西子系列，清新淡雅。",
+        "price": 360,
+        "image": "/images/photo-1546833998-877b37c2e5c6.jpg"
+      },
+      {
+        "name": "利群(软红长嘴) 84mm 条装",
+        "desc": "软红长嘴系列，江南风味。",
+        "price": 260,
+        "image": "/images/photo-1546069901-ba9599a7e63c.jpg"
+      },
+      {
+        "name": "利群(夜·西湖) 84mm 条装",
+        "desc": "夜西湖限量款，独特包装设计。",
+        "price": 400,
+        "image": "/images/photo-1545389336-cf090694435e.jpg"
+      },
+      {
+        "name": "利群(细支) 97mm 条装",
+        "desc": "利群细支系列，低焦油时尚。",
+        "price": 280,
+        "image": "/images/photo-1544636331-e26879cd4d9b.jpg"
       }
     ]
   }
