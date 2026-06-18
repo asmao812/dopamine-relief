@@ -1,0 +1,50 @@
+[
+  {
+    "id": "japanese",
+    "name": "日料盛宴",
+    "icon": "🍣",
+    "count": 3
+  },
+  {
+    "id": "french",
+    "name": "法式臻选",
+    "icon": "🥐",
+    "count": 4
+  },
+  {
+    "id": "cantonese",
+    "name": "粤式经典",
+    "icon": "🦞",
+    "count": 2
+  },
+  {
+    "id": "hotpot",
+    "name": "火锅名店",
+    "icon": "🍲",
+    "count": 1
+  },
+  {
+    "id": "seafood",
+    "name": "海鲜珍品",
+    "icon": "🦀",
+    "count": 2
+  },
+  {
+    "id": "steak",
+    "name": "牛排美馔",
+    "icon": "🥩",
+    "count": 1
+  },
+  {
+    "id": "dessert",
+    "name": "甜品艺术",
+    "icon": "🍰",
+    "count": 1
+  },
+  {
+    "id": "beijing",
+    "name": "京味传承",
+    "icon": "🦆",
+    "count": 4
+  }
+]

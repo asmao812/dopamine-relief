@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Scope test</title>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.23.0/babel.min.js"></script>
+</head>
+<body><div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+
+function CompA() {
+  const [x, setX] = useState(1);
+  return <div onClick={() => setX(x+1)} style={{padding:20,cursor:'pointer',background:'#fee'}}>
+    CompA: {x}
+  </div>;
+}
+window.CompA = CompA;
+
+function App() {
+  return <div>
+    <h2>App</h2>
+    <CompA />
+  </div>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>

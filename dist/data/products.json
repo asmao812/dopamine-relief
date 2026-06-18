@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "category": "phone",
+    "brand": "华为",
+    "name": "Mate XT 非凡大师 原版玄黑",
+    "price": 21999,
+    "originalPrice": 21999,
+    "desc": "华为三折叠旗舰，以10.2英寸超大折叠屏重新定义移动办公与影音体验。玄黑配色素雅沉稳，商务精英的不二之选。",
+    "specs": {
+      "屏幕": "10.2英寸OLED三折叠屏，2232×3184（展开）/ 1008×2232（外屏）",
+      "处理器": "麒麟9010 5G芯片",
+      "摄像头": "5000万像素主摄 + 1200万超广角 + 1200万潜望长焦",
+      "电池": "5600mAh，66W有线 + 50W无线快充",
+      "系统": "HarmonyOS",
+      "存储": "16GB + 512GB"
+    },
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate-xt-ultimate-design/images/hero/highlight-01.jpg",
+    "tags": [
+      "折叠屏",
+      "商务旗舰",
+      "10.2英寸",
+      "麒麟9010"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "phone",
+    "brand": "华为",
+    "name": "Mate XT 非凡大师 樱花粉（限定）",
+    "price": 23999,
+    "originalPrice": 23999,
+    "desc": "全球限量发售的樱花粉配色，柔雾粉调中流转着珍珠光泽，如东京四月落樱般梦幻。限量编号铭刻于机身，是只属于女神的折叠艺术品。",
+    "specs": {
+      "屏幕": "10.2英寸OLED三折叠屏，2232×3184（展开）/ 1008×2232（外屏）",
+      "处理器": "麒麟9010 5G芯片",
+      "摄像头": "5000万像素主摄 + 1200万超广角 + 1200万潜望长焦",
+      "电池": "5600mAh，66W有线 + 50W无线快充",
+      "系统": "HarmonyOS",
+      "存储": "16GB + 1TB",
+      "限定": "樱花粉限定版，独立编号，限量发售"
+    },
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate-xt-ultimate-design/images/design/colour-red-thumb.png",
+    "tags": [
+      "限定色",
+      "樱花粉",
+      "折叠屏",
+      "女神专属",
+      "限量编号"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "phone",
+    "brand": "华为",
+    "name": "Mate XT 非凡大师 薄荷绿（限定）",
+    "price": 23999,
+    "originalPrice": 23999,
+    "desc": "一抹清凉的薄荷绿，仿佛将夏日莫吉托的清爽凝固于掌心。限定版采用独家渐变镀膜工艺，从不同角度折射出薄荷冰晶般的剔透光泽，是INS博主同款时尚单品。",
+    "specs": {
+      "屏幕": "10.2英寸OLED三折叠屏，2232×3184（展开）/ 1008×2232（外屏）",
+      "处理器": "麒麟9010 5G芯片",
+      "摄像头": "5000万像素主摄 + 1200万超广角 + 1200万潜望长焦",
+      "电池": "5600mAh，66W有线 + 50W无线快充",
+      "系统": "HarmonyOS",
+      "存储": "16GB + 1TB",
+      "限定": "薄荷绿限定版，渐变镀膜工艺，限量发售"
+    },
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate-xt-ultimate-design/images/hero/highlight-02.jpg",
+    "tags": [
+      "限定色",
+      "薄荷绿",
+      "折叠屏",
+      "INS爆款",
+      "渐变镀膜"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "phone",
+    "brand": "华为",
+    "name": "Mate XT 非凡大师 星空紫（限定）",
+    "price": 23999,
+    "originalPrice": 23999,
+    "desc": "以银河星云为灵感的星空紫配色——深邃紫底上洒落细碎星芒，每一次翻转都折射出不同的星光轨迹。搭配专属星空动态壁纸，让宇宙的浪漫在手心展开。",
+    "specs": {
+      "屏幕": "10.2英寸OLED三折叠屏，2232×3184（展开）/ 1008×2232（外屏）",
+      "处理器": "麒麟9010 5G芯片",
+      "摄像头": "5000万像素主摄 + 1200万超广角 + 1200万潜望长焦",
+      "电池": "5600mAh，66W有线 + 50W无线快充",
+      "系统": "HarmonyOS",
+      "存储": "16GB + 1TB",
+      "限定": "星空紫限定版，星芒镀膜工艺，限量发售"
+    },
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate-xt-ultimate-design/images/hero/highlight-03.jpg",
+    "tags": [
+      "限定色",
+      "星空紫",
+      "折叠屏",
+      "独家星芒镀膜",
+      "限量编号"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "phone",
+    "brand": "华为",
+    "name": "Mate 70 Pro+ 阔屏 原版",
+    "price": 9999,
+    "originalPrice": 9999,
+    "desc": "华为年度影像旗舰，搭载1英寸大底可调物理光圈，卫星通信全覆盖。经典配色，性能与美学兼备。",
+    "specs": {
+      "屏幕": "6.9英寸LTPO OLED，1312×2832，1-120Hz自适应刷新率",
+      "处理器": "麒麟9100 5G芯片",
+      "摄像头": "5000万可变光圈主摄 + 4800万超广角 + 4000万长焦微距",
+      "电池": "5700mAh，88W有线 + 50W无线快充",
+      "系统": "HarmonyOS NEXT",
+      "特色": "北斗卫星消息 + 天通卫星通话",
+      "存储": "16GB + 512GB"
+    },
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate70-pro-plus/img/kv/kv-phone-2.jpg",
+    "tags": [
+      "影像旗舰",
+      "卫星通信",
+      "物理可变光圈",
+      "麒麟9100"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "phone",
+    "brand": "华为",
+    "name": "Mate 70 Pro+ 阔屏 玫瑰金（限定）",
+    "price": 10999,
+    "originalPrice": 10999,
+    "desc": "以晨间第一缕阳光洒在玫瑰花瓣上的色彩为灵感，玫瑰金限定版采用纳米级渐变镀色工艺。温润的玫瑰金色在不同光线下呈现出从暖金到柔粉的细腻变化，配合同色系限定主题UI，是献给品味女性的匠心之作。",
+    "specs": {
+      "屏幕": "6.9英寸LTPO OLED，1312×2832，1-120Hz自适应刷新率",
+      "处理器": "麒麟9100 5G芯片",
+      "摄像头": "5000万可变光圈主摄 + 4800万超广角 + 4000万长焦微距",
+      "电池": "5700mAh，88W有线 + 50W无线快充",
+      "系统": "HarmonyOS NEXT",
+      "特色": "北斗卫星消息 + 天通卫星通话",
+      "存储": "16GB + 1TB",
+      "限定": "玫瑰金限定版，纳米渐变镀色，限量发售"
+    },
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate70-pro-plus/img/kv/kv-phone-1.jpg",
+    "tags": [
+      "限定色",
+      "玫瑰金",
+      "影像旗舰",
+      "纳米渐变镀色",
+      "女神限定"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "luxury",
+    "brand": "Hermès",
+    "name": "Birkin 30 铂金包 Togo皮 金扣",
+    "price": 185000,
+    "originalPrice": 198000,
+    "desc": "爱马仕最具传奇色彩的手袋，Birkin 30以经典尺寸成为全球名媛的终极梦想。Togo牛皮天然纹理，配以金色五金件，低调中透着无与伦比的奢华气场。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800",
+    "tags": [
+      "爱马仕",
+      "Birkin",
+      "铂金包",
+      "Togo皮",
+      "配货"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "luxury",
+    "brand": "Chanel",
+    "name": "Classic Flap 口盖包 鱼子酱皮 银扣",
+    "price": 68000,
+    "originalPrice": 68000,
+    "desc": "香奈儿经典口盖包，由Coco Chanel于1955年设计，历经70年依旧是优雅的代名词。鱼子酱荔枝牛皮耐磨耐用，银色五金搭配黑色皮革，经典永不过时。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1590739297912-a9c27b17f524?w=800",
+    "tags": [
+      "香奈儿",
+      "Classic Flap",
+      "鱼子酱皮",
+      "CF",
+      "保值"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "luxury",
+    "brand": "Rolex",
+    "name": "Cosmograph Daytona 冰蓝盘 铂金款",
+    "price": 298000,
+    "originalPrice": 320000,
+    "desc": "劳力士宇宙计型迪通拿，赛车计时表的传奇之作。冰蓝表盘搭配铂金表壳与栗棕色Cerachrom陶瓷表圈，极致稀有，一表难求。是成功男士手腕上永恒的追求。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800",
+    "tags": [
+      "劳力士",
+      "Daytona",
+      "迪通拿",
+      "冰蓝盘",
+      "铂金",
+      "超公价"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "luxury",
+    "brand": "Patek Philippe",
+    "name": "Nautilus 5711/1A 钢王",
+    "price": 680000,
+    "originalPrice": 750000,
+    "desc": "百达翡丽鹦鹉螺，腕表界的蓝色传奇。5711作为已停产的绝版型号，其独特的舷窗造型和蓝黑渐变表盘让它成为拍卖市场的宠儿。拥有它，等于拥有了腕表收藏的皇冠明珠。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?w=800",
+    "tags": [
+      "百达翡丽",
+      "Nautilus",
+      "鹦鹉螺",
+      "钢王",
+      "已停产",
+      "超公价"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "luxury",
+    "brand": "Cartier",
+    "name": "Love 手镯 黄金款 经典宽版",
+    "price": 52000,
+    "originalPrice": 52000,
+    "desc": "卡地亚Love系列，诞生于1969年的经典传奇。独特的螺钉设计和专属螺丝刀，诉说着锁住爱情的浪漫隐喻。黄金宽版是Love系列最经典的入门之选，也是情侣之间最炙手可热的定情信物。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800",
+    "tags": [
+      "卡地亚",
+      "Love手镯",
+      "定情信物",
+      "18K黄金",
+      "经典宽版"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "luxury",
+    "brand": "Van Cleef & Arpels",
+    "name": "Alhambra 四叶草项链 红玉髓 黄金",
+    "price": 32000,
+    "originalPrice": 32000,
+    "desc": "梵克雅宝四叶草系列，幸运的象征。红玉髓四叶草坠饰温润通透，搭配18K黄金珠饰链条，简约而不失华贵。是温柔系女生的第一件VCA入门之选，也是所有女孩梳妆台上最闪耀的幸运符。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1601828834749-97f5b7111d6f?w=800",
+    "tags": [
+      "梵克雅宝",
+      "四叶草",
+      "Alhambra",
+      "红玉髓",
+      "幸运"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "luxury",
+    "brand": "Dior",
+    "name": "Book Tote 大号 Oblique刺绣 蓝色",
+    "price": 32000,
+    "originalPrice": 32000,
+    "desc": "Dior标志性Book Tote托特包，由创意总监Maria Grazia Chiuri设计。通体以蓝色Oblique提花刺绣包裹，超大容量兼顾实用与时尚，是名媛出街、度假、购物的完美伴侣。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800",
+    "tags": [
+      "迪奥",
+      "Book Tote",
+      "Oblique刺绣",
+      "托特包",
+      "名媛必入"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "luxury",
+    "brand": "Gucci",
+    "name": "GG Marmont 链条包 小号 黑色",
+    "price": 21000,
+    "originalPrice": 21000,
+    "desc": "Gucci GG Marmont系列，复古双G扣饰向品牌1970年代经典设计致敬。黑色Matelassé波浪绗缝皮革配以复古金色链条肩带，可斜挎可单肩，是都市女孩的百搭神器。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=800",
+    "tags": [
+      "古驰",
+      "GG Marmont",
+      "链条包",
+      "复古双G",
+      "百搭"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "luxury",
+    "brand": "Tiffany & Co.",
+    "name": "T 系列 18K金密镶钻石手镯",
+    "price": 18000,
+    "originalPrice": 18000,
+    "desc": "Tiffany T系列以品牌首字母T为灵感，干净利落的线条设计彰显纽约极简美学。密镶钻石搭配18K黄金，低调中绽放璀璨光芒，是独立女性的态度宣言。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800",
+    "tags": [
+      "蒂芙尼",
+      "T系列",
+      "钻石手镯",
+      "极简美学",
+      "Tiffany蓝"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "luxury",
+    "brand": "Bvlgari",
+    "name": "Serpenti Tubogas 双圈腕表 玫瑰金镶钻",
+    "price": 158000,
+    "originalPrice": 168000,
+    "desc": "宝格丽Serpenti灵蛇系列腕表，将珠宝与腕表完美融合。Tubogas工艺打造的玫瑰金双圈表带如灵蛇般缠绕腕间，表壳镶嵌璀璨钻石，是蛇年必入的腕间艺术品。",
+    "specs": null,
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800",
+    "tags": [
+      "宝格丽",
+      "Serpenti",
+      "灵蛇",
+      "Tubogas",
+      "玫瑰金"
+    ]
+  }
+]
