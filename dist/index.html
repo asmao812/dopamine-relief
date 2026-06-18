@@ -114,9 +114,9 @@ body {
 
 .app-header {
   position:sticky; top:0; z-index:100;
-  background: linear-gradient(135deg, var(--primary), #FF8D58);
-  color:#FFF; padding:12px 16px;
-  padding-top: max(12px, env(safe-area-inset-top));
+  background: var(--bg-card);
+  color:#FFF; padding:0;
+  padding-top: max(0px, env(safe-area-inset-top));
 }
 .app-header h1 { font-size:18px; font-weight:600; letter-spacing:0.5px; }
 .app-header .subtitle { font-size:11px; opacity:0.85; margin-top:2px; }
@@ -436,12 +436,12 @@ body {
 window.__LANG__ = localStorage.getItem('dopamine_lang') || 'zh';
 
 window.I18N_ZH = {
-  app: { title: '解压小站', subtitle: '随便点 · 不花钱 · 纯解压' },
-  home: { search: '搜高端餐厅...', nearby: '附近高端餐厅', categories: '分类', recommend: '推荐' },
+  app: { title: '悦己镇', subtitle: 'Treat yourself better' },
+  home: { search: '逛逛小镇...', nearby: '镇上的馆子', categories: '分类', recommend: '推荐' },
   store: { menu: '菜单', review: '评价', info: '店铺信息' },
   cart: { title: '购物车', empty: '购物车是空的，去逛逛吧', total: '合计', checkout: '去结算', clear: '清空' },
   order: { confirm: '确认订单', address: '收货地址', fake_address: '北京市朝阳区建国路88号', pay_method: '支付方式', wechat: '微信支付', alipay: '支付宝', card: '银行卡', submit: '提交订单', cancel: '取消' },
-  success: { title: '下单成功！🎉', saved: '本次省下', subtitle: '看，不花一分钱照样爽！', back: '继续逛', share: '分享给兄弟' },
+  success: { title: '下单成功！🎉', saved: '本次省下', subtitle: '看，不花一分钱照样爽！', back: '继续逛', share: '分享给朋友' },
   stats: { saved: '已省下', orders: '已下单', streak: '连续打卡' },
   install: { text: '添加到桌面，体验更好', install: '安装', later: '稍后' },
   toast: { added: '已加入购物车', removed: '已移除', cleared: '购物车已清空' },
@@ -450,8 +450,8 @@ window.I18N_ZH = {
 };
 
 window.I18N_EN = {
-  app: { title: 'Dopamine Relief', subtitle: 'Order anything · Zero cost · Pure joy' },
-  home: { search: 'Search fancy restaurants...', nearby: 'Nearby Premium', categories: 'Categories', recommend: 'Recommended' },
+  app: { title: 'Joyville', subtitle: 'Treat yourself better' },
+  home: { search: 'Explore the town...', nearby: 'Town Eateries', categories: 'Categories', recommend: 'Recommended' },
   store: { menu: 'Menu', review: 'Reviews', info: 'Info' },
   cart: { title: 'Cart', empty: 'Cart is empty, go explore!', total: 'Total', checkout: 'Checkout', clear: 'Clear' },
   order: { confirm: 'Confirm Order', address: 'Delivery Address', fake_address: '88 Jianguo Rd, Chaoyang, Beijing', pay_method: 'Payment', wechat: 'WeChat Pay', alipay: 'Alipay', card: 'Card', submit: 'Place Order', cancel: 'Cancel' },
@@ -518,7 +518,7 @@ window.T = function(key) {
     return '¥' + n;
   }
 
-  // ===== Header =====
+  // ===== Header (image-based banner) =====
   function Header() {
     var darkState = React.useState(false);
     var dark = darkState[0], setDark = darkState[1];
@@ -553,33 +553,52 @@ window.T = function(key) {
       window.dispatchEvent(new CustomEvent('langchange', { detail: { lang: next } }));
     }, [lang]);
 
-    return h('header', { className: 'app-header row', style: { justifyContent: 'space-between' } },
-      h('div', { className: 'app-logo' },
-        h('svg', { width: 32, height: 32, viewBox: '0 0 32 32', 'aria-label': 'FluAI' },
-          h('defs', null,
-            h('linearGradient', { id: 'fluai-grad', x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
-              h('stop', { offset: '0%', stopColor: '#FF5D37' }),
-              h('stop', { offset: '100%', stopColor: '#FF8D58' })
-            )
-          ),
-          h('circle', { cx: 16, cy: 16, r: 15, fill: 'none', stroke: 'url(#fluai-grad)', strokeWidth: 2 }),
-          h('path', {
-            d: 'M10 8h7c3 0 5.5 2 5.5 4.5s-2.5 4.5-5.5 4.5h-4v7h-3V8z',
-            fill: 'url(#fluai-grad)'
-          }),
-          h('circle', { cx: 22, cy: 14, r: 2.5, fill: '#FF5D37' })
-        ),
-        h('div', null,
-          h('h1', null, window.T('app.title')),
-          h('div', { className: 'subtitle' }, window.T('app.subtitle'))
-        )
+    return h('header', {
+      className: 'app-header',
+      style: {
+        position: 'sticky', top: 0, zIndex: 100,
+        padding: 0, background: 'none', display: 'flex',
+        alignItems: 'center', justifyContent: 'space-between',
+        paddingTop: 'max(0px, env(safe-area-inset-top))'
+      }
+    },
+      // Left: logo image instead of SVG + text
+      h('img', {
+        src: '/assets/header-bg.png',
+        alt: '悦己镇 · Joyville — Treat yourself better',
+        style: {
+          width: '100%', height: 'auto', display: 'block',
+          position: 'absolute', top: 0, left: 0, zIndex: 0
+        }
+      }),
+      // Right: language and dark mode buttons (on top of image)
+      h('div', {
+        style: {
+          position: 'absolute', top: 8, right: 8, zIndex: 2,
+          display: 'flex', gap: 6, alignItems: 'center'
+        }
+      },
+        h('button', {
+          onClick: toggleLang, title: 'Switch language',
+          style: {
+            background: 'rgba(0,0,0,0.35)', color: '#FFF',
+            border: 'none', padding: '6px 10px', borderRadius: 6,
+            fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
+            whiteSpace: 'nowrap', backdropFilter: 'blur(4px)'
+          }
+        }, window.T('lang')),
+        h('button', {
+          onClick: toggleDark, title: 'Toggle dark mode',
+          style: {
+            background: 'rgba(0,0,0,0.35)', color: '#FFF',
+            border: 'none', padding: '6px 10px', borderRadius: 6,
+            fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
+            whiteSpace: 'nowrap', backdropFilter: 'blur(4px)'
+          }
+        }, (dark ? '☀️ ' : '🌙 ') + window.T('darkmode'))
       ),
-      h('div', { className: 'header-actions' },
-        h('button', { className: 'header-btn', onClick: toggleLang, title: 'Switch language' }, window.T('lang')),
-        h('button', { className: 'header-btn', onClick: toggleDark, title: 'Toggle dark mode' },
-          (dark ? '☀️ ' : '🌙 ') + window.T('darkmode')
-        )
-      )
+      // Spacer to maintain aspect ratio (240/1600 = 0.15)
+      h('div', { style: { width: '100%', paddingTop: '15%', position: 'relative', zIndex: 1 } })
     );
   }
   window.Header = Header;
@@ -736,7 +755,7 @@ window.T = function(key) {
         filtered.length === 0 ?
           h('div', { className: 'p-16 text-center', style: { color: 'var(--text-light)', paddingTop: 40 } },
             h('div', { style: { fontSize: 48, marginBottom: 12 } }, '🍜'),
-            h('p', null, search ? '没有找到匹配的餐厅' : '暂无餐厅数据'),
+            h('p', null, search ? '没有找到匹配的上馆子' : '暂无上馆子数据'),
             h('p', { style: { fontSize: 12, marginTop: 4 } }, '试试换个关键词搜索')
           )
         :
@@ -796,6 +815,197 @@ window.T = function(key) {
   }
   window.FoodHome = FoodHome;
 
+  // ===== StoreReviews — 评价系统 =====
+  function StoreReviews(props) {
+    var store = props.store;
+    var storeId = props.storeId;
+
+    // Load reviews: localStorage first, then store data
+    var reviewsState = React.useState(function() {
+      var localKey = 'joyville_reviews_' + storeId;
+      try {
+        var saved = localStorage.getItem(localKey);
+        if (saved) return JSON.parse(saved);
+      } catch(e) {}
+      // Fall back to store.reviews if available
+      return (store && store.reviews) ? store.reviews : [];
+    });
+    var reviews = reviewsState[0], setReviews = reviewsState[1];
+
+    // Save to localStorage when reviews change
+    React.useEffect(function() {
+      try {
+        localStorage.setItem('joyville_reviews_' + storeId, JSON.stringify(reviews));
+      } catch(e) {}
+    }, [reviews, storeId]);
+
+    // Form state
+    var ratingState = React.useState(5);
+    var rating = ratingState[0], setRating = ratingState[1];
+    var hoverState = React.useState(0);
+    var hoverRating = hoverState[0], setHoverRating = hoverState[1];
+    var contentState = React.useState('');
+    var content = contentState[0], setContent = contentState[1];
+    var userState = React.useState('匿名吃货');
+    var user = userState[0], setUser = userState[1];
+    var submittedState = React.useState(false);
+    var submitted = submittedState[0], setSubmitted = submittedState[1];
+
+    var handleSubmit = React.useCallback(function() {
+      if (!content.trim()) return;
+      var newReview = {
+        user: user.trim() || '匿名吃货',
+        rating: rating,
+        date: new Date().toISOString().slice(0, 10),
+        content: content.trim()
+      };
+      setReviews(function(prev) { return [newReview].concat(prev); });
+      setContent('');
+      setRating(5);
+      setSubmitted(true);
+      setTimeout(function() { setSubmitted(false); }, 2000);
+    }, [content, rating, user]);
+
+    // Render star rating
+    function renderStars(current, interactive, onChange, onHover) {
+      var stars = [];
+      for (var s = 1; s <= 5; s++) {
+        var filled = s <= (hoverRating || current);
+        stars.push(h('span', {
+          key: s,
+          onClick: interactive ? function() { onChange(s); } : undefined,
+          onMouseEnter: interactive ? function() { onHover(s); } : undefined,
+          onMouseLeave: interactive ? function() { onHover(0); } : undefined,
+          style: {
+            cursor: interactive ? 'pointer' : 'default',
+            fontSize: interactive ? 28 : 16,
+            color: filled ? '#F5A623' : '#DDD',
+            transition: 'color 0.15s',
+            marginRight: 2
+          }
+        }, filled ? '★' : '☆'));
+      }
+      return h('div', { style: { display: 'flex', alignItems: 'center', gap: 0 } }, stars);
+    }
+
+    // Average rating
+    var avgRating = reviews.length > 0
+      ? (reviews.reduce(function(s, r) { return s + (r.rating || 0); }, 0) / reviews.length).toFixed(1)
+      : (store.rating || '0');
+
+    return h('div', { style: { paddingBottom: 80 } },
+      // Rating summary
+      h('div', {
+        style: {
+          display: 'flex', alignItems: 'center', gap: 12,
+          padding: '16px', background: 'var(--bg)', margin: '12px 16px',
+          borderRadius: 'var(--radius)'
+        }
+      },
+        h('div', { style: { fontSize: 36, fontWeight: 700, color: 'var(--primary)' } }, String(avgRating)),
+        h('div', null,
+          renderStars(parseFloat(avgRating), false),
+          h('div', { style: { fontSize: 12, color: 'var(--text-light)', marginTop: 4 } },
+            reviews.length + ' 条评价'
+          )
+        )
+      ),
+
+      // Write review form
+      h('div', {
+        style: {
+          margin: '0 16px 12px', padding: 14,
+          background: 'var(--bg)', borderRadius: 'var(--radius-sm)'
+        }
+      },
+        h('div', { style: { fontSize: 14, fontWeight: 600, marginBottom: 10 } }, '✏️ 写评价'),
+        h('input', {
+          placeholder: '你的昵称',
+          value: user,
+          onChange: function(e) { setUser(e.target.value); },
+          style: {
+            width: '100%', padding: '8px 12px', borderRadius: 6,
+            border: '1px solid var(--border)', fontSize: 13,
+            marginBottom: 8, fontFamily: 'inherit',
+            background: 'var(--bg-card)', color: 'var(--text)'
+          }
+        }),
+        h('div', { style: { marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 } },
+          h('span', { style: { fontSize: 12, color: 'var(--text-light)' } }, '评分:'),
+          renderStars(rating, true, setRating, setHoverRating)
+        ),
+        h('textarea', {
+          placeholder: '分享你的体验...',
+          value: content,
+          onChange: function(e) { setContent(e.target.value); },
+          rows: 3,
+          style: {
+            width: '100%', padding: '8px 12px', borderRadius: 6,
+            border: '1px solid var(--border)', fontSize: 13,
+            fontFamily: 'inherit', resize: 'vertical',
+            background: 'var(--bg-card)', color: 'var(--text)',
+            marginBottom: 8
+          }
+        }),
+        h('button', {
+          onClick: handleSubmit,
+          disabled: !content.trim() || submitted,
+          style: {
+            padding: '8px 20px', borderRadius: 20,
+            border: 'none',
+            background: submitted ? 'var(--success)' : (content.trim() ? 'var(--primary)' : 'var(--border)'),
+            color: '#FFF', fontSize: 14, fontWeight: 600,
+            cursor: content.trim() ? 'pointer' : 'not-allowed',
+            fontFamily: 'inherit'
+          }
+        }, submitted ? '✓ 已提交' : '提交评价')
+      ),
+
+      // Reviews list
+      h('div', { style: { padding: '0 16px' } },
+        reviews.length === 0 ?
+          h('div', { style: { textAlign: 'center', padding: '24px 0', color: 'var(--text-light)', fontSize: 13 } },
+            '暂无评价，成为第一个评价的人吧~'
+          )
+        :
+          reviews.map(function(review, idx) {
+            var initial = (review.user || '匿').charAt(0);
+            var bgColors = ['#FF5D37', '#FF8D58', '#F59E0B', '#22C55E', '#3B82F6', '#8B5CF6', '#EC4899'];
+            var bgColor = bgColors[idx % bgColors.length];
+            return h('div', {
+              key: idx,
+              style: {
+                padding: '12px 0', borderBottom: '1px solid var(--border)',
+                display: 'flex', gap: 10
+              }
+            },
+              // Avatar circle with initial
+              h('div', {
+                style: {
+                  width: 36, height: 36, borderRadius: 18,
+                  background: bgColor, color: '#FFF',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 14, fontWeight: 700, flexShrink: 0
+                }
+              }, initial),
+              // Review content
+              h('div', { style: { flex: 1 } },
+                h('div', { style: { display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 } },
+                  h('span', { style: { fontSize: 13, fontWeight: 600 } }, review.user),
+                  h('span', { style: { fontSize: 13, color: '#F5A623' } },
+                    '★'.repeat(Math.min(5, review.rating || 5)) + '☆'.repeat(Math.max(0, 5 - (review.rating || 5)))
+                  ),
+                  h('span', { style: { fontSize: 11, color: 'var(--text-light)', marginLeft: 'auto' } }, review.date)
+                ),
+                h('div', { style: { fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 } }, review.content)
+              )
+            );
+          })
+      )
+    );
+  }
+  window.StoreReviews = StoreReviews;
+
   // ===== StorePage =====
   function StorePage(props) {
     var store = props.store;
@@ -810,7 +1020,7 @@ window.T = function(key) {
 
     if (!store) {
       return h('div', { className: 'p-16 text-center', style: { color: 'var(--text-secondary)', paddingTop: 60 } },
-        h('p', null, '未选择餐厅'),
+        h('p', null, '未选择上馆子'),
         h('button', {
           onClick: onGoBack,
           style: {
@@ -992,13 +1202,8 @@ window.T = function(key) {
           )
       ) : null,
 
-      // Review tab
-      activeTab === 'review' ? h('div', { className: 'p-16 text-center', style: { paddingTop: 40, color: 'var(--text-light)' } },
-        h('div', { style: { fontSize: 48, marginBottom: 12 } }, '⭐'),
-        h('p', { style: { fontSize: 16, fontWeight: 500, color: 'var(--text)' } }, (store.rating || '4.8') + ' 分'),
-        h('p', { style: { marginTop: 8, fontSize: 13 } }, '这家店太火了，评价加载中...'),
-        h('p', { style: { fontSize: 11, marginTop: 4, color: 'var(--text-light)' } }, '(反正是假的，别在意这些细节 😄)')
-      ) : null,
+      // Review tab with real reviews
+      activeTab === 'review' ? h(StoreReviews, { store: store, storeId: store.id }) : null,
 
       // Info tab
       activeTab === 'info' ? h('div', { className: 'p-16', style: { color: 'var(--text-secondary)' } },
@@ -1513,6 +1718,7 @@ window.T = function(key) {
     var savedAmount = props.savedAmount || 0;
     var stats = props.stats || {};
     var onGoHome = props.onGoHome;
+    var orderData = props.orderData;
 
     var showState = React.useState(false);
     var showContent = showState[0], setShowContent = showState[1];
@@ -1522,6 +1728,8 @@ window.T = function(key) {
     var bigNumberAnim = bigAnimState[0], setBigNumberAnim = bigAnimState[1];
     var shareToastState = React.useState('');
     var shareToast = shareToastState[0], setShareToast = shareToastState[1];
+    var showOrderDetailState = React.useState(false);
+    var showOrderDetail = showOrderDetailState[0], setShowOrderDetail = showOrderDetailState[1];
 
     React.useEffect(function() {
       var pieces = [];
@@ -1531,7 +1739,114 @@ window.T = function(key) {
       setTimeout(function() { setBigNumberAnim(true); }, 600);
     }, []);
 
-    var handleShare = React.useCallback(function() {
+    // Canvas share: generate order card image
+    var handleShareCanvas = React.useCallback(function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = 500;
+      canvas.height = 600;
+      var ctx = canvas.getContext('2d');
+
+      // Background
+      var gradient = ctx.createLinearGradient(0, 0, 0, 600);
+      gradient.addColorStop(0, '#FFF8F0');
+      gradient.addColorStop(0.5, '#FFFFFF');
+      gradient.addColorStop(1, '#FFF8F0');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 500, 600);
+
+      // Header banner
+      var hdrGrad = ctx.createLinearGradient(0, 0, 500, 0);
+      hdrGrad.addColorStop(0, '#F5A623');
+      hdrGrad.addColorStop(1, '#FF8D58');
+      ctx.fillStyle = hdrGrad;
+      ctx.fillRect(0, 0, 500, 80);
+
+      // Title
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = 'bold 24px "Noto Sans SC", sans-serif';
+      ctx.fillText('悦己镇 · Joyville', 30, 50);
+
+      // Order ID
+      ctx.fillStyle = '#3D2E1F';
+      ctx.font = 'bold 14px "Noto Sans SC", sans-serif';
+      ctx.fillText('订单号: ' + (orderData ? orderData.orderId : 'N/A'), 30, 110);
+
+      // Time
+      ctx.font = '12px "Noto Sans SC", sans-serif';
+      ctx.fillStyle = '#7A6B5D';
+      ctx.fillText('下单时间: ' + (orderData ? orderData.time : 'N/A'), 30, 132);
+
+      // Separator
+      ctx.strokeStyle = '#F0E5D8';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(30, 150);
+      ctx.lineTo(470, 150);
+      ctx.stroke();
+
+      // Items header
+      ctx.fillStyle = '#3D2E1F';
+      ctx.font = 'bold 13px "Noto Sans SC", sans-serif';
+      ctx.fillText('商品', 30, 175);
+      ctx.fillText('数量', 300, 175);
+      ctx.fillText('金额', 400, 175);
+
+      var items = orderData ? orderData.items : [];
+      var y = 200;
+      if (items.length === 0) {
+        ctx.fillStyle = '#7A6B5D';
+        ctx.font = '12px "Noto Sans SC", sans-serif';
+        ctx.fillText('(无订单明细)', 30, y);
+        y += 24;
+      } else {
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          ctx.fillStyle = '#3D2E1F';
+          ctx.font = '12px "Noto Sans SC", sans-serif';
+          ctx.fillText(item.name, 30, y);
+          ctx.fillText('×' + item.qty, 310, y);
+          ctx.fillText('¥' + (item.price * item.qty), 410, y);
+          y += 24;
+          if (y > 450) break;
+        }
+      }
+
+      // Total
+      y = Math.max(y + 10, 460);
+      ctx.strokeStyle = '#F0E5D8';
+      ctx.beginPath();
+      ctx.moveTo(30, y);
+      ctx.lineTo(470, y);
+      ctx.stroke();
+      y += 26;
+
+      ctx.fillStyle = '#F5A623';
+      ctx.font = 'bold 18px "Noto Sans SC", sans-serif';
+      ctx.fillText('合计: ¥' + (orderData ? orderData.total : 0), 30, y);
+      ctx.fillStyle = '#5DBFB4';
+      ctx.font = '12px "Noto Sans SC", sans-serif';
+      ctx.fillText('(实付 ¥0 — 零成本解压)', 180, y);
+
+      // Footer
+      ctx.fillStyle = '#B8A99A';
+      ctx.font = '10px "Noto Sans SC", sans-serif';
+      ctx.fillText('以上均为模拟体验 · 未产生实际消费', 130, 570);
+
+      // Download
+      try {
+        var link = document.createElement('a');
+        link.download = 'joyville_order_' + (orderData ? orderData.orderId : 'card') + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        setShareToast('订单卡片已下载');
+      } catch(e) {
+        setShareToast('生成图片失败');
+      }
+      setTimeout(function() { setShareToast(''); }, 2500);
+    }, [orderData]);
+
+    // Share text
+    var handleShareText = React.useCallback(function() {
       var shareTitle = window.T('app.title');
       var shareText = '我在' + window.T('app.title') + '省下了 ¥' + savedAmount + '！零成本解压，你也来试试！';
       var shareUrl = window.location.origin + window.location.pathname;
@@ -1564,7 +1879,7 @@ window.T = function(key) {
       return String(n);
     }
 
-    return h('div', { className: 'success-page', style: { position: 'relative', overflow: 'hidden' } },
+    return h('div', { className: 'success-page', style: { position: 'relative', overflow: 'hidden', overflowY: 'auto', justifyContent: 'flex-start', paddingTop: 40 } },
       // Confetti particles
       confetti.map(function(p) {
         return h('div', {
@@ -1583,7 +1898,7 @@ window.T = function(key) {
       // Glow effect
       h('div', {
         style: {
-          position: 'absolute', top: '50%', left: '50%',
+          position: 'absolute', top: '10%', left: '50%',
           transform: 'translate(-50%, -50%)',
           width: 280, height: 280, borderRadius: 140,
           background: 'radial-gradient(circle, rgba(255,93,55,0.08) 0%, transparent 70%)',
@@ -1598,11 +1913,17 @@ window.T = function(key) {
           opacity: showContent ? 1 : 0,
           transform: showContent ? 'translateY(0)' : 'translateY(30px)',
           transition: 'all 0.6s ease-out',
-          zIndex: 1
+          zIndex: 1, width: '100%', maxWidth: 380
         }
       },
-        h('div', { className: 'success-icon', style: { animation: 'pulse 1.5s ease-in-out infinite' } }, '🎉'),
+        h('div', { className: 'success-icon', style: { animation: 'pulse 1.5s ease-in-out infinite', fontSize: 56 } }, '🎉'),
         h('div', { className: 'success-title' }, window.T('success.title')),
+
+        // Order ID
+        orderData ? h('div', {
+          style: { fontSize: 12, color: 'var(--text-light)', marginTop: 4 }
+        }, '订单号: ' + orderData.orderId) : null,
+
         h('div', { style: { fontSize: 14, color: 'var(--text-secondary)', marginBottom: 4, marginTop: 8 } },
           window.T('success.saved')
         ),
@@ -1615,6 +1936,52 @@ window.T = function(key) {
           }
         }, '¥' + fmt(savedAmount)),
         h('div', { className: 'success-subtitle' }, window.T('success.subtitle')),
+
+        // Order detail toggle
+        orderData && orderData.items && orderData.items.length > 0 ? h('div', { style: { width: '100%', marginTop: 12 } },
+          h('button', {
+            onClick: function() { setShowOrderDetail(function(v) { return !v; }); },
+            style: {
+              width: '100%', padding: '10px 0', borderRadius: 12,
+              border: '1px solid var(--border)', background: 'var(--bg)',
+              color: 'var(--text-secondary)', fontSize: 13, fontWeight: 500,
+              cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6
+            }
+          }, '📋 ' + (showOrderDetail ? '收起订单详情' : '查看订单详情')),
+          showOrderDetail ? h('div', {
+            style: {
+              background: 'var(--bg)', padding: 12, borderRadius: 'var(--radius-sm)',
+              marginTop: 8, textAlign: 'left'
+            }
+          },
+            h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginBottom: 8 } },
+              '下单时间: ' + (orderData ? orderData.time : '')
+            ),
+            orderData.items.map(function(item, i) {
+              return h('div', {
+                key: i,
+                style: { display: 'flex', justifyContent: 'space-between', padding: '3px 0', fontSize: 12 }
+              },
+                h('span', { style: { flex: 1 } }, item.name + ' ×' + item.qty),
+                h('span', { style: { fontWeight: 600, color: 'var(--primary)' } }, '¥' + (item.price * item.qty))
+              );
+            }),
+            h('div', {
+              style: {
+                display: 'flex', justifyContent: 'space-between',
+                borderTop: '1px solid var(--border)', marginTop: 6, paddingTop: 6,
+                fontWeight: 700, fontSize: 13
+              }
+            },
+              h('span', null, '合计'),
+              h('span', { style: { color: 'var(--primary)' } },
+                '¥' + (orderData ? orderData.total : 0),
+                h('span', { style: { fontSize: 10, color: 'var(--success)', marginLeft: 4 } }, '(实付 ¥0)')
+              )
+            )
+          ) : null
+        ) : null,
 
         // Stats mini
         h('div', {
@@ -1653,7 +2020,17 @@ window.T = function(key) {
             }
           }, '🛒 ' + window.T('success.back')),
           h('button', {
-            onClick: handleShare,
+            onClick: handleShareCanvas,
+            style: {
+              width: '100%', padding: '12px 0', borderRadius: 28,
+              border: '2px solid var(--primary)', background: 'var(--primary)',
+              color: '#FFF', fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', fontFamily: 'inherit',
+              transition: 'all 0.2s'
+            }
+          }, '🖼️ 下载订单卡片'),
+          h('button', {
+            onClick: handleShareText,
             style: {
               width: '100%', padding: '12px 0', borderRadius: 28,
               border: '2px solid var(--primary)', background: 'transparent',
@@ -1668,8 +2045,8 @@ window.T = function(key) {
       // Disclaimer
       h('div', {
         style: {
-          position: 'absolute', bottom: 20, fontSize: 10,
-          color: 'var(--text-light)', opacity: 0.6, zIndex: 1
+          fontSize: 10, color: 'var(--text-light)', opacity: 0.6,
+          zIndex: 1, marginTop: 20, marginBottom: 40
         }
       }, '💡 以上均为模拟体验 · 未产生实际消费'),
 
@@ -1812,7 +2189,7 @@ window.T = function(key) {
 
       onAddItem(
         { id: product.id, name: product.name, price: product.price, emoji: '📱' },
-        { id: 'shopping', name: '购物商城' }
+        { id: 'shopping', name: '免税店' }
       );
 
       setTimeout(function() {
@@ -1987,6 +2364,8 @@ window.T = function(key) {
     var renderKey = keyState[0], setRenderKey = keyState[1];
     var tabState = React.useState('food');
     var currentTab = tabState[0], setCurrentTab = tabState[1];
+    var lastOrderState = React.useState(null);
+    var lastOrder = lastOrderState[0], setLastOrder = lastOrderState[1];
 
     // Language change listener
     React.useEffect(function() {
@@ -2062,6 +2441,14 @@ window.T = function(key) {
     // Place order (fake payment)
     var placeOrder = React.useCallback(function() {
       var savedAmount = cartTotal;
+      // Save order details for success page
+      var orderData = {
+        items: cartItems.map(function(i) { return Object.assign({}, i); }),
+        total: cartTotal,
+        time: new Date().toLocaleString('zh-CN', { hour12: false }),
+        orderId: 'JV' + Date.now().toString(36).toUpperCase()
+      };
+      setLastOrder(orderData);
       setCurrentPage('paying');
       setTimeout(function() {
         setStats(function(prev) {
@@ -2140,6 +2527,7 @@ window.T = function(key) {
               savedAmount: cartTotal || stats.saved,
               stats: stats,
               onGoHome: handleGoHome,
+              orderData: lastOrder,
               key: renderKey
             })
           :
@@ -2200,14 +2588,14 @@ window.T = function(key) {
             onClick: function() { setCurrentTab('food'); }
           },
             h('span', { className: 'tab-icon' }, '🍜'),
-            h('span', null, '美食')
+            h('span', null, '上馆子')
           ),
           h('button', {
             className: 'tab-item' + (currentTab === 'shopping' ? ' active' : ''),
             onClick: function() { setCurrentTab('shopping'); }
           },
             h('span', { className: 'tab-icon' }, '🛍️'),
-            h('span', null, '购物')
+            h('span', null, '免税店')
           )
         )
       : null,
