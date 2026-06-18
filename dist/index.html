@@ -429,8 +429,71 @@ body {
   padding:10px 12px; display:flex; flex-direction:column; gap:8px;
 }
 .product-card-skeleton .skeleton-line {
-  height:12px; border-radius:6px;
+  height: 12px; border-radius: 6px;
 }
+
+/* Star Rating (Half-Star) */
+.star-rating { display: inline-flex; align-items: center; }
+.star-rating .star { color: #DDD; cursor: default; transition: color 0.15s, transform 0.15s; user-select: none; }
+.star-rating:not(.readonly) .star { cursor: pointer; }
+.star-rating:not(.readonly) .star:hover { transform: scale(1.2); }
+.star-rating .star.full { color: var(--gold); }
+.star-rating .star.half { color: var(--gold); opacity: 0.5; }
+.star-rating.small .star { font-size: 16px; }
+.star-rating.readonly .star { cursor: default; }
+
+/* Menu Detail Popup */
+.menu-detail-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); z-index: 1100;
+  display: flex; align-items: flex-end; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.menu-detail-panel {
+  background: var(--bg-card); border-radius: 20px 20px 0 0;
+  max-width: 480px; width: 100%; max-height: 85vh;
+  overflow-y: auto; padding: 0 0 24px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+.menu-detail-img {
+  width: 100%; height: 220px; object-fit: cover;
+  border-radius: var(--radius-sm); margin: 12px 16px 0;
+  width: calc(100% - 32px);
+}
+.menu-detail-body { padding: 16px; }
+.menu-detail-name { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+.menu-detail-price { font-size: 22px; font-weight: 700; color: var(--primary); }
+.menu-detail-original-price { font-size: 14px; color: var(--text-light); text-decoration: line-through; margin-left: 8px; }
+.menu-detail-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin: 12px 0; padding: 12px; background: var(--bg); border-radius: var(--radius-sm); }
+
+/* Order List */
+.order-list-page { min-height: 100vh; background: var(--bg-card); }
+.order-card {
+  background: var(--bg-card); border-bottom: 1px solid var(--border);
+  padding: 14px 16px; cursor: pointer; transition: background 0.15s;
+}
+.order-card:active { background: var(--bg); }
+.order-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.order-card-id { font-size: 12px; color: var(--text-light); font-weight: 500; }
+.order-card-status { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+.order-card-status.success { background: #E8F5E9; color: #2E7D32; }
+.order-card-status.pending { background: #FFF3E0; color: #E65100; }
+.order-card-items { font-size: 14px; color: var(--text); font-weight: 500; }
+.order-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.order-card-total { font-size: 15px; font-weight: 700; color: var(--primary); }
+.order-card-time { font-size: 11px; color: var(--text-light); }
+
+/* Order Detail */
+.order-detail-page { min-height: 100vh; background: var(--bg); }
+.order-detail-header { background: linear-gradient(135deg, #FEA031, #FCB354); color: #FFF; padding: 20px 16px; }
+.order-detail-section { background: var(--bg-card); margin: 10px 12px; padding: 16px; border-radius: var(--radius); box-shadow: var(--shadow); }
+.order-detail-section h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+.order-item-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.order-item-row:last-child { border-bottom: none; }
+.order-item-name { font-size: 14px; font-weight: 500; }
+.order-item-meta { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+.order-item-price { font-size: 14px; font-weight: 600; }
+.order-detail-row { display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
   </style>
 </head>
 <body>
@@ -613,7 +676,8 @@ window.T = function(key) {
   window.Header = Header;
 
   // ===== StatsBar =====
-  function StatsBar() {
+  function StatsBar(props) {
+    var onOrderClick = props.onOrderClick;
     var statsState = React.useState({ saved: 0, orders: 0, streak: 0 });
     var stats = statsState[0], setStats = statsState[1];
 
@@ -649,7 +713,7 @@ window.T = function(key) {
         h('div', { className: 'stat-value' }, formatMoney(stats.saved)),
         h('div', { className: 'stat-label' }, window.T('stats.saved'))
       ),
-      h('div', { className: 'stat-item' },
+      h('div', { className: 'stat-item', onClick: onOrderClick, style: onOrderClick ? { cursor: 'pointer' } : {} },
         h('div', { className: 'stat-value' }, String(stats.orders)),
         h('div', { className: 'stat-label' }, window.T('stats.orders'))
       ),
@@ -669,6 +733,7 @@ window.T = function(key) {
     var restaurants = props.restaurants || [];
     var stats = props.stats;
     var onSelectStore = props.onSelectStore;
+    var onViewOrders = props.onViewOrders;
 
     var searchState = React.useState('');
     var search = searchState[0], setSearch = searchState[1];
@@ -740,7 +805,7 @@ window.T = function(key) {
           h('div', { className: 'stat-value' }, fmtMoney(stats.saved)),
           h('div', { className: 'stat-label' }, window.T('stats.saved'))
         ),
-        h('div', { className: 'stat-item' },
+        h('div', { className: 'stat-item', onClick: onViewOrders, style: onViewOrders ? { cursor: 'pointer' } : {} },
           h('div', { className: 'stat-value' }, String(stats.orders)),
           h('div', { className: 'stat-label' }, window.T('stats.orders'))
         ),
@@ -2399,6 +2464,8 @@ window.T = function(key) {
     var currentTab = tabState[0], setCurrentTab = tabState[1];
     var lastOrderState = React.useState(null);
     var lastOrder = lastOrderState[0], setLastOrder = lastOrderState[1];
+    var selectedOrderState = React.useState(null);
+    var selectedOrder = selectedOrderState[0], setSelectedOrder = selectedOrderState[1];
 
     // Language change listener
     React.useEffect(function() {
@@ -2492,6 +2559,13 @@ window.T = function(key) {
         orderId: orderId
       };
       setLastOrder(orderData);
+      // Save to localStorage for order history
+      try {
+        var orders = JSON.parse(localStorage.getItem('joyville_orders') || '[]');
+        orders.push({ id: orderId, items: orderData.items, total: orderData.total, time: orderData.time, status: 'delivered' });
+        if (orders.length > 50) orders = orders.slice(-50);
+        localStorage.setItem('joyville_orders', JSON.stringify(orders));
+      } catch(e) {}
       setCurrentPage('paying');
       setTimeout(function() {
         setStats(function(prev) {
@@ -2588,6 +2662,22 @@ window.T = function(key) {
           :
             h(Fallback, { msg: 'OrderTracking 组件未加载' });
 
+        case 'order_list':
+          return window.OrderListPage ?
+            h(window.OrderListPage, {
+              onSelectOrder: function(order) { setSelectedOrder(order); navigateTo('order_detail'); },
+              onGoBack: function() { navigateTo('home'); }
+            })
+          : h(Fallback, { msg: 'OrderListPage 组件未加载' });
+
+        case 'order_detail':
+          return window.OrderDetailPage ?
+            h(window.OrderDetailPage, {
+              order: selectedOrder,
+              onGoBack: function() { navigateTo('order_list'); }
+            })
+          : h(Fallback, { msg: 'OrderDetailPage 组件未加载' });
+
         case 'home':
         default:
           if (currentTab === 'dutyfree') {
@@ -2615,6 +2705,7 @@ window.T = function(key) {
               restaurants: restaurants,
               stats: stats,
               onSelectStore: function(store) { navigateTo('store', store); },
+              onViewOrders: function() { navigateTo('order_list'); },
               key: renderKey
             })
           :
@@ -2707,6 +2798,233 @@ window.T = function(key) {
       h('p', null, props.msg)
     );
   }
+
+  // ===== HalfStarRating — 半星评分组件 =====
+  function HalfStarRating(props) {
+    var value = props.value || 0;
+    var interactive = props.interactive !== false;
+    var onChange = props.onChange;
+    var size = props.size || 'normal';
+    var showValue = props.showValue !== false;
+    var hoverState = React.useState(0);
+    var hoverVal = hoverState[0], setHoverVal = hoverState[1];
+
+    var displayVal = interactive && hoverVal > 0 ? hoverVal : value;
+
+    function handleClick(halfVal) {
+      if (!interactive || !onChange) return;
+      onChange(halfVal);
+    }
+
+    var stars = [];
+    for (let i = 1; i <= 10; i++) {
+      var halfVal = i / 2;
+      if (i % 2 === 1) {
+        stars.push(h('span', {
+          key: i,
+          className: 'star' + (displayVal >= halfVal ? ' full' : (displayVal >= halfVal - 0.25 ? ' half' : '')),
+          onClick: interactive ? function() { handleClick(halfVal); } : undefined,
+          onMouseEnter: interactive ? function() { setHoverVal(halfVal); } : undefined,
+          onMouseLeave: interactive ? function() { setHoverVal(0); } : undefined,
+          style: { fontSize: size === 'small' ? 16 : 24 }
+        }, '\u2605'));
+      }
+    }
+
+    return h('div', {
+      className: 'star-rating' + (size === 'small' ? ' small' : '') + (!interactive ? ' readonly' : ''),
+      style: { display: 'flex', alignItems: 'center', gap: 2 }
+    },
+      stars,
+      showValue && value > 0 ? h('span', {
+        style: { fontSize: size === 'small' ? 13 : 14, color: 'var(--text-secondary)', marginLeft: 6, fontWeight: 500 }
+      }, value.toFixed(1)) : null
+    );
+  }
+  window.HalfStarRating = HalfStarRating;
+
+  // ===== MenuItemDetail — 菜单项详情弹窗 =====
+  function MenuItemDetail(props) {
+    var item = props.item;
+    var store = props.store;
+    var onClose = props.onClose;
+    var onAdd = props.onAdd;
+    var inCart = props.inCart || 0;
+
+    var addedState = React.useState(false);
+    var added = addedState[0], setAdded = addedState[1];
+
+    if (!item) return null;
+
+    function handleAdd() {
+      if (onAdd) onAdd(item);
+      setAdded(true);
+      setTimeout(function() { setAdded(false); onClose(); }, 600);
+    }
+
+    return h('div', { className: 'menu-detail-overlay', onClick: onClose },
+      h('div', {
+        className: 'menu-detail-panel animate-in',
+        onClick: function(e) { e.stopPropagation(); }
+      },
+        h('div', { style: { display: 'flex', justifyContent: 'center', padding: '8px 0 0' } },
+          h('div', { style: { width: 36, height: 4, borderRadius: 2, background: 'var(--border)' } })
+        ),
+        item.image ? h('img', { className: 'menu-detail-img', src: item.image, alt: item.name }) : h('div', {
+          className: 'menu-detail-img',
+          style: { background: 'linear-gradient(135deg, #FDF4E0, #FEFCF5)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 48 }
+        }, item.emoji || '\uD83C\uDF5C'),
+        h('div', { className: 'menu-detail-body' },
+          h('div', { className: 'menu-detail-name' }, item.name),
+          h('div', { style: { display: 'flex', alignItems: 'baseline', marginBottom: 8 } },
+            h('span', { className: 'menu-detail-price' }, '\u00A5' + item.price),
+            item.originalPrice && item.originalPrice > item.price ? h('span', { className: 'menu-detail-original-price' }, '\u00A5' + item.originalPrice) : null
+          ),
+          item.desc ? h('div', { className: 'menu-detail-desc' }, item.desc) : null,
+          item.specs && Object.keys(item.specs).length > 0 ? h('div', {
+            style: { background: 'var(--bg)', borderRadius: 'var(--radius-sm)', padding: 12, marginBottom: 12 }
+          },
+            h('h4', { style: { fontSize: 13, marginBottom: 8, color: 'var(--text)' } }, '\u89C4\u683C\u8BE6\u60C5'),
+            Object.keys(item.specs).map(function(key) {
+              return h('div', { key: key, style: { display: 'flex', padding: '3px 0', fontSize: 12, borderBottom: '1px solid var(--border)' } },
+                h('span', { style: { color: 'var(--text-light)', width: 80, flexShrink: 0 } }, key),
+                h('span', { style: { flex: 1 } }, item.specs[key])
+              );
+            })
+          ) : null,
+          store ? h('div', { style: { fontSize: 12, color: 'var(--text-light)', marginBottom: 16, padding: '8px 12px', background: 'var(--bg)', borderRadius: 8 } },
+            '\uD83C\uDF7D\uFE0F ' + store.name + (store.category ? ' \u00B7 ' + store.category : '')
+          ) : null,
+          h('div', { style: { display: 'flex', gap: 10 } },
+            h('button', {
+              onClick: function() { onClose(); },
+              style: {
+                flex: 1, padding: '14px 0', borderRadius: 24,
+                border: '1px solid var(--border)', background: 'var(--bg)',
+                color: 'var(--text-secondary)', fontSize: 15, fontWeight: 500,
+                cursor: 'pointer', fontFamily: 'inherit'
+              }
+            }, '\u5173\u95ED'),
+            h('button', {
+              onClick: handleAdd,
+              style: {
+                flex: 2, padding: '14px 0', borderRadius: 24,
+                border: 'none',
+                background: added ? 'var(--success)' : 'var(--primary)',
+                color: '#FFF', fontSize: 15, fontWeight: 600,
+                cursor: 'pointer', fontFamily: 'inherit',
+                transition: 'all 0.2s'
+              }
+            }, added ? '\u2713 \u5DF2\u6DFB\u52A0' : '+ \u52A0\u5165\u8D2D\u7269\u8F66' + (inCart > 0 ? ' (' + inCart + ')' : ''))
+          )
+        )
+      )
+    );
+  }
+  window.MenuItemDetail = MenuItemDetail;
+
+  // ===== OrderListPage — 订单列表 =====
+  function OrderListPage(props) {
+    var onSelectOrder = props.onSelectOrder;
+    var onGoBack = props.onGoBack;
+    var ordersState = React.useState(function() {
+      try { return JSON.parse(localStorage.getItem('joyville_orders') || '[]'); }
+      catch(e) { return []; }
+    });
+    var orders = ordersState[0];
+
+    return h('div', { className: 'order-list-page animate-in' },
+      h('div', {
+        style: { display: 'flex', alignItems: 'center', padding: '16px', gap: 12, borderBottom: '1px solid var(--border)' }
+      },
+        h('button', {
+          onClick: onGoBack,
+          style: { background: 'none', border: 'none', fontSize: 16, cursor: 'pointer', color: 'var(--text-secondary)', fontFamily: 'inherit', padding: 0 }
+        }, '\u2190 \u8FD4\u56DE'),
+        h('h2', { style: { fontSize: 17, fontWeight: 600 } }, '\u8BA2\u5355\u5386\u53F2')
+      ),
+      orders.length === 0 ?
+        h('div', { className: 'empty-state' },
+          h('div', { className: 'empty-state-icon' }, '\uD83D\uDCCB'),
+          h('div', { className: 'empty-state-text' }, '\u6682\u65E0\u8BA2\u5355')
+        )
+      :
+        h('div', { style: { paddingTop: 12 } },
+          orders.slice().reverse().map(function(order, idx) {
+            var total = (order.items || []).reduce(function(s, i) { return s + (i.price || 0) * (i.qty || 0); }, 0);
+            var itemNames = (order.items || []).slice(0, 3).map(function(i) { return i.name; }).join('\u3001');
+            if ((order.items || []).length > 3) itemNames += ' \u7B49' + order.items.length + '\u4EF6';
+            return h('div', {
+              key: order.id || idx,
+              className: 'order-card',
+              onClick: function() { onSelectOrder && onSelectOrder(order); }
+            },
+              h('div', { className: 'order-card-header' },
+                h('span', { className: 'order-card-id' }, order.id || ('JV' + idx)),
+                h('span', {
+                  className: 'order-card-status' + (order.status === 'delivered' || !order.status ? ' success' : ' pending')
+                }, order.status === 'delivered' || !order.status ? '\u5DF2\u5B8C\u6210' : '\u8FDB\u884C\u4E2D')
+              ),
+              h('div', { className: 'order-card-body' },
+                h('div', { className: 'order-card-items' }, itemNames || '\u6682\u65E0\u5546\u54C1')
+              ),
+              h('div', { className: 'order-card-footer' },
+                h('span', { className: 'order-card-total' }, '\u00A5' + (total || 0)),
+                h('span', { className: 'order-card-time' }, order.time || '')
+              )
+            );
+          })
+        )
+    );
+  }
+  window.OrderListPage = OrderListPage;
+
+  // ===== OrderDetailPage — 订单详情 =====
+  function OrderDetailPage(props) {
+    var order = props.order;
+    var onGoBack = props.onGoBack;
+
+    if (!order) return null;
+
+    var total = (order.items || []).reduce(function(s, i) { return s + (i.price || 0) * (i.qty || 0); }, 0);
+
+    return h('div', { className: 'order-detail-page animate-in' },
+      h('div', { className: 'order-detail-header' },
+        h('button', {
+          onClick: onGoBack,
+          style: { background: 'rgba(255,255,255,0.2)', border: 'none', color: '#FFF', padding: '6px 12px', borderRadius: 16, cursor: 'pointer', fontSize: 13, fontFamily: 'inherit', marginBottom: 12 }
+        }, '\u2190 \u8FD4\u56DE'),
+        h('h2', null, '\u8BA2\u5355\u8BE6\u60C5'),
+        h('div', { style: { fontSize: 12, opacity: 0.8, marginTop: 6 } }, '\u8BA2\u5355\u53F7: ' + (order.id || 'N/A')),
+        h('div', { style: { fontSize: 12, opacity: 0.8, marginTop: 2 } }, '\u65F6\u95F4: ' + (order.time || 'N/A'))
+      ),
+      h('div', { className: 'order-detail-section' },
+        h('h3', null, '\u5546\u54C1\u5217\u8868'),
+        (order.items || []).map(function(item, i) {
+          return h('div', { key: i, className: 'order-item-row' },
+            h('div', { className: 'order-item-info' },
+              h('div', { className: 'order-item-name' }, item.name),
+              h('div', { className: 'order-item-meta' }, '\u00D7' + (item.qty || 1) + ' \u00B7 ' + (item.storeName || ''))
+            ),
+            h('div', { className: 'order-item-price' }, '\u00A5' + ((item.price || 0) * (item.qty || 1)))
+          );
+        })
+      ),
+      h('div', { className: 'order-detail-section' },
+        h('div', { className: 'order-detail-row' },
+          h('span', null, '\u5408\u8BA1'),
+          h('span', { className: 'value', style: { fontSize: 18, fontWeight: 700, color: 'var(--primary)' } },
+            '\u00A5' + total,
+            h('span', { style: { fontSize: 12, color: 'var(--success)', marginLeft: 6 } }, '(\u5B9E\u4ED8 \u00A50)')
+          )
+        )
+      ),
+      h('div', { style: { textAlign: 'center', padding: 12, fontSize: 11, color: 'var(--text-light)', opacity: 0.6 } },
+        '\uD83D\uDCA1 \u4EE5\u4E0A\u5747\u4E3A\u6A21\u62DF\u4F53\u9A8C \u00B7 \u672A\u4EA7\u751F\u5B9E\u9645\u6D88\u8D39'
+      )
+    );
+  }
+  window.OrderDetailPage = OrderDetailPage;
 
   window.App = App;
 

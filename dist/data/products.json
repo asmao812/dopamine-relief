@@ -1,416 +1,1086 @@
 [
   {
-    "id": "huawei",
-    "name": "华为官方旗舰店",
-    "desc": "华为官方授权线上旗舰店 · 正品保证 · 全国联保",
-    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/launch/251118/vosa/phones/mate-series-nav.png",
+    "id": "rolex",
+    "name": "劳力士官方旗舰店",
+    "desc": "瑞士劳力士·官方授权·全球联保·正品保证",
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800",
     "category": "dutyfree",
     "products": [
       {
-        "id": 1,
-        "name": "Mate XT 非凡大师",
-        "price": 21999,
-        "originalPrice": 21999,
-        "desc": "全球首个三折叠屏手机，华为天工铰链系统首次实现内外弯折。10.2英寸超形态三折叠大屏，3K超高清分辨率。首发十档可变光圈折叠影像，5000万像素超光变摄像头。5600mAh大电池，支持66W有线+50W无线快充。天通卫星通信，灵犀通信。瑞红/玄黑双色可选。",
+        "id": "rl1",
+        "name": "Daytona 116500LN 宇宙计型迪通拿",
+        "price": 285000,
+        "desc": "40mm蚝式钢表壳，Cerachrom陶瓷表圈，4130计时机芯。黑白熊猫盘，72小时动力储备。",
         "specs": {
-          "屏幕": "OLED三折叠屏，单屏6.4英寸/双屏7.9英寸/三屏10.2英寸，2232×1008/2232×2048/2232×3184像素，LTPO自适应刷新，1440Hz PWM调光，10.7亿色P3广色域",
-          "处理器": "麒麟9010",
-          "操作系统": "HarmonyOS 4.2",
-          "摄像头": "后置5000万像素超光变(F1.4-F4.0十档可变光圈,OIS)+1200万超广角(F2.2)+1200万潜望长焦(F3.4,OIS)，支持5.5倍光变/50倍数变",
-          "前置摄像头": "800万像素(F2.2)",
-          "电池": "5600mAh(典型值)",
-          "充电": "66W有线超级快充 + 50W无线超级快充 + 7.5W无线反向充电",
-          "存储": "16GB RAM + 256GB/512GB/1TB ROM",
-          "重量": "约298g",
-          "卫星通信": "天通卫星通信",
-          "特色功能": "华为天工铰链系统、岩脉纹理、XMAGE影像、星闪连接、立体声扬声器"
+          "表径": "40mm",
+          "材质": "蚝式钢",
+          "机芯": "4130自动计时机芯",
+          "动力": "72小时"
         },
-        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate-xt-ultimate-design/wx-share.jpg",
+        "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800",
         "tags": [
-          "折叠屏",
-          "三折叠",
-          "商务旗舰",
-          "卫星通信"
-        ],
-        "reviews": [
-          {
-            "user": "科技爱好者小王",
-            "rating": 5,
-            "date": "2026-06-12",
-            "content": "开箱就被震撼到了，三折叠的形态太惊艳了！展开后10.2寸的大屏幕看视频和办公都很爽，折叠起来又能轻松放进口袋。岩脉纹理的背面每一个都独一无二，手感极佳。拍照也很强，十档可变光圈确实有用，拍人像虚化很自然。唯一小遗憾是比较重，但瑕不掩瑜，值这个价！"
-          },
-          {
-            "user": "商务精英李总",
-            "rating": 5,
-            "date": "2026-06-08",
-            "content": "作为商务人士，Mate XT真的太适合我了。出差路上展开成大屏看报表太方便了，天通卫星通信功能在偏远地区出差时也很有安全感。铰链做工非常精密扎实，开合手感极佳。电池续航也给力，正常使用一天没问题。瑞红色真的很大气，拿出手倍有面子。"
-          },
-          {
-            "user": "数码老张",
-            "rating": 4,
-            "date": "2026-05-28",
-            "content": "从Mate X2升级过来的，三折叠确实是一大革新。屏幕素质非常好，三屏态下的沉浸感是普通手机没法比的。拍照色彩还原很准，长焦也很清晰。不过说实话重量确实不轻，单手操作困难。还有就是不支持IP68防水有点遗憾，毕竟这个价位了。总体还是推荐。华为做到了别人做不到的事。"
-          }
+          "劳力士",
+          "迪通拿",
+          "陶瓷圈"
         ]
       },
       {
-        "id": 2,
-        "name": "Mate 80 Pro Max",
-        "price": 7999,
-        "originalPrice": 7999,
-        "desc": "Mate系列年度旗舰，麒麟9030 Pro芯片加持。6.9英寸双层OLED显示屏，1-120Hz LTPO自适应刷新。后置四摄系统：5000万超高动态主摄+4000万超广角+5000万微距长焦+5000万超长焦，100倍数字变焦。6000mAh大电池，100W有线+80W无线快充。IP68/IP69防尘抗水。第二代红枫原色摄像头。",
+        "id": "rl2",
+        "name": "Submariner 126610LV 绿水鬼",
+        "price": 168000,
+        "desc": "41mm蚝式钢，绿色Cerachrom陶瓷表圈，3235自动机芯。防水300米。",
         "specs": {
-          "屏幕": "6.9英寸双层OLED，2848×1320像素，1-120Hz LTPO自适应刷新，1440Hz高频PWM调光，300Hz触控采样率，10.7亿色P3广色域，第二代昆仑玻璃",
-          "处理器": "麒麟9030 Pro",
-          "操作系统": "HarmonyOS 6.0",
-          "摄像头": "后置5000万超高动态主摄(F1.4-F4.0,OIS,RYYB)+4000万超广角(F2.2,RYYB)+5000万微距长焦(F2.1,OIS,RYYB)+5000万超长焦(F3.2,OIS,RYYB)，第二代红枫原色摄像头，100倍数字变焦",
-          "前置摄像头": "1300万超广角(F2.0,自动对焦)+3D深感摄像头",
-          "电池": "6000mAh(典型值)",
-          "充电": "100W有线超级快充 + 80W无线超级快充 + 18W有线反向充电",
-          "存储": "16GB RAM + 512GB/1TB ROM",
-          "重量": "约239g",
-          "防尘抗水": "IP68级6米抗水，IP69级抗高温高压喷水",
-          "卫星通信": "天通卫星通信",
-          "特色功能": "双层OLED显示屏、第二代红枫原色、XMAGE影像、星闪连接、立体声扬声器"
+          "表径": "41mm",
+          "材质": "蚝式钢",
+          "机芯": "3235自动机芯",
+          "防水": "300m"
         },
-        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/launch/251118/vosa/phones/mate-series-nav.png",
+        "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800",
         "tags": [
-          "旗舰直板",
-          "卫星通信",
-          "XMAGE影像",
-          "IP69"
-        ],
-        "reviews": [
-          {
-            "user": "摄影爱好者阿杰",
-            "rating": 5,
-            "date": "2026-06-15",
-            "content": "上手Mate 80 Pro Max一周了，拍照真的无敌！四摄系统覆盖了超广角到超长焦，尤其是那个5000万超长焦，拍远处建筑细节清晰得不可思议。第二代红枫原色色彩特别准，拍人像肤色自然。双层OLED屏幕看HDR视频观感顶级，亮度也够高，阳光下毫无压力。6000mAh电池重度使用也能撑一天半，充电速度飞起。"
-          },
-          {
-            "user": "程序员大刘",
-            "rating": 5,
-            "date": "2026-06-10",
-            "content": "从iPhone换过来的，HarmonyOS 6.0的流畅度完全不输iOS。麒麟9030 Pro性能很强，日常使用丝般顺滑，打原神高画质也不掉帧。信号比之前用的iPhone好太多了，地下车库也能流畅刷视频。IP69的防水等级让人放心，洗车时不小心溅到水也完全没事。国产旗舰真的越来越强了！"
-          },
-          {
-            "user": "旅行达人安娜",
-            "rating": 4,
-            "date": "2026-06-05",
-            "content": "主要是看中卫星通信功能买的，去西藏自驾游的时候确实派上了用场，在没有信号的地方也能和家人报平安。拍照方面，超长焦拍雪山冰川太给力了，细节丰富色彩真实。不过机身确实偏重，女生单手操作比较吃力。另外希望下一代能做得更轻薄一些。续航和充电都很满意。"
-          }
+          "劳力士",
+          "水鬼",
+          "潜水表"
         ]
       },
       {
-        "id": 3,
-        "name": "Pura 90 Pro Max",
-        "price": 6499,
-        "originalPrice": 6499,
-        "desc": "Pura系列影像旗舰，麒麟9030S芯片。6.9英寸OLED屏幕，1-120Hz LTPO自适应刷新率。后置5000万超高动态主摄+4000万超广角+超大底2亿像素长焦，100倍数字变焦。6000mAh大电池，100W有线+80W无线快充。5款时尚配色：橘子海/霞光紫/翡翠湖/晨曦金/曜石黑。",
+        "id": "rl3",
+        "name": "Day-Date 228238 星期日历型",
+        "price": 398000,
+        "desc": "40mm 18K黄金总统型表带，3255自动机芯。星期+日历双重显示。",
         "specs": {
-          "屏幕": "6.9英寸OLED，2880×1308像素，1-120Hz LTPO自适应刷新率，300Hz触控采样率，10.7亿色P3广色域，460ppi，抗反光耐刮昆仑玻璃",
-          "处理器": "麒麟9030S",
-          "操作系统": "HarmonyOS 6.1",
-          "摄像头": "后置5000万超高动态主摄(F1.4-F4.0,OIS)+4000万超广角(F2.2)+超大底2亿长焦(F2.6,OIS,长焦微距)，第二代红枫原色摄像头，4倍光变/100倍数字变焦",
-          "前置摄像头": "1300万超广角(F2.0,自动对焦)",
-          "电池": "6000mAh(典型值)",
-          "充电": "100W有线超级快充 + 80W无线超级快充 + 18W有线反向充电",
-          "存储": "12GB/16GB RAM + 256GB/512GB/1TB ROM",
-          "重量": "约230.5g",
-          "特色功能": "2亿像素长焦、第二代红枫原色、XMAGE智拍、AI姿势推荐、XMAGE风格、抗反光昆仑玻璃"
+          "表径": "40mm",
+          "材质": "18K黄金",
+          "机芯": "3255自动机芯"
         },
-        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/launch/260420/confidential/phones/pura-series/pura90-pro-max.jpg",
+        "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800",
         "tags": [
-          "影像旗舰",
-          "2亿长焦",
-          "时尚设计",
-          "大电池"
-        ],
-        "reviews": [
-          {
-            "user": "摄影博主林夕",
-            "rating": 5,
-            "date": "2026-06-14",
-            "content": "2亿像素长焦真的太震撼了！拍演唱会坐山顶也能把歌手拍得清清楚楚。第二代红枫原色色彩科学很牛，直出照片的肤色和自然色彩就很讨喜不需要后期。AI姿势推荐这个功能对给女朋友拍照太有用了，再也不怕被说拍得丑。橘子海这个颜色太美了，阳光下变幻的光泽回头率超高。续航也很给力。"
-          },
-          {
-            "user": "数码控小陈",
-            "rating": 5,
-            "date": "2026-06-09",
-            "content": "Pura 90 Pro Max是我用过最均衡的旗舰手机。麒麟9030S性能够用，HarmonyOS 6.1流畅度和动画都很舒服。拍照尤其是长焦端遥遥领先，2亿像素解析力惊人，裁切后依然清晰。6000mAh电池配合100W快充，续航焦虑彻底消失。屏幕素质也很顶，昆仑玻璃用了一个月没贴膜也没有划痕。这个价位真的超值！"
-          },
-          {
-            "user": "时尚编辑Amy",
-            "rating": 4,
-            "date": "2026-06-03",
-            "content": "最先是被霞光紫的颜值吸引的，实物比照片还好看。作为女性用户，230g的重量确实有些沉，但大屏看剧拍照的体验很好就忍了。拍照方面人像模式很自然，不会过度美颜，保留皮肤纹理的同时让肤色更好看。微距拍摄花朵昆虫效果惊艳。希望下一代能出更轻薄的版本同时保持影像实力。"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "Pura X Max",
-        "price": 10999,
-        "originalPrice": 10999,
-        "desc": "折叠屏影像旗舰，HarmonyOS 6.1系统。外屏5.4英寸+内屏7.7英寸可折叠柔性OLED，LTPO 1-120Hz自适应刷新。5000万超光变主摄(十档物理可变光圈)+1250万超广角+5000万超大光圈潜望长焦，100倍数字变焦。5300mAh电池。星际蓝/活力橙/零度白/橄榄金/幻夜黑可选。",
-        "specs": {
-          "屏幕": "外屏5.4英寸OLED 1848×1264 + 内屏7.7英寸可折叠柔性OLED 2584×1828，LTPO 1-120Hz自适应刷新，1440Hz PWM调光，10.7亿色P3广色域，外屏第二代昆仑玻璃，内屏UTG",
-          "处理器": "麒麟9010",
-          "操作系统": "HarmonyOS 6.1",
-          "摄像头": "后置5000万超光变主摄(F1.4-F4.0十档可变光圈,RYYB,OIS)+1250万超广角(F2.2,RYYB)+5000万超大光圈潜望长焦(F2.2,RYYB,OIS)，第二代红枫原色摄像头，3.5倍光变/100倍数字变焦",
-          "前置摄像头": "外屏800万(F2.4)+内屏800万(F2.2)",
-          "电池": "5300mAh(典型值)",
-          "充电": "有线超级快充 + 无线超级快充 + 无线反向充电",
-          "存储": "12GB/16GB RAM + 256GB/512GB/1TB ROM",
-          "重量": "约229g",
-          "特色功能": "十档物理可变光圈、第二代红枫原色、XMAGE智拍、AI姿势推荐、双屏同显、后置自拍"
-        },
-        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/launch/260420/confidential/phones/pura-x-max.jpg",
-        "tags": [
-          "折叠屏",
-          "影像旗舰",
-          "可变光圈",
-          "时尚设计"
-        ],
-        "reviews": [
-          {
-            "user": "时尚博主CC",
-            "rating": 5,
-            "date": "2026-06-11",
-            "content": "Pura X Max的颜值真的绝了！活力橙配色在阳光下超级好看，每次掏出来都有人问是什么手机。折叠后的尺寸小巧可爱，放在小包里刚好。展开后7.7寸大屏看剧修图都很舒服。拍照更是没话说，十档可变光圈拍人像背景虚化特别自然，小红书发图经常被问用什么相机拍的。折叠屏做到这个水准真的很厉害。"
-          },
-          {
-            "user": "极客玩家阿飞",
-            "rating": 4,
-            "date": "2026-06-06",
-            "content": "作为折叠屏老用户，Pura X Max的铰链质感和屏幕平整度比上一代提升明显。UTG内屏触感接近普通手机了。拍照系统很强，尤其是那个超大光圈长焦，暗光下出片率很高。不过5300mAh电池对于折叠屏来说中规中矩，重度使用需要一天一充。另外希望下一代能支持卫星通信。总体来说是目前最值得买的折叠屏之一。"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "name": "Mate X7",
-        "price": 12999,
-        "originalPrice": 12999,
-        "desc": "Mate系列大折叠旗舰。内外双屏设计，折叠态便携，展开态大屏沉浸。搭载麒麟旗舰芯片与HarmonyOS系统。支持卫星通信与灵犀通信技术。XMAGE影像系统，胜任多种拍摄场景。",
-        "specs": {
-          "屏幕": "外屏OLED + 内屏可折叠柔性OLED，LTPO自适应刷新率，高频PWM调光，10.7亿色P3广色域",
-          "处理器": "麒麟9010",
-          "操作系统": "HarmonyOS 4.2",
-          "摄像头": "后置XMAGE多摄系统，支持超光变主摄+超广角+潜望长焦，支持光学防抖",
-          "前置摄像头": "内外屏双前置摄像头",
-          "电池": "大容量硅负极高能量密度电池",
-          "充电": "有线超级快充 + 无线超级快充",
-          "存储": "12GB/16GB RAM + 256GB/512GB/1TB ROM",
-          "卫星通信": "天通卫星通信",
-          "特色功能": "华为天工铰链、灵犀通信、XMAGE影像、星闪连接"
-        },
-        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/launch/251118/vosa/phones/mate-series-nav.png",
-        "tags": [
-          "折叠屏",
-          "商务旗舰",
-          "卫星通信",
-          "大折叠"
-        ],
-        "reviews": [
-          {
-            "user": "企业高管Mike",
-            "rating": 5,
-            "date": "2026-05-20",
-            "content": "Mate X7作为商务用机非常称职。展开后的大屏处理邮件和文档效率提升明显，分屏功能可以一边开会一边记笔记。铰链手感扎实，开合超过一万次依然紧实。卫星通信功能在海外出差时给了很多安全感。外观低调沉稳，适合商务场合。"
-          },
-          {
-            "user": "数码评测小龙",
-            "rating": 4,
-            "date": "2026-05-15",
-            "content": "Mate X7是一款成熟度很高的大折叠屏。内外屏切换流畅自然，折痕控制得比前代更好。拍照系统虽然没有Pura系列那么激进，但日常使用完全够用。系统流畅，多任务处理效率高。唯一缺点是充电速度相比同价位的直板旗舰稍慢一些。但考虑到折叠形态的优势，还是值得推荐的。"
-          }
+          "劳力士",
+          "金表",
+          "总统型"
         ]
       }
     ]
   },
   {
-    "id": "apple",
-    "name": "苹果官方旗舰店",
-    "desc": "Apple官方授权线上旗舰店 · 正品保障 · 官方售后",
-    "image": "https://www.apple.com.cn/v/iphone/home/cj/images/overview/select/iphone_17pro__t1j902iw6kya_large.jpg",
+    "id": "patek",
+    "name": "百达翡丽旗舰店",
+    "desc": "瑞士百达翡丽·传世之作·家族传承·手工打造",
+    "image": "https://images.unsplash.com/photo-1631378227136-7d54e1c18d6e?w=800",
     "category": "dutyfree",
     "products": [
       {
-        "id": 6,
-        "name": "iPhone 17 Pro Max",
-        "price": 9999,
-        "originalPrice": 9999,
-        "desc": "A19 Pro芯片驱动，Pro级融合式摄像头系统。6.9英寸超视网膜XDR显示屏，ProMotion自适应刷新率最高120Hz，3000尼特峰值亮度。4800万像素Pro级融合式三摄系统：主摄+超广角+长焦(4倍光变)，最高40倍数码变焦。铝金属一体成型设计，超瓷晶面板2。IP68防溅抗水。视频播放最长37小时。USB-C 3.0接口。",
+        "id": "pp1",
+        "name": "Nautilus 5711/1A 鹦鹉螺",
+        "price": 880000,
+        "desc": "40mm不锈钢表壳，蓝色渐变表盘，26-330自动机芯。经典舷窗造型，最难买的钢表之王。",
         "specs": {
-          "屏幕": "6.9英寸超视网膜XDR OLED全面屏，2868×1320像素分辨率，460ppi，ProMotion自适应刷新率最高120Hz，全天候显示，HDR，原彩显示，P3广色域，2000000:1对比度，1000nit典型/1600nit HDR/3000nit户外峰值亮度，1nit最小亮度，防油渍防指纹涂层，抗反射涂层",
-          "处理器": "A19 Pro芯片(6核CPU:2性能+4能效，6核GPU，16核神经网络引擎，硬件加速光线追踪)",
-          "操作系统": "iOS 26",
-          "摄像头": "后置4800万融合式主摄(24mm,ƒ/1.78,第二代传感器位移式OIS)+4800万融合式超广角(13mm,ƒ/2.2,120°)+4800万融合式长焦(100mm,ƒ/2.8,3D传感器位移式OIS,四重反射棱镜)，4倍光变/40倍数变，支持ProRAW，4800万微距摄影",
-          "前置摄像头": "1800万Center Stage摄像头(ƒ/1.9,Focus Pixels自动对焦)，支持4K杜比视界视频拍摄",
-          "电池": "视频播放最长37小时，流媒体视频最长33小时，锂离子充电电池",
-          "充电": "USB-C快充(约20分钟充至50%需40W以上适配器)，MagSafe无线充电15W，Qi2无线充电15W",
-          "存储": "256GB/512GB/1TB/2TB",
-          "重量": "231g",
-          "防尘抗水": "IP68级(最深6米水下最长30分钟)",
-          "特色功能": "面容ID、灵动岛、全天候显示、车祸检测、SOS紧急联络、Apple智能、操作按钮、相机控制、Apple N1无线网络芯片、蓝牙6、Thread网络技术、Apple第二代UWB芯片"
+          "表径": "40mm",
+          "材质": "不锈钢",
+          "机芯": "26-330自动机芯"
         },
-        "image": "https://www.apple.com.cn/v/iphone/home/cj/images/overview/select/iphone_17pro__t1j902iw6kya_large.jpg",
+        "image": "https://images.unsplash.com/photo-1631378227136-7d54e1c18d6e?w=800",
         "tags": [
-          "Pro Max",
-          "A19 Pro",
-          "48MP三摄",
-          "长续航"
-        ],
-        "reviews": [
-          {
-            "user": "果粉小明",
-            "rating": 5,
-            "date": "2026-06-16",
-            "content": "从iPhone 15 Pro Max升级过来的，提升非常明显！A19 Pro芯片真的太快了，跑任何App都是秒开，游戏高画质稳如老狗。4800万三摄系统太强了，尤其是那个4倍光学长焦，拍远处的细节清晰锐利。新增的相机控制按钮操作起来很方便，单手就能调整曝光和焦距。37小时的视频续航真的不是吹的，重度使用一天半完全没问题。"
-          },
-          {
-            "user": "摄影师老周",
-            "rating": 5,
-            "date": "2026-06-13",
-            "content": "作为一个专业摄影师，iPhone 17 Pro Max的影像能力让我很惊喜。ProRAW格式后期空间很大，4800万像素的细节丰富度已经可以替代一些专业相机场景。新增的摄影风格功能可玩性很高。4K 120fps杜比视界视频拍摄质量令人难以置信，防抖也非常稳。超瓷晶面板2比上一代更耐摔，用了一个月裸奔都没有划痕。推荐给所有影像创作者！"
-          },
-          {
-            "user": "上班族小王",
-            "rating": 4,
-            "date": "2026-06-07",
-            "content": "购买Pro Max主要是看中了大屏和续航。6.9寸屏幕看视频和阅读文档体验很好，但是单手握持确实困难，手小的朋友建议选Pro。续航表现很满意，日常办公+午休刷视频到晚上还有40%多电量。typec口终于升级到USB3.0速度，传大文件快多了。唯一的槽点是价格有点高，2TB版本更贵。整体来说是目前最强的iPhone。"
-          }
+          "百达翡丽",
+          "鹦鹉螺",
+          "钢王"
         ]
       },
       {
-        "id": 7,
-        "name": "iPhone 17 Pro",
-        "price": 8999,
-        "originalPrice": 8999,
-        "desc": "A19 Pro芯片，Pro级融合式摄像头系统。6.3英寸超视网膜XDR显示屏，ProMotion 120Hz自适应刷新。4800万像素Pro级融合式三摄：主摄+超广角+长焦(4倍光变)，最高40倍数码变焦。铝金属设计，超瓷晶面板2。IP68防溅抗水。视频播放最长31小时。银色/星宇橙色/深蓝色可选。",
+        "id": "pp2",
+        "name": "Calatrava 5227J 将官型",
+        "price": 328000,
+        "desc": "39mm 18K黄金表壳，象牙白珐琅表盘，324自动机芯。军官式底盖。经典正装表。",
         "specs": {
-          "屏幕": "6.3英寸超视网膜XDR OLED全面屏，2622×1206像素分辨率，460ppi，ProMotion自适应刷新率最高120Hz，全天候显示，HDR，原彩显示，P3广色域，2000000:1对比度，1000nit典型/1600nit HDR/3000nit户外峰值亮度，1nit最小亮度",
-          "处理器": "A19 Pro芯片(6核CPU:2性能+4能效，6核GPU，16核神经网络引擎，硬件加速光线追踪)",
-          "操作系统": "iOS 26",
-          "摄像头": "后置4800万融合式主摄(24mm,ƒ/1.78,第二代传感器位移式OIS)+4800万融合式超广角(13mm,ƒ/2.2,120°)+4800万融合式长焦(100mm,ƒ/2.8,3D传感器位移式OIS)，4倍光变/40倍数变，ProRAW，4800万微距摄影",
-          "前置摄像头": "1800万Center Stage摄像头(ƒ/1.9,Focus Pixels自动对焦)，4K杜比视界视频拍摄",
-          "电池": "视频播放最长31小时，流媒体视频最长28小时",
-          "充电": "USB-C快充(MagSafe 15W, Qi2 15W)",
-          "存储": "256GB/512GB/1TB",
-          "重量": "204g",
-          "防尘抗水": "IP68级(最深6米水下最长30分钟)",
-          "特色功能": "面容ID、灵动岛、全天候显示、车祸检测、Apple智能、操作按钮、相机控制、Apple N1无线网络芯片、蓝牙6、Apple第二代UWB芯片"
+          "表径": "39mm",
+          "材质": "18K黄金",
+          "表盘": "珐琅",
+          "机芯": "324自动机芯"
         },
-        "image": "https://www.apple.com.cn/v/iphone/home/cj/images/overview/select/iphone_17pro__t1j902iw6kya_large.jpg",
+        "image": "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800",
         "tags": [
-          "Pro",
-          "A19 Pro",
-          "48MP三摄",
-          "iOS 26"
-        ],
-        "reviews": [
-          {
-            "user": "设计师Lisa",
-            "rating": 5,
-            "date": "2026-06-12",
-            "content": "iPhone 17 Pro的尺寸对我来说刚刚好，6.3寸可以单手操作，手感非常舒适。星宇橙色实在太特别了，在人群中一眼就能认出来。ProMotion 120Hz屏幕配合iOS 26的动画，流畅到不真实。拍照提升很大，4800万超广角终于也有了，拍建筑和风景更加得心应手。A19 Pro性能太强了，剪4K视频完全不会发热卡顿。"
-          },
-          {
-            "user": "学生党小张",
-            "rating": 4,
-            "date": "2026-06-04",
-            "content": "攒了一学期的钱终于入了17 Pro，没有让我失望。最大的感受就是整体体验很均衡，没有明显短板。相机控制按钮拍照时确实方便快捷。204g重量比Pro Max轻不少，长时间握持也不累。就是价格对学生来说确实高了，而且不送充电头需要另外购买。续航还算满意，一天一充足够。期待iOS 26后续更新带来更多AI功能。"
-          }
+          "百达翡丽",
+          "正装表",
+          "珐琅"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "audemars",
+    "name": "爱彼皇家橡树旗舰店",
+    "desc": "瑞士爱彼Audemars Piguet·皇家橡树系列·独立制表",
+    "image": "https://images.unsplash.com/photo-1619946794135-d2b3ff63afeb?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "ap1",
+        "name": "Royal Oak 15500ST 皇家橡树",
+        "price": 380000,
+        "desc": "41mm不锈钢表壳，Grande Tapisserie蓝色格纹表盘，4302自动机芯。",
+        "specs": {
+          "表径": "41mm",
+          "材质": "不锈钢",
+          "机芯": "4302自动机芯"
+        },
+        "image": "https://images.unsplash.com/photo-1619946794135-d2b3ff63afeb?w=800",
+        "tags": [
+          "爱彼",
+          "皇家橡树",
+          "蓝盘"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vc",
+    "name": "江诗丹顿旗舰店",
+    "desc": "瑞士江诗丹顿·260年历史·日内瓦印记·顶级制表",
+    "image": "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "vc1",
+        "name": "Overseas 4500V 纵横四海",
+        "price": 298000,
+        "desc": "41mm不锈钢表壳，蓝色漆面表盘，5100自动机芯。3条快拆表带（钢带/皮带/胶带）。",
+        "specs": {
+          "表径": "41mm",
+          "材质": "不锈钢",
+          "机芯": "5100自动机芯",
+          "表带": "3条快拆"
+        },
+        "image": "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800",
+        "tags": [
+          "江诗丹顿",
+          "纵横四海",
+          "蓝盘"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "omega",
+    "name": "欧米茄旗舰店",
+    "desc": "瑞士欧米茄·登月传奇·奥运计时·007同款",
+    "image": "https://images.unsplash.com/photo-1618402390632-8ce46a63c8fa?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "om1",
+        "name": "Speedmaster Moonwatch 超霸登月",
+        "price": 58000,
+        "desc": "42mm不锈钢，黑色表盘，3861手动机芯。NASA认证登月腕表。",
+        "specs": {
+          "表径": "42mm",
+          "材质": "不锈钢",
+          "机芯": "3861手动机芯"
+        },
+        "image": "https://images.unsplash.com/photo-1618402390632-8ce46a63c8fa?w=800",
+        "tags": [
+          "欧米茄",
+          "登月",
+          "超霸"
         ]
       },
       {
-        "id": 8,
-        "name": "iPhone Air",
-        "price": 7999,
-        "originalPrice": 7999,
-        "desc": "迄今最薄的iPhone，仅5.64毫米厚度，165克重量。6.5英寸超视网膜XDR显示屏，A19 Pro芯片。4800万像素融合式摄像头，ƒ/1.6大光圈。钛金属设计，超瓷晶面板2。IP68防溅抗水。视频播放最长27小时。深空黑色/云白色/浅金色/天蓝色。",
+        "id": "om2",
+        "name": "Seamaster 300M 海马潜水",
+        "price": 48000,
+        "desc": "42mm不锈钢，陶瓷表圈，8800自动机芯。007詹姆斯·邦德同款。防水300米。",
         "specs": {
-          "屏幕": "6.5英寸超视网膜XDR OLED全面屏，2736×1260像素分辨率，460ppi，ProMotion自适应刷新率最高120Hz，全天候显示，HDR，原彩显示，P3广色域，2000000:1对比度，1000nit典型/1600nit HDR/3000nit户外峰值亮度，1nit最小亮度",
-          "处理器": "A19 Pro芯片(6核CPU:2性能+4能效，5核GPU，16核神经网络引擎，硬件加速光线追踪)",
-          "操作系统": "iOS 26",
-          "摄像头": "后置4800万融合式主摄(26mm,ƒ/1.6,传感器位移式OIS,100% Focus Pixels)，支持2倍光学品质长焦(52mm)，最高10倍数码变焦，蓝宝石玻璃镜头",
-          "前置摄像头": "1800万Center Stage摄像头(ƒ/1.9,Focus Pixels自动对焦)，4K杜比视界视频",
-          "电池": "视频播放最长27小时，搭配MagSafe电池最长40小时",
-          "充电": "USB-C快充(约30分钟充至50%需20W以上适配器)，MagSafe 15W，Qi2 15W",
-          "存储": "256GB/512GB/1TB",
-          "重量": "165g",
-          "厚度": "5.64mm",
-          "防尘抗水": "IP68级(最深6米水下最长30分钟)",
-          "特色功能": "面容ID、灵动岛、全天候显示、车祸检测、Apple智能、操作按钮、相机控制、Apple C1X蜂窝调制解调器、Apple N1无线网络芯片、蓝牙6、Apple第二代UWB芯片"
+          "表径": "42mm",
+          "材质": "不锈钢",
+          "机芯": "8800自动机芯",
+          "防水": "300m"
         },
-        "image": "https://www.apple.com.cn/v/iphone/home/cj/images/overview/select/iphone_air__b5qmgl05ojyq_large.jpg",
+        "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800",
         "tags": [
-          "轻薄",
-          "A19 Pro",
-          "钛金属",
-          "超薄设计"
-        ],
-        "reviews": [
-          {
-            "user": "颜值控小雅",
-            "rating": 5,
-            "date": "2026-06-14",
-            "content": "iPhone Air真的太薄太轻了！天蓝色超级好看，配上钛金属的质感简直艺术品。165g的重量拿着完全没有负担，放牛仔裤口袋里也不觉得硌。虽然只有一个摄像头，但4800万像素ƒ/1.6大光圈拍照效果很棒，日常完全够用。屏幕和Pro系列一样支持120Hz ProMotion，体验没有缩水。最适合追求轻薄又不想妥协性能的人。"
-          },
-          {
-            "user": "极简主义者大熊",
-            "rating": 4,
-            "date": "2026-06-08",
-            "content": "买了Air替代之前的Pro Max，重量直接减了60多克，使用体验天差地别。A19 Pro性能日常绰绰有余，不打游戏的话发热控制比Pro Max还好。唯一遗憾是只有单摄没有长焦，拍远处的东西需要走近一些。USB-C只有2.0速度稍显遗憾。不过轻薄就是正义，Air是目前最符合我使用习惯的iPhone。"
-          },
-          {
-            "user": "上班族老陈",
-            "rating": 5,
-            "date": "2026-06-02",
-            "content": "从iPhone 15换到Air，轻薄程度真是惊艳。放西装口袋里几乎感觉不到它的存在。27小时视频续航对于上班族来说完全够了，配合MagSafe电池出差也不怕。操作按钮我设置成了快速启动相机，抓拍很方便。Apple C1X自研基带信号表现不错，地铁里也能正常刷视频。这款产品定位很清晰，适合追求轻薄体验的用户。"
-          }
+          "欧米茄",
+          "海马",
+          "007"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cartier",
+    "name": "卡地亚旗舰店",
+    "desc": "法国卡地亚·皇室珠宝商·珠宝腕表·经典设计",
+    "image": "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "ct1",
+        "name": "Santos-Dumont 山度士",
+        "price": 68000,
+        "desc": "43.5mm x 31.4mm不锈钢方形表壳，430MC手动机芯。1904年首款飞行员腕表的现代演绎。",
+        "specs": {
+          "尺寸": "43.5×31.4mm",
+          "材质": "不锈钢",
+          "机芯": "430MC手动机芯"
+        },
+        "image": "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=800",
+        "tags": [
+          "卡地亚",
+          "山度士",
+          "方形表"
         ]
       },
       {
-        "id": 9,
-        "name": "iPhone 17",
-        "price": 6999,
-        "originalPrice": 6999,
-        "desc": "A19芯片加持，先进双摄系统。6.3英寸超视网膜XDR显示屏，灵动岛功能。4800万像素融合式双摄：主摄+超广角，支持2倍光学品质变焦。铝金属设计，超瓷晶面板2。IP68防溅抗水。视频播放最长26小时。薰衣草紫/鼠尾草绿/青雾蓝/白色/黑色可选。",
+        "id": "ct2",
+        "name": "Tank Louis Cartier 坦克",
+        "price": 128000,
+        "desc": "33.7mm x 25.5mm 18K黄金表壳，1917MC手动机芯。1917年设计，百年经典。",
         "specs": {
-          "屏幕": "6.3英寸超视网膜XDR OLED全面屏，ProMotion自适应刷新率最高120Hz，全天候显示，HDR，原彩显示，P3广色域，2000000:1对比度，1000nit典型/1600nit HDR/3000nit户外峰值亮度",
-          "处理器": "A19芯片(6核CPU:2性能+4能效，5核GPU，16核神经网络引擎)",
-          "操作系统": "iOS 26",
-          "摄像头": "后置4800万融合式主摄(26mm,ƒ/1.6,传感器位移式OIS)+1200万超广角(13mm,ƒ/2.2)，支持2倍光学品质长焦(52mm)，最高10倍数码变焦",
-          "前置摄像头": "1800万Center Stage摄像头(ƒ/1.9,Focus Pixels自动对焦)，4K杜比视界视频",
-          "电池": "视频播放最长26小时，流媒体视频最长22小时",
-          "充电": "USB-C快充(MagSafe 15W, Qi2 15W)",
-          "存储": "128GB/256GB/512GB",
-          "重量": "约185g",
-          "防尘抗水": "IP68级(最深6米水下最长30分钟)",
-          "特色功能": "面容ID、灵动岛、全天候显示、车祸检测、Apple智能、操作按钮、相机控制、Apple N1无线网络芯片、蓝牙6、Thread网络技术"
+          "尺寸": "33.7×25.5mm",
+          "材质": "18K黄金",
+          "机芯": "1917MC手动机芯"
         },
-        "image": "https://www.apple.com.cn/iphone/home/images/overview/select/iphone_17__fb1277oq3eaa_large.jpg",
+        "image": "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800",
         "tags": [
-          "性价比",
-          "A19",
-          "双摄",
-          "iOS 26"
-        ],
-        "reviews": [
-          {
-            "user": "换机用户小刘",
-            "rating": 5,
-            "date": "2026-06-13",
-            "content": "从安卓换到iPhone 17，体验太丝滑了！iOS 26的动画和流畅度完全是另一个级别。薰衣草紫颜色太美了，实物比图片更有质感。4800万主摄拍照效果很不错，日常发朋友圈完全够用。操作按钮和灵动岛的交互很直观。A19芯片性能日常使用绰绰有余，不玩大型游戏的话完全不需要上Pro。对普通用户来说是最佳选择！"
-          },
-          {
-            "user": "学生党小李",
-            "rating": 4,
-            "date": "2026-06-05",
-            "content": "综合考虑预算选择了iPhone 17，性价比确实不错。128GB起步对学生来说够用了。虽然没有长焦镜头，但主摄的2倍光学品质变焦效果还不错。128GB起步的存储希望下一代能给256GB。屏幕120Hz ProMotion下放了，用着很爽。续航比想象中好，上课一天回来还有电。推荐预算有限又想体验新iPhone的朋友。"
-          }
+          "卡地亚",
+          "坦克",
+          "经典"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iwc",
+    "name": "IWC万国表旗舰店",
+    "desc": "瑞士IWC·沙夫豪森制造·飞行员腕表·工程师精神",
+    "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "iw1",
+        "name": "Big Pilot 大型飞行员43",
+        "price": 88000,
+        "desc": "43mm不锈钢，蓝色表盘，82100自动机芯。标志性洋葱头表冠，7日动力储备。",
+        "specs": {
+          "表径": "43mm",
+          "材质": "不锈钢",
+          "机芯": "82100自动机芯",
+          "动力": "7日"
+        },
+        "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800",
+        "tags": [
+          "IWC",
+          "大飞",
+          "飞行员"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "maotai",
+    "name": "茅台官方旗舰店",
+    "desc": "贵州茅台酒·国酒之尊·酱香型白酒·收藏投资",
+    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "mt1",
+        "name": "飞天茅台 53%vol 500ml",
+        "price": 2888,
+        "desc": "酱香型白酒典范。历经九次蒸煮、八次发酵、七次取酒，五年窖藏方成。",
+        "specs": {
+          "酒精度": "53%vol",
+          "容量": "500ml",
+          "香型": "酱香型",
+          "年份": "5年窖藏"
+        },
+        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "tags": [
+          "茅台",
+          "飞天",
+          "酱香"
+        ]
+      },
+      {
+        "id": "mt2",
+        "name": "茅台生肖纪念酒·龙年 500ml",
+        "price": 8888,
+        "desc": "茅台生肖纪念系列·甲辰龙年特别版。限量发行，兼具饮用与收藏价值。",
+        "specs": {
+          "酒精度": "53%vol",
+          "容量": "500ml",
+          "系列": "生肖纪念·龙年",
+          "特点": "限量版"
+        },
+        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "tags": [
+          "茅台",
+          "生肖",
+          "限量"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hennessy",
+    "name": "轩尼诗旗舰店",
+    "desc": "法国轩尼诗·干邑之王·250年传承",
+    "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "hn1",
+        "name": "Hennessy XO 干邑白兰地 700ml",
+        "price": 3880,
+        "desc": "由100多种陈年生命之水调配而成，陈酿至少10年以上。层次丰富，余韵悠长。",
+        "specs": {
+          "酒精度": "40%vol",
+          "容量": "700ml",
+          "陈酿": "10年以上",
+          "类型": "干邑XO"
+        },
+        "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800",
+        "tags": [
+          "轩尼诗",
+          "XO",
+          "干邑"
+        ]
+      },
+      {
+        "id": "hn2",
+        "name": "Hennessy Paradis 700ml",
+        "price": 18800,
+        "desc": "轩尼诗顶级珍藏，由25-130年陈年生命之水调配。全球限量供应。",
+        "specs": {
+          "陈酿": "25-130年",
+          "容量": "700ml",
+          "类型": "顶级珍藏"
+        },
+        "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800",
+        "tags": [
+          "轩尼诗",
+          "Paradis",
+          "珍藏"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "louis13",
+    "name": "路易十三旗舰店",
+    "desc": "法国路易十三·干邑皇冠上的明珠·百年陈酿",
+    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "l13-1",
+        "name": "Louis XIII 经典装 700ml",
+        "price": 38800,
+        "desc": "由多达1200种陈年40-100年的生命之水调配。Baccarat水晶瓶纯手工吹制。",
+        "specs": {
+          "酒精度": "40%vol",
+          "容量": "700ml",
+          "陈酿": "40-100年",
+          "瓶身": "Baccarat水晶"
+        },
+        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "tags": [
+          "路易十三",
+          "百年陈酿",
+          "水晶瓶"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "domperi",
+    "name": "唐培里侬旗舰店",
+    "desc": "法国唐培里侬·香槟之王·年份香槟的标杆",
+    "image": "https://images.unsplash.com/photo-1594144432582-6c5c81fc2a1f?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "dp1",
+        "name": "Dom Perignon Vintage 2013 750ml",
+        "price": 2880,
+        "desc": "2013年份香槟。经过至少8年酒窖陈酿，霞多丽与黑皮诺的完美平衡。",
+        "specs": {
+          "容量": "750ml",
+          "年份": "2013",
+          "陈酿": "8年以上"
+        },
+        "image": "https://images.unsplash.com/photo-1594144432582-6c5c81fc2a1f?w=800",
+        "tags": [
+          "香槟",
+          "年份",
+          "唐培里侬"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wuliangye",
+    "name": "五粮液旗舰店",
+    "desc": "四川宜宾·浓香型白酒典范·600年古窖池",
+    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "wl1",
+        "name": "五粮液 52%vol 500ml 普五",
+        "price": 1580,
+        "desc": "以高粱大米糯米小麦玉米五种粮食为原料，明代古窖池发酵。浓香型标杆。",
+        "specs": {
+          "酒精度": "52%vol",
+          "容量": "500ml",
+          "香型": "浓香型",
+          "原料": "五粮"
+        },
+        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "tags": [
+          "五粮液",
+          "浓香",
+          "古窖"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "macallan",
+    "name": "麦卡伦旗舰店",
+    "desc": "苏格兰麦卡伦·单一麦芽威士忌之王·雪莉桶专家",
+    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "mc1",
+        "name": "Macallan 18年 雪莉桶 700ml",
+        "price": 6800,
+        "desc": "100%雪莉桶陈酿18年。干果、巧克力、香料层次丰富。单一麦芽威士忌的标杆。",
+        "specs": {
+          "容量": "700ml",
+          "年份": "18年",
+          "桶型": "雪莉桶",
+          "产地": "苏格兰斯佩塞"
+        },
+        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "tags": [
+          "麦卡伦",
+          "18年",
+          "雪莉桶"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "davidoff",
+    "name": "大卫杜夫旗舰店",
+    "desc": "瑞士大卫杜夫·雪茄奢侈品的代名词·始于1911年",
+    "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "dv1",
+        "name": "Davidoff Winston Churchill 雪茄盒25支",
+        "price": 12800,
+        "desc": "丘吉尔纪念系列，厄瓜多尔茄衣+多米尼加茄芯。中等浓郁，木香与坚果风味。",
+        "specs": {
+          "支数": "25支",
+          "茄衣": "厄瓜多尔",
+          "茄芯": "多米尼加",
+          "风味": "木香/坚果"
+        },
+        "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+        "tags": [
+          "雪茄",
+          "大卫杜夫",
+          "丘吉尔"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cohiba",
+    "name": "高希霸旗舰店",
+    "desc": "古巴高希霸·古巴雪茄之王·卡斯特罗至爱",
+    "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "ch1",
+        "name": "Cohiba Behike 56 木盒10支",
+        "price": 28800,
+        "desc": "高希霸最顶级的Behike系列。稀有Medio Tiempo烟叶，环径56，浓郁复杂的风味。",
+        "specs": {
+          "支数": "10支",
+          "环径": "56",
+          "产地": "古巴",
+          "烟叶": "Medio Tiempo"
+        },
+        "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+        "tags": [
+          "高希霸",
+          "Behike",
+          "古巴"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "laperla",
+    "name": "La Perla旗舰店",
+    "desc": "意大利La Perla·内衣界的劳斯莱斯·1954年创立",
+    "image": "https://images.unsplash.com/photo-1554200876-56c2f25224fa?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "lp1",
+        "name": "Silk Saga 真丝系列套装",
+        "price": 6800,
+        "desc": "100%桑蚕丝面料的奢华触感。意大利工匠手工制作，Leavers蕾丝镶边。",
+        "specs": {
+          "材质": "100%桑蚕丝",
+          "工艺": "手工",
+          "蕾丝": "Leavers法式蕾丝"
+        },
+        "image": "https://images.unsplash.com/photo-1554200876-56c2f25224fa?w=800",
+        "tags": [
+          "La Perla",
+          "真丝",
+          "手工"
+        ]
+      },
+      {
+        "id": "lp2",
+        "name": "La Perla Maison 睡袍",
+        "price": 8800,
+        "desc": "丝绸与蕾丝结合的居家艺术品。法国加莱地区手工蕾丝，意大利科莫湖丝绸。",
+        "specs": {
+          "材质": "丝绸+蕾丝",
+          "蕾丝": "法国加莱手工",
+          "丝绸": "意大利科莫湖"
+        },
+        "image": "https://images.unsplash.com/photo-1554200876-56c2f25224fa?w=800",
+        "tags": [
+          "La Perla",
+          "睡袍",
+          "奢侈"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "agent",
+    "name": "Agent Provocateur旗舰店",
+    "desc": "英国大内密探·叛逆奢华·1994年创立",
+    "image": "https://images.unsplash.com/photo-1571513722275-4b41940f54b8?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "ag1",
+        "name": "Lorna 蕾丝套装",
+        "price": 4800,
+        "desc": "黑色法国加莱蕾丝，丝绸绑带设计。标志性的Agent Provocateur性感风格。",
+        "specs": {
+          "材质": "蕾丝+丝绸",
+          "蕾丝": "法国加莱",
+          "风格": "性感奢华"
+        },
+        "image": "https://images.unsplash.com/photo-1571513722275-4b41940f54b8?w=800",
+        "tags": [
+          "Agent Provocateur",
+          "蕾丝",
+          "英伦"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "arcteryx",
+    "name": "始祖鸟旗舰店",
+    "desc": "加拿大始祖鸟·户外装备天花板·1989年温哥华创立",
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "ac1",
+        "name": "Alpha SV Jacket 硬壳冲锋衣",
+        "price": 8800,
+        "desc": "GORE-TEX Pro 3层压胶，N100d高强度面料。极端环境下的终极保护。",
+        "specs": {
+          "材质": "GORE-TEX Pro",
+          "面料": "N100d",
+          "用途": "极端环境/登山"
+        },
+        "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "tags": [
+          "始祖鸟",
+          "硬壳",
+          "登山"
+        ]
+      },
+      {
+        "id": "ac2",
+        "name": "Cerium SV Hoody 羽绒服",
+        "price": 6800,
+        "desc": "850蓬松度欧洲鹅绒，Arato 10超轻面料。极寒环境下的保暖利器。",
+        "specs": {
+          "填充": "850蓬欧洲鹅绒",
+          "面料": "Arato 10",
+          "重量": "305g"
+        },
+        "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "tags": [
+          "始祖鸟",
+          "羽绒",
+          "轻量"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nike",
+    "name": "Nike旗舰店",
+    "desc": "美国Nike·Just Do It·全球运动品牌第一",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "nk1",
+        "name": "Air Jordan 1 Retro High OG",
+        "price": 1499,
+        "desc": "经典黑红配色，1985年首发。全掌Air-Sole气垫，头层牛皮鞋面。",
+        "specs": {
+          "科技": "Air-Sole",
+          "鞋面": "头层牛皮",
+          "首发": "1985年"
+        },
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+        "tags": [
+          "Nike",
+          "AJ1",
+          "经典"
+        ]
+      },
+      {
+        "id": "nk2",
+        "name": "Nike Vaporfly 3 碳板跑鞋",
+        "price": 2299,
+        "desc": "全掌ZoomX泡棉+碳纤维板。世界纪录级马拉松竞速跑鞋。",
+        "specs": {
+          "中底": "ZoomX+碳板",
+          "重量": "约200g",
+          "用途": "马拉松竞速"
+        },
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+        "tags": [
+          "Nike",
+          "碳板",
+          "竞速"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "taylormade",
+    "name": "TaylorMade旗舰店",
+    "desc": "美国TaylorMade·高尔夫装备王者·Stealth暗影系列",
+    "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "tm1",
+        "name": "Stealth 2 Plus 一号木杆",
+        "price": 5800,
+        "desc": "60层碳纤维杆面，Fujikura Ventus TR杆身。极低倒旋率+最大球速。",
+        "specs": {
+          "杆面": "60层碳纤维",
+          "杆身": "Fujikura Ventus TR",
+          "特点": "低倒旋/高球速"
+        },
+        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+        "tags": [
+          "高尔夫",
+          "一号木",
+          "碳纤维"
+        ]
+      },
+      {
+        "id": "tm2",
+        "name": "P·7TW 老虎·伍兹签名铁杆组",
+        "price": 18800,
+        "desc": "Tiger Woods亲自参与设计的铁杆组（3-PW）。锻造1025碳钢，极佳手感。",
+        "specs": {
+          "组合": "3-PW(8支)",
+          "材质": "锻造1025碳钢",
+          "设计师": "Tiger Woods"
+        },
+        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+        "tags": [
+          "高尔夫",
+          "铁杆",
+          "老虎签名"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "callaway",
+    "name": "Callaway旗舰店",
+    "desc": "美国Callaway·高尔夫科技创新者",
+    "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "cw1",
+        "name": "Paradym Triple Diamond 一号木",
+        "price": 4800,
+        "desc": "360°碳纤维底盘+钛合金杆面。AI设计的杆面结构。",
+        "specs": {
+          "杆面": "钛合金",
+          "底盘": "碳纤维",
+          "技术": "AI设计"
+        },
+        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+        "tags": [
+          "高尔夫",
+          "一号木",
+          "AI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA官方旗舰店",
+    "desc": "美国NVIDIA·AI计算之王·GPU核心硬件",
+    "image": "https://images.unsplash.com/photo-1632186082681-1ef1c979bf0c?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "nv1",
+        "name": "GeForce RTX 6090 32GB",
+        "price": 19999,
+        "desc": "Blackwell架构旗舰GPU。24576个CUDA核心，32GB GDDR7显存。PCIe 5.0 x16。",
+        "specs": {
+          "架构": "Blackwell",
+          "CUDA": "24576",
+          "显存": "32GB GDDR7",
+          "接口": "PCIe 5.0"
+        },
+        "image": "https://images.unsplash.com/photo-1632186082681-1ef1c979bf0c?w=800",
+        "tags": [
+          "NVIDIA",
+          "RTX",
+          "Blackwell"
+        ]
+      },
+      {
+        "id": "nv2",
+        "name": "NVIDIA A100 80GB 数据中心GPU",
+        "price": 128000,
+        "desc": "Ampere架构，6912个CUDA核心，80GB HBM2e显存。AI训练/推理专用。",
+        "specs": {
+          "架构": "Ampere",
+          "显存": "80GB HBM2e",
+          "用途": "AI训练/推理"
+        },
+        "image": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800",
+        "tags": [
+          "NVIDIA",
+          "A100",
+          "AI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "amd",
+    "name": "AMD官方旗舰店",
+    "desc": "美国AMD·锐龙处理器·Radeon显卡·3D V-Cache",
+    "image": "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "ad1",
+        "name": "Ryzen 9 9950X3D 处理器",
+        "price": 6599,
+        "desc": "Zen 5架构，16核32线程，144MB 3D V-Cache。游戏+生产力终极CPU。",
+        "specs": {
+          "架构": "Zen 5",
+          "核心": "16核32线程",
+          "缓存": "144MB 3D V-Cache"
+        },
+        "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8bde75c?w=800",
+        "tags": [
+          "AMD",
+          "Ryzen",
+          "3D V-Cache"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "intel",
+    "name": "Intel官方旗舰店",
+    "desc": "美国Intel·酷睿Ultra·AI PC时代",
+    "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8bde75c?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "il1",
+        "name": "Core Ultra 9 285K 处理器",
+        "price": 5899,
+        "desc": "Arrow Lake架构，24核24线程（8P+16E）。集成NPU，AI算力48 TOPS。",
+        "specs": {
+          "架构": "Arrow Lake",
+          "核心": "24核24线程",
+          "AI算力": "48 TOPS"
+        },
+        "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8bde75c?w=800",
+        "tags": [
+          "Intel",
+          "AI PC",
+          "NPU"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "apple-store",
+    "name": "Apple官方旗舰店",
+    "desc": "美国Apple·Think Different·全球市值第一科技公司",
+    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "aa1",
+        "name": "Vision Pro 空间计算设备",
+        "price": 29999,
+        "desc": "M2+R1双芯片，2300万像素Micro-OLED显示屏。空间计算时代的开端。",
+        "specs": {
+          "芯片": "M2+R1",
+          "显示": "2300万像素Micro-OLED",
+          "存储": "256GB/512GB/1TB"
+        },
+        "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800",
+        "tags": [
+          "Apple",
+          "Vision Pro",
+          "空间计算"
+        ]
+      },
+      {
+        "id": "aa2",
+        "name": "MacBook Pro 16 M4 Max",
+        "price": 29999,
+        "desc": "M4 Max芯片，16核CPU+40核GPU，128GB统一内存。专业创作者终极工具。",
+        "specs": {
+          "芯片": "M4 Max",
+          "内存": "128GB统一内存",
+          "屏幕": "16.2\" Liquid Retina XDR"
+        },
+        "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+        "tags": [
+          "Apple",
+          "MacBook Pro",
+          "M4 Max"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung旗舰店",
+    "desc": "韩国三星·全球科技巨头·Galaxy生态",
+    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "ss1",
+        "name": "Galaxy S25 Ultra 1TB",
+        "price": 10999,
+        "desc": "6.9\" Dynamic AMOLED 2X，120Hz。200MP主摄+50MP 5倍长焦。钛金属框架。",
+        "specs": {
+          "屏幕": "6.9\" AMOLED 2X 120Hz",
+          "摄像头": "200MP+50MP长焦",
+          "材质": "钛金属"
+        },
+        "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+        "tags": [
+          "Samsung",
+          "Galaxy",
+          "Ultra"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sony",
+    "name": "Sony官方旗舰店",
+    "desc": "日本索尼·创新为灵魂·消费电子王者",
+    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "sy1",
+        "name": "PlayStation 6 光驱版",
+        "price": 4999,
+        "desc": "次世代游戏主机。AMD定制芯片，8K/120fps输出。触觉反馈手柄。1TB SSD。",
+        "specs": {
+          "输出": "8K/120fps",
+          "存储": "1TB SSD",
+          "手柄": "触觉反馈"
+        },
+        "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+        "tags": [
+          "Sony",
+          "PS6",
+          "游戏"
+        ]
+      },
+      {
+        "id": "sy2",
+        "name": "Sony α9 IV 全画幅微单",
+        "price": 38000,
+        "desc": "5000万像素堆栈式CMOS，120fps连拍。AI对焦系统，8K 60p内录。",
+        "specs": {
+          "像素": "5000万",
+          "连拍": "120fps",
+          "视频": "8K 60p"
+        },
+        "image": "https://images.unsplash.com/photo-1516724562728-afc824a36e84?w=800",
+        "tags": [
+          "Sony",
+          "α9",
+          "旗舰相机"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dji",
+    "name": "DJI大疆旗舰店",
+    "desc": "中国大疆·无人机全球霸主·影像创新",
+    "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "dj1",
+        "name": "DJI Mavic 4 Pro",
+        "price": 12888,
+        "desc": "哈苏L2D-20c相机，4/3 CMOS，5.1K/60fps。全向避障，15公里图传。",
+        "specs": {
+          "相机": "哈苏4/3 CMOS",
+          "视频": "5.1K/60fps",
+          "图传": "15km",
+          "避障": "全向"
+        },
+        "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800",
+        "tags": [
+          "DJI",
+          "无人机",
+          "哈苏"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bose",
+    "name": "Bose旗舰店",
+    "desc": "美国Bose·声学科技领导者·降噪耳机开创者",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "bs1",
+        "name": "Bose QuietComfort Ultra 耳机",
+        "price": 3299,
+        "desc": "CustomTune智能校准+沉浸式空间音频。行业最强主动降噪。",
+        "specs": {
+          "降噪": "Adaptive ANC",
+          "音频": "空间音频",
+          "续航": "24小时"
+        },
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
+        "tags": [
+          "Bose",
+          "降噪",
+          "耳机"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bo",
+    "name": "Bang & Olufsen旗舰店",
+    "desc": "丹麦B&O·1925年创立·北欧设计美学·声音艺术",
+    "image": "https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "bo1",
+        "name": "Beolab 90 落地音箱(对)",
+        "price": 288000,
+        "desc": "18个独立扬声器单元×2，8200W总功率。自适应声场技术。奢华家居音响巅峰。",
+        "specs": {
+          "单元": "18个×2",
+          "功率": "8200W总",
+          "技术": "自适应声场"
+        },
+        "image": "https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=800",
+        "tags": [
+          "B&O",
+          "旗舰音箱",
+          "北欧"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "montblanc",
+    "name": "万宝龙旗舰店",
+    "desc": "德国万宝龙·书写艺术·始于1906年·奢华配饰",
+    "image": "https://images.unsplash.com/photo-1585123334904-845d60e97b29?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "mb1",
+        "name": "Meisterstück 149 大班钢笔",
+        "price": 6800,
+        "desc": "18K金手工打磨笔尖，黑色名贵树脂笔杆。标志性的白色六角星。钢笔收藏的终极之选。",
+        "specs": {
+          "笔尖": "18K金手工",
+          "笔杆": "黑色树脂",
+          "系列": "Meisterstück大班"
+        },
+        "image": "https://images.unsplash.com/photo-1585123334904-845d60e97b29?w=800",
+        "tags": [
+          "万宝龙",
+          "钢笔",
+          "大班"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rimowa",
+    "name": "RIMOWA日默瓦旗舰店",
+    "desc": "德国日默瓦·1898年创立·铝镁合金行李箱之王",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+    "category": "dutyfree",
+    "products": [
+      {
+        "id": "rw1",
+        "name": "Original Cabin 登机箱 21寸",
+        "price": 9800,
+        "desc": "铝镁合金材质，标志性沟槽设计。TSA海关锁，Multi-Wheel静音万向轮。",
+        "specs": {
+          "尺寸": "21寸登机",
+          "材质": "铝镁合金",
+          "锁": "TSA海关锁"
+        },
+        "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+        "tags": [
+          "RIMOWA",
+          "登机箱",
+          "铝镁合金"
         ]
       }
     ]
