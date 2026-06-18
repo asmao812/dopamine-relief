@@ -2133,209 +2133,233 @@ window.T = function(key) {
   window.PwaBanner = PwaBanner;
 
   // ===== ShoppingScene =====
-  function ShoppingScene(props) {
-    var cartItems = props.cartItems || [];
+  // ===== DutyFreeScene: Store → Product → Detail (three-layer) =====
+  function DutyFreeScene(props) {
     var onAddItem = props.onAddItem;
-    var cartCount = props.cartCount || 0;
-
-    var productsState = React.useState([]);
-    var products = productsState[0], setProducts = productsState[1];
+    var storesState = React.useState([]);
+    var stores = storesState[0], setStores = storesState[1];
     var loadingState = React.useState(true);
     var loading = loadingState[0], setLoading = loadingState[1];
-    var errorState = React.useState('');
-    var error = errorState[0], setError = errorState[1];
-    var catState = React.useState('全部');
-    var activeCategory = catState[0], setActiveCategory = catState[1];
+    var selectedStoreState = React.useState(null);
+    var selectedStore = selectedStoreState[0], setSelectedStore = selectedStoreState[1];
+    var selectedProductState = React.useState(null);
+    var selectedProduct = selectedProductState[0], setSelectedProduct = selectedProductState[1];
     var addedState = React.useState({});
     var addedAnim = addedState[0], setAddedAnim = addedState[1];
 
     React.useEffect(function() {
-      setLoading(true);
-      setError('');
       fetch('/data/products.json')
-        .then(function(res) {
-          if (!res.ok) throw new Error('加载失败');
-          return res.json();
-        })
-        .then(function(data) {
-          setProducts(data || []);
-          setLoading(false);
-        })
-        .catch(function(err) {
-          console.warn('[ShoppingScene] Failed to load products:', err);
-          setError('商品数据加载失败，请稍后重试');
-          setLoading(false);
-        });
+        .then(function(r) { return r.json(); })
+        .then(function(d) { setStores(d||[]); setLoading(false); })
+        .catch(function() { setLoading(false); });
     }, []);
 
-    var categories = React.useMemo(function() {
-      return ['全部', '手机', '奢侈品'];
-    }, []);
-
-    var catMap = { '手机': 'phone', '奢侈品': 'luxury' };
-    var filtered = React.useMemo(function() {
-      var catKey = catMap[activeCategory] || activeCategory;
-      return products.filter(function(p) {
-        return activeCategory === '全部' || p.category === catKey;
-      });
-    }, [products, activeCategory]);
-
-    function handleAdd(product) {
+    function handleAdd(product, storeName) {
       var key = product.id;
-      var newAnim = {};
-      for (var k in addedAnim) { if (addedAnim.hasOwnProperty(k)) newAnim[k] = addedAnim[k]; }
-      newAnim[key] = true;
-      setAddedAnim(newAnim);
-
-      onAddItem(
-        { id: product.id, name: product.name, price: product.price, emoji: '📱' },
-        { id: 'shopping', name: '免税店' }
-      );
-
-      setTimeout(function() {
-        setAddedAnim(function(prev) {
-          var next = {};
-          for (var k in prev) { if (prev.hasOwnProperty(k)) next[k] = prev[k]; }
-          next[key] = false;
-          return next;
-        });
-      }, 600);
+      var newAnim = {}; for (var k in addedAnim) newAnim[k]=addedAnim[k];
+      newAnim[key] = true; setAddedAnim(newAnim);
+      onAddItem({id:product.id,name:product.name,price:product.price},{id:product.id,name:storeName});
+      setTimeout(function(){setAddedAnim(function(p){var n={};for(var k in p)n[k]=p[k];n[key]=false;return n;});},600);
     }
 
-    function getItemQty(productId) {
-      var found = cartItems.find(function(i) { return i.id === productId && i.storeId === 'shopping'; });
-      return found ? found.qty : 0;
-    }
+    function formatPrice(n) { if (n>=10000) return '¥'+(n/10000).toFixed(1)+'万'; return '¥'+n; }
 
-    function formatPrice(n) {
-      if (n >= 10000) return '¥' + (n / 10000).toFixed(1) + '万';
-      return '¥' + n;
-    }
+    if (loading) return h('div',{className:'p-16 text-center',style:{paddingTop:60}},h('p',null,'加载中...'));
+    if (!stores.length) return h('div',{className:'empty-state'},h('div',{className:'empty-state-icon'},'📦'),h('p',null,'暂无免税店'));
 
-    // Loading skeleton
-    if (loading) {
-      return h('div', null,
-        h('div', { className: 'cat-tabs' },
-          categories.map(function(cat) {
-            return h('button', {
-              key: cat,
-              className: 'cat-tab' + (activeCategory === cat ? ' active' : ''),
-              onClick: function() { setActiveCategory(cat); }
-            }, cat === '全部' ? '🛍️ ' + cat : cat);
-          })
+    // LAYER 3: Product detail
+    if (selectedProduct) {
+      var p = selectedProduct;
+      var specsObj = p.specs || {};
+      var specsArr = Object.entries(specsObj);
+      var reviews = p.reviews || [];
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedProduct(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 返回'),
+        p.image?h('img',{src:p.image,alt:p.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:20}},p.name),
+        h('div',{style:{fontSize:22,fontWeight:700,color:'var(--primary)',marginBottom:8}},formatPrice(p.price)),
+        h('p',{style:{color:'var(--text-secondary)',fontSize:13,lineHeight:1.6,marginBottom:12}},p.desc),
+        h('h3',{style:{fontSize:14,marginBottom:6}},'详细参数'),
+        h('div',{style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:12}},
+          specsArr.map(function(e){return h('div',{key:e[0],style:{display:'flex',padding:'4px 0',fontSize:12,borderBottom:'1px solid var(--border)'}},h('span',{style:{color:'var(--text-light)',width:80,flexShrink:0}},e[0]),h('span',{style:{flex:1}},e[1]));})
         ),
-        h('div', { className: 'product-grid' },
-          [1, 2, 3, 4].map(function(i) {
-            return h('div', { key: i, className: 'product-card-skeleton' },
-              h('div', { className: 'skeleton skeleton-img' }),
-              h('div', { className: 'skeleton-body' },
-                h('div', { className: 'skeleton skeleton-line', style: { width: '80%' } }),
-                h('div', { className: 'skeleton skeleton-line', style: { width: '50%' } }),
-                h('div', { className: 'skeleton skeleton-line', style: { width: '90%' } })
-              )
-            );
-          })
-        )
+        h('button',{onClick:function(){handleAdd(p,selectedStore.name);},style:{width:'100%',padding:12,borderRadius:24,border:'none',background:'var(--primary)',color:'#FFF',fontSize:15,fontWeight:600,cursor:'pointer',fontFamily:'inherit',marginBottom:16}},'+ 加购'),
+        // Reviews
+        reviews.length>0?h('div',null,
+          h('h3',{style:{fontSize:14,marginBottom:8}},'用户评价 ('+reviews.length+')'),
+          reviews.map(function(r,i){return h('div',{key:i,style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:8}},
+            h('div',{style:{display:'flex',alignItems:'center',gap:8,marginBottom:4}},
+              h('div',{style:{width:28,height:28,borderRadius:14,background:'hsl('+(i*137%360)+',50%,70%)',display:'flex',alignItems:'center',justifyContent:'center',color:'#FFF',fontSize:12,fontWeight:700}},r.user.charAt(0)),
+              h('span',{style:{fontWeight:600,fontSize:13}},r.user),
+              h('span',{style:{color:'var(--gold)',fontSize:12}},'★'.repeat(r.rating)+'☆'.repeat(5-r.rating)),
+              h('span',{style:{color:'var(--text-light)',fontSize:11,marginLeft:'auto'}},r.date)
+            ),
+            h('p',{style:{fontSize:12,color:'var(--text-secondary)',lineHeight:1.5}},r.content)
+          );})
+        ):null
       );
     }
 
-    // Error state
-    if (error && products.length === 0) {
-      return h('div', { className: 'empty-state' },
-        h('div', { className: 'empty-state-icon' }, '😵'),
-        h('p', { className: 'empty-state-text' }, error),
-        h('button', {
-          onClick: function() { window.location.reload(); },
-          style: {
-            marginTop: 16, padding: '10px 24px', borderRadius: 20,
-            border: 'none', background: 'var(--primary)', color: '#FFF',
-            fontSize: 14, cursor: 'pointer', fontFamily: 'inherit'
-          }
-        }, '🔄 重新加载')
-      );
-    }
-
-    return h('div', null,
-      // Category tabs
-      h('div', { className: 'cat-tabs' },
-        categories.map(function(cat) {
-          return h('button', {
-            key: cat,
-            className: 'cat-tab' + (activeCategory === cat ? ' active' : ''),
-            onClick: function() { setActiveCategory(cat); }
-          }, cat === '全部' ? '🛍️ ' + cat : cat);
-        })
-      ),
-
-      // Product grid or empty
-      filtered.length === 0 ?
-        h('div', { className: 'empty-state' },
-          h('div', { className: 'empty-state-icon' }, '📦'),
-          h('p', { className: 'empty-state-text' }, '该分类暂无商品'),
-          h('p', { className: 'empty-state-hint' }, '换个分类看看吧~')
-        )
-      :
-        h('div', { className: 'product-grid' },
-          filtered.map(function(product, idx) {
-            var qty = getItemQty(product.id);
+    // LAYER 2: Products within a store
+    if (selectedStore) {
+      var s = selectedStore;
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedStore(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 全部免税店'),
+        s.image?h('img',{src:s.image,alt:s.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8,objectFit:'cover',maxHeight:180}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:18}},s.name),
+        h('p',{style:{color:'var(--text-light)',fontSize:12,marginBottom:12}},s.desc),
+        h('div',{className:'product-grid'},
+          (s.products||[]).map(function(product,idx){
             var isAdded = addedAnim[product.id];
-            var specsObj = product.specs || {};
-            var specsArr = Array.isArray(specsObj) ? specsObj : Object.entries(specsObj).map(function(e) { return e[0] + ': ' + e[1]; });
-            var badges = product.tags || (product.brand ? [product.brand] : []);
-
-            return h('div', {
-              key: product.id || idx,
-              className: 'product-card animate-in',
-              style: { animationDelay: (idx * 60) + 'ms' }
-            },
-              // Product image
-              h('div', { className: 'product-img-wrap' },
-                badges.length > 0 ? h('span', { className: 'brand-badge' }, badges[0]) : null,
-                product.image ?
-                  h('img', {
-                    className: 'product-img',
-                    src: product.image,
-                    alt: product.name,
-                    loading: 'lazy',
-                    onError: function(e) {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }
-                  })
-                : null,
-                h('div', {
-                  className: 'product-img-fallback',
-                  style: { display: product.image ? 'none' : 'flex' }
-                }, product.brand ? product.brand.charAt(0) : '📱')
+            return h('div',{key:product.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms'},onClick:function(){setSelectedProduct(product);}},
+              h('div',{className:'product-img-wrap'},
+                (product.tags||[]).length>0?h('span',{className:'brand-badge'},product.tags[0]):null,
+                product.image?h('img',{className:'product-img',src:product.image,alt:product.name,loading:'lazy'}):null
               ),
-
-              // Product body
-              h('div', { className: 'product-body' },
-                h('div', { className: 'product-name' }, product.name),
-                h('div', { className: 'product-price-row' },
-                  h('span', { className: 'product-price' }, formatPrice(product.price)),
-                  product.originalPrice && product.originalPrice > product.price ?
-                    h('span', { className: 'original' }, formatPrice(product.originalPrice))
-                  : null
-                ),
-                specsArr.length > 0 ? h('div', { className: 'product-specs' },
-                  specsArr.slice(0,4).map(function(spec, i) {
-                    return h('span', { key: i }, spec);
-                  })
-                ) : null,
-                h('button', {
-                  className: 'btn-add-cart' + (isAdded ? ' added' : ''),
-                  onClick: function() { handleAdd(product); }
-                },
-                  isAdded ? '✓ 已添加' : (qty > 0 ? '+ 加购 (' + qty + ')' : '+ 加购')
-                )
+              h('div',{className:'product-body'},
+                h('div',{className:'product-name'},product.name),
+                h('div',{className:'product-price-row'},h('span',{className:'product-price'},formatPrice(product.price))),
+                h('button',{className:'btn-add-cart'+(isAdded?' added':''),onClick:function(e){e.stopPropagation();handleAdd(product,s.name);}},isAdded?'✓ 已添加':'+ 加购')
               )
             );
           })
         )
+      );
+    }
+
+    // LAYER 1: Store list
+    return h('div',null,
+      h('div',{style:{padding:'12px 16px 4px'}},h('h2',{style:{fontSize:16,fontWeight:600}},'🛍️ 免税店 ('+stores.length+')')),
+      h('div',{className:'product-grid'},
+        stores.map(function(store,idx){
+          return h('div',{key:store.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms',cursor:'pointer'},onClick:function(){setSelectedStore(store);}},
+            h('div',{className:'product-img-wrap'},
+              store.image?h('img',{className:'product-img',src:store.image,alt:store.name,loading:'lazy'}):h('div',{className:'product-img-fallback',style:{display:'flex'}},'🏪')
+            ),
+            h('div',{className:'product-body'},
+              h('div',{className:'product-name'},store.name),
+              h('div',{style:{fontSize:11,color:'var(--text-light)',marginTop:2}},store.desc),
+              h('div',{style:{fontSize:12,color:'var(--primary)',marginTop:4,fontWeight:600}},(store.products||[]).length+' 款商品')
+            )
+          );
+        })
+      )
     );
   }
-  window.ShoppingScene = ShoppingScene;
+  window.DutyFreeScene = DutyFreeScene;
+
+  // ===== SpaScene: Same three-layer pattern =====
+  function SpaScene(props) {
+    var onAddItem = props.onAddItem;
+    var storesState = React.useState([]);
+    var stores = storesState[0], setStores = storesState[1];
+    var loadingState = React.useState(true);
+    var loading = loadingState[0], setLoading = loadingState[1];
+    var selectedStoreState = React.useState(null);
+    var selectedStore = selectedStoreState[0], setSelectedStore = selectedStoreState[1];
+    var selectedProductState = React.useState(null);
+    var selectedProduct = selectedProductState[0], setSelectedProduct = selectedProductState[1];
+    var addedState = React.useState({});
+    var addedAnim = addedState[0], setAddedAnim = addedState[1];
+
+    React.useEffect(function() {
+      fetch('/data/spa.json')
+        .then(function(r) { return r.json(); })
+        .then(function(d) { setStores(d||[]); setLoading(false); })
+        .catch(function() { setLoading(false); });
+    }, []);
+
+    function handleAdd(product, storeName) {
+      var key = product.id;
+      var newAnim = {}; for (var k in addedAnim) newAnim[k]=addedAnim[k];
+      newAnim[key] = true; setAddedAnim(newAnim);
+      onAddItem({id:product.id,name:product.name,price:product.price},{id:product.id,name:storeName});
+      setTimeout(function(){setAddedAnim(function(p){var n={};for(var k in p)n[k]=p[k];n[key]=false;return n;});},600);
+    }
+
+    function formatPrice(n) { return '¥'+n; }
+
+    if (loading) return h('div',{className:'p-16 text-center',style:{paddingTop:60}},h('p',null,'加载中...'));
+    if (!stores.length) return h('div',{className:'empty-state'},h('div',{className:'empty-state-icon'},'💆'),h('p',null,'暂无SPA服务'));
+
+    // LAYER 3: Product detail
+    if (selectedProduct) {
+      var p = selectedProduct;
+      var specsObj = p.specs || {};
+      var specsArr = Object.entries(specsObj);
+      var reviews = p.reviews || [];
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedProduct(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 返回'),
+        p.image?h('img',{src:p.image,alt:p.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:20}},p.name),
+        h('div',{style:{fontSize:22,fontWeight:700,color:'var(--primary)',marginBottom:8}},formatPrice(p.price)),
+        h('p',{style:{color:'var(--text-secondary)',fontSize:13,lineHeight:1.6,marginBottom:12}},p.desc),
+        h('h3',{style:{fontSize:14,marginBottom:6}},'服务详情'),
+        h('div',{style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:12}},
+          specsArr.map(function(e){return h('div',{key:e[0],style:{display:'flex',padding:'4px 0',fontSize:12,borderBottom:'1px solid var(--border)'}},h('span',{style:{color:'var(--text-light)',width:60,flexShrink:0}},e[0]),h('span',{style:{flex:1}},e[1]));})
+        ),
+        h('button',{onClick:function(){handleAdd(p,selectedStore.name);},style:{width:'100%',padding:12,borderRadius:24,border:'none',background:'var(--primary)',color:'#FFF',fontSize:15,fontWeight:600,cursor:'pointer',fontFamily:'inherit',marginBottom:16}},'+ 加入预约'),
+        reviews.length>0?h('div',null,
+          h('h3',{style:{fontSize:14,marginBottom:8}},'用户评价 ('+reviews.length+')'),
+          reviews.map(function(r,i){return h('div',{key:i,style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:8}},
+            h('div',{style:{display:'flex',alignItems:'center',gap:8,marginBottom:4}},
+              h('div',{style:{width:28,height:28,borderRadius:14,background:'hsl('+(i*137%360)+',50%,70%)',display:'flex',alignItems:'center',justifyContent:'center',color:'#FFF',fontSize:12,fontWeight:700}},r.user.charAt(0)),
+              h('span',{style:{fontWeight:600,fontSize:13}},r.user),
+              h('span',{style:{color:'var(--gold)',fontSize:12}},'★'.repeat(r.rating)+'☆'.repeat(5-r.rating)),
+              h('span',{style:{color:'var(--text-light)',fontSize:11,marginLeft:'auto'}},r.date)
+            ),
+            h('p',{style:{fontSize:12,color:'var(--text-secondary)',lineHeight:1.5}},r.content)
+          );})
+        ):null
+      );
+    }
+
+    // LAYER 2: Products within a store
+    if (selectedStore) {
+      var s = selectedStore;
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedStore(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 全部SPA'),
+        s.image?h('img',{src:s.image,alt:s.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8,objectFit:'cover',maxHeight:180}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:18}},s.name),
+        h('p',{style:{color:'var(--text-light)',fontSize:12,marginBottom:12}},s.desc),
+        h('div',{className:'product-grid'},
+          (s.products||[]).map(function(product,idx){
+            var isAdded = addedAnim[product.id];
+            return h('div',{key:product.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms'},onClick:function(){setSelectedProduct(product);}},
+              h('div',{className:'product-img-wrap'},
+                product.image?h('img',{className:'product-img',src:product.image,alt:product.name,loading:'lazy'}):h('div',{className:'product-img-fallback',style:{display:'flex'}},'💆')
+              ),
+              h('div',{className:'product-body'},
+                h('div',{className:'product-name'},product.name),
+                h('div',{className:'product-price-row'},h('span',{className:'product-price'},formatPrice(product.price))),
+                h('button',{className:'btn-add-cart'+(isAdded?' added':''),onClick:function(e){e.stopPropagation();handleAdd(product,s.name);}},isAdded?'✓ 已预约':'+ 预约')
+              )
+            );
+          })
+        )
+      );
+    }
+
+    // LAYER 1: Store list
+    return h('div',null,
+      h('div',{style:{padding:'12px 16px 4px'}},h('h2',{style:{fontSize:16,fontWeight:600}},'💆 做SPA ('+stores.length+')')),
+      h('div',{className:'product-grid'},
+        stores.map(function(store,idx){
+          return h('div',{key:store.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms',cursor:'pointer'},onClick:function(){setSelectedStore(store);}},
+            h('div',{className:'product-img-wrap'},
+              store.image?h('img',{className:'product-img',src:store.image,alt:store.name,loading:'lazy'}):h('div',{className:'product-img-fallback',style:{display:'flex'}},'💆')
+            ),
+            h('div',{className:'product-body'},
+              h('div',{className:'product-name'},store.name),
+              h('div',{style:{fontSize:11,color:'var(--text-light)',marginTop:2}},store.desc),
+              h('div',{style:{fontSize:12,color:'var(--primary)',marginTop:4,fontWeight:600}},(store.products||[]).length+' 个项目')
+            )
+          );
+        })
+      )
+    );
+  }
+  window.SpaScene = SpaScene;
 
   // ===== App (main state manager) =====
   function App() {
@@ -2535,15 +2559,25 @@ window.T = function(key) {
 
         case 'home':
         default:
-          if (currentTab === 'shopping') {
-            return window.ShoppingScene ?
-              h(window.ShoppingScene, {
+          if (currentTab === 'dutyfree') {
+            return window.DutyFreeScene ?
+              h(window.DutyFreeScene, {
                 cartItems: cartItems,
                 onAddItem: addItem,
                 key: renderKey
               })
             :
-              h(Fallback, { msg: 'ShoppingScene 组件未加载' });
+              h(Fallback, { msg: 'DutyFreeScene 组件未加载' });
+          }
+          if (currentTab === 'spa') {
+            return window.SpaScene ?
+              h(window.SpaScene, {
+                cartItems: cartItems,
+                onAddItem: addItem,
+                key: renderKey
+              })
+            :
+              h(Fallback, { msg: 'SpaScene 组件未加载' });
           }
           return window.FoodHome ?
             h(window.FoodHome, {
@@ -2580,7 +2614,7 @@ window.T = function(key) {
       // Toast
       toast ? h('div', { className: 'toast', key: toast }, toast) : null,
 
-      // Bottom Tab Bar (only on home)
+      // Bottom Tab Bar (only on home, 3 tabs)
       currentPage === 'home' ?
         h('div', { className: 'tab-bar' },
           h('button', {
@@ -2591,8 +2625,15 @@ window.T = function(key) {
             h('span', null, '上馆子')
           ),
           h('button', {
-            className: 'tab-item' + (currentTab === 'shopping' ? ' active' : ''),
-            onClick: function() { setCurrentTab('shopping'); }
+            className: 'tab-item' + (currentTab === 'spa' ? ' active' : ''),
+            onClick: function() { setCurrentTab('spa'); }
+          },
+            h('span', { className: 'tab-icon' }, '💆'),
+            h('span', null, '做SPA')
+          ),
+          h('button', {
+            className: 'tab-item' + (currentTab === 'dutyfree' ? ' active' : ''),
+            onClick: function() { setCurrentTab('dutyfree'); }
           },
             h('span', { className: 'tab-icon' }, '🛍️'),
             h('span', null, '免税店')
