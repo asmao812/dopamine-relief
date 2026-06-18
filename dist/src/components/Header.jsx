@@ -36,8 +36,8 @@ const Header = () => {
   return (
     <header className="app-header row" style={{ justifyContent: 'space-between' }}>
       <div>
-        <h1>{window.T('app.title')}</h1>
-        <div className="subtitle">{window.T('app.subtitle')}</div>
+        <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, letterSpacing: '0.02em', color: 'var(--text)' }}>{window.T('app.title')}</h1>
+        <div className="subtitle" style={{ fontStyle: 'italic', fontFamily: "'Playfair Display', serif", color: 'var(--text-light)', fontSize: 12 }}>{window.T('app.subtitle')}</div>
       </div>
       <div className="header-actions">
         <button className="header-btn" onClick={toggleLang} title="Switch language">

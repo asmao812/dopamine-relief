@@ -1,18 +1,20 @@
-# 解压小站 · Dopamine Relief
+# 悦己镇 · Joyville
 
-> 浏览高端餐厅，释放压力，寻找美食灵感
-> Browse high-end restaurants, relieve stress, find culinary inspiration.
+> Treat yourself better.
+> 一座只服务你的小镇——美食、数码、奢品、SPA，逛逛就解压。
+> A small town where everything is about you — browse, indulge, relieve stress.
 
 ---
 
 ## 中文说明
 
-**解压小站**是一个基于 React 的单页应用（SPA），让你足不出户浏览精选高端餐厅的菜品，从视觉上"解压"——看美食、选美食、释放多巴胺。
+**悦己镇**是一个基于 React 的渐进式 Web 应用（PWA），让你足不出户浏览高端餐厅、数码奢品和 SPA 体验——一座只服务你的小镇。逛一逛，释放多巴胺。
 
 ### 功能特点
 
 - 🍽️ **20+ 精选高端餐厅** — 大董烤鸭、新荣记、Ultraviolet by Paul Pairet 等
-- 📋 **完整菜单浏览** — 每道菜都有图片、描述、价格
+- 📱 **数码奢品** — 华为 Mate XT、iPhone 等旗舰好物
+- 💆 **SPA 体验** — 高端水疗与身体护理
 - 🌐 **中英双语** — 支持中文 / English 切换
 - 📱 **PWA 支持** — 可添加到手机主屏幕，离线可用
 - 🐳 **Docker 一键部署** — Nginx + SSL，开箱即用
@@ -67,7 +69,7 @@ dopamine-app/
 
 ## English
 
-**Dopamine Relief** is a React single-page application (SPA) for browsing curated high-end restaurants. Find culinary inspiration and relieve stress through visual food exploration.
+**Joyville** is a React Progressive Web App (PWA) for browsing curated high-end restaurants, luxury gadgets, and spa experiences. Step into a small town built just for you — browse, indulge, and let the dopamine flow.
 
 ### Features
 

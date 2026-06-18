@@ -1,6 +1,6 @@
 window.I18N_EN = {
-  app: { title: 'Dopamine Relief', subtitle: 'Order anything · Zero cost · Pure joy' },
-  home: { search: 'Search fancy restaurants...', nearby: 'Nearby Premium', categories: 'Categories', recommend: 'Recommended' },
+  app: { title: 'Joyville', subtitle: 'Treat yourself better' },
+  home: { search: 'Explore the town...', nearby: 'Town Eateries', categories: 'Categories', recommend: 'Recommended' },
   store: { menu: 'Menu', review: 'Reviews', info: 'Info' },
   cart: { title: 'Cart', empty: 'Cart is empty, go explore!', total: 'Total', checkout: 'Checkout', clear: 'Clear' },
   order: { confirm: 'Confirm Order', address: 'Delivery Address', fake_address: '88 Jianguo Rd, Chaoyang, Beijing', pay_method: 'Payment', wechat: 'WeChat Pay', alipay: 'Alipay', card: 'Card', submit: 'Place Order', cancel: 'Cancel' },

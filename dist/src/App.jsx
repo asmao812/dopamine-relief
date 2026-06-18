@@ -241,8 +241,8 @@ function App() {
       ) : (
         <header className="app-header row" style={{ justifyContent: 'space-between' }}>
           <div style={{ cursor: 'pointer' }}>
-            <h1>{window.T('app.title')}</h1>
-            <div className="subtitle">{window.T('app.subtitle')}</div>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22 }}>{window.T('app.title')}</h1>
+            <div className="subtitle" style={{ fontStyle: 'italic', fontFamily: "'Playfair Display', serif", color: 'var(--text-light)', fontSize: 12 }}>{window.T('app.subtitle')}</div>
           </div>
         </header>
       )}
