@@ -21,3 +21,7 @@ Thumbs.db
 # Environment
 .env.local
 .env.production
+
+# Backups
+dist.bak*/
+.understand-anything/
