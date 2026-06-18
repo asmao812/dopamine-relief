@@ -131,9 +131,18 @@ function App() {
     if (page === 'home') setSelectedStore(null);
   }, []);
 
-  // 下单 (假支付)
+  // 追踪用的订单数据（跨页面传递）
+  const trackingData = useRef({ cartItems: [], savedAmount: 0, orderId: '' });
+
+  // 下单 (假支付) → 跳转追踪页
   const placeOrder = useCallback(() => {
     const savedAmount = cartTotal;
+    const orderId = 'DP' + Date.now().toString(36).toUpperCase();
+    trackingData.current = {
+      cartItems: [...cartItems],
+      savedAmount,
+      orderId
+    };
     setCurrentPage('paying');
     setTimeout(() => {
       setStats(prev => {
@@ -148,9 +157,9 @@ function App() {
         return newStats;
       });
       setCartItems([]);
-      setCurrentPage('success');
+      setCurrentPage('tracking');
     }, 1500);
-  }, [cartTotal]);
+  }, [cartTotal, cartItems]);
 
   // 成功页返回
   const handleGoHome = useCallback(() => {
@@ -209,13 +218,26 @@ function App() {
       case 'success':
         return window.OrderSuccess ? (
           <window.OrderSuccess
-            savedAmount={cartTotal || stats.saved}
+            savedAmount={trackingData.current?.savedAmount || cartTotal || stats.saved}
             stats={stats}
             onGoHome={handleGoHome}
             key={renderKey}
           />
         ) : (
           <Fallback msg="OrderSuccess 组件未加载" />
+        );
+
+      case 'tracking':
+        return window.OrderTracking ? (
+          <window.OrderTracking
+            cartItems={trackingData.current?.cartItems || []}
+            savedAmount={trackingData.current?.savedAmount || 0}
+            orderId={trackingData.current?.orderId || 'DP' + Date.now()}
+            onGoHome={handleGoHome}
+            key={renderKey}
+          />
+        ) : (
+          <Fallback msg="OrderTracking 组件未加载" />
         );
 
       case 'home':
