@@ -4,6 +4,7 @@ const { useState } = React;
 function StorePage({ store, cartItems, onAddItem, onGoBack }) {
   const [animItems, setAnimItems] = useState({});
   const [activeTab, setActiveTab] = useState('menu');
+  const [selectedMenuItem, setSelectedMenuItem] = useState(null);
 
   if (!store) {
     return (
@@ -130,17 +131,29 @@ function StorePage({ store, cartItems, onAddItem, onGoBack }) {
                   <div
                     key={item.id || idx}
                     className={`cart-item animate-in`}
-                    style={{ animationDelay: `${idx * 50}ms` }}
+                    style={{ animationDelay: `${idx * 50}ms`, cursor: 'pointer' }}
+                    onClick={() => setSelectedMenuItem(item)}
                   >
                     {/* 图片占位 */}
-                    <div style={{
-                      width: 64, height: 64, borderRadius: 8,
-                      background: 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: 28, flexShrink: 0
-                    }}>
-                      {item.emoji || '🍜'}
-                    </div>
+                    {item.image ? (
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        style={{
+                          width: 64, height: 64, borderRadius: 8,
+                          objectFit: 'cover', flexShrink: 0
+                        }}
+                      />
+                    ) : (
+                      <div style={{
+                        width: 64, height: 64, borderRadius: 8,
+                        background: 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        fontSize: 28, flexShrink: 0
+                      }}>
+                        {item.emoji || '🍜'}
+                      </div>
+                    )}
 
                     {/* 信息 */}
                     <div className="cart-item-name">
@@ -175,7 +188,7 @@ function StorePage({ store, cartItems, onAddItem, onGoBack }) {
                         </span>
                       )}
                       <button
-                        onClick={() => handleAdd(item)}
+                        onClick={(e) => { e.stopPropagation(); handleAdd(item); }}
                         style={{
                           width: 32, height: 32, borderRadius: 16,
                           border: 'none', cursor: 'pointer',
@@ -244,6 +257,18 @@ function StorePage({ store, cartItems, onAddItem, onGoBack }) {
           </div>
         </div>
       )}
+
+      {/* 菜单项详情弹窗 */}
+      {selectedMenuItem && window.MenuItemDetail && React.createElement(window.MenuItemDetail, {
+        item: selectedMenuItem,
+        store: store,
+        onClose: () => setSelectedMenuItem(null),
+        onAdd: (item) => {
+          handleAdd(item);
+          setSelectedMenuItem(null);
+        },
+        inCart: getItemQty(selectedMenuItem)
+      })}
     </div>
   );
 }

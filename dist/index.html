@@ -566,7 +566,7 @@ window.T = function(key) {
       deliveryTime: r.delivery_time || r.deliveryTime,
       minPrice: r.min_price || r.minPrice,
       address: r.address,
-      image: (typeof r.image === 'string' && (r.image.indexOf('http') === 0 || r.image.indexOf('https') === 0)) ? r.image : (r.image && r.image.indexOf('http') !== 0 ? null : null),
+      image: (typeof r.image === 'string' && (r.image.indexOf('http') === 0 || r.image.indexOf('https') === 0 || r.image.indexOf('/') === 0)) ? r.image : null,
       emoji: r.emoji || r.image,
       desc: r.description || r.desc,
       menu: (r.menu || []).map(function(item) {
@@ -575,7 +575,7 @@ window.T = function(key) {
           name: item.name,
           desc: item.desc,
           price: item.price,
-          image: (typeof item.image === 'string' && (item.image.indexOf('http') === 0 || item.image.indexOf('https') === 0)) ? item.image : null,
+          image: (typeof item.image === 'string' && (item.image.indexOf('http') === 0 || item.image.indexOf('https') === 0 || item.image.indexOf('/') === 0)) ? item.image : null,
           emoji: item.emoji,
           originalPrice: item.original_price || item.originalPrice
         };
@@ -1091,6 +1091,8 @@ window.T = function(key) {
     var animItems = animState[0], setAnimItems = animState[1];
     var tabState = React.useState('menu');
     var activeTab = tabState[0], setActiveTab = tabState[1];
+    var menuDetailState = React.useState(null);
+    var selectedMenuItem = menuDetailState[0], setSelectedMenuItem = menuDetailState[1];
 
     if (!store) {
       return h('div', { className: 'p-16 text-center', style: { color: 'var(--text-secondary)', paddingTop: 60 } },
@@ -1222,7 +1224,8 @@ window.T = function(key) {
               return h('div', {
                 key: item.id || idx,
                 className: 'cart-item animate-in',
-                style: { animationDelay: (idx * 50) + 'ms' }
+                style: { animationDelay: (idx * 50) + 'ms', cursor: 'pointer' },
+                onClick: function() { setSelectedMenuItem(item); }
               },
                 // Image placeholder
                 item.image ?
@@ -1258,7 +1261,7 @@ window.T = function(key) {
                     style: { minWidth: 24, textAlign: 'center', fontWeight: 600, fontSize: 14, color: 'var(--primary)' }
                   }, String(qty)) : null,
                   h('button', {
-                    onClick: function() { handleAdd(item); },
+                    onClick: function(e) { e.stopPropagation(); handleAdd(item); },
                     style: {
                       width: 32, height: 32, borderRadius: 16,
                       border: 'none', cursor: 'pointer',
@@ -1300,7 +1303,19 @@ window.T = function(key) {
             textAlign: 'center'
           }
         }, '⚠️ 温馨提示：本店纯属虚构，仅供解压体验，不提供真实外卖服务')
-      ) : null
+      ) : null,
+
+      // MenuItemDetail popup
+      selectedMenuItem ? h(MenuItemDetail, {
+        item: selectedMenuItem,
+        store: store,
+        onClose: function() { setSelectedMenuItem(null); },
+        onAdd: function(item) {
+          handleAdd(item);
+          setSelectedMenuItem(null);
+        },
+        inCart: getItemQty(selectedMenuItem)
+      }) : null
     );
   }
   window.StorePage = StorePage;
