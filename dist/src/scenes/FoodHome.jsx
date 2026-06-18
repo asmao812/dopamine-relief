@@ -117,7 +117,7 @@ function FoodHome({ restaurants = [], stats, onSelectStore, cartItemCount, onCar
                 <div
                   className="store-card-img"
                   style={{
-                    background: restaurant.color || 'linear-gradient(135deg, #FFE0D5, #FFF0E8)',
+                    background: restaurant.color || 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: 28
                   }}

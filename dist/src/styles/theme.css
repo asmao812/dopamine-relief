@@ -1,7 +1,7 @@
 :root {
-  --primary: #FF5D37;
+  --primary: #FEA031;
   --primary-dark: #E04A2A;
-  --bg: #FFF5F0;
+  --bg: #FEFCF5;
   --bg-card: #FFFFFF;
   --text: #1A1A1A;
   --text-secondary: #6F6F6F;
@@ -16,7 +16,7 @@
 
 [data-theme="dark"] {
   --primary: #FF7B5A;
-  --primary-dark: #FF5D37;
+  --primary-dark: #FEA031;
   --bg: #1A1A2E;
   --bg-card: #16213E;
   --text: #E8E8E8;

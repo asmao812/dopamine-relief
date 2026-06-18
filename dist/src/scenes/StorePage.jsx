@@ -66,7 +66,7 @@ function StorePage({ store, cartItems, onAddItem, onGoBack }) {
         <div
           className="store-header-bg"
           style={{
-            background: store.color || 'linear-gradient(135deg, #FF5D37, #FF8D58)',
+            background: store.color || 'linear-gradient(135deg, #FEA031, #FCB354)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: 64
           }}
@@ -135,7 +135,7 @@ function StorePage({ store, cartItems, onAddItem, onGoBack }) {
                     {/* 图片占位 */}
                     <div style={{
                       width: 64, height: 64, borderRadius: 8,
-                      background: 'linear-gradient(135deg, #FFE8DC, #FFF3EB)',
+                      background: 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       fontSize: 28, flexShrink: 0
                     }}>

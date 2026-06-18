@@ -181,7 +181,7 @@ function OrderTracking({ cartItems = [], savedAmount = 0, orderId, onGoHome }) {
           }),
           anchor: 'bottom-center',
           label: {
-            content: '<div style="background:#FF5D37;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;white-space:nowrap">商家</div>',
+            content: '<div style="background:#FEA031;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;white-space:nowrap">商家</div>',
             offset: new window.AMap.Pixel(0, -40),
           }
         });
@@ -208,13 +208,13 @@ function OrderTracking({ cartItems = [], savedAmount = 0, orderId, onGoHome }) {
           position: start,
           icon: new window.AMap.Icon({
             size: new window.AMap.Size(32, 32),
-            image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FF5D37" stroke="#fff" stroke-width="2"/><text x="20" y="26" text-anchor="middle" font-size="18">🛵</text></svg>'),
+            image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FEA031" stroke="#fff" stroke-width="2"/><text x="20" y="26" text-anchor="middle" font-size="18">🛵</text></svg>'),
             imageSize: new window.AMap.Size(32, 32),
           }),
           anchor: 'center',
           zIndex: 100,
           label: {
-            content: '<div style="background:#FF5D37;color:#fff;padding:2px 8px;border-radius:10px;font-size:10px;white-space:nowrap;animation:pulse 1.5s infinite">🏍️ 骑手</div>',
+            content: '<div style="background:#FEA031;color:#fff;padding:2px 8px;border-radius:10px;font-size:10px;white-space:nowrap;animation:pulse 1.5s infinite">🏍️ 骑手</div>',
             offset: new window.AMap.Pixel(0, -34),
           }
         });
@@ -223,7 +223,7 @@ function OrderTracking({ cartItems = [], savedAmount = 0, orderId, onGoHome }) {
         // 绘制路径
         const polyline = new window.AMap.Polyline({
           path: route.current.fullPath,
-          strokeColor: '#FF5D37',
+          strokeColor: '#FEA031',
           strokeWeight: 4,
           strokeOpacity: 0.5,
           strokeStyle: 'dashed',
@@ -302,7 +302,7 @@ function OrderTracking({ cartItems = [], savedAmount = 0, orderId, onGoHome }) {
     <div className="animate-in" style={{ paddingBottom: 40 }}>
       {/* 顶部订单编号 */}
       <div style={{
-        padding: '16px', background: 'linear-gradient(135deg, #FF5D37, #FF8D58)',
+        padding: '16px', background: 'linear-gradient(135deg, #FEA031, #FCB354)',
         color: '#FFF', borderRadius: '0 0 20px 20px'
       }}>
         <div style={{ fontSize: 12, opacity: 0.8, marginBottom: 4 }}>

@@ -1,7 +1,7 @@
 const { useState, useEffect, useCallback } = React;
 
 // ===== Confetti 粒子 =====
-const CONFETTI_COLORS = ['#FF5D37', '#FF8D58', '#F59E0B', '#22C55E', '#3B82F6', '#8B5CF6', '#EC4899'];
+const CONFETTI_COLORS = ['#FEA031', '#FCB354', '#F59E0B', '#22C55E', '#3B82F6', '#8B5CF6', '#EC4899'];
 const CONFETTI_EMOJIS = ['🎉', '✨', '💸', '🎊', '💰', '🤑', '🔥', '💎', '🥳'];
 
 function randomConfetti() {
