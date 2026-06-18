@@ -65,7 +65,10 @@ body {
   position: relative;
   background: var(--bg-card);
   overflow-x: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
 }
+#root.ready { opacity: 1; }
 
 /* Utility */
 .row { display:flex; flex-direction:row; align-items:center; }
@@ -2713,6 +2716,8 @@ window.T = function(key) {
     if (rootEl) {
       var root = ReactDOM.createRoot(rootEl);
       root.render(h(App, null));
+      // Reveal page after React mounts (prevent FOUC)
+      setTimeout(function() { rootEl.classList.add('ready'); }, 50);
     }
   }
 
