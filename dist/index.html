@@ -1,501 +1,2729 @@
-1|1|<!DOCTYPE html>
-2|2|<html lang="zh-CN">
-3|3|<head>
-4|4|  <meta charset="UTF-8">
-5|5|  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-6|6|  <meta name="theme-color" content="#FEA031">
-7|7|  <meta name="apple-mobile-web-app-capable" content="yes">
-8|8|  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-9|9|  <meta name="apple-mobile-web-app-title" content="悦己镇">
-10|10|  <link rel="manifest" href="/manifest.json">
-11|11|  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
-12|12|  <title>悦己镇 · Joyville — Treat yourself better</title>
-13|13|  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-14|14|  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-15|15|  <script src="https://unpkg.com/@babel/standalone@7.23.0/babel.min.js"></script>
-16|16|  <script src="https://webapi.amap.com/maps?v=2.0&key=a448036028b969a51fe8d6bf016a82b6"></script>
-17|17|  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-18|18|  <style>
-19|19|:root {
-20|20|  --primary: #FEA031;
-21|21|  --primary-dark: #FCB354;
-22|22|  --accent: #C6B092;
-23|23|  --bg: #FEFCF5;
-24|24|  --bg-card: #FFFFFF;
-25|25|  --text: #5C4A32;
-26|26|  --text-secondary: #8B7D6B;
-27|27|  --text-light: #B8A99A;
-28|28|  --border: #F0EAD5;
-29|29|  --success: #7BAF9B;
-30|30|  --gold: #FEA031;
-31|31|  --sand: #FDF4E0;
-32|32|  --shadow: 0 2px 12px rgba(92,74,50,0.06);
-33|33|  --radius: 12px;
-34|34|  --radius-sm: 8px;
-35|35|}
-36|36|
-37|37|[data-theme="dark"] {
-38|38|  --primary: #FCB354;
-39|39|  --primary-dark: #FEA031;
-40|40|  --accent: #D4C4A8;
-41|41|  --bg: #1F1B15;
-42|42|  --bg-card: #2C261D;
-43|43|  --text: #F0E8D5;
-44|44|  --text-secondary: #B8A99A;
-45|45|  --text-light: #8B7D6B;
-46|46|  --border: #3D3425;
-47|47|  --shadow: 0 2px 12px rgba(0,0,0,0.3);
-48|48|}
-49|49|
-50|50|* { margin:0; padding:0; box-sizing:border-box; }
-51|51|
-52|52|body {
-53|53|  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-54|54|  background: var(--bg);
-55|55|  color: var(--text);
-56|56|  -webkit-font-smoothing: antialiased;
-57|57|  overscroll-behavior: none;
-58|58|}
-59|59|
-60|60|#root {
-61|61|  max-width: 480px;
-62|62|  margin: 0 auto;
-63|63|  min-height: 100vh;
-64|64|  min-height: 100dvh;
-65|65|  position: relative;
-66|66|  background: var(--bg-card);
-67|67|  overflow-x: hidden;
-68|68|}
-69|69|
-70|70|/* Utility */
-71|71|.row { display:flex; flex-direction:row; align-items:center; }
-72|72|.col { display:flex; flex-direction:column; }
-73|73|.gap-8 { gap:8px; }
-74|74|.gap-12 { gap:12px; }
-75|75|.flex-1 { flex:1; }
-76|76|.text-center { text-align:center; }
-77|77|.mt-8 { margin-top:8px; }
-78|78|.mt-16 { margin-top:16px; }
-79|79|.p-16 { padding:16px; }
-80|80|.px-16 { padding-left:16px; padding-right:16px; }
-81|81|
-82|82|/* Animations */
-83|83|@keyframes fadeInUp {
-84|84|  from { opacity:0; transform:translateY(20px); }
-85|85|  to { opacity:1; transform:translateY(0); }
-86|86|}
-87|87|@keyframes pulse {
-88|88|  0%,100% { transform:scale(1); }
-89|89|  50% { transform:scale(1.05); }
-90|90|}
-91|91|@keyframes slideInRight {
-92|92|  from { transform:translateX(100%); }
-93|93|  to { transform:translateX(0); }
-94|94|}
-95|95|@keyframes confetti {
-96|96|  0% { transform:translateY(0) rotate(0deg); opacity:1; }
-97|97|  100% { transform:translateY(-200px) rotate(720deg); opacity:0; }
-98|98|}
-99|99|@keyframes shimmer {
-100|100|  0% { background-position:-200% 0; }
-101|101|  100% { background-position:200% 0; }
-102|102|}
-103|103|@keyframes spin {
-104|104|  to { transform: rotate(360deg); }
-105|105|}
-106|106|
-107|107|.animate-in { animation: fadeInUp 0.4s ease-out; }
-108|108|.btn-pulse { animation: pulse 2s infinite; }
-109|109|
-110|110|/* Toast */
-111|111|.toast {
-112|112|  position:fixed; bottom:80px; left:50%; transform:translateX(-50%);
-113|113|  background:#1A1A1A; color:#FFF; padding:12px 24px; border-radius:24px;
-114|114|  font-size:14px; z-index:999; animation:fadeInUp 0.3s ease-out;
-115|115|}
-116|116|
-117|117|.app-header {
-118|118|  position:sticky; top:0; z-index:100;
-119|119|  background: var(--bg-card);
-120|120|  color:#FFF; padding:0;
-121|121|  padding-top: max(0px, env(safe-area-inset-top));
-122|122|}
-123|123|.app-header h1 { font-size:18px; font-weight:600; letter-spacing:0.5px; }
-124|124|.app-header .subtitle { font-size:11px; opacity:0.85; margin-top:2px; }
-125|125|
-126|126|.header-actions { display:flex; gap:8px; align-items:center; }
-127|127|.header-btn {
-128|128|  background:rgba(255,255,255,0.2); border:none; color:#FFF;
-129|129|  padding:6px 10px; border-radius:6px; font-size:12px; cursor:pointer;
-130|130|  font-family:inherit; white-space:nowrap;
-131|131|}
-132|132|
-133|133|/* Food Cards */
-134|134|.food-card {
-135|135|  background:var(--bg-card); border-radius:var(--radius);
-136|136|  box-shadow:var(--shadow); overflow:hidden; cursor:pointer;
-137|137|  transition: transform 0.2s;
-138|138|}
-139|139|.food-card:active { transform:scale(0.98); }
-140|140|.food-card-img {
-141|141|  width:100%; height:140px; object-fit:cover;
-142|142|  background: linear-gradient(135deg, #FDF4E0, #FEFCF5);
-143|143|}
-144|144|.food-card-body { padding:10px 12px; }
-145|145|.food-card-name { font-size:14px; font-weight:500; margin-bottom:4px; }
-146|146|.food-card-price { color:var(--primary); font-weight:700; font-size:15px; }
-147|147|.food-card-price .original { color:var(--text-light); font-size:11px; text-decoration:line-through; margin-left:6px; font-weight:400; }
-148|148|.food-card-meta { font-size:11px; color:var(--text-secondary); margin-top:2px; }
-149|149|
-150|150|/* Store Card */
-151|151|.store-card {
-152|152|  display:flex; gap:12px; padding:14px 16px; background:var(--bg-card);
-153|153|  border-bottom:1px solid var(--border); cursor:pointer;
-154|154|}
-155|155|.store-card:active { background:var(--bg); }
-156|156|.store-card-img {
-157|157|  width:72px; height:72px; border-radius:var(--radius-sm);
-158|158|  object-fit:cover; background:linear-gradient(135deg, #FDF4E0, #FEFCF5);
-159|159|}
-160|160|.store-card-info { flex:1; }
-161|161|.store-card-name { font-size:15px; font-weight:600; margin-bottom:4px; }
-162|162|.store-card-stars { color:var(--gold); font-size:12px; }
-163|163|.store-card-type { font-size:11px; color:var(--text-secondary); margin-top:2px; }
-164|164|.store-card-tag {
-165|165|  display:inline-block; background:#FDF4E0; color:var(--primary);
-166|166|  font-size:10px; padding:2px 6px; border-radius:4px; margin-top:4px;
-167|167|}
-168|168|
-169|169|/* Cart */
-170|170|.cart-fab {
-171|171|  position:fixed; bottom:90px; right:16px;
-172|172|  width:56px; height:56px; border-radius:28px;
-173|173|  background:var(--primary); color:#FFF; border:none;
-174|174|  font-size:22px; cursor:pointer; box-shadow:0 4px 16px rgba(255,93,55,0.4);
-175|175|  z-index:90; display:flex; align-items:center; justify-content:center;
-176|176|}
-177|177|.cart-badge {
-178|178|  position:absolute; top:-4px; right:-4px;
-179|179|  background:#FF0000; color:#FFF; font-size:11px;
-180|180|  min-width:20px; height:20px; border-radius:10px;
-181|181|  display:flex; align-items:center; justify-content:center;
-182|182|}
-183|183|
-184|184|.cart-panel {
-185|185|  position:fixed; bottom:0; left:0; right:0; max-width:480px; margin:0 auto;
-186|186|  background:var(--bg-card); border-radius:20px 20px 0 0;
-187|187|  box-shadow:0 -4px 24px rgba(0,0,0,0.1);
-188|188|  z-index:95; max-height:60vh; overflow-y:auto;
-189|189|  animation: slideInRight 0.3s ease-out;
-190|190|}
-191|191|.cart-panel-header {
-192|192|  padding:16px; border-bottom:1px solid var(--border);
-193|193|  display:flex; justify-content:space-between; align-items:center;
-194|194|  position:sticky; top:0; background:var(--bg-card); z-index:1;
-195|195|}
-196|196|.cart-item {
-197|197|  display:flex; gap:10px; padding:12px 16px; border-bottom:1px solid var(--border);
-198|198|  align-items:center;
-199|199|}
-200|200|.cart-item-name { flex:1; font-size:13px; }
-201|201|.cart-item-price { color:var(--primary); font-weight:600; font-size:14px; }
-202|202|.cart-item-qty { display:flex; align-items:center; gap:8px; }
-203|203|.qty-btn {
-204|204|  width:26px; height:26px; border-radius:13px; border:1px solid var(--border);
-205|205|  background:var(--bg); cursor:pointer; font-size:14px; display:flex;
-206|206|  align-items:center; justify-content:center;
-207|207|}
-208|208|.cart-footer {
-209|209|  padding:14px 16px; border-top:1px solid var(--border);
-210|210|  display:flex; justify-content:space-between; align-items:center;
-211|211|  position:sticky; bottom:0; background:var(--bg-card);
-212|212|}
-213|213|.cart-total { font-size:14px; }
-214|214|.cart-total .price { color:var(--primary); font-weight:700; font-size:18px; }
-215|215|.btn-checkout {
-216|216|  background:var(--primary); color:#FFF; border:none;
-217|217|  padding:12px 32px; border-radius:24px; font-size:15px; font-weight:600;
-218|218|  cursor:pointer; font-family:inherit;
-219|219|}
-220|220|
-221|221|/* Checkout */
-222|222|.checkout-page { height:100vh; height:100dvh; display:flex; flex-direction:column; }
-223|223|.checkout-stepper {
-224|224|  display:flex; justify-content:center; gap:4px; padding:20px 0 0;
-225|225|}
-226|226|.step-dot {
-227|227|  width:8px; height:8px; border-radius:4px; background:var(--border);
-228|228|}
-229|229|.step-dot.active { background:var(--primary); width:24px; }
-230|230|.step-dot.done { background:var(--success); }
-231|231|.checkout-content { flex:1; overflow-y:auto; padding:24px 16px; }
-232|232|.checkout-address {
-233|233|  background:var(--bg); padding:14px; border-radius:var(--radius-sm);
-234|234|  display:flex; gap:10px; align-items:center; margin-bottom:16px;
-235|235|}
-236|236|.checkout-pay-method {
-237|237|  display:flex; gap:12px; flex-wrap:wrap;
-238|238|}
-239|239|.pay-option {
-240|240|  flex:1; min-width:80px; padding:16px 12px; border:2px solid var(--border);
-241|241|  border-radius:var(--radius-sm); text-align:center; cursor:pointer;
-242|242|  font-size:13px;
-243|243|}
-244|244|.pay-option.selected { border-color:var(--primary); background:#FDF4E0; }
-245|245|
-246|246|/* Order Success */
-247|247|.success-page {
-248|248|  display:flex; flex-direction:column; align-items:center;
-249|249|  justify-content:center; height:100vh; height:100dvh;
-250|250|  padding:32px; text-align:center;
-251|251|}
-252|252|.success-icon { font-size:72px; animation:pulse 1.5s ease-in-out; }
-253|253|.success-title { font-size:22px; font-weight:700; margin:16px 0 8px; }
-254|254|.success-saved { color:var(--primary); font-weight:700; font-size:32px; margin:12px 0; }
-255|255|.success-subtitle { color:var(--text-secondary); font-size:14px; margin-bottom:24px; }
-256|256|.confetti {
-257|257|  position:absolute; font-size:24px; animation:confetti 2s ease-out forwards;
-258|258|  opacity:0;
-259|259|}
-260|260|
-261|261|/* Stats Bar */
-262|262|.stats-bar {
-263|263|  display:flex; justify-content:space-around; padding:14px 16px;
-264|264|  background:var(--bg); border-radius:var(--radius);
-265|265|  margin:12px 16px;
-266|266|}
-267|267|.stat-item { text-align:center; }
-268|268|.stat-value { font-size:20px; font-weight:700; color:var(--primary); }
-269|269|.stat-label { font-size:11px; color:var(--text-secondary); margin-top:2px; }
-270|270|
-271|271|/* Category tabs */
-272|272|.cat-tabs {
-273|273|  display:flex; overflow-x:auto; padding:12px 16px; gap:10px;
-274|274|  scrollbar-width:none;
-275|275|}
-276|276|.cat-tabs::-webkit-scrollbar { display:none; }
-277|277|.cat-tab {
-278|278|  padding:8px 18px; border-radius:20px; font-size:13px;
-279|279|  white-space:nowrap; cursor:pointer; border:1px solid var(--border);
-280|280|  background:var(--bg); color:var(--text-secondary);
-281|281|}
-282|282|.cat-tab.active { background:var(--primary); color:#FFF; border-color:var(--primary); }
-283|283|
-284|284|/* Store header */
-285|285|.store-header {
-286|286|  position:relative; height:180px; overflow:hidden;
-287|287|}
-288|288|.store-header-bg {
-289|289|  width:100%; height:100%; object-fit:cover;
-290|290|  background:linear-gradient(135deg, #FEA031, #FCB354);
-291|291|}
-292|292|.store-header-info {
-293|293|  position:absolute; bottom:0; left:0; right:0;
-294|294|  padding:16px; background:linear-gradient(transparent, rgba(0,0,0,0.6));
-295|295|  color:#FFF;
-296|296|}
-297|297|.store-header-name { font-size:20px; font-weight:700; }
-298|298|.store-header-meta { font-size:12px; opacity:0.9; margin-top:4px; }
-299|299|.store-header-tags { margin-top:4px; display:flex; gap:4px; flex-wrap:wrap; }
-300|300|.store-header-tag {
-301|301|  background:rgba(255,255,255,0.25); color:#FFF;
-302|302|  font-size:10px; padding:2px 8px; border-radius:10px;
-303|303|}
-304|304|
-305|305|/* Loading skeleton */
-306|306|.skeleton {
-307|307|  background:linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%);
-308|308|  background-size:200% 100%; animation:shimmer 1.5s infinite;
-309|309|  border-radius:var(--radius-sm);
-310|310|}
-311|311|
-312|312|/* Install PWA prompt */
-313|313|.pwa-banner {
-314|314|  position:fixed; bottom:0; left:0; right:0; max-width:480px; margin:0 auto;
-315|315|  background:var(--bg-card); padding:14px 16px;
-316|316|  box-shadow:0 -4px 20px rgba(0,0,0,0.15);
-317|317|  display:flex; gap:12px; align-items:center; z-index:200;
-318|318|  animation:fadeInUp 0.4s ease-out;
-319|319|}
-320|320|.pwa-banner-text { flex:1; font-size:13px; font-weight:500; }
-321|321|.pwa-banner-btn {
-322|322|  background:var(--primary); color:#FFF; border:none;
-323|323|  padding:8px 16px; border-radius:18px; font-size:13px;
-324|324|  font-weight:600; cursor:pointer; font-family:inherit;
-325|325|}
-326|326|.pwa-banner-close {
-327|327|  background:none; border:none; color:var(--text-light); cursor:pointer;
-328|328|  font-size:18px; padding:4px;
-329|329|}
-330|330|
-331|331|/* Bottom Tab Bar */
-332|332|.tab-bar {
-333|333|  position:fixed; bottom:0; left:0; right:0; max-width:480px; margin:0 auto;
-334|334|  background:var(--bg-card); border-top:1px solid var(--border);
-335|335|  display:flex; z-index:85; padding-bottom:env(safe-area-inset-bottom);
-336|336|  box-shadow:0 -2px 12px rgba(0,0,0,0.06);
-337|337|}
-338|338|.tab-item {
-339|339|  flex:1; display:flex; flex-direction:column; align-items:center;
-340|340|  justify-content:center; padding:8px 0 4px; cursor:pointer;
-341|341|  border:none; background:transparent; font-family:inherit;
-342|342|  font-size:11px; color:var(--text-light); gap:4px;
-343|343|  transition:color 0.2s; -webkit-tap-highlight-color:transparent;
-344|344|}
-345|345|.tab-item .tab-icon { font-size:22px; line-height:1; }
-346|346|.tab-item.active { color:var(--primary); font-weight:600; }
-347|347|
-348|348|/* Logo */
-349|349|.app-logo { display:flex; align-items:center; gap:10px; }
-350|350|.app-logo svg { flex-shrink:0; }
-351|351|
-352|352|/* Product Cards (Shopping) */
-353|353|.product-grid {
-354|354|  display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:0 16px;
-355|355|}
-356|356|.product-card {
-357|357|  background:var(--bg-card); border-radius:var(--radius);
-358|358|  box-shadow:var(--shadow); overflow:hidden; cursor:pointer;
-359|359|  transition: transform 0.2s;
-360|360|}
-361|361|.product-card:active { transform:scale(0.98); }
-362|362|.product-img-wrap {
-363|363|  position:relative; width:100%; height:160px; overflow:hidden;
-364|364|  background:linear-gradient(135deg, #F5F5F5, #E8E8E8);
-365|365|}
-366|366|.product-img {
-367|367|  width:100%; height:100%; object-fit:cover;
-368|368|}
-369|369|.product-img-fallback {
-370|370|  width:100%; height:100%; display:flex; align-items:center;
-371|371|  justify-content:center; font-size:48px;
-372|372|  background:linear-gradient(135deg, #FDF4E0, #FEFCF5);
-373|373|}
-374|374|.brand-badge {
-375|375|  position:absolute; top:8px; left:8px;
-376|376|  background:rgba(0,0,0,0.7); color:#FFF; font-size:10px;
-377|377|  padding:2px 8px; border-radius:4px; font-weight:500;
-378|378|  backdrop-filter:blur(4px);
-379|379|}
-380|380|.product-body { padding:10px 12px; }
-381|381|.product-name { font-size:13px; font-weight:500; margin-bottom:6px;
-382|382|  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
-383|383|  overflow:hidden; line-height:1.4; min-height:36px;
-384|384|}
-385|385|.product-price-row { display:flex; align-items:center; gap:6px; margin-bottom:6px; }
-386|386|.product-price { color:var(--primary); font-weight:700; font-size:16px; }
-387|387|.product-price .original {
-388|388|  color:var(--text-light); font-size:11px; text-decoration:line-through;
-389|389|  font-weight:400; margin-left:4px;
-390|390|}
-391|391|.product-specs { font-size:10px; color:var(--text-light); margin-bottom:8px; }
-392|392|.product-specs span {
-393|393|  display:inline-block; background:var(--bg); padding:1px 6px;
-394|394|  border-radius:3px; margin-right:4px; margin-bottom:2px;
-395|395|}
-396|396|.btn-add-cart {
-397|397|  width:100%; padding:8px 0; border-radius:6px; border:1px solid var(--primary);
-398|398|  background:transparent; color:var(--primary); font-size:13px; font-weight:600;
-399|399|  cursor:pointer; font-family:inherit; transition:all 0.2s;
-400|400|}
-401|401|.btn-add-cart:hover, .btn-add-cart:active {
-402|402|  background:var(--primary); color:#FFF;
-403|403|}
-404|404|.btn-add-cart.added {
-405|405|  background:var(--success); color:#FFF; border-color:var(--success);
-406|406|}
-407|407|
-408|408|/* Empty state */
-409|409|.empty-state {
-410|410|  display:flex; flex-direction:column; align-items:center;
-411|411|  justify-content:center; padding:60px 20px; text-align:center;
-412|412|}
-413|413|.empty-state-icon { font-size:56px; margin-bottom:16px; }
-414|414|.empty-state-text { color:var(--text-secondary); font-size:14px; }
-415|415|.empty-state-hint { color:var(--text-light); font-size:12px; margin-top:6px; }
-416|416|
-417|417|/* Loading shimmer for product cards */
-418|418|.product-card-skeleton {
-419|419|  background:var(--bg-card); border-radius:var(--radius);
-420|420|  box-shadow:var(--shadow); overflow:hidden;
-421|421|}
-422|422|.product-card-skeleton .skeleton-img {
-423|423|  width:100%; height:160px;
-424|424|}
-425|425|.product-card-skeleton .skeleton-body {
-426|426|  padding:10px 12px; display:flex; flex-direction:column; gap:8px;
-427|427|}
-428|428|.product-card-skeleton .skeleton-line {
-429|429|  height:12px; border-radius:6px;
-430|430|}
-431|431|  </style>
-432|432|</head>
-433|433|<body>
-434|434|<div id="root"></div>
-435|435|
-436|436|<script type="text/babel" src="/src/scenes/OrderTracking.jsx"></script>
-437|437|
-438|438|<script>
-439|439|// ===== I18N Data & T() function =====
-440|440|window.__LANG__ = localStorage.getItem('dopamine_lang') || 'zh';
-441|441|
-442|442|window.I18N_ZH = {
-443|443|  app: { title: '悦己镇', subtitle: 'Treat yourself better' },
-444|444|  home: { search: '逛逛小镇...', nearby: '镇上的馆子', categories: '分类', recommend: '推荐' },
-445|445|  store: { menu: '菜单', review: '评价', info: '店铺信息' },
-446|446|  cart: { title: '购物车', empty: '购物车是空的，去逛逛吧', total: '合计', checkout: '去结算', clear: '清空' },
-447|447|  order: { confirm: '确认订单', address: '收货地址', fake_address: '北京市朝阳区建国路88号', pay_method: '支付方式', wechat: '微信支付', alipay: '支付宝', card: '银行卡', submit: '提交订单', cancel: '取消' },
-448|448|  tracking: { title: '订单追踪', accepted: '已接单', waiting: '等骑手', delivering: '配送中', arrived: '已送达', estimated: '预计送达', order_no: '订单号', detail: '订单详情', map_title: '骑手实时位置', items: '件', total_time: '总共用时', back_home: '返回首页', sim_tip: '模拟配送 · 骑手位置为虚拟轨迹' },
-449|449|  success: { title: '下单成功！🎉', saved: '本次省下', subtitle: '看，不花一分钱照样爽！', back: '继续逛', share: '分享给朋友' },
-450|450|  stats: { saved: '已省下', orders: '已下单', streak: '连续打卡' },
-451|451|  install: { text: '添加到桌面，体验更好', install: '安装', later: '稍后' },
-452|452|  toast: { added: '已加入购物车', removed: '已移除', cleared: '购物车已清空' },
-453|453|  darkmode: '暗色',
-454|454|  lang: 'EN'
-455|455|};
-456|456|
-457|457|window.I18N_EN = {
-458|458|  app: { title: 'Joyville', subtitle: 'Treat yourself better' },
-459|459|  home: { search: 'Explore the town...', nearby: 'Town Eateries', categories: 'Categories', recommend: 'Recommended' },
-460|460|  store: { menu: 'Menu', review: 'Reviews', info: 'Info' },
-461|461|  cart: { title: 'Cart', empty: 'Cart is empty, go explore!', total: 'Total', checkout: 'Checkout', clear: 'Clear' },
-462|462|  order: { confirm: 'Confirm Order', address: 'Delivery Address', fake_address: '88 Jianguo Rd, Chaoyang, Beijing', pay_method: 'Payment', wechat: 'WeChat Pay', alipay: 'Alipay', card: 'Card', submit: 'Place Order', cancel: 'Cancel' },
-463|463|  tracking: { title: 'Order Tracking', accepted: 'Accepted', waiting: 'Awaiting Rider', delivering: 'On the way', arrived: 'Delivered', estimated: 'Est. arrival', order_no: 'Order #', detail: 'Order Details', map_title: 'Live Rider Location', items: 'items', total_time: 'Total time', back_home: 'Back to Home', sim_tip: 'Simulated delivery · Rider position is virtual' },
-464|464|  success: { title: 'Order Placed! 🎉', saved: 'You Saved', subtitle: 'All the dopamine, none of the cost!', back: 'Browse More', share: 'Share' },
-465|465|  stats: { saved: 'Total Saved', orders: 'Orders', streak: 'Day Streak' },
-466|466|  install: { text: 'Add to home screen for best experience', install: 'Install', later: 'Later' },
-467|467|  toast: { added: 'Added to cart', removed: 'Removed', cleared: 'Cart cleared' },
-468|468|  darkmode: 'Dark',
-469|469|  lang: '中文'
-470|470|};
-471|471|
-472|472|window.T = function(key) {
-473|473|  var lang = window.__LANG__ || 'zh';
-474|474|  var dict = lang === 'en' ? window.I18N_EN : window.I18N_ZH;
-475|475|  var keys = key.split('.');
-476|476|  var val = dict;
-477|477|  for (var i = 0; i < keys.length; i++) {
-478|478|    if (val && val[keys[i]] !== undefined) val = val[keys[i]];
-479|479|    else return key;
-480|480|  }
-481|481|  return val;
-482|482|};
-483|483|</script>
-484|484|
-485|485|<script>
-486|486|// ===== All Components using React.createElement() =====
-487|487|(function() {
-488|488|  // Shorter alias
-489|489|  var h = React.createElement;
-490|490|
-491|491|  // ===== Data normalization helper =====
-492|492|  function normRestaurant(r) {
-493|493|    return {
-494|494|      id: r.id,
-495|495|      name: r.name,
-496|496|      name_en: r.name_en,
-497|497|      tags: r.tags || [],
-498|498|      rating: r.rating,
-499|499|      category: r.category,
-500|500|      deliveryTime: r.delivery_time || r.deliveryTime,
-501|
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FEA031">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="悦己镇">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <title>悦己镇 · Joyville — Treat yourself better</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.23.0/babel.min.js"></script>
+  <script src="https://webapi.amap.com/maps?v=2.0&key=a448036028b969a51fe8d6bf016a82b6"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --primary: #FEA031;
+  --primary-dark: #FCB354;
+  --accent: #C6B092;
+  --bg: #FEFCF5;
+  --bg-card: #FFFFFF;
+  --text: #5C4A32;
+  --text-secondary: #8B7D6B;
+  --text-light: #B8A99A;
+  --border: #F0EAD5;
+  --success: #7BAF9B;
+  --gold: #FEA031;
+  --sand: #FDF4E0;
+  --shadow: 0 2px 12px rgba(92,74,50,0.06);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+[data-theme="dark"] {
+  --primary: #FCB354;
+  --primary-dark: #FEA031;
+  --accent: #D4C4A8;
+  --bg: #1F1B15;
+  --bg-card: #2C261D;
+  --text: #F0E8D5;
+  --text-secondary: #B8A99A;
+  --text-light: #8B7D6B;
+  --border: #3D3425;
+  --shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+#root {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  background: var(--bg-card);
+  overflow-x: hidden;
+}
+
+/* Utility */
+.row { display:flex; flex-direction:row; align-items:center; }
+.col { display:flex; flex-direction:column; }
+.gap-8 { gap:8px; }
+.gap-12 { gap:12px; }
+.flex-1 { flex:1; }
+.text-center { text-align:center; }
+.mt-8 { margin-top:8px; }
+.mt-16 { margin-top:16px; }
+.p-16 { padding:16px; }
+.px-16 { padding-left:16px; padding-right:16px; }
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes pulse {
+  0%,100% { transform:scale(1); }
+  50% { transform:scale(1.05); }
+}
+@keyframes slideInRight {
+  from { transform:translateX(100%); }
+  to { transform:translateX(0); }
+}
+@keyframes confetti {
+  0% { transform:translateY(0) rotate(0deg); opacity:1; }
+  100% { transform:translateY(-200px) rotate(720deg); opacity:0; }
+}
+@keyframes shimmer {
+  0% { background-position:-200% 0; }
+  100% { background-position:200% 0; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-in { animation: fadeInUp 0.4s ease-out; }
+.btn-pulse { animation: pulse 2s infinite; }
+
+/* Toast */
+.toast {
+  position:fixed; bottom:80px; left:50%; transform:translateX(-50%);
+  background:#1A1A1A; color:#FFF; padding:12px 24px; border-radius:24px;
+  font-size:14px; z-index:999; animation:fadeInUp 0.3s ease-out;
+}
+
+.app-header {
+  position:sticky; top:0; z-index:100;
+  background: var(--bg-card);
+  color:#FFF; padding:0;
+  padding-top: max(0px, env(safe-area-inset-top));
+}
+.app-header h1 { font-size:18px; font-weight:600; letter-spacing:0.5px; }
+.app-header .subtitle { font-size:11px; opacity:0.85; margin-top:2px; }
+
+.header-actions { display:flex; gap:8px; align-items:center; }
+.header-btn {
+  background:rgba(255,255,255,0.2); border:none; color:#FFF;
+  padding:6px 10px; border-radius:6px; font-size:12px; cursor:pointer;
+  font-family:inherit; white-space:nowrap;
+}
+
+/* Food Cards */
+.food-card {
+  background:var(--bg-card); border-radius:var(--radius);
+  box-shadow:var(--shadow); overflow:hidden; cursor:pointer;
+  transition: transform 0.2s;
+}
+.food-card:active { transform:scale(0.98); }
+.food-card-img {
+  width:100%; height:140px; object-fit:cover;
+  background: linear-gradient(135deg, #FDF4E0, #FEFCF5);
+}
+.food-card-body { padding:10px 12px; }
+.food-card-name { font-size:14px; font-weight:500; margin-bottom:4px; }
+.food-card-price { color:var(--primary); font-weight:700; font-size:15px; }
+.food-card-price .original { color:var(--text-light); font-size:11px; text-decoration:line-through; margin-left:6px; font-weight:400; }
+.food-card-meta { font-size:11px; color:var(--text-secondary); margin-top:2px; }
+
+/* Store Card */
+.store-card {
+  display:flex; gap:12px; padding:14px 16px; background:var(--bg-card);
+  border-bottom:1px solid var(--border); cursor:pointer;
+}
+.store-card:active { background:var(--bg); }
+.store-card-img {
+  width:72px; height:72px; border-radius:var(--radius-sm);
+  object-fit:cover; background:linear-gradient(135deg, #FDF4E0, #FEFCF5);
+}
+.store-card-info { flex:1; }
+.store-card-name { font-size:15px; font-weight:600; margin-bottom:4px; }
+.store-card-stars { color:var(--gold); font-size:12px; }
+.store-card-type { font-size:11px; color:var(--text-secondary); margin-top:2px; }
+.store-card-tag {
+  display:inline-block; background:#FEFCF5; color:var(--primary);
+  font-size:10px; padding:2px 6px; border-radius:4px; margin-top:4px;
+}
+
+/* Cart */
+.cart-fab {
+  position:fixed; bottom:90px; right:16px;
+  width:56px; height:56px; border-radius:28px;
+  background:var(--primary); color:#FFF; border:none;
+  font-size:22px; cursor:pointer; box-shadow:0 4px 16px rgba(255,93,55,0.4);
+  z-index:90; display:flex; align-items:center; justify-content:center;
+}
+.cart-badge {
+  position:absolute; top:-4px; right:-4px;
+  background:#FF0000; color:#FFF; font-size:11px;
+  min-width:20px; height:20px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+}
+
+.cart-panel {
+  position:fixed; bottom:0; left:0; right:0; max-width:480px; margin:0 auto;
+  background:var(--bg-card); border-radius:20px 20px 0 0;
+  box-shadow:0 -4px 24px rgba(0,0,0,0.1);
+  z-index:95; max-height:60vh; overflow-y:auto;
+  animation: slideInRight 0.3s ease-out;
+}
+.cart-panel-header {
+  padding:16px; border-bottom:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+  position:sticky; top:0; background:var(--bg-card); z-index:1;
+}
+.cart-item {
+  display:flex; gap:10px; padding:12px 16px; border-bottom:1px solid var(--border);
+  align-items:center;
+}
+.cart-item-name { flex:1; font-size:13px; }
+.cart-item-price { color:var(--primary); font-weight:600; font-size:14px; }
+.cart-item-qty { display:flex; align-items:center; gap:8px; }
+.qty-btn {
+  width:26px; height:26px; border-radius:13px; border:1px solid var(--border);
+  background:var(--bg); cursor:pointer; font-size:14px; display:flex;
+  align-items:center; justify-content:center;
+}
+.cart-footer {
+  padding:14px 16px; border-top:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+  position:sticky; bottom:0; background:var(--bg-card);
+}
+.cart-total { font-size:14px; }
+.cart-total .price { color:var(--primary); font-weight:700; font-size:18px; }
+.btn-checkout {
+  background:var(--primary); color:#FFF; border:none;
+  padding:12px 32px; border-radius:24px; font-size:15px; font-weight:600;
+  cursor:pointer; font-family:inherit;
+}
+
+/* Checkout */
+.checkout-page { height:100vh; height:100dvh; display:flex; flex-direction:column; }
+.checkout-stepper {
+  display:flex; justify-content:center; gap:4px; padding:20px 0 0;
+}
+.step-dot {
+  width:8px; height:8px; border-radius:4px; background:var(--border);
+}
+.step-dot.active { background:var(--primary); width:24px; }
+.step-dot.done { background:var(--success); }
+.checkout-content { flex:1; overflow-y:auto; padding:24px 16px; }
+.checkout-address {
+  background:var(--bg); padding:14px; border-radius:var(--radius-sm);
+  display:flex; gap:10px; align-items:center; margin-bottom:16px;
+}
+.checkout-pay-method {
+  display:flex; gap:12px; flex-wrap:wrap;
+}
+.pay-option {
+  flex:1; min-width:80px; padding:16px 12px; border:2px solid var(--border);
+  border-radius:var(--radius-sm); text-align:center; cursor:pointer;
+  font-size:13px;
+}
+.pay-option.selected { border-color:var(--primary); background:#FDF4E0; }
+
+/* Order Success */
+.success-page {
+  display:flex; flex-direction:column; align-items:center;
+  justify-content:center; height:100vh; height:100dvh;
+  padding:32px; text-align:center;
+}
+.success-icon { font-size:72px; animation:pulse 1.5s ease-in-out; }
+.success-title { font-size:22px; font-weight:700; margin:16px 0 8px; }
+.success-saved { color:var(--primary); font-weight:700; font-size:32px; margin:12px 0; }
+.success-subtitle { color:var(--text-secondary); font-size:14px; margin-bottom:24px; }
+.confetti {
+  position:absolute; font-size:24px; animation:confetti 2s ease-out forwards;
+  opacity:0;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display:flex; justify-content:space-around; padding:14px 16px;
+  background:var(--bg); border-radius:var(--radius);
+  margin:12px 16px;
+}
+.stat-item { text-align:center; }
+.stat-value { font-size:20px; font-weight:700; color:var(--primary); }
+.stat-label { font-size:11px; color:var(--text-secondary); margin-top:2px; }
+
+/* Category tabs */
+.cat-tabs {
+  display:flex; overflow-x:auto; padding:12px 16px; gap:10px;
+  scrollbar-width:none;
+}
+.cat-tabs::-webkit-scrollbar { display:none; }
+.cat-tab {
+  padding:8px 18px; border-radius:20px; font-size:13px;
+  white-space:nowrap; cursor:pointer; border:1px solid var(--border);
+  background:var(--bg); color:var(--text-secondary);
+}
+.cat-tab.active { background:var(--primary); color:#FFF; border-color:var(--primary); }
+
+/* Store header */
+.store-header {
+  position:relative; height:180px; overflow:hidden;
+}
+.store-header-bg {
+  width:100%; height:100%; object-fit:cover;
+  background:linear-gradient(135deg, #FEA031, #FCB354);
+}
+.store-header-info {
+  position:absolute; bottom:0; left:0; right:0;
+  padding:16px; background:linear-gradient(transparent, rgba(0,0,0,0.6));
+  color:#FFF;
+}
+.store-header-name { font-size:20px; font-weight:700; }
+.store-header-meta { font-size:12px; opacity:0.9; margin-top:4px; }
+.store-header-tags { margin-top:4px; display:flex; gap:4px; flex-wrap:wrap; }
+.store-header-tag {
+  background:rgba(255,255,255,0.25); color:#FFF;
+  font-size:10px; padding:2px 8px; border-radius:10px;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background:linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%);
+  background-size:200% 100%; animation:shimmer 1.5s infinite;
+  border-radius:var(--radius-sm);
+}
+
+/* Install PWA prompt */
+.pwa-banner {
+  position:fixed; bottom:0; left:0; right:0; max-width:480px; margin:0 auto;
+  background:var(--bg-card); padding:14px 16px;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.15);
+  display:flex; gap:12px; align-items:center; z-index:200;
+  animation:fadeInUp 0.4s ease-out;
+}
+.pwa-banner-text { flex:1; font-size:13px; font-weight:500; }
+.pwa-banner-btn {
+  background:var(--primary); color:#FFF; border:none;
+  padding:8px 16px; border-radius:18px; font-size:13px;
+  font-weight:600; cursor:pointer; font-family:inherit;
+}
+.pwa-banner-close {
+  background:none; border:none; color:var(--text-light); cursor:pointer;
+  font-size:18px; padding:4px;
+}
+
+/* Bottom Tab Bar */
+.tab-bar {
+  position:fixed; bottom:0; left:0; right:0; max-width:480px; margin:0 auto;
+  background:var(--bg-card); border-top:1px solid var(--border);
+  display:flex; z-index:85; padding-bottom:env(safe-area-inset-bottom);
+  box-shadow:0 -2px 12px rgba(0,0,0,0.06);
+}
+.tab-item {
+  flex:1; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; padding:8px 0 4px; cursor:pointer;
+  border:none; background:transparent; font-family:inherit;
+  font-size:11px; color:var(--text-light); gap:4px;
+  transition:color 0.2s; -webkit-tap-highlight-color:transparent;
+}
+.tab-item .tab-icon { font-size:22px; line-height:1; }
+.tab-item.active { color:var(--primary); font-weight:600; }
+
+/* Logo */
+.app-logo { display:flex; align-items:center; gap:10px; }
+.app-logo svg { flex-shrink:0; }
+
+/* Product Cards (Shopping) */
+.product-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:0 16px;
+}
+.product-card {
+  background:var(--bg-card); border-radius:var(--radius);
+  box-shadow:var(--shadow); overflow:hidden; cursor:pointer;
+  transition: transform 0.2s;
+}
+.product-card:active { transform:scale(0.98); }
+.product-img-wrap {
+  position:relative; width:100%; height:160px; overflow:hidden;
+  background:linear-gradient(135deg, #F5F5F5, #E8E8E8);
+}
+.product-img {
+  width:100%; height:100%; object-fit:cover;
+}
+.product-img-fallback {
+  width:100%; height:100%; display:flex; align-items:center;
+  justify-content:center; font-size:48px;
+  background:linear-gradient(135deg, #FDF4E0, #FEFCF5);
+}
+.brand-badge {
+  position:absolute; top:8px; left:8px;
+  background:rgba(0,0,0,0.7); color:#FFF; font-size:10px;
+  padding:2px 8px; border-radius:4px; font-weight:500;
+  backdrop-filter:blur(4px);
+}
+.product-body { padding:10px 12px; }
+.product-name { font-size:13px; font-weight:500; margin-bottom:6px;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+  overflow:hidden; line-height:1.4; min-height:36px;
+}
+.product-price-row { display:flex; align-items:center; gap:6px; margin-bottom:6px; }
+.product-price { color:var(--primary); font-weight:700; font-size:16px; }
+.product-price .original {
+  color:var(--text-light); font-size:11px; text-decoration:line-through;
+  font-weight:400; margin-left:4px;
+}
+.product-specs { font-size:10px; color:var(--text-light); margin-bottom:8px; }
+.product-specs span {
+  display:inline-block; background:var(--bg); padding:1px 6px;
+  border-radius:3px; margin-right:4px; margin-bottom:2px;
+}
+.btn-add-cart {
+  width:100%; padding:8px 0; border-radius:6px; border:1px solid var(--primary);
+  background:transparent; color:var(--primary); font-size:13px; font-weight:600;
+  cursor:pointer; font-family:inherit; transition:all 0.2s;
+}
+.btn-add-cart:hover, .btn-add-cart:active {
+  background:var(--primary); color:#FFF;
+}
+.btn-add-cart.added {
+  background:var(--success); color:#FFF; border-color:var(--success);
+}
+
+/* Empty state */
+.empty-state {
+  display:flex; flex-direction:column; align-items:center;
+  justify-content:center; padding:60px 20px; text-align:center;
+}
+.empty-state-icon { font-size:56px; margin-bottom:16px; }
+.empty-state-text { color:var(--text-secondary); font-size:14px; }
+.empty-state-hint { color:var(--text-light); font-size:12px; margin-top:6px; }
+
+/* Loading shimmer for product cards */
+.product-card-skeleton {
+  background:var(--bg-card); border-radius:var(--radius);
+  box-shadow:var(--shadow); overflow:hidden;
+}
+.product-card-skeleton .skeleton-img {
+  width:100%; height:160px;
+}
+.product-card-skeleton .skeleton-body {
+  padding:10px 12px; display:flex; flex-direction:column; gap:8px;
+}
+.product-card-skeleton .skeleton-line {
+  height:12px; border-radius:6px;
+}
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="/src/scenes/OrderTracking.jsx"></script>
+
+<script>
+// ===== I18N Data & T() function =====
+window.__LANG__ = localStorage.getItem('dopamine_lang') || 'zh';
+
+window.I18N_ZH = {
+  app: { title: '悦己镇', subtitle: 'Treat yourself better' },
+  home: { search: '逛逛小镇...', nearby: '镇上的馆子', categories: '分类', recommend: '推荐' },
+  store: { menu: '菜单', review: '评价', info: '店铺信息' },
+  cart: { title: '购物车', empty: '购物车是空的，去逛逛吧', total: '合计', checkout: '去结算', clear: '清空' },
+  order: { confirm: '确认订单', address: '收货地址', fake_address: '北京市朝阳区建国路88号', pay_method: '支付方式', wechat: '微信支付', alipay: '支付宝', card: '银行卡', submit: '提交订单', cancel: '取消' },
+  tracking: { title: '订单追踪', accepted: '已接单', waiting: '等骑手', delivering: '配送中', arrived: '已送达', estimated: '预计送达', order_no: '订单号', detail: '订单详情', map_title: '骑手实时位置', items: '件', total_time: '总共用时', back_home: '返回首页', sim_tip: '模拟配送 · 骑手位置为虚拟轨迹' },
+  success: { title: '下单成功！🎉', saved: '本次省下', subtitle: '看，不花一分钱照样爽！', back: '继续逛', share: '分享给朋友' },
+  stats: { saved: '已省下', orders: '已下单', streak: '连续打卡' },
+  install: { text: '添加到桌面，体验更好', install: '安装', later: '稍后' },
+  toast: { added: '已加入购物车', removed: '已移除', cleared: '购物车已清空' },
+  darkmode: '暗色',
+  lang: 'EN'
+};
+
+window.I18N_EN = {
+  app: { title: 'Joyville', subtitle: 'Treat yourself better' },
+  home: { search: 'Explore the town...', nearby: 'Town Eateries', categories: 'Categories', recommend: 'Recommended' },
+  store: { menu: 'Menu', review: 'Reviews', info: 'Info' },
+  cart: { title: 'Cart', empty: 'Cart is empty, go explore!', total: 'Total', checkout: 'Checkout', clear: 'Clear' },
+  order: { confirm: 'Confirm Order', address: 'Delivery Address', fake_address: '88 Jianguo Rd, Chaoyang, Beijing', pay_method: 'Payment', wechat: 'WeChat Pay', alipay: 'Alipay', card: 'Card', submit: 'Place Order', cancel: 'Cancel' },
+  tracking: { title: 'Order Tracking', accepted: 'Accepted', waiting: 'Awaiting Rider', delivering: 'On the way', arrived: 'Delivered', estimated: 'Est. arrival', order_no: 'Order #', detail: 'Order Details', map_title: 'Live Rider Location', items: 'items', total_time: 'Total time', back_home: 'Back to Home', sim_tip: 'Simulated delivery · Rider position is virtual' },
+  success: { title: 'Order Placed! 🎉', saved: 'You Saved', subtitle: 'All the dopamine, none of the cost!', back: 'Browse More', share: 'Share' },
+  stats: { saved: 'Total Saved', orders: 'Orders', streak: 'Day Streak' },
+  install: { text: 'Add to home screen for best experience', install: 'Install', later: 'Later' },
+  toast: { added: 'Added to cart', removed: 'Removed', cleared: 'Cart cleared' },
+  darkmode: 'Dark',
+  lang: '中文'
+};
+
+window.T = function(key) {
+  var lang = window.__LANG__ || 'zh';
+  var dict = lang === 'en' ? window.I18N_EN : window.I18N_ZH;
+  var keys = key.split('.');
+  var val = dict;
+  for (var i = 0; i < keys.length; i++) {
+    if (val && val[keys[i]] !== undefined) val = val[keys[i]];
+    else return key;
+  }
+  return val;
+};
+</script>
+
+<script>
+// ===== All Components using React.createElement() =====
+(function() {
+  // Shorter alias
+  var h = React.createElement;
+
+  // ===== Data normalization helper =====
+  function normRestaurant(r) {
+    return {
+      id: r.id,
+      name: r.name,
+      name_en: r.name_en,
+      tags: r.tags || [],
+      rating: r.rating,
+      category: r.category,
+      deliveryTime: r.delivery_time || r.deliveryTime,
+      minPrice: r.min_price || r.minPrice,
+      address: r.address,
+      image: (typeof r.image === 'string' && (r.image.indexOf('http') === 0 || r.image.indexOf('https') === 0)) ? r.image : (r.image && r.image.indexOf('http') !== 0 ? null : null),
+      emoji: r.emoji || r.image,
+      desc: r.description || r.desc,
+      menu: (r.menu || []).map(function(item) {
+        return {
+          id: item.name,
+          name: item.name,
+          desc: item.desc,
+          price: item.price,
+          image: (typeof item.image === 'string' && (item.image.indexOf('http') === 0 || item.image.indexOf('https') === 0)) ? item.image : null,
+          emoji: item.emoji,
+          originalPrice: item.original_price || item.originalPrice
+        };
+      }),
+      color: r.color
+    };
+  }
+
+  function fmtMoney(n) {
+    if (n >= 10000) return '¥' + (n / 10000).toFixed(1) + '万';
+    if (n >= 1000) return '¥' + (n / 1000).toFixed(1) + 'k';
+    return '¥' + n;
+  }
+
+  // ===== Header (image-based banner) =====
+  function Header() {
+    var darkState = React.useState(false);
+    var dark = darkState[0], setDark = darkState[1];
+    var langState = React.useState(window.__LANG__ || 'zh');
+    var lang = langState[0], setLang = langState[1];
+
+    React.useEffect(function() {
+      var stored = localStorage.getItem('dopamine_dark');
+      if (stored === 'true') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        setDark(true);
+      }
+    }, []);
+
+    var toggleDark = React.useCallback(function() {
+      var next = !dark;
+      setDark(next);
+      if (next) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('dopamine_dark', 'true');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('dopamine_dark', 'false');
+      }
+    }, [dark]);
+
+    var toggleLang = React.useCallback(function() {
+      var next = lang === 'zh' ? 'en' : 'zh';
+      setLang(next);
+      window.__LANG__ = next;
+      localStorage.setItem('dopamine_lang', next);
+      window.dispatchEvent(new CustomEvent('langchange', { detail: { lang: next } }));
+    }, [lang]);
+
+    return h('header', {
+      className: 'app-header',
+      style: {
+        position: 'sticky', top: 0, zIndex: 100,
+        padding: 0, background: 'none', display: 'flex',
+        alignItems: 'center', justifyContent: 'space-between',
+        paddingTop: 'max(0px, env(safe-area-inset-top))'
+      }
+    },
+      // Left: logo image instead of SVG + text
+      h('img', {
+        src: '/assets/header-bg.png',
+        alt: '悦己镇 · Joyville — Treat yourself better',
+        style: {
+          width: '100%', height: 'auto', display: 'block',
+          position: 'absolute', top: 0, left: 0, zIndex: 0
+        }
+      }),
+      // Right: language and dark mode buttons (on top of image)
+      h('div', {
+        style: {
+          position: 'absolute', top: 8, right: 8, zIndex: 2,
+          display: 'flex', gap: 6, alignItems: 'center'
+        }
+      },
+        h('button', {
+          onClick: toggleLang, title: 'Switch language',
+          style: {
+            background: 'rgba(0,0,0,0.35)', color: '#FFF',
+            border: 'none', padding: '6px 10px', borderRadius: 6,
+            fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
+            whiteSpace: 'nowrap', backdropFilter: 'blur(4px)'
+          }
+        }, window.T('lang')),
+        h('button', {
+          onClick: toggleDark, title: 'Toggle dark mode',
+          style: {
+            background: 'rgba(0,0,0,0.35)', color: '#FFF',
+            border: 'none', padding: '6px 10px', borderRadius: 6,
+            fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
+            whiteSpace: 'nowrap', backdropFilter: 'blur(4px)'
+          }
+        }, (dark ? '☀️ ' : '🌙 ') + window.T('darkmode'))
+      ),
+      // Spacer to maintain aspect ratio (240/1600 = 0.15)
+      h('div', { style: { width: '100%', paddingTop: '15%', position: 'relative', zIndex: 1 } })
+    );
+  }
+  window.Header = Header;
+
+  // ===== StatsBar =====
+  function StatsBar() {
+    var statsState = React.useState({ saved: 0, orders: 0, streak: 0 });
+    var stats = statsState[0], setStats = statsState[1];
+
+    React.useEffect(function() {
+      function loadStats() {
+        setStats({
+          saved: parseFloat(localStorage.getItem('dopamine_saved') || '0'),
+          orders: parseInt(localStorage.getItem('dopamine_orders') || '0', 10),
+          streak: parseInt(localStorage.getItem('dopamine_streak') || '0', 10)
+        });
+      }
+      loadStats();
+
+      var handleStorage = function(e) {
+        if (e.key && e.key.indexOf('dopamine_') === 0) loadStats();
+      };
+      window.addEventListener('storage', handleStorage);
+      window.addEventListener('statsupdate', loadStats);
+
+      return function() {
+        window.removeEventListener('storage', handleStorage);
+        window.removeEventListener('statsupdate', loadStats);
+      };
+    }, []);
+
+    function formatMoney(amount) {
+      if (amount >= 10000) return '¥' + (amount / 10000).toFixed(1) + '万';
+      return '¥' + amount.toFixed(0);
+    }
+
+    return h('div', { className: 'stats-bar animate-in' },
+      h('div', { className: 'stat-item' },
+        h('div', { className: 'stat-value' }, formatMoney(stats.saved)),
+        h('div', { className: 'stat-label' }, window.T('stats.saved'))
+      ),
+      h('div', { className: 'stat-item' },
+        h('div', { className: 'stat-value' }, String(stats.orders)),
+        h('div', { className: 'stat-label' }, window.T('stats.orders'))
+      ),
+      h('div', { className: 'stat-item' },
+        h('div', { className: 'stat-value' },
+          String(stats.streak),
+          h('span', { style: { fontSize: '14px', marginLeft: '2px' } }, '🔥')
+        ),
+        h('div', { className: 'stat-label' }, window.T('stats.streak'))
+      )
+    );
+  }
+  window.StatsBar = StatsBar;
+
+  // ===== FoodHome =====
+  function FoodHome(props) {
+    var restaurants = props.restaurants || [];
+    var stats = props.stats;
+    var onSelectStore = props.onSelectStore;
+
+    var searchState = React.useState('');
+    var search = searchState[0], setSearch = searchState[1];
+    var catState = React.useState('all');
+    var activeCategory = catState[0], setActiveCategory = catState[1];
+
+    var categories = React.useMemo(function() {
+      var cats = [];
+      var seen = {};
+      restaurants.forEach(function(r) {
+        var cat = r.category;
+        if (cat && !seen[cat]) { seen[cat] = true; cats.push(cat); }
+      });
+      return ['all'].concat(cats);
+    }, [restaurants]);
+
+    var filtered = React.useMemo(function() {
+      return restaurants.filter(function(r) {
+        var matchCat = activeCategory === 'all' || r.category === activeCategory;
+        var matchSearch = !search || (
+          r.name && r.name.toLowerCase().indexOf(search.toLowerCase()) !== -1
+        );
+        return matchCat && matchSearch;
+      });
+    }, [restaurants, activeCategory, search]);
+
+    return h('div', null,
+      // Search bar
+      h('div', { className: 'px-16', style: { paddingTop: 12, paddingBottom: 4 } },
+        h('div', {
+          style: {
+            display: 'flex', alignItems: 'center', background: 'var(--bg)',
+            borderRadius: 24, padding: '10px 16px', gap: 8
+          }
+        },
+          h('span', { style: { fontSize: 16, opacity: 0.5 } }, '🔍'),
+          h('input', {
+            type: 'text',
+            placeholder: window.T('home.search'),
+            value: search,
+            onChange: function(e) { setSearch(e.target.value); },
+            style: {
+              flex: 1, border: 'none', outline: 'none', background: 'transparent',
+              fontSize: 14, color: 'var(--text)', fontFamily: 'inherit'
+            }
+          }),
+          search ? h('span', {
+            onClick: function() { setSearch(''); },
+            style: { cursor: 'pointer', fontSize: 16, opacity: 0.5 }
+          }, '✕') : null
+        )
+      ),
+
+      // Category tabs
+      h('div', { className: 'cat-tabs' },
+        categories.map(function(cat) {
+          var isActive = activeCategory === cat;
+          return h('button', {
+            key: cat,
+            className: 'cat-tab' + (isActive ? ' active' : ''),
+            onClick: function() { setActiveCategory(cat); }
+          }, cat === 'all' ? '🔥 ' + window.T('home.recommend') : cat);
+        })
+      ),
+
+      // Stats bar
+      h('div', { className: 'stats-bar animate-in' },
+        h('div', { className: 'stat-item' },
+          h('div', { className: 'stat-value' }, fmtMoney(stats.saved)),
+          h('div', { className: 'stat-label' }, window.T('stats.saved'))
+        ),
+        h('div', { className: 'stat-item' },
+          h('div', { className: 'stat-value' }, String(stats.orders)),
+          h('div', { className: 'stat-label' }, window.T('stats.orders'))
+        ),
+        h('div', { className: 'stat-item' },
+          h('div', { className: 'stat-value' }, String(stats.streak) + '🔥'),
+          h('div', { className: 'stat-label' }, window.T('stats.streak'))
+        )
+      ),
+
+      // Restaurant list header
+      h('div', null,
+        h('div', { className: 'px-16', style: { paddingTop: 16, paddingBottom: 8 } },
+          h('h2', { style: { fontSize: 17, fontWeight: 600 } },
+            search ? '🔍 "' + search + '"' : window.T('home.nearby'),
+            h('span', { style: { fontSize: 12, color: 'var(--text-light)', fontWeight: 400, marginLeft: 8 } },
+              '(' + filtered.length + ')'
+            )
+          )
+        ),
+
+        filtered.length === 0 ?
+          h('div', { className: 'p-16 text-center', style: { color: 'var(--text-light)', paddingTop: 40 } },
+            h('div', { style: { fontSize: 48, marginBottom: 12 } }, '🍜'),
+            h('p', null, search ? '没有找到匹配的上馆子' : '暂无上馆子数据'),
+            h('p', { style: { fontSize: 12, marginTop: 4 } }, '试试换个关键词搜索')
+          )
+        :
+          h('div', null,
+            filtered.map(function(restaurant, idx) {
+              var deliveryTime = restaurant.deliveryTime;
+              var minPrice = restaurant.minPrice;
+              var emoji = restaurant.emoji;
+              var imgUrl = restaurant.image;
+              var tags = restaurant.tags || [];
+              return h('div', {
+                key: restaurant.id || idx,
+                className: 'store-card animate-in',
+                style: { animationDelay: (idx * 60) + 'ms' },
+                onClick: function() { onSelectStore(restaurant); }
+              },
+                restaurant.image ?
+                  h('img', {
+                    className: 'store-card-img',
+                    src: restaurant.image,
+                    alt: restaurant.name,
+                    loading: 'lazy',
+                    onError: function(e) { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; },
+                    style: { objectFit: 'cover' }
+                  })
+                : null,
+                h('div', {
+                  className: 'store-card-img',
+                  style: {
+                    background: restaurant.color || 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
+                    display: restaurant.image ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 28
+                  }
+                }, emoji || '🍽️'),
+                h('div', { className: 'store-card-info' },
+                  h('div', { className: 'row', style: { justifyContent: 'space-between' } },
+                    h('div', { className: 'store-card-name' }, restaurant.name),
+                    restaurant.rating ? h('span', { className: 'store-card-stars' }, '⭐ ' + restaurant.rating) : null
+                  ),
+                  h('div', { className: 'store-card-type' },
+                    (restaurant.category || '美食') +
+                    (minPrice ? ' · 人均 ¥' + minPrice : '') +
+                    (deliveryTime ? ' · ' + deliveryTime : '')
+                  ),
+                  tags.length > 0 ? h('div', { style: { marginTop: 4, display: 'flex', gap: 4, flexWrap: 'wrap' } },
+                    tags.slice(0, 3).map(function(tag, i) {
+                      return h('span', { key: i, className: 'store-card-tag' }, tag);
+                    })
+                  ) : null,
+                  restaurant.desc ? h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginTop: 2 } }, restaurant.desc) : null
+                )
+              );
+            })
+          )
+      )
+    );
+  }
+  window.FoodHome = FoodHome;
+
+  // ===== StoreReviews — 评价系统 =====
+  function StoreReviews(props) {
+    var store = props.store;
+    var storeId = props.storeId;
+
+    // Load reviews: localStorage first, then store data
+    var reviewsState = React.useState(function() {
+      var localKey = 'joyville_reviews_' + storeId;
+      try {
+        var saved = localStorage.getItem(localKey);
+        if (saved) return JSON.parse(saved);
+      } catch(e) {}
+      // Fall back to store.reviews if available
+      return (store && store.reviews) ? store.reviews : [];
+    });
+    var reviews = reviewsState[0], setReviews = reviewsState[1];
+
+    // Save to localStorage when reviews change
+    React.useEffect(function() {
+      try {
+        localStorage.setItem('joyville_reviews_' + storeId, JSON.stringify(reviews));
+      } catch(e) {}
+    }, [reviews, storeId]);
+
+    // Form state
+    var ratingState = React.useState(5);
+    var rating = ratingState[0], setRating = ratingState[1];
+    var hoverState = React.useState(0);
+    var hoverRating = hoverState[0], setHoverRating = hoverState[1];
+    var contentState = React.useState('');
+    var content = contentState[0], setContent = contentState[1];
+    var userState = React.useState('匿名吃货');
+    var user = userState[0], setUser = userState[1];
+    var submittedState = React.useState(false);
+    var submitted = submittedState[0], setSubmitted = submittedState[1];
+
+    var handleSubmit = React.useCallback(function() {
+      if (!content.trim()) return;
+      var newReview = {
+        user: user.trim() || '匿名吃货',
+        rating: rating,
+        date: new Date().toISOString().slice(0, 10),
+        content: content.trim()
+      };
+      setReviews(function(prev) { return [newReview].concat(prev); });
+      setContent('');
+      setRating(5);
+      setSubmitted(true);
+      setTimeout(function() { setSubmitted(false); }, 2000);
+    }, [content, rating, user]);
+
+    // Render star rating
+    function renderStars(current, interactive, onChange, onHover) {
+      var stars = [];
+      for (var s = 1; s <= 5; s++) {
+        var filled = s <= (hoverRating || current);
+        stars.push(h('span', {
+          key: s,
+          onClick: interactive ? function() { onChange(s); } : undefined,
+          onMouseEnter: interactive ? function() { onHover(s); } : undefined,
+          onMouseLeave: interactive ? function() { onHover(0); } : undefined,
+          style: {
+            cursor: interactive ? 'pointer' : 'default',
+            fontSize: interactive ? 28 : 16,
+            color: filled ? '#FEA031' : '#DDD',
+            transition: 'color 0.15s',
+            marginRight: 2
+          }
+        }, filled ? '★' : '☆'));
+      }
+      return h('div', { style: { display: 'flex', alignItems: 'center', gap: 0 } }, stars);
+    }
+
+    // Average rating
+    var avgRating = reviews.length > 0
+      ? (reviews.reduce(function(s, r) { return s + (r.rating || 0); }, 0) / reviews.length).toFixed(1)
+      : (store.rating || '0');
+
+    return h('div', { style: { paddingBottom: 80 } },
+      // Rating summary
+      h('div', {
+        style: {
+          display: 'flex', alignItems: 'center', gap: 12,
+          padding: '16px', background: 'var(--bg)', margin: '12px 16px',
+          borderRadius: 'var(--radius)'
+        }
+      },
+        h('div', { style: { fontSize: 36, fontWeight: 700, color: 'var(--primary)' } }, String(avgRating)),
+        h('div', null,
+          renderStars(parseFloat(avgRating), false),
+          h('div', { style: { fontSize: 12, color: 'var(--text-light)', marginTop: 4 } },
+            reviews.length + ' 条评价'
+          )
+        )
+      ),
+
+      // Write review form
+      h('div', {
+        style: {
+          margin: '0 16px 12px', padding: 14,
+          background: 'var(--bg)', borderRadius: 'var(--radius-sm)'
+        }
+      },
+        h('div', { style: { fontSize: 14, fontWeight: 600, marginBottom: 10 } }, '✏️ 写评价'),
+        h('input', {
+          placeholder: '你的昵称',
+          value: user,
+          onChange: function(e) { setUser(e.target.value); },
+          style: {
+            width: '100%', padding: '8px 12px', borderRadius: 6,
+            border: '1px solid var(--border)', fontSize: 13,
+            marginBottom: 8, fontFamily: 'inherit',
+            background: 'var(--bg-card)', color: 'var(--text)'
+          }
+        }),
+        h('div', { style: { marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 } },
+          h('span', { style: { fontSize: 12, color: 'var(--text-light)' } }, '评分:'),
+          renderStars(rating, true, setRating, setHoverRating)
+        ),
+        h('textarea', {
+          placeholder: '分享你的体验...',
+          value: content,
+          onChange: function(e) { setContent(e.target.value); },
+          rows: 3,
+          style: {
+            width: '100%', padding: '8px 12px', borderRadius: 6,
+            border: '1px solid var(--border)', fontSize: 13,
+            fontFamily: 'inherit', resize: 'vertical',
+            background: 'var(--bg-card)', color: 'var(--text)',
+            marginBottom: 8
+          }
+        }),
+        h('button', {
+          onClick: handleSubmit,
+          disabled: !content.trim() || submitted,
+          style: {
+            padding: '8px 20px', borderRadius: 20,
+            border: 'none',
+            background: submitted ? 'var(--success)' : (content.trim() ? 'var(--primary)' : 'var(--border)'),
+            color: '#FFF', fontSize: 14, fontWeight: 600,
+            cursor: content.trim() ? 'pointer' : 'not-allowed',
+            fontFamily: 'inherit'
+          }
+        }, submitted ? '✓ 已提交' : '提交评价')
+      ),
+
+      // Reviews list
+      h('div', { style: { padding: '0 16px' } },
+        reviews.length === 0 ?
+          h('div', { style: { textAlign: 'center', padding: '24px 0', color: 'var(--text-light)', fontSize: 13 } },
+            '暂无评价，成为第一个评价的人吧~'
+          )
+        :
+          reviews.map(function(review, idx) {
+            var initial = (review.user || '匿').charAt(0);
+            var bgColors = ['#FEA031', '#FCB354', '#F59E0B', '#22C55E', '#3B82F6', '#8B5CF6', '#EC4899'];
+            var bgColor = bgColors[idx % bgColors.length];
+            return h('div', {
+              key: idx,
+              style: {
+                padding: '12px 0', borderBottom: '1px solid var(--border)',
+                display: 'flex', gap: 10
+              }
+            },
+              // Avatar circle with initial
+              h('div', {
+                style: {
+                  width: 36, height: 36, borderRadius: 18,
+                  background: bgColor, color: '#FFF',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 14, fontWeight: 700, flexShrink: 0
+                }
+              }, initial),
+              // Review content
+              h('div', { style: { flex: 1 } },
+                h('div', { style: { display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 } },
+                  h('span', { style: { fontSize: 13, fontWeight: 600 } }, review.user),
+                  h('span', { style: { fontSize: 13, color: '#FEA031' } },
+                    '★'.repeat(Math.min(5, review.rating || 5)) + '☆'.repeat(Math.max(0, 5 - (review.rating || 5)))
+                  ),
+                  h('span', { style: { fontSize: 11, color: 'var(--text-light)', marginLeft: 'auto' } }, review.date)
+                ),
+                h('div', { style: { fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 } }, review.content)
+              )
+            );
+          })
+      )
+    );
+  }
+  window.StoreReviews = StoreReviews;
+
+  // ===== StorePage =====
+  function StorePage(props) {
+    var store = props.store;
+    var cartItems = props.cartItems || [];
+    var onAddItem = props.onAddItem;
+    var onGoBack = props.onGoBack;
+
+    var animState = React.useState({});
+    var animItems = animState[0], setAnimItems = animState[1];
+    var tabState = React.useState('menu');
+    var activeTab = tabState[0], setActiveTab = tabState[1];
+
+    if (!store) {
+      return h('div', { className: 'p-16 text-center', style: { color: 'var(--text-secondary)', paddingTop: 60 } },
+        h('p', null, '未选择上馆子'),
+        h('button', {
+          onClick: onGoBack,
+          style: {
+            marginTop: 16, padding: '8px 20px', background: 'var(--primary)',
+            color: '#FFF', border: 'none', borderRadius: 20, cursor: 'pointer',
+            fontFamily: 'inherit', fontSize: 14
+          }
+        }, '← 返回首页')
+      );
+    }
+
+    function getItemQty(item) {
+      var found = cartItems.find(function(i) { return i.id === item.id && i.storeId === store.id; });
+      return found ? found.qty : 0;
+    }
+
+    function handleAdd(item) {
+      var key = item.id;
+      var newAnim = {};
+      for (var k in animItems) { if (animItems.hasOwnProperty(k)) newAnim[k] = animItems[k]; }
+      newAnim[key] = true;
+      setAnimItems(newAnim);
+      onAddItem(item, store);
+      setTimeout(function() {
+        setAnimItems(function(prev) {
+          var next = {};
+          for (var k2 in prev) { if (prev.hasOwnProperty(k2)) next[k2] = prev[k2]; }
+          next[key] = false;
+          return next;
+        });
+      }, 400);
+    }
+
+    var menuItems = store.menu || [];
+    var tabs = ['menu', 'review', 'info'];
+    var imgUrl2 = store.image;
+    var emoji = store.emoji;
+
+    return h('div', { className: 'animate-in' },
+      // Back button
+      h('div', { style: { position: 'relative' } },
+        h('button', {
+          onClick: onGoBack,
+          style: {
+            position: 'absolute', top: 12, left: 12, zIndex: 10,
+            width: 32, height: 32, borderRadius: 16,
+            background: 'rgba(0,0,0,0.4)', color: '#FFF', border: 'none',
+            cursor: 'pointer', fontSize: 16, display: 'flex',
+            alignItems: 'center', justifyContent: 'center'
+          },
+          'aria-label': '返回'
+        }, '←')
+      ),
+
+      // Store header
+      h('div', { className: 'store-header' },
+        store.image ?
+          h('img', {
+            className: 'store-header-bg',
+            src: store.image,
+            alt: store.name,
+            onError: function(e) { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; },
+            style: { objectFit: 'cover' }
+          })
+        : null,
+        h('div', {
+          className: 'store-header-bg',
+          style: {
+            background: store.color || 'linear-gradient(135deg, #FEA031, #FCB354)',
+            display: store.image ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: 64
+          }
+        }, emoji || '🍽️'),
+        h('div', { className: 'store-header-info' },
+          h('div', { className: 'store-header-name' }, store.name),
+          h('div', { className: 'store-header-meta' },
+            (store.rating ? '⭐ ' + store.rating + '  ' : '') +
+            (store.category || '') +
+            (store.minPrice ? ' · 人均 ¥' + store.minPrice : '') +
+            (store.deliveryTime ? ' · ' + store.deliveryTime : '')
+          ),
+          store.tags && store.tags.length > 0 ? h('div', { className: 'store-header-tags' },
+            store.tags.map(function(tag, i) {
+              return h('span', { key: i, className: 'store-header-tag' }, tag);
+            })
+          ) : null
+        )
+      ),
+
+      // Tab switcher
+      h('div', {
+        style: {
+          display: 'flex', borderBottom: '1px solid var(--border)',
+          position: 'sticky', top: 0, background: 'var(--bg-card)', zIndex: 5
+        }
+      },
+        tabs.map(function(tab) {
+          var isActive = activeTab === tab;
+          return h('button', {
+            key: tab,
+            onClick: function() { setActiveTab(tab); },
+            style: {
+              flex: 1, padding: '14px 0', border: 'none',
+              background: 'transparent', cursor: 'pointer',
+              fontSize: 14, fontWeight: isActive ? 600 : 400,
+              color: isActive ? 'var(--primary)' : 'var(--text-secondary)',
+              borderBottom: isActive ? '2px solid var(--primary)' : '2px solid transparent',
+              fontFamily: 'inherit', transition: 'all 0.2s'
+            }
+          }, window.T('store.' + tab));
+        })
+      ),
+
+      // Menu tab
+      activeTab === 'menu' ? h('div', { style: { paddingBottom: 80 } },
+        menuItems.length === 0 ?
+          h('div', { className: 'p-16 text-center', style: { color: 'var(--text-light)', paddingTop: 40 } },
+            h('p', null, '暂无菜单')
+          )
+        :
+          h('div', null,
+            menuItems.map(function(item, idx) {
+              var qty = getItemQty(item);
+              var isAnimating = animItems[item.id];
+              return h('div', {
+                key: item.id || idx,
+                className: 'cart-item animate-in',
+                style: { animationDelay: (idx * 50) + 'ms' }
+              },
+                // Image placeholder
+                item.image ?
+                  h('img', {
+                    src: item.image, alt: item.name,
+                    onError: function(e) { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; },
+                    style: { width: 64, height: 64, borderRadius: 8, objectFit: 'cover', flexShrink: 0 }
+                  })
+                : null,
+                h('div', {
+                  style: {
+                    width: 64, height: 64, borderRadius: 8,
+                    background: 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
+                    display: item.image ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 28, flexShrink: 0
+                  }
+                }, item.emoji || '🍜'),
+
+                // Info
+                h('div', { className: 'cart-item-name' },
+                  h('div', { style: { fontWeight: 500, fontSize: 14, marginBottom: 2 } }, item.name),
+                  item.desc ? h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginBottom: 4 } }, item.desc) : null,
+                  h('div', { style: { display: 'flex', alignItems: 'center', gap: 6 } },
+                    h('span', { style: { color: 'var(--primary)', fontWeight: 700, fontSize: 15 } }, '¥' + item.price),
+                    item.originalPrice && item.originalPrice > item.price ?
+                      h('span', { style: { color: 'var(--text-light)', fontSize: 11, textDecoration: 'line-through' } }, '¥' + item.originalPrice) : null
+                  )
+                ),
+
+                // Add to cart button
+                h('div', { style: { display: 'flex', alignItems: 'center', gap: 6 } },
+                  qty > 0 ? h('span', {
+                    style: { minWidth: 24, textAlign: 'center', fontWeight: 600, fontSize: 14, color: 'var(--primary)' }
+                  }, String(qty)) : null,
+                  h('button', {
+                    onClick: function() { handleAdd(item); },
+                    style: {
+                      width: 32, height: 32, borderRadius: 16,
+                      border: 'none', cursor: 'pointer',
+                      background: isAnimating ? 'var(--success)' : 'var(--primary)',
+                      color: '#FFF', fontSize: 18, fontWeight: 700,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      transition: 'all 0.2s ease',
+                      transform: isAnimating ? 'scale(1.3)' : 'scale(1)',
+                      boxShadow: isAnimating ? '0 0 16px rgba(34, 197, 94, 0.5)' : 'none'
+                    }
+                  }, isAnimating ? '✓' : '+')
+                )
+              );
+            })
+          )
+      ) : null,
+
+      // Review tab with real reviews
+      activeTab === 'review' ? h(StoreReviews, { store: store, storeId: store.id }) : null,
+
+      // Info tab
+      activeTab === 'info' ? h('div', { className: 'p-16', style: { color: 'var(--text-secondary)' } },
+        h('div', { style: { marginBottom: 16 } },
+          h('h3', { style: { fontSize: 14, fontWeight: 600, color: 'var(--text)', marginBottom: 8 } }, '📍 地址'),
+          h('p', { style: { fontSize: 13 } }, store.address || '北京市朝阳区建国路88号 SOHO现代城')
+        ),
+        h('div', { style: { marginBottom: 16 } },
+          h('h3', { style: { fontSize: 14, fontWeight: 600, color: 'var(--text)', marginBottom: 8 } }, '🕐 营业时间'),
+          h('p', { style: { fontSize: 13 } }, '每日 10:00 - 22:00')
+        ),
+        h('div', { style: { marginBottom: 16 } },
+          h('h3', { style: { fontSize: 14, fontWeight: 600, color: 'var(--text)', marginBottom: 8 } }, '📞 电话'),
+          h('p', { style: { fontSize: 13 } }, '400-888-' + String(store.id || '0000').padStart(4, '0'))
+        ),
+        h('div', {
+          style: {
+            marginTop: 24, padding: 12, borderRadius: 8,
+            background: 'var(--bg)', fontSize: 11, color: 'var(--text-light)',
+            textAlign: 'center'
+          }
+        }, '⚠️ 温馨提示：本店纯属虚构，仅供解压体验，不提供真实外卖服务')
+      ) : null
+    );
+  }
+  window.StorePage = StorePage;
+
+  // ===== CartPanel =====
+  function CartPanel(props) {
+    var cartItems = props.cartItems || [];
+    var onUpdateQty = props.onUpdateQty;
+    var onRemove = props.onRemove;
+    var onCheckout = props.onCheckout;
+    var onClose = props.onClose;
+    var visible = props.visible;
+
+    var panelRef = React.useRef(null);
+
+    React.useEffect(function() {
+      if (!visible) return;
+      var handler = function(e) {
+        if (e.key === 'Escape' && onClose) onClose();
+      };
+      document.addEventListener('keydown', handler);
+      return function() { document.removeEventListener('keydown', handler); };
+    }, [visible, onClose]);
+
+    React.useEffect(function() {
+      if (visible) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+      return function() { document.body.style.overflow = ''; };
+    }, [visible]);
+
+    if (!visible) return null;
+
+    var total = cartItems.reduce(function(sum, item) {
+      return sum + (item.price || 0) * (item.qty || 0);
+    }, 0);
+
+    return h(React.Fragment, null,
+      // Backdrop
+      h('div', {
+        onClick: onClose,
+        style: {
+          position: 'fixed', inset: 0,
+          background: 'rgba(0,0,0,0.35)',
+          zIndex: 94,
+          animation: 'fadeInUp 0.3s ease-out'
+        }
+      }),
+
+      // Cart Panel
+      h('div', { ref: panelRef, className: 'cart-panel', style: { zIndex: 95 } },
+        // Header
+        h('div', { className: 'cart-panel-header' },
+          h('h2', { style: { fontSize: '16px', fontWeight: 600 } },
+            window.T('cart.title') + ' (' + cartItems.reduce(function(s, i) { return s + (i.qty || 0); }, 0) + ')'
+          ),
+          h('button', {
+            onClick: onClose,
+            style: {
+              background: 'none', border: 'none',
+              fontSize: '20px', cursor: 'pointer',
+              color: 'var(--text-light)', padding: '4px 8px'
+            }
+          }, '✕')
+        ),
+
+        // Items
+        cartItems.length === 0 ?
+          h('div', { style: { padding: '32px 16px', textAlign: 'center', color: 'var(--text-light)', fontSize: '14px' } },
+            window.T('cart.empty')
+          )
+        :
+          h('div', null,
+            cartItems.map(function(item, idx) {
+              var qty = item.qty || 1;
+              return h('div', { key: item.id || idx, className: 'cart-item' },
+                h('div', { className: 'cart-item-name' },
+                  h('div', { style: { fontWeight: 500 } }, item.name),
+                  h('div', { className: 'cart-item-price' }, '¥' + item.price)
+                ),
+                h('div', { className: 'cart-item-qty' },
+                  h('button', {
+                    className: 'qty-btn',
+                    onClick: function() { onUpdateQty && onUpdateQty(item.id, qty - 1); },
+                    style: { color: 'var(--text)' }
+                  }, '−'),
+                  h('span', { style: { minWidth: '20px', textAlign: 'center', fontSize: '14px' } }, String(qty)),
+                  h('button', {
+                    className: 'qty-btn',
+                    onClick: function() { onUpdateQty && onUpdateQty(item.id, qty + 1); },
+                    style: { color: 'var(--text)' }
+                  }, '+'),
+                  h('button', {
+                    onClick: function() { onRemove && onRemove(item.id); },
+                    style: {
+                      background: 'none', border: 'none',
+                      color: 'var(--text-light)', cursor: 'pointer',
+                      fontSize: '14px', padding: '4px', marginLeft: '4px'
+                    }
+                  }, '🗑')
+                )
+              );
+            })
+          ),
+
+        // Footer
+        cartItems.length > 0 ? h('div', { className: 'cart-footer' },
+          h('div', { className: 'cart-total' },
+            window.T('cart.total') + ': ',
+            h('span', { className: 'price' }, '¥' + total.toFixed(2))
+          ),
+          h('button', { className: 'btn-checkout', onClick: onCheckout },
+            window.T('cart.checkout')
+          )
+        ) : null
+      )
+    );
+  }
+  window.CartPanel = CartPanel;
+
+  // ===== CheckoutScene =====
+  function CheckoutScene(props) {
+    var cartItems = props.cartItems || [];
+    var cartTotal = props.cartTotal;
+    var onPlaceOrder = props.onPlaceOrder;
+    var onCancel = props.onCancel;
+
+    var stepState = React.useState(1);
+    var step = stepState[0], setStep = stepState[1];
+    var addrState = React.useState(0);
+    var selectedAddress = addrState[0], setSelectedAddress = addrState[1];
+    var payState = React.useState('wechat');
+    var selectedPayment = payState[0], setSelectedPayment = payState[1];
+    var loadingState = React.useState(false);
+    var loading = loadingState[0], setLoading = loadingState[1];
+    var showFormState = React.useState(false);
+    var showForm = showFormState[0], setShowForm = showFormState[1];
+    var editIdState = React.useState(null);
+    var editId = editIdState[0], setEditId = editIdState[1];
+    
+    // Form fields
+    var formTagState = React.useState('🏠');
+    var formTag = formTagState[0], setFormTag = formTagState[1];
+    var formNameState = React.useState('');
+    var formName = formNameState[0], setFormName = formNameState[1];
+    var formPhoneState = React.useState('');
+    var formPhone = formPhoneState[0], setFormPhone = formPhoneState[1];
+    var formDetailState = React.useState('');
+    var formDetail = formDetailState[0], setFormDetail = formDetailState[1];
+
+    // Load addresses from localStorage
+    var addressesState = React.useState(function() {
+      try {
+        var saved = localStorage.getItem('dopamine_addresses');
+        return saved ? JSON.parse(saved) : [
+          { id: 0, tag: '🏠 家', detail: window.T('order.fake_address'), name: '张三', phone: '138****8888' },
+          { id: 1, tag: '🏢 公司', detail: '北京市海淀区中关村大街1号 理想国际大厦', name: '张三', phone: '138****8888' },
+          { id: 2, tag: '🏫 学校', detail: '北京市海淀区学院路15号', name: '张三', phone: '138****8888' }
+        ];
+      } catch(e) {
+        return [
+          { id: 0, tag: '🏠 家', detail: window.T('order.fake_address'), name: '张三', phone: '138****8888' }
+        ];
+      }
+    });
+    var addresses = addressesState[0], setAddresses = addressesState[1];
+
+    var saveAddresses = React.useCallback(function(newAddrs) {
+      setAddresses(newAddrs);
+      localStorage.setItem('dopamine_addresses', JSON.stringify(newAddrs));
+    }, []);
+
+    var handleAddAddress = React.useCallback(function() {
+      if (!formDetail.trim()) return;
+      var maxId = addresses.reduce(function(m, a) { return Math.max(m, a.id); }, 0);
+      var newAddr = {
+        id: maxId + 1,
+        tag: (formTag || '🏠') + ' ' + (formName || '新地址'),
+        detail: formDetail.trim(),
+        name: formName.trim() || '未知',
+        phone: formPhone.trim() || '无'
+      };
+      saveAddresses(addresses.concat([newAddr]));
+      setFormTag('🏠'); setFormName(''); setFormPhone(''); setFormDetail('');
+      setShowForm(false);
+    }, [addresses, formTag, formName, formPhone, formDetail, saveAddresses]);
+
+    var handleDeleteAddress = React.useCallback(function(id) {
+      saveAddresses(addresses.filter(function(a) { return a.id !== id; }));
+      if (selectedAddress >= addresses.length - 1) setSelectedAddress(Math.max(0, addresses.length - 2));
+    }, [addresses, selectedAddress, saveAddresses]);
+
+    var payMethods = [
+      { id: 'wechat', icon: '💚', name: window.T('order.wechat') },
+      { id: 'alipay', icon: '💙', name: window.T('order.alipay') },
+      { id: 'card', icon: '💳', name: window.T('order.card') }
+    ];
+
+    function handleSubmit() {
+      setLoading(true);
+      onPlaceOrder();
+    }
+
+    if (loading) {
+      return h('div', {
+        style: {
+          display: 'flex', flexDirection: 'column', alignItems: 'center',
+          justifyContent: 'center', height: '70vh', gap: 16
+        }
+      },
+        h('div', {
+          style: {
+            width: 56, height: 56, borderRadius: 28,
+            border: '4px solid var(--border)',
+            borderTopColor: 'var(--primary)',
+            animation: 'spin 0.7s linear infinite'
+          }
+        }),
+        h('p', { style: { color: 'var(--text-secondary)', fontSize: 14 } }, '🔒 安全支付中...'),
+        h('p', { style: { fontSize: 11, color: 'var(--text-light)' } }, '(假的啦，一分钱都不会扣)')
+      );
+    }
+
+    var TAG_OPTIONS = ['🏠', '🏢', '🏫', '🏥', '📍', '✈️'];
+
+    return h('div', { className: 'animate-in', style: { minHeight: '80vh', display: 'flex', flexDirection: 'column', paddingBottom: 80 } },
+      // Step indicators
+      h('div', { className: 'checkout-stepper' },
+        [1, 2, 3].map(function(s) {
+          var cls = 'step-dot' + (s === step ? ' active' : '') + (s < step ? ' done' : '');
+          return h('div', { key: s, className: cls });
+        })
+      ),
+
+      h('div', { style: { textAlign: 'center', padding: '12px 0 4px' } },
+        h('span', { style: { fontSize: 13, color: 'var(--text-secondary)' } }, '步骤 ' + step + '/3')
+      ),
+
+      // Step content
+      h('div', { className: 'checkout-content' },
+        step === 1 ? h('div', { className: 'animate-in' },
+          h('h3', { style: { fontSize: 16, fontWeight: 600, marginBottom: 16 } }, '📍 ' + window.T('order.address')),
+          
+          showForm ? h('div', {
+            style: {
+              background: 'var(--bg)', padding: 16, borderRadius: 'var(--radius-sm)',
+              marginBottom: 16, border: '2px solid var(--primary)'
+            }
+          },
+            h('div', { style: { fontSize: 13, fontWeight: 600, marginBottom: 12 } }, editId ? '编辑地址' : '新增地址'),
+            // Tag selector
+            h('div', { style: { marginBottom: 10 } },
+              h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginBottom: 6 } }, '选择标签'),
+              h('div', { style: { display: 'flex', gap: 6 } },
+                TAG_OPTIONS.map(function(t) {
+                  return h('button', {
+                    key: t,
+                    onClick: function() { setFormTag(t); },
+                    style: {
+                      padding: '6px 10px', borderRadius: 6, border: formTag === t ? '2px solid var(--primary)' : '1px solid var(--border)',
+                      background: formTag === t ? '#FDF4E0' : 'white', cursor: 'pointer', fontSize: 18
+                    }
+                  }, t);
+                })
+              )
+            ),
+            h('input', {
+              placeholder: '收货人姓名', value: formName,
+              onChange: function(e) { setFormName(e.target.value); },
+              style: {
+                width: '100%', padding: '10px 12px', borderRadius: 8, border: '1px solid var(--border)',
+                fontSize: 14, marginBottom: 8, fontFamily: 'inherit', background: 'white', color: 'var(--text)'
+              }
+            }),
+            h('input', {
+              placeholder: '手机号码', value: formPhone,
+              onChange: function(e) { setFormPhone(e.target.value); },
+              style: {
+                width: '100%', padding: '10px 12px', borderRadius: 8, border: '1px solid var(--border)',
+                fontSize: 14, marginBottom: 8, fontFamily: 'inherit', background: 'white', color: 'var(--text)'
+              }
+            }),
+            h('input', {
+              placeholder: '详细地址（如：北京市朝阳区XX路XX号）', value: formDetail,
+              onChange: function(e) { setFormDetail(e.target.value); },
+              style: {
+                width: '100%', padding: '10px 12px', borderRadius: 8, border: '1px solid var(--border)',
+                fontSize: 14, marginBottom: 12, fontFamily: 'inherit', background: 'white', color: 'var(--text)'
+              }
+            }),
+            h('div', { style: { display: 'flex', gap: 8 } },
+              h('button', {
+                onClick: handleAddAddress,
+                disabled: !formDetail.trim(),
+                style: {
+                  flex: 1, padding: '10px 0', borderRadius: 20, border: 'none',
+                  background: formDetail.trim() ? 'var(--primary)' : 'var(--border)',
+                  color: '#FFF', fontSize: 14, fontWeight: 600, cursor: formDetail.trim() ? 'pointer' : 'not-allowed',
+                  fontFamily: 'inherit'
+                }
+              }, '💾 保存'),
+              h('button', {
+                onClick: function() { setShowForm(false); setEditId(null); },
+                style: {
+                  flex: 1, padding: '10px 0', borderRadius: 20,
+                  border: '1px solid var(--border)', background: 'white',
+                  color: 'var(--text-secondary)', fontSize: 14, cursor: 'pointer', fontFamily: 'inherit'
+                }
+              }, '取消')
+            )
+          ) : null,
+          
+          addresses.map(function(addr, i) {
+            var isSelected = selectedAddress === i;
+            return h('div', {
+              key: addr.id,
+              className: 'checkout-address',
+              onClick: function() { setSelectedAddress(i); },
+              style: {
+                cursor: 'pointer',
+                border: isSelected ? '2px solid var(--primary)' : '1px solid var(--border)',
+                borderRadius: 'var(--radius-sm)', transition: 'all 0.2s', position: 'relative'
+              }
+            },
+              h('div', {
+                style: {
+                  width: 20, height: 20, borderRadius: 10,
+                  border: isSelected ? '6px solid var(--primary)' : '2px solid var(--border)',
+                  flexShrink: 0, transition: 'all 0.2s'
+                }
+              }),
+              h('div', { style: { flex: 1 } },
+                h('div', { style: { fontWeight: 600, fontSize: 13, marginBottom: 4 } },
+                  addr.tag,
+                  h('span', { style: { fontWeight: 400, color: 'var(--text-secondary)', marginLeft: 8 } },
+                    addr.name + ' ' + addr.phone
+                  )
+                ),
+                h('div', { style: { fontSize: 12, color: 'var(--text-light)' } }, addr.detail)
+              ),
+              h('button', {
+                onClick: function(e) { e.stopPropagation(); handleDeleteAddress(addr.id); },
+                style: {
+                  background: 'none', border: 'none', color: 'var(--text-light)',
+                  cursor: 'pointer', fontSize: 14, padding: '4px 8px',
+                  opacity: 0.5, flexShrink: 0
+                },
+                title: '删除'
+              }, '🗑')
+            );
+          }),
+          
+          // Add new address button
+          !showForm ? h('button', {
+            onClick: function() { setShowForm(true); setEditId(null); },
+            style: {
+              width: '100%', padding: '14px 0', borderRadius: 'var(--radius-sm)',
+              border: '2px dashed var(--border)', background: 'white',
+              color: 'var(--primary)', fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', fontFamily: 'inherit', marginTop: 8
+            }
+          }, '➕ 添加新地址') : null
+        ) : null,
+
+        step === 2 ? h('div', { className: 'animate-in' },
+          h('h3', { style: { fontSize: 16, fontWeight: 600, marginBottom: 16 } }, '💰 ' + window.T('order.pay_method')),
+          h('div', { className: 'checkout-pay-method' },
+            payMethods.map(function(method) {
+              var isSelected = selectedPayment === method.id;
+              return h('div', {
+                key: method.id,
+                className: 'pay-option' + (isSelected ? ' selected' : ''),
+                onClick: function() { setSelectedPayment(method.id); }
+              },
+                h('div', { style: { fontSize: 28, marginBottom: 8 } }, method.icon),
+                h('div', { style: { fontWeight: 500 } }, method.name)
+              );
+            })
+          ),
+          h('div', {
+            style: {
+              marginTop: 24, padding: 12, borderRadius: 8,
+              background: 'var(--bg)', fontSize: 11, color: 'var(--text-light)',
+              textAlign: 'center'
+            }
+          }, '🔒 支付由' + window.T('app.title') + '安全托管 · 所有支付均为模拟')
+        ) : null,
+
+        step === 3 ? h('div', { className: 'animate-in' },
+          h('h3', { style: { fontSize: 16, fontWeight: 600, marginBottom: 16 } }, '✅ ' + window.T('order.confirm')),
+
+          // Address summary
+          h('div', { style: { background: 'var(--bg)', padding: 12, borderRadius: 'var(--radius-sm)', marginBottom: 12 } },
+            h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginBottom: 4 } }, window.T('order.address')),
+            h('div', { style: { fontSize: 13, fontWeight: 500 } },
+              (addresses[selectedAddress] || {}).tag + ' · ' + (addresses[selectedAddress] || {}).detail
+            )
+          ),
+
+          // Payment summary
+          h('div', { style: { background: 'var(--bg)', padding: 12, borderRadius: 'var(--radius-sm)', marginBottom: 16 } },
+            h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginBottom: 4 } }, window.T('order.pay_method')),
+            h('div', { style: { fontSize: 13, fontWeight: 500 } },
+              (payMethods.find(function(m) { return m.id === selectedPayment; }) || {}).icon + ' ' +
+              (payMethods.find(function(m) { return m.id === selectedPayment; }) || {}).name
+            )
+          ),
+
+          // Order items
+          h('div', { style: { background: 'var(--bg)', padding: 12, borderRadius: 'var(--radius-sm)', marginBottom: 16 } },
+            h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginBottom: 8 } }, '📋 订单明细'),
+            cartItems.map(function(item, i) {
+              return h('div', {
+                key: i,
+                style: { display: 'flex', justifyContent: 'space-between', padding: '4px 0', fontSize: 13 }
+              },
+                h('span', { style: { flex: 1 } }, item.name + ' ×' + item.qty),
+                h('span', { style: { fontWeight: 600, minWidth: 60, textAlign: 'right' } }, '¥' + (item.price * item.qty))
+              );
+            }),
+            h('div', {
+              style: {
+                display: 'flex', justifyContent: 'space-between',
+                borderTop: '1px solid var(--border)', marginTop: 8, paddingTop: 8,
+                fontWeight: 700, fontSize: 15
+              }
+            },
+              h('span', null, window.T('cart.total')),
+              h('span', { style: { color: 'var(--primary)' } },
+                '¥' + cartTotal,
+                h('span', { style: { fontSize: 11, color: 'var(--success)', marginLeft: 4 } }, '(实付 ¥0)')
+              )
+            )
+          )
+        ) : null
+      ),
+
+      // Bottom buttons
+      h('div', {
+        style: {
+          position: 'fixed', bottom: 0, left: 0, right: 0, maxWidth: 480, margin: '0 auto',
+          padding: '12px 16px', paddingBottom: 'max(12px, env(safe-area-inset-bottom))',
+          background: 'var(--bg-card)', borderTop: '1px solid var(--border)',
+          display: 'flex', gap: 10, zIndex: 10
+        }
+      },
+        h('button', {
+          onClick: step === 1 ? onCancel : function() { setStep(function(s) { return s - 1; }); },
+          style: {
+            flex: 1, padding: '12px 0', borderRadius: 24,
+            border: '1px solid var(--border)', background: 'var(--bg)',
+            color: 'var(--text-secondary)', fontSize: 14, fontWeight: 500,
+            cursor: 'pointer', fontFamily: 'inherit'
+          }
+        }, step === 1 ? window.T('order.cancel') : '← 上一步'),
+        h('button', {
+          onClick: step === 3 ? handleSubmit : function() { setStep(function(s) { return s + 1; }); },
+          style: {
+            flex: 2, padding: '12px 0', borderRadius: 24,
+            border: 'none', background: step === 3 ? 'var(--success)' : 'var(--primary)',
+            color: '#FFF', fontSize: 15, fontWeight: 600,
+            cursor: 'pointer', fontFamily: 'inherit',
+            transition: 'all 0.2s'
+          }
+        }, step === 3 ? '🎉 ' + window.T('order.submit') : '下一步 →')
+      )
+    );
+  }
+  window.CheckoutScene = CheckoutScene;
+
+  // ===== OrderSuccess =====
+  var CONFETTI_EMOJIS = ['🎉', '✨', '💸', '🎊', '💰', '🤑', '🔥', '💎', '🥳'];
+
+  function randomConfetti() {
+    return {
+      id: Math.random(),
+      left: Math.random() * 100,
+      delay: Math.random() * 0.8,
+      duration: 1.5 + Math.random() * 2,
+      size: 12 + Math.random() * 20,
+      emoji: CONFETTI_EMOJIS[Math.floor(Math.random() * CONFETTI_EMOJIS.length)],
+      rotation: Math.random() * 720 - 360
+    };
+  }
+
+  function OrderSuccess(props) {
+    var savedAmount = props.savedAmount || 0;
+    var stats = props.stats || {};
+    var onGoHome = props.onGoHome;
+    var orderData = props.orderData;
+
+    var showState = React.useState(false);
+    var showContent = showState[0], setShowContent = showState[1];
+    var confettiState = React.useState([]);
+    var confetti = confettiState[0], setConfetti = confettiState[1];
+    var bigAnimState = React.useState(false);
+    var bigNumberAnim = bigAnimState[0], setBigNumberAnim = bigAnimState[1];
+    var shareToastState = React.useState('');
+    var shareToast = shareToastState[0], setShareToast = shareToastState[1];
+    var showOrderDetailState = React.useState(false);
+    var showOrderDetail = showOrderDetailState[0], setShowOrderDetail = showOrderDetailState[1];
+
+    React.useEffect(function() {
+      var pieces = [];
+      for (var i = 0; i < 50; i++) { pieces.push(randomConfetti()); }
+      setConfetti(pieces);
+      setTimeout(function() { setShowContent(true); }, 200);
+      setTimeout(function() { setBigNumberAnim(true); }, 600);
+    }, []);
+
+    // Canvas share: generate order card image
+    var handleShareCanvas = React.useCallback(function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = 500;
+      canvas.height = 600;
+      var ctx = canvas.getContext('2d');
+
+      // Background
+      var gradient = ctx.createLinearGradient(0, 0, 0, 600);
+      gradient.addColorStop(0, '#FEFCF5');
+      gradient.addColorStop(0.5, '#FFFFFF');
+      gradient.addColorStop(1, '#FEFCF5');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 500, 600);
+
+      // Header banner
+      var hdrGrad = ctx.createLinearGradient(0, 0, 500, 0);
+      hdrGrad.addColorStop(0, '#FEA031');
+      hdrGrad.addColorStop(1, '#FCB354');
+      ctx.fillStyle = hdrGrad;
+      ctx.fillRect(0, 0, 500, 80);
+
+      // Title
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = 'bold 24px "Noto Sans SC", sans-serif';
+      ctx.fillText('悦己镇 · Joyville', 30, 50);
+
+      // Order ID
+      ctx.fillStyle = '#3D2E1F';
+      ctx.font = 'bold 14px "Noto Sans SC", sans-serif';
+      ctx.fillText('订单号: ' + (orderData ? orderData.orderId : 'N/A'), 30, 110);
+
+      // Time
+      ctx.font = '12px "Noto Sans SC", sans-serif';
+      ctx.fillStyle = '#7A6B5D';
+      ctx.fillText('下单时间: ' + (orderData ? orderData.time : 'N/A'), 30, 132);
+
+      // Separator
+      ctx.strokeStyle = '#F0E5D8';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(30, 150);
+      ctx.lineTo(470, 150);
+      ctx.stroke();
+
+      // Items header
+      ctx.fillStyle = '#3D2E1F';
+      ctx.font = 'bold 13px "Noto Sans SC", sans-serif';
+      ctx.fillText('商品', 30, 175);
+      ctx.fillText('数量', 300, 175);
+      ctx.fillText('金额', 400, 175);
+
+      var items = orderData ? orderData.items : [];
+      var y = 200;
+      if (items.length === 0) {
+        ctx.fillStyle = '#7A6B5D';
+        ctx.font = '12px "Noto Sans SC", sans-serif';
+        ctx.fillText('(无订单明细)', 30, y);
+        y += 24;
+      } else {
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          ctx.fillStyle = '#3D2E1F';
+          ctx.font = '12px "Noto Sans SC", sans-serif';
+          ctx.fillText(item.name, 30, y);
+          ctx.fillText('×' + item.qty, 310, y);
+          ctx.fillText('¥' + (item.price * item.qty), 410, y);
+          y += 24;
+          if (y > 450) break;
+        }
+      }
+
+      // Total
+      y = Math.max(y + 10, 460);
+      ctx.strokeStyle = '#F0E5D8';
+      ctx.beginPath();
+      ctx.moveTo(30, y);
+      ctx.lineTo(470, y);
+      ctx.stroke();
+      y += 26;
+
+      ctx.fillStyle = '#FEA031';
+      ctx.font = 'bold 18px "Noto Sans SC", sans-serif';
+      ctx.fillText('合计: ¥' + (orderData ? orderData.total : 0), 30, y);
+      ctx.fillStyle = '#5DBFB4';
+      ctx.font = '12px "Noto Sans SC", sans-serif';
+      ctx.fillText('(实付 ¥0 — 零成本解压)', 180, y);
+
+      // Footer
+      ctx.fillStyle = '#B8A99A';
+      ctx.font = '10px "Noto Sans SC", sans-serif';
+      ctx.fillText('以上均为模拟体验 · 未产生实际消费', 130, 570);
+
+      // Download
+      try {
+        var link = document.createElement('a');
+        link.download = 'joyville_order_' + (orderData ? orderData.orderId : 'card') + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        setShareToast('订单卡片已下载');
+      } catch(e) {
+        setShareToast('生成图片失败');
+      }
+      setTimeout(function() { setShareToast(''); }, 2500);
+    }, [orderData]);
+
+    // Share text
+    var handleShareText = React.useCallback(function() {
+      var shareTitle = window.T('app.title');
+      var shareText = '我在' + window.T('app.title') + '省下了 ¥' + savedAmount + '！零成本解压，你也来试试！';
+      var shareUrl = window.location.origin + window.location.pathname;
+
+      if (navigator.share) {
+        navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl
+        }).catch(function() {});
+      } else {
+        var text = shareText + ' ' + shareUrl;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function() {
+            setShareToast('链接已复制');
+            setTimeout(function() { setShareToast(''); }, 2500);
+          }).catch(function() {
+            setShareToast('复制失败，请手动分享');
+            setTimeout(function() { setShareToast(''); }, 2500);
+          });
+        } else {
+          setShareToast('链接已复制');
+          setTimeout(function() { setShareToast(''); }, 2500);
+        }
+      }
+    }, [savedAmount]);
+
+    function fmt(n) {
+      if (n >= 10000) return (n / 10000).toFixed(1) + '万';
+      return String(n);
+    }
+
+    return h('div', { className: 'success-page', style: { position: 'relative', overflow: 'hidden', overflowY: 'auto', justifyContent: 'flex-start', paddingTop: 40 } },
+      // Confetti particles
+      confetti.map(function(p) {
+        return h('div', {
+          key: p.id,
+          className: 'confetti',
+          style: {
+            left: p.left + '%',
+            bottom: '-20px',
+            fontSize: p.size + 'px',
+            animationDelay: p.delay + 's',
+            animationDuration: p.duration + 's'
+          }
+        }, p.emoji);
+      }),
+
+      // Glow effect
+      h('div', {
+        style: {
+          position: 'absolute', top: '10%', left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: 280, height: 280, borderRadius: 140,
+          background: 'radial-gradient(circle, rgba(255,93,55,0.08) 0%, transparent 70%)',
+          animation: 'pulse 2s ease-in-out infinite',
+          pointerEvents: 'none'
+        }
+      }),
+
+      // Content
+      h('div', {
+        style: {
+          opacity: showContent ? 1 : 0,
+          transform: showContent ? 'translateY(0)' : 'translateY(30px)',
+          transition: 'all 0.6s ease-out',
+          zIndex: 1, width: '100%', maxWidth: 380
+        }
+      },
+        h('div', { className: 'success-icon', style: { animation: 'pulse 1.5s ease-in-out infinite', fontSize: 56 } }, '🎉'),
+        h('div', { className: 'success-title' }, window.T('success.title')),
+
+        // Order ID
+        orderData ? h('div', {
+          style: { fontSize: 12, color: 'var(--text-light)', marginTop: 4 }
+        }, '订单号: ' + orderData.orderId) : null,
+
+        h('div', { style: { fontSize: 14, color: 'var(--text-secondary)', marginBottom: 4, marginTop: 8 } },
+          window.T('success.saved')
+        ),
+        h('div', {
+          className: 'success-saved',
+          style: {
+            transform: bigNumberAnim ? 'scale(1)' : 'scale(0.5)',
+            transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+            fontSize: 36
+          }
+        }, '¥' + fmt(savedAmount)),
+        h('div', { className: 'success-subtitle' }, window.T('success.subtitle')),
+
+        // Order detail toggle
+        orderData && orderData.items && orderData.items.length > 0 ? h('div', { style: { width: '100%', marginTop: 12 } },
+          h('button', {
+            onClick: function() { setShowOrderDetail(function(v) { return !v; }); },
+            style: {
+              width: '100%', padding: '10px 0', borderRadius: 12,
+              border: '1px solid var(--border)', background: 'var(--bg)',
+              color: 'var(--text-secondary)', fontSize: 13, fontWeight: 500,
+              cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6
+            }
+          }, '📋 ' + (showOrderDetail ? '收起订单详情' : '查看订单详情')),
+          showOrderDetail ? h('div', {
+            style: {
+              background: 'var(--bg)', padding: 12, borderRadius: 'var(--radius-sm)',
+              marginTop: 8, textAlign: 'left'
+            }
+          },
+            h('div', { style: { fontSize: 11, color: 'var(--text-light)', marginBottom: 8 } },
+              '下单时间: ' + (orderData ? orderData.time : '')
+            ),
+            orderData.items.map(function(item, i) {
+              return h('div', {
+                key: i,
+                style: { display: 'flex', justifyContent: 'space-between', padding: '3px 0', fontSize: 12 }
+              },
+                h('span', { style: { flex: 1 } }, item.name + ' ×' + item.qty),
+                h('span', { style: { fontWeight: 600, color: 'var(--primary)' } }, '¥' + (item.price * item.qty))
+              );
+            }),
+            h('div', {
+              style: {
+                display: 'flex', justifyContent: 'space-between',
+                borderTop: '1px solid var(--border)', marginTop: 6, paddingTop: 6,
+                fontWeight: 700, fontSize: 13
+              }
+            },
+              h('span', null, '合计'),
+              h('span', { style: { color: 'var(--primary)' } },
+                '¥' + (orderData ? orderData.total : 0),
+                h('span', { style: { fontSize: 10, color: 'var(--success)', marginLeft: 4 } }, '(实付 ¥0)')
+              )
+            )
+          ) : null
+        ) : null,
+
+        // Stats mini
+        h('div', {
+          style: {
+            display: 'flex', justifyContent: 'center', gap: 24,
+            margin: '16px 0 24px', padding: '12px 20px',
+            background: 'var(--bg)', borderRadius: 16
+          }
+        },
+          h('div', { style: { textAlign: 'center' } },
+            h('div', { style: { fontSize: 18, fontWeight: 700, color: 'var(--primary)' } }, '¥' + fmt(stats.saved)),
+            h('div', { style: { fontSize: 10, color: 'var(--text-light)' } }, window.T('stats.saved'))
+          ),
+          h('div', { style: { textAlign: 'center' } },
+            h('div', { style: { fontSize: 18, fontWeight: 700, color: 'var(--primary)' } }, String(stats.orders)),
+            h('div', { style: { fontSize: 10, color: 'var(--text-light)' } }, window.T('stats.orders'))
+          ),
+          h('div', { style: { textAlign: 'center' } },
+            h('div', { style: { fontSize: 18, fontWeight: 700, color: 'var(--primary)' } }, String(stats.streak) + '🔥'),
+            h('div', { style: { fontSize: 10, color: 'var(--text-light)' } }, window.T('stats.streak'))
+          )
+        ),
+
+        // Buttons
+        h('div', { style: { display: 'flex', gap: 12, flexDirection: 'column', width: '100%', maxWidth: 280 } },
+          h('button', {
+            onClick: onGoHome,
+            className: 'btn-pulse',
+            style: {
+              width: '100%', padding: '14px 0', borderRadius: 28,
+              border: 'none', background: 'var(--primary)',
+              color: '#FFF', fontSize: 16, fontWeight: 600,
+              cursor: 'pointer', fontFamily: 'inherit',
+              boxShadow: '0 4px 20px rgba(255,93,55,0.4)',
+              transition: 'all 0.2s'
+            }
+          }, '🛒 ' + window.T('success.back')),
+          h('button', {
+            onClick: handleShareCanvas,
+            style: {
+              width: '100%', padding: '12px 0', borderRadius: 28,
+              border: '2px solid var(--primary)', background: 'var(--primary)',
+              color: '#FFF', fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', fontFamily: 'inherit',
+              transition: 'all 0.2s'
+            }
+          }, '🖼️ 下载订单卡片'),
+          h('button', {
+            onClick: handleShareText,
+            style: {
+              width: '100%', padding: '12px 0', borderRadius: 28,
+              border: '2px solid var(--primary)', background: 'transparent',
+              color: 'var(--primary)', fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', fontFamily: 'inherit',
+              transition: 'all 0.2s'
+            }
+          }, '📤 ' + window.T('success.share'))
+        )
+      ),
+
+      // Disclaimer
+      h('div', {
+        style: {
+          fontSize: 10, color: 'var(--text-light)', opacity: 0.6,
+          zIndex: 1, marginTop: 20, marginBottom: 40
+        }
+      }, '💡 以上均为模拟体验 · 未产生实际消费'),
+
+      // Share toast
+      shareToast ? h('div', {
+        className: 'toast',
+        style: { bottom: 40, zIndex: 999 }
+      }, shareToast) : null
+    );
+  }
+  window.OrderSuccess = OrderSuccess;
+
+  // ===== PwaBanner =====
+  function PwaBanner() {
+    var promptState = React.useState(null);
+    var deferredPrompt = promptState[0], setDeferredPrompt = promptState[1];
+    var visibleState = React.useState(false);
+    var visible = visibleState[0], setVisible = visibleState[1];
+    var dismissedState = React.useState(false);
+    var dismissed = dismissedState[0], setDismissed = dismissedState[1];
+
+    React.useEffect(function() {
+      var dismissedTime = localStorage.getItem('dopamine_pwa_dismissed');
+      if (dismissedTime) {
+        var elapsed = Date.now() - parseInt(dismissedTime, 10);
+        if (elapsed < 7 * 24 * 60 * 60 * 1000) {
+          setDismissed(true);
+          return;
+        }
+      }
+
+      if (window.matchMedia('(display-mode: standalone)').matches) {
+        return;
+      }
+
+      var handler = function(e) {
+        e.preventDefault();
+        setDeferredPrompt(e);
+        setVisible(true);
+      };
+
+      window.addEventListener('beforeinstallprompt', handler);
+
+      var installedHandler = function() {
+        setVisible(false);
+        setDeferredPrompt(null);
+      };
+      window.addEventListener('appinstalled', installedHandler);
+
+      return function() {
+        window.removeEventListener('beforeinstallprompt', handler);
+        window.removeEventListener('appinstalled', installedHandler);
+      };
+    }, []);
+
+    var handleInstall = React.useCallback(function() {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(function(result) {
+        if (result.outcome === 'accepted') {
+          setVisible(false);
+          setDeferredPrompt(null);
+        }
+      }).catch(function(err) {
+        console.warn('PWA install prompt failed:', err);
+      });
+    }, [deferredPrompt]);
+
+    var handleDismiss = React.useCallback(function() {
+      setVisible(false);
+      setDismissed(true);
+      localStorage.setItem('dopamine_pwa_dismissed', String(Date.now()));
+    }, []);
+
+    if (!visible || dismissed) return null;
+
+    return h('div', { className: 'pwa-banner' },
+      h('span', { style: { fontSize: '28px', flexShrink: 0 } }, '📲'),
+      h('div', { className: 'pwa-banner-text' }, window.T('install.text')),
+      h('button', { className: 'pwa-banner-btn', onClick: handleInstall }, window.T('install.install')),
+      h('button', { className: 'pwa-banner-close', onClick: handleDismiss, 'aria-label': 'Close' }, '✕')
+    );
+  }
+  window.PwaBanner = PwaBanner;
+
+  // ===== ShoppingScene =====
+  // ===== DutyFreeScene: Store → Product → Detail (three-layer) =====
+  function DutyFreeScene(props) {
+    var onAddItem = props.onAddItem;
+    var storesState = React.useState([]);
+    var stores = storesState[0], setStores = storesState[1];
+    var loadingState = React.useState(true);
+    var loading = loadingState[0], setLoading = loadingState[1];
+    var selectedStoreState = React.useState(null);
+    var selectedStore = selectedStoreState[0], setSelectedStore = selectedStoreState[1];
+    var selectedProductState = React.useState(null);
+    var selectedProduct = selectedProductState[0], setSelectedProduct = selectedProductState[1];
+    var addedState = React.useState({});
+    var addedAnim = addedState[0], setAddedAnim = addedState[1];
+
+    React.useEffect(function() {
+      fetch('/data/products.json')
+        .then(function(r) { return r.json(); })
+        .then(function(d) { setStores(d||[]); setLoading(false); })
+        .catch(function() { setLoading(false); });
+    }, []);
+
+    function handleAdd(product, storeName) {
+      var key = product.id;
+      var newAnim = {}; for (var k in addedAnim) newAnim[k]=addedAnim[k];
+      newAnim[key] = true; setAddedAnim(newAnim);
+      onAddItem({id:product.id,name:product.name,price:product.price},{id:product.id,name:storeName});
+      setTimeout(function(){setAddedAnim(function(p){var n={};for(var k in p)n[k]=p[k];n[key]=false;return n;});},600);
+    }
+
+    function formatPrice(n) { if (n>=10000) return '¥'+(n/10000).toFixed(1)+'万'; return '¥'+n; }
+
+    if (loading) return h('div',{className:'p-16 text-center',style:{paddingTop:60}},h('p',null,'加载中...'));
+    if (!stores.length) return h('div',{className:'empty-state'},h('div',{className:'empty-state-icon'},'📦'),h('p',null,'暂无免税店'));
+
+    // LAYER 3: Product detail
+    if (selectedProduct) {
+      var p = selectedProduct;
+      var specsObj = p.specs || {};
+      var specsArr = Object.entries(specsObj);
+      var reviews = p.reviews || [];
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedProduct(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 返回'),
+        p.image?h('img',{src:p.image,alt:p.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:20}},p.name),
+        h('div',{style:{fontSize:22,fontWeight:700,color:'var(--primary)',marginBottom:8}},formatPrice(p.price)),
+        h('p',{style:{color:'var(--text-secondary)',fontSize:13,lineHeight:1.6,marginBottom:12}},p.desc),
+        h('h3',{style:{fontSize:14,marginBottom:6}},'详细参数'),
+        h('div',{style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:12}},
+          specsArr.map(function(e){return h('div',{key:e[0],style:{display:'flex',padding:'4px 0',fontSize:12,borderBottom:'1px solid var(--border)'}},h('span',{style:{color:'var(--text-light)',width:80,flexShrink:0}},e[0]),h('span',{style:{flex:1}},e[1]));})
+        ),
+        h('button',{onClick:function(){handleAdd(p,selectedStore.name);},style:{width:'100%',padding:12,borderRadius:24,border:'none',background:'var(--primary)',color:'#FFF',fontSize:15,fontWeight:600,cursor:'pointer',fontFamily:'inherit',marginBottom:16}},'+ 加购'),
+        // Reviews
+        reviews.length>0?h('div',null,
+          h('h3',{style:{fontSize:14,marginBottom:8}},'用户评价 ('+reviews.length+')'),
+          reviews.map(function(r,i){return h('div',{key:i,style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:8}},
+            h('div',{style:{display:'flex',alignItems:'center',gap:8,marginBottom:4}},
+              h('div',{style:{width:28,height:28,borderRadius:14,background:'hsl('+(i*137%360)+',50%,70%)',display:'flex',alignItems:'center',justifyContent:'center',color:'#FFF',fontSize:12,fontWeight:700}},r.user.charAt(0)),
+              h('span',{style:{fontWeight:600,fontSize:13}},r.user),
+              h('span',{style:{color:'var(--gold)',fontSize:12}},'★'.repeat(r.rating)+'☆'.repeat(5-r.rating)),
+              h('span',{style:{color:'var(--text-light)',fontSize:11,marginLeft:'auto'}},r.date)
+            ),
+            h('p',{style:{fontSize:12,color:'var(--text-secondary)',lineHeight:1.5}},r.content)
+          );})
+        ):null
+      );
+    }
+
+    // LAYER 2: Products within a store
+    if (selectedStore) {
+      var s = selectedStore;
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedStore(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 全部免税店'),
+        s.image?h('img',{src:s.image,alt:s.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8,objectFit:'cover',maxHeight:180}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:18}},s.name),
+        h('p',{style:{color:'var(--text-light)',fontSize:12,marginBottom:12}},s.desc),
+        h('div',{className:'product-grid'},
+          (s.products||[]).map(function(product,idx){
+            var isAdded = addedAnim[product.id];
+            return h('div',{key:product.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms'},onClick:function(){setSelectedProduct(product);}},
+              h('div',{className:'product-img-wrap'},
+                (product.tags||[]).length>0?h('span',{className:'brand-badge'},product.tags[0]):null,
+                product.image?h('img',{className:'product-img',src:product.image,alt:product.name,loading:'lazy'}):null
+              ),
+              h('div',{className:'product-body'},
+                h('div',{className:'product-name'},product.name),
+                h('div',{className:'product-price-row'},h('span',{className:'product-price'},formatPrice(product.price))),
+                h('button',{className:'btn-add-cart'+(isAdded?' added':''),onClick:function(e){e.stopPropagation();handleAdd(product,s.name);}},isAdded?'✓ 已添加':'+ 加购')
+              )
+            );
+          })
+        )
+      );
+    }
+
+    // LAYER 1: Store list
+    return h('div',null,
+      h('div',{style:{padding:'12px 16px 4px'}},h('h2',{style:{fontSize:16,fontWeight:600}},'🛍️ 免税店 ('+stores.length+')')),
+      h('div',{className:'product-grid'},
+        stores.map(function(store,idx){
+          return h('div',{key:store.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms',cursor:'pointer'},onClick:function(){setSelectedStore(store);}},
+            h('div',{className:'product-img-wrap'},
+              store.image?h('img',{className:'product-img',src:store.image,alt:store.name,loading:'lazy'}):h('div',{className:'product-img-fallback',style:{display:'flex'}},'🏪')
+            ),
+            h('div',{className:'product-body'},
+              h('div',{className:'product-name'},store.name),
+              h('div',{style:{fontSize:11,color:'var(--text-light)',marginTop:2}},store.desc),
+              h('div',{style:{fontSize:12,color:'var(--primary)',marginTop:4,fontWeight:600}},(store.products||[]).length+' 款商品')
+            )
+          );
+        })
+      )
+    );
+  }
+  window.DutyFreeScene = DutyFreeScene;
+
+  // ===== SpaScene: Same three-layer pattern =====
+  function SpaScene(props) {
+    var onAddItem = props.onAddItem;
+    var storesState = React.useState([]);
+    var stores = storesState[0], setStores = storesState[1];
+    var loadingState = React.useState(true);
+    var loading = loadingState[0], setLoading = loadingState[1];
+    var selectedStoreState = React.useState(null);
+    var selectedStore = selectedStoreState[0], setSelectedStore = selectedStoreState[1];
+    var selectedProductState = React.useState(null);
+    var selectedProduct = selectedProductState[0], setSelectedProduct = selectedProductState[1];
+    var addedState = React.useState({});
+    var addedAnim = addedState[0], setAddedAnim = addedState[1];
+
+    React.useEffect(function() {
+      fetch('/data/spa.json')
+        .then(function(r) { return r.json(); })
+        .then(function(d) { setStores(d||[]); setLoading(false); })
+        .catch(function() { setLoading(false); });
+    }, []);
+
+    function handleAdd(product, storeName) {
+      var key = product.id;
+      var newAnim = {}; for (var k in addedAnim) newAnim[k]=addedAnim[k];
+      newAnim[key] = true; setAddedAnim(newAnim);
+      onAddItem({id:product.id,name:product.name,price:product.price},{id:product.id,name:storeName});
+      setTimeout(function(){setAddedAnim(function(p){var n={};for(var k in p)n[k]=p[k];n[key]=false;return n;});},600);
+    }
+
+    function formatPrice(n) { return '¥'+n; }
+
+    if (loading) return h('div',{className:'p-16 text-center',style:{paddingTop:60}},h('p',null,'加载中...'));
+    if (!stores.length) return h('div',{className:'empty-state'},h('div',{className:'empty-state-icon'},'💆'),h('p',null,'暂无SPA服务'));
+
+    // LAYER 3: Product detail
+    if (selectedProduct) {
+      var p = selectedProduct;
+      var specsObj = p.specs || {};
+      var specsArr = Object.entries(specsObj);
+      var reviews = p.reviews || [];
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedProduct(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 返回'),
+        p.image?h('img',{src:p.image,alt:p.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:20}},p.name),
+        h('div',{style:{fontSize:22,fontWeight:700,color:'var(--primary)',marginBottom:8}},formatPrice(p.price)),
+        h('p',{style:{color:'var(--text-secondary)',fontSize:13,lineHeight:1.6,marginBottom:12}},p.desc),
+        h('h3',{style:{fontSize:14,marginBottom:6}},'服务详情'),
+        h('div',{style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:12}},
+          specsArr.map(function(e){return h('div',{key:e[0],style:{display:'flex',padding:'4px 0',fontSize:12,borderBottom:'1px solid var(--border)'}},h('span',{style:{color:'var(--text-light)',width:60,flexShrink:0}},e[0]),h('span',{style:{flex:1}},e[1]));})
+        ),
+        h('button',{onClick:function(){handleAdd(p,selectedStore.name);},style:{width:'100%',padding:12,borderRadius:24,border:'none',background:'var(--primary)',color:'#FFF',fontSize:15,fontWeight:600,cursor:'pointer',fontFamily:'inherit',marginBottom:16}},'+ 加入预约'),
+        reviews.length>0?h('div',null,
+          h('h3',{style:{fontSize:14,marginBottom:8}},'用户评价 ('+reviews.length+')'),
+          reviews.map(function(r,i){return h('div',{key:i,style:{background:'var(--bg)',borderRadius:'var(--radius-sm)',padding:12,marginBottom:8}},
+            h('div',{style:{display:'flex',alignItems:'center',gap:8,marginBottom:4}},
+              h('div',{style:{width:28,height:28,borderRadius:14,background:'hsl('+(i*137%360)+',50%,70%)',display:'flex',alignItems:'center',justifyContent:'center',color:'#FFF',fontSize:12,fontWeight:700}},r.user.charAt(0)),
+              h('span',{style:{fontWeight:600,fontSize:13}},r.user),
+              h('span',{style:{color:'var(--gold)',fontSize:12}},'★'.repeat(r.rating)+'☆'.repeat(5-r.rating)),
+              h('span',{style:{color:'var(--text-light)',fontSize:11,marginLeft:'auto'}},r.date)
+            ),
+            h('p',{style:{fontSize:12,color:'var(--text-secondary)',lineHeight:1.5}},r.content)
+          );})
+        ):null
+      );
+    }
+
+    // LAYER 2: Products within a store
+    if (selectedStore) {
+      var s = selectedStore;
+      return h('div',null,
+        h('button',{onClick:function(){setSelectedStore(null);},style:{padding:8,background:'none',border:'none',fontSize:16,cursor:'pointer',fontFamily:'inherit',color:'var(--text-secondary)'}},'← 全部SPA'),
+        s.image?h('img',{src:s.image,alt:s.name,style:{width:'100%',borderRadius:'var(--radius)',marginTop:8,objectFit:'cover',maxHeight:180}}):null,
+        h('h2',{style:{margin:'12px 0 4px',fontSize:18}},s.name),
+        h('p',{style:{color:'var(--text-light)',fontSize:12,marginBottom:12}},s.desc),
+        h('div',{className:'product-grid'},
+          (s.products||[]).map(function(product,idx){
+            var isAdded = addedAnim[product.id];
+            return h('div',{key:product.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms'},onClick:function(){setSelectedProduct(product);}},
+              h('div',{className:'product-img-wrap'},
+                product.image?h('img',{className:'product-img',src:product.image,alt:product.name,loading:'lazy'}):h('div',{className:'product-img-fallback',style:{display:'flex'}},'💆')
+              ),
+              h('div',{className:'product-body'},
+                h('div',{className:'product-name'},product.name),
+                h('div',{className:'product-price-row'},h('span',{className:'product-price'},formatPrice(product.price))),
+                h('button',{className:'btn-add-cart'+(isAdded?' added':''),onClick:function(e){e.stopPropagation();handleAdd(product,s.name);}},isAdded?'✓ 已预约':'+ 预约')
+              )
+            );
+          })
+        )
+      );
+    }
+
+    // LAYER 1: Store list
+    return h('div',null,
+      h('div',{style:{padding:'12px 16px 4px'}},h('h2',{style:{fontSize:16,fontWeight:600}},'💆 做SPA ('+stores.length+')')),
+      h('div',{className:'product-grid'},
+        stores.map(function(store,idx){
+          return h('div',{key:store.id||idx,className:'product-card animate-in',style:{animationDelay:(idx*60)+'ms',cursor:'pointer'},onClick:function(){setSelectedStore(store);}},
+            h('div',{className:'product-img-wrap'},
+              store.image?h('img',{className:'product-img',src:store.image,alt:store.name,loading:'lazy'}):h('div',{className:'product-img-fallback',style:{display:'flex'}},'💆')
+            ),
+            h('div',{className:'product-body'},
+              h('div',{className:'product-name'},store.name),
+              h('div',{style:{fontSize:11,color:'var(--text-light)',marginTop:2}},store.desc),
+              h('div',{style:{fontSize:12,color:'var(--primary)',marginTop:4,fontWeight:600}},(store.products||[]).length+' 个项目')
+            )
+          );
+        })
+      )
+    );
+  }
+  window.SpaScene = SpaScene;
+
+  // ===== App (main state manager) =====
+  function App() {
+    var pageState = React.useState('home');
+    var currentPage = pageState[0], setCurrentPage = pageState[1];
+    var storeState = React.useState(null);
+    var selectedStore = storeState[0], setSelectedStore = storeState[1];
+    var cartState = React.useState([]);
+    var cartItems = cartState[0], setCartItems = cartState[1];
+    var restState = React.useState([]);
+    var restaurants = restState[0], setRestaurants = restState[1];
+    var statsState = React.useState(function() {
+      return {
+        saved: parseFloat(localStorage.getItem('dopamine_saved') || '0'),
+        orders: parseInt(localStorage.getItem('dopamine_orders') || '0', 10),
+        streak: parseInt(localStorage.getItem('dopamine_streak') || '0', 10),
+        lastDate: localStorage.getItem('dopamine_lastdate') || ''
+      };
+    });
+    var stats = statsState[0], setStats = statsState[1];
+    var toastState = React.useState('');
+    var toast = toastState[0], setToast = toastState[1];
+    var cartOpenState = React.useState(false);
+    var cartOpen = cartOpenState[0], setCartOpen = cartOpenState[1];
+    var keyState = React.useState(0);
+    var renderKey = keyState[0], setRenderKey = keyState[1];
+    var tabState = React.useState('food');
+    var currentTab = tabState[0], setCurrentTab = tabState[1];
+    var lastOrderState = React.useState(null);
+    var lastOrder = lastOrderState[0], setLastOrder = lastOrderState[1];
+
+    // Language change listener
+    React.useEffect(function() {
+      var handler = function() { setRenderKey(function(k) { return k + 1; }); };
+      window.addEventListener('langchange', handler);
+      return function() { window.removeEventListener('langchange', handler); };
+    }, []);
+
+    // Init language
+    React.useEffect(function() {
+      window.__LANG__ = localStorage.getItem('dopamine_lang') || 'zh';
+    }, []);
+
+    // Load restaurants
+    React.useEffect(function() {
+      fetch('/data/restaurants.json')
+        .then(function(res) { return res.json(); })
+        .then(function(data) { setRestaurants(data.map(normRestaurant)); })
+        .catch(function() {
+          console.warn('[App] Failed to load /data/restaurants.json');
+          setRestaurants([]);
+        });
+    }, []);
+
+    // Toast
+    var showToast = React.useCallback(function(msg) {
+      setToast(msg);
+      setTimeout(function() { setToast(''); }, 2000);
+    }, []);
+
+    // Cart operations
+    var addItem = React.useCallback(function(item, store) {
+      setCartItems(function(prev) {
+        var existing = prev.find(function(i) { return i.id === item.id && i.storeId === store.id; });
+        if (existing) {
+          return prev.map(function(i) {
+            return i.id === item.id && i.storeId === store.id ? Object.assign({}, i, { qty: i.qty + 1 }) : i;
+          });
+        }
+        return prev.concat([{
+          id: item.id, storeId: store.id, storeName: store.name,
+          name: item.name, price: item.price, qty: 1
+        }]);
+      });
+      showToast(window.T('toast.added'));
+    }, [showToast]);
+
+    var handleRemove = React.useCallback(function(itemId) {
+      setCartItems(function(prev) { return prev.filter(function(i) { return i.id !== itemId; }); });
+      showToast(window.T('toast.removed'));
+    }, [showToast]);
+
+    var handleUpdateQty = React.useCallback(function(itemId, newQty) {
+      setCartItems(function(prev) {
+        if (newQty <= 0) return prev.filter(function(i) { return i.id !== itemId; });
+        return prev.map(function(i) { return i.id === itemId ? Object.assign({}, i, { qty: newQty }) : i; });
+      });
+    }, []);
+
+    var cartTotal = React.useMemo(function() {
+      return cartItems.reduce(function(sum, i) { return sum + i.price * i.qty; }, 0);
+    }, [cartItems]);
+
+    // Navigation
+    var navigateTo = React.useCallback(function(page, store) {
+      window.scrollTo(0, 0);
+      setCurrentPage(page);
+      setCartOpen(false);
+      if (store) setSelectedStore(store);
+      if (page === 'home') setSelectedStore(null);
+    }, []);
+
+    // Tracking data ref (cross-page order data)
+    var trackingData = React.useRef({ cartItems: [], savedAmount: 0, orderId: '' });
+
+    // Place order (fake payment) → go to tracking
+    var placeOrder = React.useCallback(function() {
+      var savedAmount = cartTotal;
+      var orderId = 'JV' + Date.now().toString(36).toUpperCase();
+      // Save order details for tracking page
+      trackingData.current = {
+        cartItems: cartItems.map(function(i) { return Object.assign({}, i); }),
+        savedAmount: savedAmount,
+        orderId: orderId
+      };
+      // Also save for success/share page
+      var orderData = {
+        items: cartItems.map(function(i) { return Object.assign({}, i); }),
+        total: cartTotal,
+        time: new Date().toLocaleString('zh-CN', { hour12: false }),
+        orderId: orderId
+      };
+      setLastOrder(orderData);
+      setCurrentPage('paying');
+      setTimeout(function() {
+        setStats(function(prev) {
+          var today = new Date().toISOString().slice(0, 10);
+          var yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+          var newStreak = prev.lastDate === yesterday ? prev.streak + 1 : (prev.lastDate === today ? prev.streak : 1);
+          var newStats = {
+            saved: prev.saved + savedAmount,
+            orders: prev.orders + 1,
+            streak: newStreak,
+            lastDate: today
+          };
+          localStorage.setItem('dopamine_saved', String(newStats.saved));
+          localStorage.setItem('dopamine_orders', String(newStats.orders));
+          localStorage.setItem('dopamine_streak', String(newStats.streak));
+          localStorage.setItem('dopamine_lastdate', newStats.lastDate);
+          window.dispatchEvent(new CustomEvent('statsupdate'));
+          return newStats;
+        });
+        setCartItems([]);
+        setCurrentPage('tracking');
+      }, 1500);
+    }, [cartTotal, cartItems]);
+
+    var handleGoHome = React.useCallback(function() {
+      navigateTo('home');
+    }, [navigateTo]);
+
+    // Render current page
+    function renderPage() {
+      switch (currentPage) {
+        case 'paying':
+          return h('div', {
+            style: {
+              display: 'flex', flexDirection: 'column', alignItems: 'center',
+              justifyContent: 'center', height: '70vh', gap: 20
+            }
+          },
+            h('div', {
+              style: {
+                width: 48, height: 48, border: '4px solid var(--border)',
+                borderTopColor: 'var(--primary)', borderRadius: '50%',
+                animation: 'spin 0.8s linear infinite'
+              }
+            }),
+            h('p', { style: { color: 'var(--text-secondary)', fontSize: 14 } }, window.T('order.submit') + '...'),
+            h('p', { style: { fontSize: 12, color: 'var(--text-light)' } }, '(假的支付，放心~)')
+          );
+
+        case 'store':
+          return window.StorePage ?
+            h(window.StorePage, {
+              store: selectedStore,
+              cartItems: cartItems,
+              onAddItem: addItem,
+              onGoBack: function() { navigateTo('home'); },
+              key: (selectedStore && selectedStore.id) || 'store'
+            })
+          :
+            h(Fallback, { msg: 'StorePage 组件未加载' });
+
+        case 'checkout':
+          return window.CheckoutScene ?
+            h(window.CheckoutScene, {
+              cartItems: cartItems,
+              cartTotal: cartTotal,
+              onPlaceOrder: placeOrder,
+              onCancel: function() { navigateTo('home'); }
+            })
+          :
+            h(Fallback, { msg: 'CheckoutScene 组件未加载' });
+
+        case 'success':
+          return window.OrderSuccess ?
+            h(window.OrderSuccess, {
+              savedAmount: trackingData.current ? trackingData.current.savedAmount : (cartTotal || stats.saved),
+              stats: stats,
+              onGoHome: handleGoHome,
+              orderData: lastOrder,
+              key: renderKey
+            })
+          :
+            h(Fallback, { msg: 'OrderSuccess 组件未加载' });
+
+        case 'tracking':
+          return window.OrderTracking ?
+            h(window.OrderTracking, {
+              cartItems: trackingData.current ? trackingData.current.cartItems : [],
+              savedAmount: trackingData.current ? trackingData.current.savedAmount : 0,
+              orderId: trackingData.current ? trackingData.current.orderId : ('DP' + Date.now().toString(36).toUpperCase()),
+              onGoHome: handleGoHome,
+              key: renderKey
+            })
+          :
+            h(Fallback, { msg: 'OrderTracking 组件未加载' });
+
+        case 'home':
+        default:
+          if (currentTab === 'dutyfree') {
+            return window.DutyFreeScene ?
+              h(window.DutyFreeScene, {
+                cartItems: cartItems,
+                onAddItem: addItem,
+                key: renderKey
+              })
+            :
+              h(Fallback, { msg: 'DutyFreeScene 组件未加载' });
+          }
+          if (currentTab === 'spa') {
+            return window.SpaScene ?
+              h(window.SpaScene, {
+                cartItems: cartItems,
+                onAddItem: addItem,
+                key: renderKey
+              })
+            :
+              h(Fallback, { msg: 'SpaScene 组件未加载' });
+          }
+          return window.FoodHome ?
+            h(window.FoodHome, {
+              restaurants: restaurants,
+              stats: stats,
+              onSelectStore: function(store) { navigateTo('store', store); },
+              key: renderKey
+            })
+          :
+            h(Fallback, { msg: 'FoodHome 组件未加载' });
+      }
+    }
+
+    // Main cart count
+    var cartCount = cartItems.reduce(function(s, i) { return s + i.qty; }, 0);
+
+    return h('div', { style: { minHeight: '100vh', minHeight: '100dvh', display: 'flex', flexDirection: 'column' } },
+      // Header
+      window.Header ?
+        h(window.Header, { key: renderKey })
+      :
+        h('header', { className: 'app-header row', style: { justifyContent: 'space-between' } },
+          h('div', { style: { cursor: 'pointer' } },
+            h('h1', null, window.T('app.title')),
+            h('div', { className: 'subtitle' }, window.T('app.subtitle'))
+          )
+        ),
+
+      // Main content
+      h('main', { style: { flex: 1, paddingBottom: (currentPage === 'home' ? 70 : (cartItems.length > 0 && !cartOpen ? 80 : 16)) } },
+        renderPage()
+      ),
+
+      // Toast
+      toast ? h('div', { className: 'toast', key: toast }, toast) : null,
+
+      // Bottom Tab Bar (only on home, 3 tabs)
+      currentPage === 'home' ?
+        h('div', { className: 'tab-bar' },
+          h('button', {
+            className: 'tab-item' + (currentTab === 'food' ? ' active' : ''),
+            onClick: function() { setCurrentTab('food'); }
+          },
+            h('span', { className: 'tab-icon' }, '🍜'),
+            h('span', null, '上馆子')
+          ),
+          h('button', {
+            className: 'tab-item' + (currentTab === 'spa' ? ' active' : ''),
+            onClick: function() { setCurrentTab('spa'); }
+          },
+            h('span', { className: 'tab-icon' }, '💆'),
+            h('span', null, '做SPA')
+          ),
+          h('button', {
+            className: 'tab-item' + (currentTab === 'dutyfree' ? ' active' : ''),
+            onClick: function() { setCurrentTab('dutyfree'); }
+          },
+            h('span', { className: 'tab-icon' }, '🛍️'),
+            h('span', null, '免税店')
+          )
+        )
+      : null,
+
+      // Cart FAB
+      cartItems.length > 0 && currentPage !== 'checkout' && currentPage !== 'success' && currentPage !== 'paying' && currentPage !== 'tracking' ?
+        h('button', {
+          className: 'cart-fab',
+          onClick: function() { setCartOpen(function(prev) { return !prev; }); },
+          style: { animation: cartOpen ? 'none' : 'pulse 2s infinite' }
+        },
+          '🛒',
+          h('span', { className: 'cart-badge' }, String(cartCount))
+        )
+      : null,
+
+      // Cart Panel
+      window.CartPanel ?
+        h(window.CartPanel, {
+          cartItems: cartItems,
+          visible: cartOpen,
+          onUpdateQty: handleUpdateQty,
+          onRemove: handleRemove,
+          onCheckout: function() { setCartOpen(false); navigateTo('checkout'); },
+          onClose: function() { setCartOpen(false); }
+        })
+      : null,
+
+      // PWA Banner
+      window.PwaBanner ? h(window.PwaBanner, null) : null
+    );
+  }
+
+  // ===== Fallback component =====
+  function Fallback(props) {
+    return h('div', { className: 'p-16 text-center', style: { color: 'var(--text-secondary)', paddingTop: 60 } },
+      h('p', null, props.msg)
+    );
+  }
+
+  window.App = App;
+
+  // ===== Mount =====
+  function mount() {
+    var rootEl = document.getElementById('root');
+    if (rootEl) {
+      var root = ReactDOM.createRoot(rootEl);
+      root.render(h(App, null));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', mount);
+
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    mount();
+  }
+
+})();
+</script>
+
+</body>
+</html>
