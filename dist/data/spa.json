@@ -3,7 +3,7 @@
     "id": "spa-yacht",
     "name": "寰宇游艇会",
     "desc": "三亚·全球顶级游艇·私人定制出海",
-    "image": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800",
+    "image": "/images/photo-1569263979104-865ab7cd8d13.jpg",
     "category": "spa",
     "products": [
       {
@@ -17,7 +17,7 @@
           "载客": "12人",
           "含": "船长+香槟+海钓"
         },
-        "image": "https://images.unsplash.com/photo-1567899378479-7bb73738e056?w=800",
+        "image": "/images/photo-1569263979104-865ab7cd8d13.jpg",
         "tags": [
           "游艇出海",
           "意大利",
@@ -43,7 +43,7 @@
           "载客": "20人",
           "含": "管家+厨师+龙虾宴"
         },
-        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
+        "image": "/images/photo-1544551763-46a013bb70d5.jpg",
         "tags": [
           "超级游艇",
           "英伦奢华",
@@ -61,7 +61,7 @@
           "载客": "8人",
           "含": "起泡酒+小食"
         },
-        "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800",
+        "image": "/images/photo-1500937386664-56d1dfef3854.jpg",
         "tags": [
           "帆船",
           "落日",
@@ -74,7 +74,7 @@
     "id": "spa-private-club",
     "name": "长安俱乐部",
     "desc": "北京长安街·顶级私人会所·会员制·极致私密",
-    "image": "https://images.unsplash.com/photo-1576947793436-82a9bc38ae40?w=800",
+    "image": "/images/photo-1560185007-cde436f6a4d0.jpg",
     "category": "spa",
     "products": [
       {
@@ -87,7 +87,7 @@
           "设施": "泳池+雪茄吧+影院+餐厅",
           "含": "管家+午餐+下午茶"
         },
-        "image": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800",
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg",
         "tags": [
           "私人会所",
           "京城顶级",
@@ -105,7 +105,7 @@
           "威士忌": "Macallan 25年",
           "含": "古巴雪茄师+顾问"
         },
-        "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
         "tags": [
           "雪茄",
           "威士忌",
@@ -118,7 +118,7 @@
     "id": "spa-villa",
     "name": "御墅轰趴馆",
     "desc": "上海/北京近郊·五星级别墅·私人派对定制",
-    "image": "https://images.unsplash.com/photo-1576947793436-82a9bc38ae40?w=800",
+    "image": "/images/photo-1560185007-cde436f6a4d0.jpg",
     "category": "spa",
     "products": [
       {
@@ -131,7 +131,7 @@
           "房间": "8间套房",
           "含": "KTV+泳池+厨师+BBQ"
         },
-        "image": "https://images.unsplash.com/photo-1576947793436-82a9bc38ae40?w=800",
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg",
         "tags": [
           "别墅轰趴",
           "中式王府",
@@ -148,7 +148,7 @@
           "面积": "500㎡",
           "含": "DJ+BBQ+漂浮早餐+酒水"
         },
-        "image": "https://images.unsplash.com/photo-1576947793436-82a9bc38ae40?w=800",
+        "image": "/images/photo-1560185007-cde436f6a4d0.jpg",
         "tags": [
           "泳池派对",
           "DJ",
@@ -161,7 +161,7 @@
     "id": "spa-golf",
     "name": "佘山国际高尔夫俱乐部",
     "desc": "上海佘山·锦标赛级18洞·PGA认证·私人教练",
-    "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+    "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
     "category": "spa",
     "products": [
       {
@@ -174,7 +174,7 @@
           "球童": "一对一",
           "含": "球车+练习场+会所"
         },
-        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+        "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
         "tags": [
           "高尔夫",
           "锦标赛",
@@ -191,7 +191,7 @@
           "教练": "PGA认证",
           "含": "视频分析+练习球"
         },
-        "image": "https://images.unsplash.com/photo-1592919505780-303950717480?w=800",
+        "image": "/images/photo-1592919505780-303950717480.jpg",
         "tags": [
           "私教",
           "PGA"
@@ -203,7 +203,7 @@
     "id": "spa-racing",
     "name": "极速方程式赛车中心",
     "desc": "上海国际赛车场·法拉利/兰博基尼·F1赛道体验",
-    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800",
+    "image": "/images/photo-1503376780353-7e6692767b70.jpg",
     "category": "spa",
     "products": [
       {
@@ -216,7 +216,7 @@
           "车型": "法拉利488 GTB",
           "含": "教练+装备+数据报告"
         },
-        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800",
+        "image": "/images/photo-1503376780353-7e6692767b70.jpg",
         "tags": [
           "法拉利",
           "F1赛道",
@@ -234,7 +234,7 @@
           "马力": "640匹V10",
           "含": "漂移教练+视频"
         },
-        "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800",
+        "image": "/images/photo-1544636331-e26879cd4d9b.jpg",
         "tags": [
           "兰博基尼",
           "漂移",
@@ -247,7 +247,7 @@
     "id": "spa-dating",
     "name": "臻爱高端婚恋",
     "desc": "上海·严格身份审核·千万资产门槛·一对一红娘",
-    "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800",
+    "image": "/images/photo-1518199266791-5375a83190b7.jpg",
     "category": "spa",
     "products": [
       {
@@ -261,7 +261,7 @@
           "地点": "五星级酒店",
           "门槛": "千万资产"
         },
-        "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800",
+        "image": "/images/photo-1529333166437-7750a6dd5a70.jpg",
         "tags": [
           "高端婚恋",
           "精英圈层",
@@ -278,7 +278,7 @@
           "地点": "米其林餐厅",
           "含": "晚餐+酒水+社交"
         },
-        "image": "https://images.unsplash.com/photo-1555244162-803834f70033?w=800",
+        "image": "/images/photo-1555244162-803834f70033.jpg",
         "tags": [
           "社交晚宴",
           "米其林",
@@ -291,7 +291,7 @@
     "id": "spa-whisky",
     "name": "麦芽共和国·威士忌图书馆",
     "desc": "上海外滩·3000+瓶珍藏·亚洲最全单一麦芽",
-    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800",
+    "image": "/images/photo-1470337458703-46ad1756a187.jpg",
     "category": "spa",
     "products": [
       {
@@ -304,7 +304,7 @@
           "产区": "5大经典产区",
           "含": "顾问讲解+佐酒小食"
         },
-        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800",
+        "image": "/images/photo-1470337458703-46ad1756a187.jpg",
         "tags": [
           "威士忌",
           "品鉴",
@@ -322,7 +322,7 @@
           "限量": "全球<100瓶",
           "含": "大师侍酒+巧克力"
         },
-        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
         "tags": [
           "Macallan",
           "年份珍品",
@@ -335,7 +335,7 @@
     "id": "spa-cigar",
     "name": "哈瓦那雪茄俱乐部",
     "desc": "北京国贸·恒温恒湿雪茄窖·古巴雪茄师驻场",
-    "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+    "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
     "category": "spa",
     "products": [
       {
@@ -348,7 +348,7 @@
           "大师": "古巴国家级",
           "含": "亲手卷制+刻名+保湿盒"
         },
-        "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
         "tags": [
           "雪茄",
           "古巴大师",
@@ -365,7 +365,7 @@
           "品牌": "Cohiba Behike",
           "搭配": "20年陈年朗姆酒"
         },
-        "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
         "tags": [
           "Cohiba",
           "Behike",
@@ -378,7 +378,7 @@
     "id": "spa-jet",
     "name": "天际线公务航空",
     "desc": "北京/上海出发·Gulfstream G650·全球任意目的地",
-    "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800",
+    "image": "/images/photo-1540962351504-03099e0a754b.jpg",
     "category": "spa",
     "products": [
       {
@@ -392,7 +392,7 @@
           "载客": "14人",
           "含": "米其林餐+香槟"
         },
-        "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800",
+        "image": "/images/photo-1540962351504-03099e0a754b.jpg",
         "tags": [
           "私人飞机",
           "G650",
@@ -410,7 +410,7 @@
           "人数": "1-3人",
           "含": "香槟"
         },
-        "image": "https://images.unsplash.com/photo-1572099606223-6cf8d8b13b98?w=800",
+        "image": "/images/photo-1540962351504-03099e0a754b.jpg",
         "tags": [
           "直升机",
           "城市观光",
@@ -423,7 +423,7 @@
     "id": "spa-horse",
     "name": "天星调良国际马术俱乐部",
     "desc": "北京·国际马联认证·进口温血马·奥运级场地",
-    "image": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800",
+    "image": "/images/photo-1553284965-83fd3e82fa5a.jpg",
     "category": "spa",
     "products": [
       {
@@ -436,7 +436,7 @@
           "教练": "国际认证",
           "马匹": "荷兰温血马"
         },
-        "image": "https://images.unsplash.com/photo-1534773728080-33d31da27ae5?w=800",
+        "image": "/images/photo-1534773728080-33d31da27ae5.jpg",
         "tags": [
           "马术",
           "温血马",
@@ -453,7 +453,7 @@
           "教练": "前奥运选手",
           "要求": "有基础"
         },
-        "image": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800",
+        "image": "/images/photo-1553284965-83fd3e82fa5a.jpg",
         "tags": [
           "盛装舞步",
           "奥运教练"
@@ -465,7 +465,7 @@
     "id": "spa-art",
     "name": "嘉德艺术中心·VIP私洽",
     "desc": "北京王府井·中国最大拍卖行·私人艺术品顾问",
-    "image": "https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=800",
+    "image": "/images/photo-1524230659092-07f99a75c013.jpg",
     "category": "spa",
     "products": [
       {
@@ -478,7 +478,7 @@
           "顾问": "资深艺术品专家",
           "含": "大师真迹鉴赏+拍卖知识"
         },
-        "image": "https://images.unsplash.com/photo-1561839561-b13cfe4e77e1?w=800",
+        "image": "/images/photo-1524230659092-07f99a75c013.jpg",
         "tags": [
           "艺术品",
           "嘉德",
@@ -491,7 +491,7 @@
     "id": "spa-dive",
     "name": "蓝洞潜水俱乐部",
     "desc": "三亚·PADI五星教练中心·沉船/珊瑚礁/蓝洞",
-    "image": "https://images.unsplash.com/photo-1544551763-8dd44758c2dd?w=800",
+    "image": "/images/photo-1544551763-8dd44758c2dd.jpg",
     "category": "spa",
     "products": [
       {
@@ -505,7 +505,7 @@
           "深度": "≤30米",
           "要求": "持证"
         },
-        "image": "https://images.unsplash.com/photo-1544551763-8dd44758c2dd?w=800",
+        "image": "/images/photo-1544551763-8dd44758c2dd.jpg",
         "tags": [
           "潜水",
           "珊瑚礁",
@@ -523,7 +523,7 @@
           "潜水": "3次",
           "要求": "AOW以上"
         },
-        "image": "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=800",
+        "image": "/images/photo-1582967788606-a171c1080cb0.jpg",
         "tags": [
           "沉船",
           "西沙",
@@ -536,7 +536,7 @@
     "id": "spa-chef",
     "name": "味蕾实验室·私厨上门",
     "desc": "北京/上海/深圳·米其林背景主厨·上门定制家宴",
-    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800",
+    "image": "/images/photo-1556910103-1c02745aae4d.jpg",
     "category": "spa",
     "products": [
       {
@@ -550,7 +550,7 @@
           "人数": "4-8人",
           "含": "食材+餐酒+烹饪+清洁"
         },
-        "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+        "image": "/images/photo-1414235077428-338989a2e8c0.jpg",
         "tags": [
           "米其林",
           "私厨",
@@ -567,7 +567,7 @@
           "师傅": "银座名店出身",
           "人数": "2-6人"
         },
-        "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800",
+        "image": "/images/photo-1579871494447-9811cf80d66c.jpg",
         "tags": [
           "Omakase",
           "寿司",
@@ -580,7 +580,7 @@
     "id": "spa-zen",
     "name": "拈花湾禅修度假村",
     "desc": "无锡灵山·东方禅意美学·正念冥想·茶道花道",
-    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800",
+    "image": "/images/photo-1507652313519-d4e9174996dd.jpg",
     "category": "spa",
     "products": [
       {
@@ -593,7 +593,7 @@
           "住宿": "独栋禅意套房",
           "含": "禅修+茶道+花道+颂钵+素食三餐"
         },
-        "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800",
+        "image": "/images/photo-1507652313519-d4e9174996dd.jpg",
         "tags": [
           "禅修",
           "正念",
@@ -610,7 +610,7 @@
           "工具": "尼泊尔手工颂钵",
           "含": "脉轮检测+音疗"
         },
-        "image": "https://images.unsplash.com/photo-1545389336-cf090694435e?w=800",
+        "image": "/images/photo-1545389336-cf090694435e.jpg",
         "tags": [
           "颂钵",
           "音疗",
@@ -623,7 +623,7 @@
     "id": "spa-aman",
     "name": "安缦颐和·皇室套房",
     "desc": "北京颐和园东门·安缦集团·昔日觐见慈禧的贵宾下榻处",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800",
+    "image": "/images/photo-1571896349842-33c89424de2d.jpg",
     "category": "spa",
     "products": [
       {
@@ -636,7 +636,7 @@
           "类型": "皇室套房(四合院)",
           "含": "管家+颐和园VIP+双人SPA"
         },
-        "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800",
+        "image": "/images/photo-1571896349842-33c89424de2d.jpg",
         "tags": [
           "安缦",
           "皇室",
@@ -653,7 +653,7 @@
           "护理": "全身按摩+面部+私汤",
           "产品": "安缦定制天然系列"
         },
-        "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800",
+        "image": "/images/photo-1544161515-4ab6ce6db874.jpg",
         "tags": [
           "安缦",
           "双人SPA",
@@ -666,7 +666,7 @@
     "id": "spa-aurora",
     "name": "极光之约·北欧定制旅行",
     "desc": "芬兰/挪威/冰岛·北极圈内·玻璃屋酒店·哈士奇雪橇",
-    "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800",
+    "image": "/images/photo-1531366936337-7c912a4589a7.jpg",
     "category": "spa",
     "products": [
       {
@@ -680,7 +680,7 @@
           "住宿": "玻璃屋酒店",
           "含": "雪橇+圣诞村+破冰船+导游"
         },
-        "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800",
+        "image": "/images/photo-1531366936337-7c912a4589a7.jpg",
         "tags": [
           "极光",
           "芬兰",
@@ -693,7 +693,7 @@
     "id": "spa-desert",
     "name": "迪拜沙漠皇家营地",
     "desc": "迪拜·路虎揽胜冲沙·猎鹰表演·贝都因帐篷晚宴",
-    "image": "https://images.unsplash.com/photo-1512632578888-185bb8ac7b2d?w=800",
+    "image": "/images/photo-1555244162-803834f70033.jpg",
     "category": "spa",
     "products": [
       {
@@ -706,7 +706,7 @@
           "车辆": "路虎揽胜",
           "含": "冲沙+猎鹰+骆驼+晚宴+表演"
         },
-        "image": "https://images.unsplash.com/photo-1512632578888-185bb8ac7b2d?w=800",
+        "image": "/images/photo-1555244162-803834f70033.jpg",
         "tags": [
           "迪拜",
           "冲沙",
@@ -719,7 +719,7 @@
     "id": "spa-balloon",
     "name": "云端热气球俱乐部",
     "desc": "桂林阳朔·土耳其同款·日出飞行",
-    "image": "https://images.unsplash.com/photo-1572375992501-4b0892d50d2d?w=800",
+    "image": "/images/photo-1555244162-803834f70033.jpg",
     "category": "spa",
     "products": [
       {
@@ -732,7 +732,7 @@
           "地点": "桂林阳朔",
           "含": "香槟仪式+飞行证书"
         },
-        "image": "https://images.unsplash.com/photo-1572375992501-4b0892d50d2d?w=800",
+        "image": "/images/photo-1555244162-803834f70033.jpg",
         "tags": [
           "热气球",
           "阳朔",
@@ -745,7 +745,7 @@
     "id": "spa-maldives",
     "name": "马尔代夫·瑞吉度假村",
     "desc": "马尔代夫沃姆利岛·水上别墅·私人管家",
-    "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800",
+    "image": "/images/photo-1514282401047-d79a71a590e8.jpg",
     "category": "spa",
     "products": [
       {
@@ -758,7 +758,7 @@
           "房型": "水上别墅200㎡",
           "含": "管家+漂浮早餐+海豚巡游+SPA"
         },
-        "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800",
+        "image": "/images/photo-1514282401047-d79a71a590e8.jpg",
         "tags": [
           "马尔代夫",
           "水上别墅",
@@ -771,7 +771,7 @@
     "id": "spa-opera",
     "name": "国家大剧院·歌剧包厢",
     "desc": "北京国家大剧院·歌剧厅VIP包厢·专属管家",
-    "image": "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=800",
+    "image": "/images/photo-1514306191717-452ec28c7814.jpg",
     "category": "spa",
     "products": [
       {
@@ -784,7 +784,7 @@
           "地点": "国家大剧院",
           "含": "香槟+小食+管家"
         },
-        "image": "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=800",
+        "image": "/images/photo-1514306191717-452ec28c7814.jpg",
         "tags": [
           "歌剧",
           "国家大剧院",
@@ -797,7 +797,7 @@
     "id": "spa-exotic",
     "name": "异域风情·奢华伴游",
     "desc": "全球精选·严格筛选·多语言·商务/旅行伴侣",
-    "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800",
+    "image": "/images/photo-1529626455594-4ff0802cfb7e.jpg",
     "category": "spa",
     "products": [
       {
@@ -811,7 +811,7 @@
           "场景": "商务晚宴/社交",
           "含": "全程陪伴+造型建议"
         },
-        "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800",
+        "image": "/images/photo-1529626455594-4ff0802cfb7e.jpg",
         "tags": [
           "高端伴游",
           "商务",
@@ -828,7 +828,7 @@
           "场景": "全球旅行",
           "含": "全程陪伴+行程规划"
         },
-        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800",
+        "image": "/images/photo-1494790108377-be9c29b29330.jpg",
         "tags": [
           "旅行伴侣",
           "全球",

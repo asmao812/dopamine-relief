@@ -3,7 +3,7 @@
     "id": "rolex",
     "name": "劳力士官方旗舰店",
     "desc": "瑞士劳力士·官方授权·全球联保·正品保证",
-    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800",
+    "image": "/images/photo-1523170335258-f5ed11844a49.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -17,7 +17,7 @@
           "机芯": "4130自动计时机芯",
           "动力": "72小时"
         },
-        "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800",
+        "image": "/images/photo-1523170335258-f5ed11844a49.jpg",
         "tags": [
           "劳力士",
           "迪通拿",
@@ -35,7 +35,7 @@
           "机芯": "3235自动机芯",
           "防水": "300m"
         },
-        "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800",
+        "image": "/images/photo-1547996160-81dfa63595aa.jpg",
         "tags": [
           "劳力士",
           "水鬼",
@@ -52,7 +52,7 @@
           "材质": "18K黄金",
           "机芯": "3255自动机芯"
         },
-        "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800",
+        "image": "/images/photo-1622434641406-a158123450f9.jpg",
         "tags": [
           "劳力士",
           "金表",
@@ -65,7 +65,7 @@
     "id": "patek",
     "name": "百达翡丽旗舰店",
     "desc": "瑞士百达翡丽·传世之作·家族传承·手工打造",
-    "image": "https://images.unsplash.com/photo-1631378227136-7d54e1c18d6e?w=800",
+    "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -78,7 +78,7 @@
           "材质": "不锈钢",
           "机芯": "26-330自动机芯"
         },
-        "image": "https://images.unsplash.com/photo-1631378227136-7d54e1c18d6e?w=800",
+        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
         "tags": [
           "百达翡丽",
           "鹦鹉螺",
@@ -96,7 +96,7 @@
           "表盘": "珐琅",
           "机芯": "324自动机芯"
         },
-        "image": "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800",
+        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
         "tags": [
           "百达翡丽",
           "正装表",
@@ -109,7 +109,7 @@
     "id": "audemars",
     "name": "爱彼皇家橡树旗舰店",
     "desc": "瑞士爱彼Audemars Piguet·皇家橡树系列·独立制表",
-    "image": "https://images.unsplash.com/photo-1619946794135-d2b3ff63afeb?w=800",
+    "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -122,7 +122,7 @@
           "材质": "不锈钢",
           "机芯": "4302自动机芯"
         },
-        "image": "https://images.unsplash.com/photo-1619946794135-d2b3ff63afeb?w=800",
+        "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
         "tags": [
           "爱彼",
           "皇家橡树",
@@ -135,7 +135,7 @@
     "id": "vc",
     "name": "江诗丹顿旗舰店",
     "desc": "瑞士江诗丹顿·260年历史·日内瓦印记·顶级制表",
-    "image": "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800",
+    "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -149,7 +149,7 @@
           "机芯": "5100自动机芯",
           "表带": "3条快拆"
         },
-        "image": "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800",
+        "image": "/images/photo-1587836374828-4dbafa94cf0e.jpg",
         "tags": [
           "江诗丹顿",
           "纵横四海",
@@ -162,7 +162,7 @@
     "id": "omega",
     "name": "欧米茄旗舰店",
     "desc": "瑞士欧米茄·登月传奇·奥运计时·007同款",
-    "image": "https://images.unsplash.com/photo-1618402390632-8ce46a63c8fa?w=800",
+    "image": "/images/photo-1547996160-81dfa63595aa.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -175,7 +175,7 @@
           "材质": "不锈钢",
           "机芯": "3861手动机芯"
         },
-        "image": "https://images.unsplash.com/photo-1618402390632-8ce46a63c8fa?w=800",
+        "image": "/images/photo-1547996160-81dfa63595aa.jpg",
         "tags": [
           "欧米茄",
           "登月",
@@ -193,7 +193,7 @@
           "机芯": "8800自动机芯",
           "防水": "300m"
         },
-        "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800",
+        "image": "/images/photo-1547996160-81dfa63595aa.jpg",
         "tags": [
           "欧米茄",
           "海马",
@@ -206,7 +206,7 @@
     "id": "cartier",
     "name": "卡地亚旗舰店",
     "desc": "法国卡地亚·皇室珠宝商·珠宝腕表·经典设计",
-    "image": "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=800",
+    "image": "/images/photo-1589128777073-263566ae5e4d.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -219,7 +219,7 @@
           "材质": "不锈钢",
           "机芯": "430MC手动机芯"
         },
-        "image": "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=800",
+        "image": "/images/photo-1589128777073-263566ae5e4d.jpg",
         "tags": [
           "卡地亚",
           "山度士",
@@ -236,7 +236,7 @@
           "材质": "18K黄金",
           "机芯": "1917MC手动机芯"
         },
-        "image": "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800",
+        "image": "/images/photo-1614164185128-e4ec99c436d7.jpg",
         "tags": [
           "卡地亚",
           "坦克",
@@ -249,7 +249,7 @@
     "id": "iwc",
     "name": "IWC万国表旗舰店",
     "desc": "瑞士IWC·沙夫豪森制造·飞行员腕表·工程师精神",
-    "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800",
+    "image": "/images/photo-1622434641406-a158123450f9.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -263,7 +263,7 @@
           "机芯": "82100自动机芯",
           "动力": "7日"
         },
-        "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800",
+        "image": "/images/photo-1622434641406-a158123450f9.jpg",
         "tags": [
           "IWC",
           "大飞",
@@ -276,7 +276,7 @@
     "id": "maotai",
     "name": "茅台官方旗舰店",
     "desc": "贵州茅台酒·国酒之尊·酱香型白酒·收藏投资",
-    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -290,7 +290,7 @@
           "香型": "酱香型",
           "年份": "5年窖藏"
         },
-        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
         "tags": [
           "茅台",
           "飞天",
@@ -308,7 +308,7 @@
           "系列": "生肖纪念·龙年",
           "特点": "限量版"
         },
-        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
         "tags": [
           "茅台",
           "生肖",
@@ -321,7 +321,7 @@
     "id": "hennessy",
     "name": "轩尼诗旗舰店",
     "desc": "法国轩尼诗·干邑之王·250年传承",
-    "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800",
+    "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -335,7 +335,7 @@
           "陈酿": "10年以上",
           "类型": "干邑XO"
         },
-        "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800",
+        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg",
         "tags": [
           "轩尼诗",
           "XO",
@@ -352,7 +352,7 @@
           "容量": "700ml",
           "类型": "顶级珍藏"
         },
-        "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800",
+        "image": "/images/photo-1514362545857-3bc16c4c7d1b.jpg",
         "tags": [
           "轩尼诗",
           "Paradis",
@@ -365,7 +365,7 @@
     "id": "louis13",
     "name": "路易十三旗舰店",
     "desc": "法国路易十三·干邑皇冠上的明珠·百年陈酿",
-    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -379,7 +379,7 @@
           "陈酿": "40-100年",
           "瓶身": "Baccarat水晶"
         },
-        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
         "tags": [
           "路易十三",
           "百年陈酿",
@@ -392,7 +392,7 @@
     "id": "domperi",
     "name": "唐培里侬旗舰店",
     "desc": "法国唐培里侬·香槟之王·年份香槟的标杆",
-    "image": "https://images.unsplash.com/photo-1594144432582-6c5c81fc2a1f?w=800",
+    "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -405,7 +405,7 @@
           "年份": "2013",
           "陈酿": "8年以上"
         },
-        "image": "https://images.unsplash.com/photo-1594144432582-6c5c81fc2a1f?w=800",
+        "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
         "tags": [
           "香槟",
           "年份",
@@ -418,7 +418,7 @@
     "id": "wuliangye",
     "name": "五粮液旗舰店",
     "desc": "四川宜宾·浓香型白酒典范·600年古窖池",
-    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -432,7 +432,7 @@
           "香型": "浓香型",
           "原料": "五粮"
         },
-        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
         "tags": [
           "五粮液",
           "浓香",
@@ -445,7 +445,7 @@
     "id": "macallan",
     "name": "麦卡伦旗舰店",
     "desc": "苏格兰麦卡伦·单一麦芽威士忌之王·雪莉桶专家",
-    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+    "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -459,7 +459,7 @@
           "桶型": "雪莉桶",
           "产地": "苏格兰斯佩塞"
         },
-        "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800",
+        "image": "/images/photo-1569529465841-dfecdab7503b.jpg",
         "tags": [
           "麦卡伦",
           "18年",
@@ -472,7 +472,7 @@
     "id": "davidoff",
     "name": "大卫杜夫旗舰店",
     "desc": "瑞士大卫杜夫·雪茄奢侈品的代名词·始于1911年",
-    "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+    "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -486,7 +486,7 @@
           "茄芯": "多米尼加",
           "风味": "木香/坚果"
         },
-        "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
         "tags": [
           "雪茄",
           "大卫杜夫",
@@ -499,7 +499,7 @@
     "id": "cohiba",
     "name": "高希霸旗舰店",
     "desc": "古巴高希霸·古巴雪茄之王·卡斯特罗至爱",
-    "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+    "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -513,7 +513,7 @@
           "产地": "古巴",
           "烟叶": "Medio Tiempo"
         },
-        "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=800",
+        "image": "/images/photo-1595981267035-7b04ca84a82d.jpg",
         "tags": [
           "高希霸",
           "Behike",
@@ -526,7 +526,7 @@
     "id": "laperla",
     "name": "La Perla旗舰店",
     "desc": "意大利La Perla·内衣界的劳斯莱斯·1954年创立",
-    "image": "https://images.unsplash.com/photo-1554200876-56c2f25224fa?w=800",
+    "image": "/images/photo-1554200876-56c2f25224fa.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -539,7 +539,7 @@
           "工艺": "手工",
           "蕾丝": "Leavers法式蕾丝"
         },
-        "image": "https://images.unsplash.com/photo-1554200876-56c2f25224fa?w=800",
+        "image": "/images/photo-1554200876-56c2f25224fa.jpg",
         "tags": [
           "La Perla",
           "真丝",
@@ -556,7 +556,7 @@
           "蕾丝": "法国加莱手工",
           "丝绸": "意大利科莫湖"
         },
-        "image": "https://images.unsplash.com/photo-1554200876-56c2f25224fa?w=800",
+        "image": "/images/photo-1554200876-56c2f25224fa.jpg",
         "tags": [
           "La Perla",
           "睡袍",
@@ -569,7 +569,7 @@
     "id": "agent",
     "name": "Agent Provocateur旗舰店",
     "desc": "英国大内密探·叛逆奢华·1994年创立",
-    "image": "https://images.unsplash.com/photo-1571513722275-4b41940f54b8?w=800",
+    "image": "/images/photo-1571513722275-4b41940f54b8.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -582,7 +582,7 @@
           "蕾丝": "法国加莱",
           "风格": "性感奢华"
         },
-        "image": "https://images.unsplash.com/photo-1571513722275-4b41940f54b8?w=800",
+        "image": "/images/photo-1571513722275-4b41940f54b8.jpg",
         "tags": [
           "Agent Provocateur",
           "蕾丝",
@@ -595,7 +595,7 @@
     "id": "arcteryx",
     "name": "始祖鸟旗舰店",
     "desc": "加拿大始祖鸟·户外装备天花板·1989年温哥华创立",
-    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+    "image": "/images/photo-1551698618-1dfe5d97d256.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -608,7 +608,7 @@
           "面料": "N100d",
           "用途": "极端环境/登山"
         },
-        "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "image": "/images/photo-1551698618-1dfe5d97d256.jpg",
         "tags": [
           "始祖鸟",
           "硬壳",
@@ -625,7 +625,7 @@
           "面料": "Arato 10",
           "重量": "305g"
         },
-        "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800",
+        "image": "/images/photo-1551698618-1dfe5d97d256.jpg",
         "tags": [
           "始祖鸟",
           "羽绒",
@@ -638,7 +638,7 @@
     "id": "nike",
     "name": "Nike旗舰店",
     "desc": "美国Nike·Just Do It·全球运动品牌第一",
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+    "image": "/images/photo-1542291026-7eec264c27ff.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -651,7 +651,7 @@
           "鞋面": "头层牛皮",
           "首发": "1985年"
         },
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+        "image": "/images/photo-1542291026-7eec264c27ff.jpg",
         "tags": [
           "Nike",
           "AJ1",
@@ -668,7 +668,7 @@
           "重量": "约200g",
           "用途": "马拉松竞速"
         },
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+        "image": "/images/photo-1542291026-7eec264c27ff.jpg",
         "tags": [
           "Nike",
           "碳板",
@@ -681,7 +681,7 @@
     "id": "taylormade",
     "name": "TaylorMade旗舰店",
     "desc": "美国TaylorMade·高尔夫装备王者·Stealth暗影系列",
-    "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+    "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -694,7 +694,7 @@
           "杆身": "Fujikura Ventus TR",
           "特点": "低倒旋/高球速"
         },
-        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+        "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
         "tags": [
           "高尔夫",
           "一号木",
@@ -711,7 +711,7 @@
           "材质": "锻造1025碳钢",
           "设计师": "Tiger Woods"
         },
-        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+        "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
         "tags": [
           "高尔夫",
           "铁杆",
@@ -724,7 +724,7 @@
     "id": "callaway",
     "name": "Callaway旗舰店",
     "desc": "美国Callaway·高尔夫科技创新者",
-    "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+    "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -737,7 +737,7 @@
           "底盘": "碳纤维",
           "技术": "AI设计"
         },
-        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800",
+        "image": "/images/photo-1535131749006-b7f58c99034b.jpg",
         "tags": [
           "高尔夫",
           "一号木",
@@ -750,7 +750,7 @@
     "id": "nvidia",
     "name": "NVIDIA官方旗舰店",
     "desc": "美国NVIDIA·AI计算之王·GPU核心硬件",
-    "image": "https://images.unsplash.com/photo-1632186082681-1ef1c979bf0c?w=800",
+    "image": "/images/photo-1555680202-c86f0e12f086.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -764,7 +764,7 @@
           "显存": "32GB GDDR7",
           "接口": "PCIe 5.0"
         },
-        "image": "https://images.unsplash.com/photo-1632186082681-1ef1c979bf0c?w=800",
+        "image": "/images/photo-1555680202-c86f0e12f086.jpg",
         "tags": [
           "NVIDIA",
           "RTX",
@@ -781,7 +781,7 @@
           "显存": "80GB HBM2e",
           "用途": "AI训练/推理"
         },
-        "image": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800",
+        "image": "/images/photo-1555680202-c86f0e12f086.jpg",
         "tags": [
           "NVIDIA",
           "A100",
@@ -794,7 +794,7 @@
     "id": "amd",
     "name": "AMD官方旗舰店",
     "desc": "美国AMD·锐龙处理器·Radeon显卡·3D V-Cache",
-    "image": "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=800",
+    "image": "/images/photo-1591405351990-4726e331f141.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -807,7 +807,7 @@
           "核心": "16核32线程",
           "缓存": "144MB 3D V-Cache"
         },
-        "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8bde75c?w=800",
+        "image": "/images/photo-1591405351990-4726e331f141.jpg",
         "tags": [
           "AMD",
           "Ryzen",
@@ -820,7 +820,7 @@
     "id": "intel",
     "name": "Intel官方旗舰店",
     "desc": "美国Intel·酷睿Ultra·AI PC时代",
-    "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8bde75c?w=800",
+    "image": "/images/photo-1591405351990-4726e331f141.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -833,7 +833,7 @@
           "核心": "24核24线程",
           "AI算力": "48 TOPS"
         },
-        "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8bde75c?w=800",
+        "image": "/images/photo-1591405351990-4726e331f141.jpg",
         "tags": [
           "Intel",
           "AI PC",
@@ -846,7 +846,7 @@
     "id": "apple-store",
     "name": "Apple官方旗舰店",
     "desc": "美国Apple·Think Different·全球市值第一科技公司",
-    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800",
+    "image": "/images/photo-1580910051074-3eb694886505.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -859,7 +859,7 @@
           "显示": "2300万像素Micro-OLED",
           "存储": "256GB/512GB/1TB"
         },
-        "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800",
+        "image": "/images/photo-1580910051074-3eb694886505.jpg",
         "tags": [
           "Apple",
           "Vision Pro",
@@ -876,7 +876,7 @@
           "内存": "128GB统一内存",
           "屏幕": "16.2\" Liquid Retina XDR"
         },
-        "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+        "image": "/images/photo-1517336714731-489689fd1ca8.jpg",
         "tags": [
           "Apple",
           "MacBook Pro",
@@ -889,7 +889,7 @@
     "id": "samsung",
     "name": "Samsung旗舰店",
     "desc": "韩国三星·全球科技巨头·Galaxy生态",
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+    "image": "/images/photo-1610945265064-0e34e5519bbf.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -902,7 +902,7 @@
           "摄像头": "200MP+50MP长焦",
           "材质": "钛金属"
         },
-        "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+        "image": "/images/photo-1610945265064-0e34e5519bbf.jpg",
         "tags": [
           "Samsung",
           "Galaxy",
@@ -915,7 +915,7 @@
     "id": "sony",
     "name": "Sony官方旗舰店",
     "desc": "日本索尼·创新为灵魂·消费电子王者",
-    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+    "image": "/images/photo-1606144042614-b2417e99c4e3.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -928,7 +928,7 @@
           "存储": "1TB SSD",
           "手柄": "触觉反馈"
         },
-        "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+        "image": "/images/photo-1606144042614-b2417e99c4e3.jpg",
         "tags": [
           "Sony",
           "PS6",
@@ -945,7 +945,7 @@
           "连拍": "120fps",
           "视频": "8K 60p"
         },
-        "image": "https://images.unsplash.com/photo-1516724562728-afc824a36e84?w=800",
+        "image": "/images/photo-1516724562728-afc824a36e84.jpg",
         "tags": [
           "Sony",
           "α9",
@@ -958,7 +958,7 @@
     "id": "dji",
     "name": "DJI大疆旗舰店",
     "desc": "中国大疆·无人机全球霸主·影像创新",
-    "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800",
+    "image": "/images/photo-1473968512647-3e447244af8f.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -972,7 +972,7 @@
           "图传": "15km",
           "避障": "全向"
         },
-        "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800",
+        "image": "/images/photo-1473968512647-3e447244af8f.jpg",
         "tags": [
           "DJI",
           "无人机",
@@ -985,7 +985,7 @@
     "id": "bose",
     "name": "Bose旗舰店",
     "desc": "美国Bose·声学科技领导者·降噪耳机开创者",
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
+    "image": "/images/photo-1505740420928-5e560c06d30e.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -998,7 +998,7 @@
           "音频": "空间音频",
           "续航": "24小时"
         },
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
+        "image": "/images/photo-1505740420928-5e560c06d30e.jpg",
         "tags": [
           "Bose",
           "降噪",
@@ -1011,7 +1011,7 @@
     "id": "bo",
     "name": "Bang & Olufsen旗舰店",
     "desc": "丹麦B&O·1925年创立·北欧设计美学·声音艺术",
-    "image": "https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=800",
+    "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -1024,7 +1024,7 @@
           "功率": "8200W总",
           "技术": "自适应声场"
         },
-        "image": "https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=800",
+        "image": "/images/photo-1524678714210-9917a6c619c2.jpg",
         "tags": [
           "B&O",
           "旗舰音箱",
@@ -1037,7 +1037,7 @@
     "id": "montblanc",
     "name": "万宝龙旗舰店",
     "desc": "德国万宝龙·书写艺术·始于1906年·奢华配饰",
-    "image": "https://images.unsplash.com/photo-1585123334904-845d60e97b29?w=800",
+    "image": "/images/photo-1585123334904-845d60e97b29.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -1050,7 +1050,7 @@
           "笔杆": "黑色树脂",
           "系列": "Meisterstück大班"
         },
-        "image": "https://images.unsplash.com/photo-1585123334904-845d60e97b29?w=800",
+        "image": "/images/photo-1585123334904-845d60e97b29.jpg",
         "tags": [
           "万宝龙",
           "钢笔",
@@ -1063,7 +1063,7 @@
     "id": "rimowa",
     "name": "RIMOWA日默瓦旗舰店",
     "desc": "德国日默瓦·1898年创立·铝镁合金行李箱之王",
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+    "image": "/images/photo-1553062407-98eeb64c6a62.jpg",
     "category": "dutyfree",
     "products": [
       {
@@ -1076,7 +1076,7 @@
           "材质": "铝镁合金",
           "锁": "TSA海关锁"
         },
-        "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+        "image": "/images/photo-1553062407-98eeb64c6a62.jpg",
         "tags": [
           "RIMOWA",
           "登机箱",
