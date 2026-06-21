@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#FEA031">
+  <meta name="theme-color" content="#533afd">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="悦己镇">
@@ -14,43 +14,44 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.23.0/babel.min.js"></script>
   <script src="https://webapi.amap.com/maps?v=2.0&key=a448036028b969a51fe8d6bf016a82b6"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
 :root {
-  --primary: #FEA031;
-  --primary-dark: #FCB354;
-  --accent: #C6B092;
-  --bg: #FEFCF5;
-  --bg-card: #FFFFFF;
-  --text: #5C4A32;
-  --text-secondary: #8B7D6B;
-  --text-light: #B8A99A;
-  --border: #F0EAD5;
-  --success: #7BAF9B;
-  --gold: #FEA031;
-  --sand: #FDF4E0;
-  --shadow: 0 2px 12px rgba(92,74,50,0.06);
-  --radius: 12px;
-  --radius-sm: 8px;
+  --primary: #533afd;
+  --primary-dark: #4434d4;
+  --accent: #b9b9f9;
+  --bg: #ffffff;
+  --bg-card: #ffffff;
+  --text: #061b31;
+  --text-secondary: #64748d;
+  --text-light: #8b9db5;
+  --border: #e5edf5;
+  --success: #15be53;
+  --gold: #533afd;
+  --sand: #f8f9fc;
+  --shadow: rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;
+  --radius: 6px;
+  --radius-sm: 4px;
+  --font-display: 'Playfair Display', serif;
 }
 
 [data-theme="dark"] {
-  --primary: #FCB354;
-  --primary-dark: #FEA031;
-  --accent: #D4C4A8;
-  --bg: #1F1B15;
-  --bg-card: #2C261D;
-  --text: #F0E8D5;
-  --text-secondary: #B8A99A;
-  --text-light: #8B7D6B;
-  --border: #3D3425;
-  --shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --primary: #7766ff;
+  --primary-dark: #533afd;
+  --accent: #665efd;
+  --bg: #0d1220;
+  --bg-card: #151d2e;
+  --text: #e8ecf2;
+  --text-secondary: #8b9db5;
+  --text-light: #64748d;
+  --border: #1e2d44;
+  --shadow: rgba(0,0,0,0.4) 0px 30px 45px -30px;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Source Sans 3', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -119,12 +120,13 @@ body {
 
 .app-header {
   position:sticky; top:0; z-index:100;
-  background: var(--bg-card);
-  color:#FFF; padding:0;
-  padding-top: max(0px, env(safe-area-inset-top));
+  background: #1c1e54;
+  color:#ffffff; padding:12px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top: max(12px, env(safe-area-inset-top));
 }
-.app-header h1 { font-size:18px; font-weight:600; letter-spacing:0.5px; }
-.app-header .subtitle { font-size:11px; opacity:0.85; margin-top:2px; }
+.app-header h1 { font-size:20px; font-weight:700; letter-spacing:-0.3px; }
+.app-header .subtitle { font-size:11px; opacity:0.6; margin-top:2px; font-weight:300; }
 
 .header-actions { display:flex; gap:8px; align-items:center; }
 .header-btn {
@@ -136,13 +138,14 @@ body {
 /* Food Cards */
 .food-card {
   background:var(--bg-card); border-radius:var(--radius);
-  box-shadow:var(--shadow); overflow:hidden; cursor:pointer;
-  transition: transform 0.2s;
+  border:1px solid var(--border); overflow:hidden; cursor:pointer;
+  transition: all 0.15s ease;
 }
+.food-card:hover { box-shadow: var(--shadow); }
 .food-card:active { transform:scale(0.98); }
 .food-card-img {
   width:100%; height:140px; object-fit:cover;
-  background: linear-gradient(135deg, #FDF4E0, #FEFCF5);
+  background: linear-gradient(135deg, #f8f9fc, #ffffff);
 }
 .food-card-body { padding:10px 12px; }
 .food-card-name { font-size:14px; font-weight:500; margin-bottom:4px; }
@@ -158,14 +161,14 @@ body {
 .store-card:active { background:var(--bg); }
 .store-card-img {
   width:72px; height:72px; border-radius:var(--radius-sm);
-  object-fit:cover; background:linear-gradient(135deg, #FDF4E0, #FEFCF5);
+  object-fit:cover; background:linear-gradient(135deg, #f8f9fc, #ffffff);
 }
 .store-card-info { flex:1; }
 .store-card-name { font-size:15px; font-weight:600; margin-bottom:4px; }
 .store-card-stars { color:var(--gold); font-size:12px; }
 .store-card-type { font-size:11px; color:var(--text-secondary); margin-top:2px; }
 .store-card-tag {
-  display:inline-block; background:#FEFCF5; color:var(--primary);
+  display:inline-block; background:#ffffff; color:var(--primary);
   font-size:10px; padding:2px 6px; border-radius:4px; margin-top:4px;
 }
 
@@ -174,7 +177,7 @@ body {
   position:fixed; bottom:90px; right:16px;
   width:56px; height:56px; border-radius:28px;
   background:var(--primary); color:#FFF; border:none;
-  font-size:22px; cursor:pointer; box-shadow:0 4px 16px rgba(255,93,55,0.4);
+  font-size:22px; cursor:pointer; box-shadow:0 4px 16px rgba(83,58,253,0.4);
   z-index:90; display:flex; align-items:center; justify-content:center;
 }
 .cart-badge {
@@ -217,8 +220,8 @@ body {
 .cart-total .price { color:var(--primary); font-weight:700; font-size:18px; }
 .btn-checkout {
   background:var(--primary); color:#FFF; border:none;
-  padding:12px 32px; border-radius:24px; font-size:15px; font-weight:600;
-  cursor:pointer; font-family:inherit;
+  padding:10px 24px; border-radius:4px; font-size:14px; font-weight:500;
+  cursor:pointer; font-family:inherit; letter-spacing:-0.2px;
 }
 
 /* Checkout */
@@ -244,7 +247,7 @@ body {
   border-radius:var(--radius-sm); text-align:center; cursor:pointer;
   font-size:13px;
 }
-.pay-option.selected { border-color:var(--primary); background:#FDF4E0; }
+.pay-option.selected { border-color:var(--primary); background:#f8f9fc; }
 
 /* Order Success */
 .success-page {
@@ -254,7 +257,7 @@ body {
 }
 .success-icon { font-size:72px; animation:pulse 1.5s ease-in-out; }
 .success-title { font-size:22px; font-weight:700; margin:16px 0 8px; }
-.success-saved { color:var(--primary); font-weight:700; font-size:32px; margin:12px 0; }
+.success-saved { color:var(--primary); font-weight:700; font-size:32px; margin:12px 0; letter-spacing:-0.5px; }
 .success-subtitle { color:var(--text-secondary); font-size:14px; margin-bottom:24px; }
 .confetti {
   position:absolute; font-size:24px; animation:confetti 2s ease-out forwards;
@@ -264,8 +267,9 @@ body {
 /* Stats Bar */
 .stats-bar {
   display:flex; justify-content:space-around; padding:14px 16px;
-  background:var(--bg); border-radius:var(--radius);
+  background:var(--sand); border-radius:var(--radius);
   margin:12px 16px;
+  box-shadow: var(--shadow);
 }
 .stat-item { text-align:center; }
 .stat-value { font-size:20px; font-weight:700; color:var(--primary); }
@@ -282,7 +286,7 @@ body {
   white-space:nowrap; cursor:pointer; border:1px solid var(--border);
   background:var(--bg); color:var(--text-secondary);
 }
-.cat-tab.active { background:var(--primary); color:#FFF; border-color:var(--primary); }
+.cat-tab.active { background:var(--primary); color:#FFF; border-color:var(--primary); font-weight:500; }
 
 /* Store header */
 .store-header {
@@ -290,7 +294,7 @@ body {
 }
 .store-header-bg {
   width:100%; height:100%; object-fit:cover;
-  background:linear-gradient(135deg, #FEA031, #FCB354);
+  background:linear-gradient(135deg, #533afd, #665efd);
 }
 .store-header-info {
   position:absolute; bottom:0; left:0; right:0;
@@ -323,8 +327,8 @@ body {
 .pwa-banner-text { flex:1; font-size:13px; font-weight:500; }
 .pwa-banner-btn {
   background:var(--primary); color:#FFF; border:none;
-  padding:8px 16px; border-radius:18px; font-size:13px;
-  font-weight:600; cursor:pointer; font-family:inherit;
+  padding:8px 16px; border-radius:4px; font-size:13px;
+  font-weight:500; cursor:pointer; font-family:inherit;
 }
 .pwa-banner-close {
   background:none; border:none; color:var(--text-light); cursor:pointer;
@@ -346,7 +350,7 @@ body {
   transition:color 0.2s; -webkit-tap-highlight-color:transparent;
 }
 .tab-item .tab-icon { font-size:22px; line-height:1; }
-.tab-item.active { color:var(--primary); font-weight:600; }
+.tab-item.active { color:var(--primary); font-weight:600; border-top:2px solid var(--primary); padding-top:6px; }
 
 /* Logo */
 .app-logo { display:flex; align-items:center; gap:10px; }
@@ -358,9 +362,10 @@ body {
 }
 .product-card {
   background:var(--bg-card); border-radius:var(--radius);
-  box-shadow:var(--shadow); overflow:hidden; cursor:pointer;
-  transition: transform 0.2s;
+  border:1px solid var(--border); overflow:hidden; cursor:pointer;
+  transition: all 0.15s ease;
 }
+.product-card:hover { box-shadow: var(--shadow); }
 .product-card:active { transform:scale(0.98); }
 .product-img-wrap {
   position:relative; width:100%; height:160px; overflow:hidden;
@@ -372,7 +377,7 @@ body {
 .product-img-fallback {
   width:100%; height:100%; display:flex; align-items:center;
   justify-content:center; font-size:48px;
-  background:linear-gradient(135deg, #FDF4E0, #FEFCF5);
+  background:linear-gradient(135deg, #f8f9fc, #ffffff);
 }
 .brand-badge {
   position:absolute; top:8px; left:8px;
@@ -485,7 +490,7 @@ body {
 
 /* Order Detail */
 .order-detail-page { min-height: 100vh; background: var(--bg); }
-.order-detail-header { background: linear-gradient(135deg, #FEA031, #FCB354); color: #FFF; padding: 20px 16px; }
+.order-detail-header { background: linear-gradient(135deg, #533afd, #4434d4); color: #FFF; padding: 20px 16px; }
 .order-detail-section { background: var(--bg-card); margin: 10px 12px; padding: 16px; border-radius: var(--radius); box-shadow: var(--shadow); }
 .order-detail-section h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
 .order-item-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--border); }
@@ -626,51 +631,48 @@ window.T = function(key) {
     }, [lang]);
 
     return h('header', {
-      className: 'app-header',
-      style: {
-        position: 'sticky', top: 0, zIndex: 100,
-        padding: 0, background: 'none', display: 'flex',
-        alignItems: 'center', justifyContent: 'space-between',
-        paddingTop: 'max(0px, env(safe-area-inset-top))'
-      }
+      className: 'app-header'
     },
-      // Left: logo image instead of SVG + text
-      h('img', {
-        src: '/assets/header-bg.png',
-        alt: '悦己镇 · Joyville — Treat yourself better',
-        style: {
-          width: '100%', height: 'auto', display: 'block',
-          position: 'absolute', top: 0, left: 0, zIndex: 0
-        }
-      }),
-      // Right: language and dark mode buttons (on top of image)
+      // Left: Logo (text-based, Stripe-style)
       h('div', {
-        style: {
-          position: 'absolute', top: 8, right: 8, zIndex: 2,
-          display: 'flex', gap: 6, alignItems: 'center'
-        }
+        style: { display: 'flex', alignItems: 'baseline', gap: 8 }
+      },
+        h('span', {
+          style: {
+            fontSize: 20, fontWeight: 700, color: '#ffffff',
+            fontFamily: "'Playfair Display', serif", letterSpacing: '-0.3px'
+          }
+        }, '悦己镇'),
+        h('span', {
+          style: {
+            fontSize: 11, fontWeight: 300, color: 'rgba(255,255,255,0.6)',
+            letterSpacing: '0.5px'
+          }
+        }, 'Joyville')
+      ),
+      // Right: language and dark mode buttons
+      h('div', {
+        style: { display: 'flex', gap: 6, alignItems: 'center' }
       },
         h('button', {
           onClick: toggleLang, title: 'Switch language',
           style: {
-            background: 'rgba(0,0,0,0.35)', color: '#FFF',
-            border: 'none', padding: '6px 10px', borderRadius: 6,
+            background: 'rgba(255,255,255,0.1)', color: '#ffffff',
+            border: '1px solid rgba(255,255,255,0.15)', padding: '4px 10px', borderRadius: 4,
             fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
-            whiteSpace: 'nowrap', backdropFilter: 'blur(4px)'
+            whiteSpace: 'nowrap'
           }
         }, window.T('lang')),
         h('button', {
           onClick: toggleDark, title: 'Toggle dark mode',
           style: {
-            background: 'rgba(0,0,0,0.35)', color: '#FFF',
-            border: 'none', padding: '6px 10px', borderRadius: 6,
+            background: 'rgba(255,255,255,0.1)', color: '#ffffff',
+            border: '1px solid rgba(255,255,255,0.15)', padding: '4px 10px', borderRadius: 4,
             fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
-            whiteSpace: 'nowrap', backdropFilter: 'blur(4px)'
+            whiteSpace: 'nowrap'
           }
         }, (dark ? '☀️ ' : '🌙 ') + window.T('darkmode'))
-      ),
-      // Spacer to maintain aspect ratio (240/1600 = 0.15)
-      h('div', { style: { width: '100%', paddingTop: '15%', position: 'relative', zIndex: 1 } })
+      )
     );
   }
   window.Header = Header;
@@ -859,7 +861,7 @@ window.T = function(key) {
                 h('div', {
                   className: 'store-card-img',
                   style: {
-                    background: restaurant.color || 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
+                    background: restaurant.color || 'linear-gradient(135deg, #f8f9fc, #ffffff)',
                     display: restaurant.image ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: 28
                   }
@@ -953,7 +955,7 @@ window.T = function(key) {
           style: {
             cursor: interactive ? 'pointer' : 'default',
             fontSize: interactive ? 28 : 16,
-            color: filled ? '#FEA031' : '#DDD',
+            color: filled ? '#533afd' : '#DDD',
             transition: 'color 0.15s',
             marginRight: 2
           }
@@ -1044,7 +1046,7 @@ window.T = function(key) {
         :
           reviews.map(function(review, idx) {
             var initial = (review.user || '匿').charAt(0);
-            var bgColors = ['#FEA031', '#FCB354', '#F59E0B', '#22C55E', '#3B82F6', '#8B5CF6', '#EC4899'];
+            var bgColors = ['#533afd', '#4434d4', '#F59E0B', '#22C55E', '#3B82F6', '#8B5CF6', '#EC4899'];
             var bgColor = bgColors[idx % bgColors.length];
             return h('div', {
               key: idx,
@@ -1066,7 +1068,7 @@ window.T = function(key) {
               h('div', { style: { flex: 1 } },
                 h('div', { style: { display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 } },
                   h('span', { style: { fontSize: 13, fontWeight: 600 } }, review.user),
-                  h('span', { style: { fontSize: 13, color: '#FEA031' } },
+                  h('span', { style: { fontSize: 13, color: '#533afd' } },
                     '★'.repeat(Math.min(5, review.rating || 5)) + '☆'.repeat(Math.max(0, 5 - (review.rating || 5)))
                   ),
                   h('span', { style: { fontSize: 11, color: 'var(--text-light)', marginLeft: 'auto' } }, review.date)
@@ -1165,7 +1167,7 @@ window.T = function(key) {
         h('div', {
           className: 'store-header-bg',
           style: {
-            background: store.color || 'linear-gradient(135deg, #FEA031, #FCB354)',
+            background: store.color || 'linear-gradient(135deg, #533afd, #4434d4)',
             display: store.image ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: 64
           }
@@ -1238,7 +1240,7 @@ window.T = function(key) {
                 h('div', {
                   style: {
                     width: 64, height: 64, borderRadius: 8,
-                    background: 'linear-gradient(135deg, #FDF4E0, #FEFCF5)',
+                    background: 'linear-gradient(135deg, #f8f9fc, #ffffff)',
                     display: item.image ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: 28, flexShrink: 0
                   }
@@ -1361,7 +1363,7 @@ window.T = function(key) {
         onClick: onClose,
         style: {
           position: 'fixed', inset: 0,
-          background: 'rgba(0,0,0,0.35)',
+          background: 'rgba(0,0,0,0.45)',
           zIndex: 94,
           animation: 'fadeInUp 0.3s ease-out'
         }
@@ -1578,7 +1580,7 @@ window.T = function(key) {
                     onClick: function() { setFormTag(t); },
                     style: {
                       padding: '6px 10px', borderRadius: 6, border: formTag === t ? '2px solid var(--primary)' : '1px solid var(--border)',
-                      background: formTag === t ? '#FDF4E0' : 'white', cursor: 'pointer', fontSize: 18
+                      background: formTag === t ? '#f8f9fc' : 'white', cursor: 'pointer', fontSize: 18
                     }
                   }, t);
                 })
@@ -1837,16 +1839,16 @@ window.T = function(key) {
 
       // Background
       var gradient = ctx.createLinearGradient(0, 0, 0, 600);
-      gradient.addColorStop(0, '#FEFCF5');
+      gradient.addColorStop(0, '#ffffff');
       gradient.addColorStop(0.5, '#FFFFFF');
-      gradient.addColorStop(1, '#FEFCF5');
+      gradient.addColorStop(1, '#ffffff');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, 500, 600);
 
       // Header banner
       var hdrGrad = ctx.createLinearGradient(0, 0, 500, 0);
-      hdrGrad.addColorStop(0, '#FEA031');
-      hdrGrad.addColorStop(1, '#FCB354');
+      hdrGrad.addColorStop(0, '#533afd');
+      hdrGrad.addColorStop(1, '#4434d4');
       ctx.fillStyle = hdrGrad;
       ctx.fillRect(0, 0, 500, 80);
 
@@ -1856,17 +1858,17 @@ window.T = function(key) {
       ctx.fillText('悦己镇 · Joyville', 30, 50);
 
       // Order ID
-      ctx.fillStyle = '#3D2E1F';
+      ctx.fillStyle = '#061b31';
       ctx.font = 'bold 14px "Noto Sans SC", sans-serif';
       ctx.fillText('订单号: ' + (orderData ? orderData.orderId : 'N/A'), 30, 110);
 
       // Time
       ctx.font = '12px "Noto Sans SC", sans-serif';
-      ctx.fillStyle = '#7A6B5D';
+      ctx.fillStyle = '#64748d';
       ctx.fillText('下单时间: ' + (orderData ? orderData.time : 'N/A'), 30, 132);
 
       // Separator
-      ctx.strokeStyle = '#F0E5D8';
+      ctx.strokeStyle = '#e5edf5';
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(30, 150);
@@ -1874,7 +1876,7 @@ window.T = function(key) {
       ctx.stroke();
 
       // Items header
-      ctx.fillStyle = '#3D2E1F';
+      ctx.fillStyle = '#061b31';
       ctx.font = 'bold 13px "Noto Sans SC", sans-serif';
       ctx.fillText('商品', 30, 175);
       ctx.fillText('数量', 300, 175);
@@ -1883,14 +1885,14 @@ window.T = function(key) {
       var items = orderData ? orderData.items : [];
       var y = 200;
       if (items.length === 0) {
-        ctx.fillStyle = '#7A6B5D';
+        ctx.fillStyle = '#64748d';
         ctx.font = '12px "Noto Sans SC", sans-serif';
         ctx.fillText('(无订单明细)', 30, y);
         y += 24;
       } else {
         for (var i = 0; i < items.length; i++) {
           var item = items[i];
-          ctx.fillStyle = '#3D2E1F';
+          ctx.fillStyle = '#061b31';
           ctx.font = '12px "Noto Sans SC", sans-serif';
           ctx.fillText(item.name, 30, y);
           ctx.fillText('×' + item.qty, 310, y);
@@ -1902,14 +1904,14 @@ window.T = function(key) {
 
       // Total
       y = Math.max(y + 10, 460);
-      ctx.strokeStyle = '#F0E5D8';
+      ctx.strokeStyle = '#e5edf5';
       ctx.beginPath();
       ctx.moveTo(30, y);
       ctx.lineTo(470, y);
       ctx.stroke();
       y += 26;
 
-      ctx.fillStyle = '#FEA031';
+      ctx.fillStyle = '#533afd';
       ctx.font = 'bold 18px "Noto Sans SC", sans-serif';
       ctx.fillText('合计: ¥' + (orderData ? orderData.total : 0), 30, y);
       ctx.fillStyle = '#5DBFB4';
@@ -1917,7 +1919,7 @@ window.T = function(key) {
       ctx.fillText('(实付 ¥0 — 零成本解压)', 180, y);
 
       // Footer
-      ctx.fillStyle = '#B8A99A';
+      ctx.fillStyle = '#8b9db5';
       ctx.font = '10px "Noto Sans SC", sans-serif';
       ctx.fillText('以上均为模拟体验 · 未产生实际消费', 130, 570);
 
@@ -1990,7 +1992,7 @@ window.T = function(key) {
           position: 'absolute', top: '10%', left: '50%',
           transform: 'translate(-50%, -50%)',
           width: 280, height: 280, borderRadius: 140,
-          background: 'radial-gradient(circle, rgba(255,93,55,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(83,58,253,0.08) 0%, transparent 70%)',
           animation: 'pulse 2s ease-in-out infinite',
           pointerEvents: 'none'
         }
@@ -2104,7 +2106,7 @@ window.T = function(key) {
               border: 'none', background: 'var(--primary)',
               color: '#FFF', fontSize: 16, fontWeight: 600,
               cursor: 'pointer', fontFamily: 'inherit',
-              boxShadow: '0 4px 20px rgba(255,93,55,0.4)',
+              boxShadow: '0 4px 20px rgba(83,58,253,0.4)',
               transition: 'all 0.2s'
             }
           }, '🛒 ' + window.T('success.back')),
@@ -2887,7 +2889,7 @@ window.T = function(key) {
         ),
         item.image ? h('img', { className: 'menu-detail-img', src: item.image, alt: item.name }) : h('div', {
           className: 'menu-detail-img',
-          style: { background: 'linear-gradient(135deg, #FDF4E0, #FEFCF5)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 48 }
+          style: { background: 'linear-gradient(135deg, #f8f9fc, #ffffff)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 48 }
         }, item.emoji || '\uD83C\uDF5C'),
         h('div', { className: 'menu-detail-body' },
           h('div', { className: 'menu-detail-name' }, item.name),

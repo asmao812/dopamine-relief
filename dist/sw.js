@@ -1,4 +1,4 @@
-const CACHE = 'dopamine-v1';
+const CACHE = 'dopamine-v2';
 const URLS = ['/','/index.html','/manifest.json','/src/styles/theme.css','/src/styles/app.css'];
 
 self.addEventListener('install', e => {
